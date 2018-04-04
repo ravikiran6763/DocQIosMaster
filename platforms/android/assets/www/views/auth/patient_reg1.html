@@ -1,0 +1,77 @@
+<ion-view class="patient-reg-1-view" cache-view="false" has-bouncing="false">
+  <!-- <ion-header-bar class="bar-header bar-light">
+
+  </ion-header-bar> -->
+<ion-content scroll="false" padding="false" >
+  <div class="top-content hide-on-keyboard-open" >
+      <div class="regTitle">
+        <div class="regHeader">
+          <div class="backButton " ng-click="goBack();">
+            <i class="icon ion-ios-arrow-back" ></i>
+            <p  >Patient Registration</p>
+          </div>
+              <div class="regFlowImg">
+                <!-- <img  src="./img/iOS-Assets-v01_patient_registration_progress1.png" > -->
+                <img  src="./img/iOS-Assets-v01_patient_registration_progress1.png" >
+              </div>
+              <div class="regMsg">
+                <p class="reg_message"> Register now and get your first consultation FREE with doctor of your choice. </p>
+              </div>
+        </div>
+
+      </div>
+  </div>
+
+
+  <div class="form-content">
+    <form name="PatientReg1" ng-submit="submitForm($event)" ng-class={submitted:submitted}>
+        <div class="form-group" keyboard-attach >
+          <input  type="text"  placeholder="First Name" name="patient_fname"  ng-model="PatientDetail.patient_fname" no-special-char required>
+        </div>
+
+        <!-- <div class="form-group" >
+          <input type="text"  placeholder="Middle Name" name="patient_mname" ng-model="PatientDetail.patient_mname" no-special-char>
+        </div> -->
+
+        <div class="form-group" keyboard-attach>
+          <input type="text"  placeholder="Last Name" name="patient_lname" ng-model="PatientDetail.patient_lname" no-special-char required>
+        </div>
+
+        <!-- <div class="form-group button-bar">
+          <ion-radio class="form-control" ng-model="PatientDetail.gender" ng-value="'Male'" required><span >Male</span></ion-radio>
+          <ion-radio class="form-control" ng-model="PatientDetail.gender" ng-value="'Female'" required><span >Female</span></ion-radio>
+        </div> -->
+
+
+        <div class="form-group" keyboard-attach>
+          <!-- <ionic-datepicker date="currentDate" min="minDate" max="maxDate" callback="datePickerCallback">
+              <button class="button button-block button-positive"> {{ currentDate | date:'MMMM/dd/yyyy' }} </button>
+          </ionic-datepicker> -->
+          <!-- <div class="to-date">
+              <p>To {{toDate| date: "dd-MM-yyyy"}}<span><i class="ion-ios-calendar-outline" ng-click="openDatePickerTo();"></i></span></p>
+          </div> -->
+          <!-- <input placeholder="DOB" class="textbox-n" type="text" ng-model="PatientDetail.dob" onfocus="(this.type='date')"  id="date" required> -->
+          <!-- <input  type="date"  placeholder="DOB" name="patient_fname"  ng-model="PatientDetail.dob" no-special-char required> -->
+          <input type='text' placeholder="DOB"  ng-click="openDatePickerDOB();" ng-value="dateOfBirth| date: 'dd-MM-yyyy' " required readonly="true" style="background-color:none !important;">
+        </div>
+    </form>
+  </div>
+
+  <div class="bottom-content">
+    <button class="login_button button button-block button-assertive"  type="submit" ng-click="validateUser(PatientReg1.$valid)"  ><span>Next</span></button>
+    <div class="tAndC">
+      <div class="terms">
+        <h2 > By Signing in, I agree to DoctorQuick's <br/><a ng-click="termsAndCond();">Terms and Conditions</a>  </h2>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>
+<!-- <ion-footer-bar  >
+ng-disabled="PatientReg1.$invalid"
+          <button class="bottom-content login_button button button-block button-assertive"  type="submit" ng-click="validateUser(PatientReg1.$valid)" linked="link"  ><span>Next</span></button>
+          <h2 > By Signing in, I agree to DoctorQuicks <br/><a ng-click="termsAndCond();">Terms and Conditions</a>  </h2>
+
+</ion-footer-bar> -->
+</ion-view>

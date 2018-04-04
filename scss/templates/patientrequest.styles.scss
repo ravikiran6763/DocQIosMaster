@@ -1,0 +1,120 @@
+.patient-request-view
+{
+    background-color:#ffffff !important;
+    font-family: Ubuntu,bold,sans-serif !important;
+
+    .top-content{
+      width: 100%;
+      height: 40%;
+      .imageContainer{
+        width: 30%;
+        height: 25% !important;
+        margin: 0 auto;
+        img{
+          width: 100%;
+          border-radius: 60%;
+          padding: 6%;
+          background-color: #dedad7 !important;
+          margin-top: 14%;
+        }
+        i{
+          position: absolute;
+          padding-left: 23%;
+          padding-top: 0;
+          margin-top: 5%;
+        }
+      }
+      h1{
+        font-size: 130%;
+        text-align: center;
+        margin-top: 24%;
+        line-height: 20%;
+      }
+      h2{
+        font-size: 85%;
+        text-align: center;
+      }
+
+    }
+  .callReq{
+    width: 100%;
+    margin-top: 17% !important;
+
+    h4,h5{
+      text-align: center !important;
+    }
+
+  }
+  .callAcc{
+    width: 100%;
+    margin-top: 17% !important;
+
+    h4,h5{
+      text-align: center !important;
+    }
+    h4{
+      margin-left: 18vw !important;
+    }
+    i{
+      float: right !important;
+      margin-right: 12vw !important;
+      margin-top: -6vh !important;
+      font-size: 7vw !important;
+      color: #28a54c !important;
+    }
+
+  }
+  i{
+    position: inherit !important;
+    margin-left: 46vw !important;
+    font-size: 15vw !important;
+  }
+  .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+	.bottom-content
+	{
+
+		padding-top: 5px;
+     .active{
+      background-color: green !important;
+
+    }
+    // .button-calm.activated{
+    //   background-color:#517b2f !important;
+    // }
+    // background-color: yellow;
+  //  box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+       .button-bar {
+         width: 100% !important;
+       }
+       .button
+        {
+          color:#100;
+          font-weight: medium;//bold
+          font-size: 145%;//previous val 20
+          width:100%;
+          background-color: #e2e2e2;
+          box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+          font-family: Ubuntu,bold,sans-serif !important;
+
+        }
+        .deny-btn{
+              background-image: url(../img/dq_request_decline_up_540x960.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              padding-top: 45%;
+
+        }
+        .accpt-btn{
+              background-image: url(../img/dq_request_accept_up_540x960.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              padding-top: 45%;
+
+        }
+
+	}
+}

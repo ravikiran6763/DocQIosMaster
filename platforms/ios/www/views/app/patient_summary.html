@@ -1,0 +1,63 @@
+<ion-view class="summary-view" cache-view="false" >
+  <ion-content  scrollbar-y="false" ng-repeat="consult in myDoctor">
+    <div class="top-content">
+      <div class="details">
+        <div class="profileImage">
+          <!-- <img src="./img/doc.jpg"> -->
+          <img  ng-hide="consult.docImage2 == null "ng-src="{{consult.docImage2}}"   >
+          <img  ng-show="consult.docImage2 == null " ng-src="img/doc.jpg" >
+
+        </div>
+        <div class="name-content">
+          <h2>Dr.{{consult.doctorFname | capitalize}} {{consult.doctorMname | capitalize}} {{consult.doctorLname | capitalize}}</h2>
+          <p>{{consult.doctorDegrees}}<br>Practising since {{consult.practicingSince}} </p>
+
+          <div class="ratingContainer">
+            <div>
+              <span class="stars " style="margin: -30px 0 0 19px;" ng-show="{{consult.ratingCount == 0}}">
+                <span ng-style="{ 'width': getStars(0) }"></span>
+              </span>
+              <span class="stars " style="margin: -30px 0 0 19px;" ng-show="{{consult.ratingCount != 0}}">
+                <span ng-style="{ 'width': getStars(consult.ratings/consult.ratingCount) }"></span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="rateClass">
+      <div class="card ">
+
+          <div class="row">
+            <div class="col">Add doctor to favorites</div>
+            <div class="col-30 " >
+            <!-- <i class="icon  ion-android-favorite-outline"    on-icon="ion-android-favorite-outline" off-icon="ion-android-favorite" ng-click="addToFavorite();" icon-switcher></i> -->
+            <i  class="icon ion-android-favorite" ng-show="consult.fav >= 1" ng-click="removeFavorite();"></i>
+            <i id="like" ng-show="consult.fav == 0" ng-class="{'icon ion-android-favorite': liked, 'icon ion-android-favorite-outline': !liked}" ng-click="addToFavorite(liked=!liked);"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">Rate doctor</div>
+            <div >
+              <a href="javascript:" ng-repeat="r in ratingArr" style="text-decoration:none; font-size: 150%; ">
+                <i class="icon {{r.icon}}" ng-click="setRating(r.ratings,r.value)"></i>
+              </a>
+            </div>
+          </div>
+      </div>
+
+    </div>
+    <div class="lowRatesComment" ng-show="unhappy">
+        <p>Please share details with us why you were<br>unhappy with the consultation so that we <br>can improve our services.</p>
+        <textarea name="ratingComments" id="ratingComments" ng-model="ratingComments.comment">
+        </textarea>
+        <div class="btn-content">
+          <button class="button button-block" ng-click="sendRatings();">Send</button>
+        </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

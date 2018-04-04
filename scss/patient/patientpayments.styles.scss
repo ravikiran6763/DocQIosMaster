@@ -1,0 +1,264 @@
+.patient-payment-view
+{
+  background-color: #e2e2e2 !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  ionic-content{
+    overflow: hidden !important;
+  }
+  .scroll-view{
+	  // position: relative !important;
+    height: 100% !important;
+	}
+  .top-content{
+    width: 100%;
+    height: 50%;
+    // background-color: yellow;
+    overflow: hidden !important;
+    .accDetails{
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      // background-color: green;
+      .walletDetails{
+        width: 100%;
+        height: 40%;
+        // background-color: red;
+        .walletLogo{
+            width: 15%;
+            height: 50%;
+            margin: 0 auto;
+            padding-top: 4%;
+            // background-color: white;
+        }
+        h1{
+          font-family: inherit;
+          font-family: inherit;
+          font-size: 150%;
+          text-align: center;
+        }
+      }
+
+      .balanceAmt{
+        width: 100%;
+        height: 32%;
+        // background-color:pink;
+        p{
+          padding-top: 6%;
+          font-size: 120%;
+        }
+        span{
+          float: right;
+        }
+
+      }
+      .buttons{
+        width: 100%;
+        height: 20%;
+        margin-left: 3%;
+
+        .refund{
+            //background-color: green;
+            width: 50%;
+            float: left;
+            .button{
+              width: 90%;
+              background-color: #a1a1a1 !important;
+              border: 1px solid #9c9c9c;
+            }
+            .button-calm.activated{
+      				background-color: #808080 !important;
+      			}
+        }
+        .topup{
+            //background-color: green;
+            width: 50%;
+            float: left;
+            .button{
+              width: 90%;
+              background-color: #6aa13e !important;
+              border: 1px solid #619b3b;
+            }
+            .button-stable.activated{
+      				background-color: #517b2f !important;
+      			}
+        }
+
+      }
+    }
+
+  }
+  .item-divider {
+    padding-top: 2%;
+    padding-bottom: 0%;
+    background-color: #dbdbdb;
+    color: #222;
+    font-weight: 600;
+    height: 8%;
+    line-height: 7vh;
+    text-align: center;
+    border-top: 2px solid white;
+  }
+  .bottom-content{
+    width: 100%;
+    height: 40%;
+    box-shadow: inset 0px 10px 10px -10px rgba(0,0,0,0.8);
+    overflow: scroll !important;
+
+
+  li {
+    height: 30%;
+    border-bottom: 2px solid #dadada;
+    margin-top: 1%;
+    @include clearfix();
+
+    &:first-child {
+      //box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    }
+
+    &:last-child {
+      border-bottom: none !important;
+      margin-bottom: 10px auto;
+    }
+
+    .profile-img {
+      width: 16%;
+      float: left;
+      margin: 3% 0 0 2%;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+        width: 95%;
+      }
+    }
+
+    .next-icon {
+      width: 16%;
+      float: right;
+      padding-top: 6%;
+      padding-right: 0;
+      position: relative;
+
+      .ion-chevron-right:before {
+        color: black;
+        font-size: 1.8em;
+      }
+    }
+
+    .name-content {
+      float: left;
+      padding: 11px 0 0 6px;
+        .name{
+          width: 100%;
+          margin-top: 12%;
+        }
+        .date{
+          position: absolute;
+          width: 20%;
+          margin-left: 55%;
+          margin-top: -4%;
+        }
+        .msgContent{
+          display: inline-block;
+          overflow: hidden !important;
+          height: 3vh;
+          width: 100% !important;
+          text-overflow: ellipsis !important;
+          margin-top: 2% !important;
+        }
+        .chatCount{
+          float: left !important;
+          margin: -9vh 0 0 -20vw !important;
+        }
+      p{
+          font-size: 74%;
+          margin: 0% 2%;
+          color: black;
+        }
+
+      h2{
+          // margin: 2%;
+          font-size: 110%;
+          color: black;
+          font-family: Ubuntu,bold,sans-serif !important;
+          line-height: 50%;
+        }
+
+    }
+
+  }
+
+  }
+  .payment-bottom-content{
+    background-color: #e2e2e2;
+    width: 100%;
+    height: 45%;
+    box-shadow: inset 0px 10px 10px -10px rgba(0,0,0,0.8);
+    overflow: scroll !important;
+
+
+  li {
+    height: 31.3%;
+    border-bottom: 2px solid #678929;
+    padding-top: 5% ;
+
+    @include clearfix();
+
+    &:first-child {
+      //box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    }
+
+    &:last-child {
+      border-bottom: none !important;
+      margin-bottom: 10px auto;
+    }
+
+    .profile-img {
+      width: 13%;
+    float: left;
+    margin: 1% 0 0 2%;
+
+      img {
+        margin-left: 3%;
+        margin-top: -5%;
+        width: 100%;
+        border-radius: 100%;
+      }
+    }
+
+    .next-icon {
+      width: 5%;
+      float: right;
+      padding-top: 2%;
+      padding-right: 8%;
+      position: relative;
+
+      .ion-chevron-right:before {
+        color: #ffffff;
+        font-size: 1.8em;
+      }
+    }
+
+    .name-content {
+      float: left;
+      padding: 3% 3%;
+      height: 100%;
+
+      p{
+          font-size: 80%;
+          margin: 0px;
+          color: #fff;
+        }
+
+      h2{
+        margin-top: 0;
+        font-size: 125%;
+        color: #fff;
+        font-family: Ubuntu,bold,sans-serif !important;
+        line-height: 50%;
+                }
+    }
+
+  }
+  }
+}

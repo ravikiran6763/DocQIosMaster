@@ -1,0 +1,50 @@
+<ion-view class="change_pwd-view" cache-view="false">
+  <!-- <ion-header-bar class="bar-header bar-light">
+
+  </ion-header-bar> -->
+<ion-content scroll="false">
+  <div class="top-content ">
+      <div class="regTitle">
+          <div class="regHeader">
+              <p>Update your email from the below form</p>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="form-content">
+    <form name="form" ng-submit="submitForm($event)" ng-class={submitted:submitted}>
+        <div class="form-group" >
+          <input ng-model="emailToUpdate.email" type="email" name="email" placeholder="New Email" validate-email required >
+        </div>
+        <div class="form-group" >
+          <input ng-model="emailToUpdate.verify" type="email" name="verify" placeholder="Confirm New Email" validate-email required  >
+        </div>
+        <!-- <div class="error" ng-show="form.verify.$error.nxEqual">Password does not match!</div> -->
+
+    </form>
+  </div>
+
+  <div class="bottom-content" style="margin-top:-10% ">
+    <button class=" login_button button button-block button-assertive" ng-click="updateDoctorEmail();">
+    Update
+    </button>
+    <br>
+    <div>
+      <center>
+        <!-- {{email}} -->
+        <i class="back-btn-cls ion-checkmark-circled"  ng-show="emailVerified"></i>
+        <i class="back-btn-cls ion-android-alert"  ng-hide="emailVerified"></i>
+        <h5 style="color:#6aa13e;" ng-show="Verified">Current email is verified</h5>
+        <h5 style="color: rgb(142, 31, 3);" ng-hide="Verified">Current email is unverified</h5>
+
+      </center>
+
+      <center><h5 ng-hide="Verified"  ><a style="color: #6aa13e; text-decoration: underline;" ng-click = "sendVerificationMailToDoc();">Click here to verify</a></h5></center>
+    </div>
+
+
+  </div>
+
+</ion-content>
+</ion-view>

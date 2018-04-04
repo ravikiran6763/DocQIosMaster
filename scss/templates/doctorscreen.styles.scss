@@ -1,0 +1,197 @@
+.doctorscreen-view
+{
+  font-family: Ubuntu,bold,sans-serif !important;
+  background-color: #6fa22c;
+	ion-content{
+		overflow: hidden !important;
+	}
+
+  .slider-content{
+    // background-color: red;
+    width: 100%;
+    height: 50%;
+
+  }
+  .noRequests{
+    background-color: red;
+    position: absolute;
+    margin-top: 45vh;
+    z-index: 0;
+    visibility: hidden;
+  }
+
+  .slides.slider, .slider-slides {
+    height: 100%;
+  }
+
+  .slider-slide img {
+      height: 100%;
+  }
+
+  .slider-pager-page i {
+    color: #0D0F10;
+  }
+
+  .slider-pager-page.active i {
+    color: #6aa433 !important;
+  }
+
+  .item-divider {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #dbdbdb;
+    color: #222;
+    font-weight: 600;
+    height: 8%;
+    line-height: 7vh;
+    text-align: center;
+  }
+  .item-complex .item-content{
+    background-color: #6aa433;
+    border-bottom: 11px;
+  }
+
+  .item-content{
+    border: 1px solid #86b553;
+
+  }
+    .item-avatar:last-child{
+    border-bottom: none;
+  }
+  .devider{
+    height: 5%;
+  }
+
+  .bottom-content
+  {
+      background-color: #6aa433;
+      width: 100%;
+      height: 45%;
+      box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+      overflow: scroll !important;
+      position: absolute;
+      // visibility: hidden;
+      z-index: 1;
+
+
+    li {
+      height: 31.3%;
+      border-bottom: 1px solid #fff;
+
+      @include clearfix();
+
+      &:first-child {
+        //box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+      }
+
+      &:last-child {
+        border-bottom: none !important;
+        margin-bottom: 10px auto;
+      }
+
+      .profile-img {
+        width: 15vw;
+        float: left;
+        margin: 2vh 0px 0px 2vh;
+
+        img {
+          width: 100%;
+          border-radius: 55%;
+          max-height: 14vw;
+        }
+      }
+
+      .next-icon {
+          width: 4vw;
+          float: right;
+          text-align: center;
+          margin-right: 10px;
+          // height: 100%;
+          line-height: 14vh;
+          margin-top: 5vh;
+
+        .ion-chevron-right:before {
+          color: #ffffff;
+          font-size: 1.8em;
+        }
+      }
+
+      .name-content {
+        float: left;
+        padding: 2vh 2vh;
+        height: 100%;
+
+        p{
+            font-size: 3.2vw;
+            line-height: 2.8vh;
+            margin: 0px;
+            color: #fff;
+          }
+
+        h2{
+            margin: 2vh 0 0 0;
+            font-size: 5vw;
+            color: #fff;
+            font-family: Ubuntu,bold,sans-serif !important;
+            line-height: 6vw;
+          }
+      }
+
+    }
+  }
+
+  .toggle-item{
+    background-color: transparent;
+    border: none;
+    .toggle{
+      margin-top: 5vh;
+      margin-left: 31vw;
+    }
+    .toggle .track{
+      width: 30vw;
+      height: 6vh;
+      margin-top: 1vh;
+      background-color: red;
+      border: none;
+      &:after{
+          right: 14vw;
+      }
+    }
+    .toggle .handle{
+      width: 13vw;
+      height: 7vh;
+      margin-top: 0vh;
+      left: 1vw;
+
+      &:after{
+          right: 14vw;
+      }
+    }
+    .toggle.toggle-assertive input:checked + .handle {
+        border-color: #6aa13e;
+        background-color: #6aa13e;
+        /* left: 9vw; */
+    }
+    .toggle.toggle-assertive input:checked + .track .handle{
+          left: 14vw !important;
+    }
+
+    .status-txt-cls {
+
+      position: absolute;
+      top: 3vh;
+      color: #fff;
+      left: 14vw;
+      font-size: 4vw;
+      }
+
+    .toggle.toggle-assertive input:checked + .track .status-txt-cls {
+      left: 4vw !important;
+    }
+
+    .OnlineStatus{
+    background-color: transparent !important;
+    height: 18vh !important;
+    }
+  }
+}

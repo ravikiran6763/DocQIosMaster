@@ -1,0 +1,27 @@
+<ion-view>
+  <ion-content>
+
+
+     <div>
+          <a class="item item-avatar item-icon-right" ng-repeat="doc in doclist" ng-click="viewDocProfile({{doc.doctorPhone}});">
+            <img src="img/doc.jpg">
+            <h2>Dr.{{doc.doctorFname}} {{doc.doctorLname}} </h2> <i class="icon ion-android-add-circle"></i>
+            <p>{{doc.doctorDegrees}}</p>
+              <p>Practicing since {{doc.doctorPhone}}{{doc.practicingSince}}<span>*****</span></p>
+
+          </a>
+
+      </div>
+
+        <p ng-model="stmt">  </p>
+
+<!--
+     <ul>
+    <li ng-repeat="doc in doclist">
+      {{ doc.doctorFname }}
+    </li>
+  </ul> -->
+
+
+  </ion-content>
+</ion-view>

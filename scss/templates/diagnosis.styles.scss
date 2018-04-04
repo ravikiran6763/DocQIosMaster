@@ -1,0 +1,67 @@
+.prescription-view
+{
+	background-color: #e2e2e2 !important;
+	font-family: Ubuntu,bold,sans-serif !important;
+
+	.top-content{
+		width: 100% !important;
+		height: 12% !important;
+		margin: 0 auto;
+
+		.details{
+			width: 90% !important;
+			margin: 0 auto !important;
+			.profileImage{
+				width: 25%;
+				margin-top: 2%;
+				img {
+					border-radius: 100%;
+					width: 85%;
+					border: 5% solid #dedae9;
+				}
+			}
+			.name-content {
+				width: 75%;
+				margin-left: 26%;
+
+				h2{
+					margin-top: -18%;
+					font-size: 104%;
+					color: black;
+					font-family: Ubuntu,bold,sans-serif !important;
+					}
+			}
+
+
+		}
+
+	}
+	.buttons{
+				width: 90%;
+				margin: 0 auto;
+					.clear-field{
+						color: #343434;
+						margin-top: 4vh;
+						margin-left: 0vw;
+						float: left;
+						font-weight: 300;
+					}
+					.done{
+						color: #343434;
+					margin-top: 4vh;
+					/* margin-left: 60vw; */
+					float: right;
+					font-weight: 300;
+					}
+	}
+
+	.prescText{
+		textarea {
+				width: 100% !important;
+				height: 50% !important;
+				font-family: inherit;
+				padding: 5%;
+		}
+	}
+
+}

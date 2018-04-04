@@ -1,0 +1,190 @@
+
+.item-icon-left .icon:before, .item-icon-right .icon:before {
+    display: block;
+    width: 26px !important;
+    text-align: center;
+}
+
+.ion-android-bookmark::before {
+    content: url('../img/icon_small_profile.svg');
+}
+
+.ion-ios-home::before {
+    content: url('../img/icon_small_home.svg');
+    color: #6aa433;
+    // font-size: 80%;
+}
+
+.ion-radio-waves::before {
+    content: url('../img/icon_small_mydoctors.svg');
+}
+
+.ion-social-wordpress::before {
+    content: url('../img/icon_small_myconsultations.svg');
+}
+
+.ion-wand::before {
+    content: url('../img/icon_small_payments.svg');
+}
+
+.ion-asterisk::before {
+    content: url('../img/icon_small_reviewapp.svg');
+}
+
+.ion-document::before {
+    content: url('../img/icon_small_notifications.svg');
+}
+
+.ion-gear-a::before {
+    content: url('../img/icon_small_customer-care.svg');
+}
+.ion-ios-chatbubble-outline::before {
+      margin: -2% 0 0 0% !important;
+      font-size: 220% !important;
+}
+.ion-android-cloud-circle::before {
+    content: url('../img/icon_small_rate.svg');
+    max-width: 100%;
+    height: auto;
+    width: 2vmin;
+}
+
+.ion-android-cloud-done::before {
+    content: url('../img/icon_small_terms.svg');
+    max-width: 100%;
+    height: auto;
+    width: 2vmin;
+}
+
+.ion-ios-chatbubble-outline::before{
+    content: "";
+    color: #fff;
+    font-size: 10vw;
+    position: absolute;
+    z-index: -1;
+    /* float: right; */
+    margin: 2px 0 0 8px;
+}
+
+//first page icon images
+.ion-android-happy::before {
+    content: url('../img/dq_icon_speciality_540x960.png') ;
+    max-width: 100%;
+    height: auto;
+    width: 2vmin;
+  //  background-color: red;
+}
+.ion-android-search::before {
+    content: url('..//img/dq_icon_search_540x960.png');
+}
+.ion-ios-medkit::before {
+    content: url('../img/dq_icon_doctor_540x960.png');
+}
+
+.ion-ios-arrow-right::before{
+    content: url('../img/dq_arrow_grey_forward_540x960.png');
+}
+//front page ionicons-font-path
+.ion-android-add-circle::before{
+    content: url('../img/dq_notifier_online_540x960.png');
+    // padding: 30px 10px;
+    // padding-top: 0px;
+    // padding-left: 100px;
+}
+
+.ion-android-arrow-dropdown-circle::before{
+    content: url('../img/dq_notifier_offline_540x960.png');
+    // padding: 30px 10px;
+    // padding-top: 0px;
+    // padding-left: 100px;
+}
+
+.ion-checkmark-circled:before {
+    color: #6aa13e;
+}
+
+.ion-android-alert::before{
+    // content: url('../img/dq_notifier_offline2_540x960.png');
+    color: rgb(142, 31, 3);
+
+}
+
+//Doctor screens
+.ion-android-wifi::before{
+    content: url('../img/dq_icon_small_payments_540x960.png');
+}
+
+.ion-log-out::before{
+    content: url('../img/icon_small_signout.svg');
+}
+
+.ion-ios-calendar-outline::before{
+ content: url('../img/dq_icon_calendar_540x960.png');
+ font-size: 9vw;
+ padding-right: 2vw;
+ line-height: 0;
+ float: right;
+ margin-right: 2px;
+}
+// .ion-alert-circled::before{
+//  content: url('../img/warning.png');
+//  font-size: 70% !important;
+// }
+
+//ratingsObject ion-ios-star
+.ion-ios-star::before{
+  color: #fbb03a !important;
+  font-size: 130% !important;
+
+}
+.ion-ios-star-outline::before{
+  color: black;
+  font-size: 130% !important;
+}
+
+.ion-android-favorite-outline:before {
+  content: "";
+  font-size: 190%;
+  /* margin: -1px; */
+  color: teal;
+  float: right;
+  margin-top: 36%;
+}
+.ion-android-favorite:before {
+    content: "";
+    font-size: 190%;
+    /* margin: -1px; */
+    color: teal;
+    float: right;
+    margin-top: 36%;
+}
+.ion-eye:before  {
+content: "";
+margin: -5vh 11vw 0 0;
+}
+
+.ion-eye-disabled:before  {
+content: "\f306";
+margin: -5vh 11vw 0 0;
+}
+.ion-alert-circled:before {
+    font-size: 170%;
+    color: white;
+    position: absolute;
+}
+
+.ion-android-share-alt:before {
+    font-size: 6vh;
+    position: absolute;
+    color: teal;
+    margin: 0 auto;
+    z-index: 999;
+    margin: -11% 0 0 85%;
+}
+
+.ion-edit:before {
+  font-size: 150% !important;
+}
+.ion-android-delete:before {
+  font-size: 150% !important;
+}

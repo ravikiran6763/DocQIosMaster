@@ -1,0 +1,94 @@
+.customercare-view
+{
+	background-color: #e2e2e2 !important;
+	font-family: Ubuntu,bold,sans-serif !important;
+		ion-content{
+			overflow: scroll !important;
+		}
+		.top-content{
+			width: 100%;
+			height: 60%;
+			// background-color: red;
+			.queryContent{
+				width: 85%;
+				height: 100%;
+				margin: 0 auto;
+				// background-color: blue;
+					.msg{
+						width: 100%;
+						height: 20%;
+						// background-color: teal;
+						h2{
+							font-family: inherit;
+							font-family: inherit;
+							font-size: 108%;
+							padding-top: 5%;
+						}
+					}
+					.textBox{
+						height: 60%;
+						width: 100%;
+						// background-color: yellow;
+						textarea {
+						    width: 100% !important;
+								height: 94% !important;
+								font-family: inherit;
+								padding: 20px !important;
+						}
+					}
+					.sendButton{
+						height: 26%;
+						width: 100%;
+						margin-top: 0 !important;
+						// background-color: green;
+						.button{
+							width: 30%;
+							float: right;
+							color: #fff;
+						}
+					}
+			}
+		}
+		.bottom-content{
+			width: 100%;
+			// background-color:teal;
+			height: 40%;
+			box-shadow: inset 0px 10px 10px -10px rgba(0,0,0,0.8);
+			.callBack{
+					width: 85%;
+					height: 100%;
+					margin: 0 auto;
+					// background-color: red;
+					.workingHrs{
+						width: 80%;
+						height: 60%;
+						margin: 0 auto;
+						// background-color: blue;
+						.timerLogo{
+							width: 20%;
+							margin: 0 auto;
+							padding-top: 8%;
+						}
+						h3{
+							font-family: inherit;
+							font-family: inherit;
+							font-size: 100%;
+							text-align: center;
+						}
+					}
+					.callBackButton{
+						width: 100%;
+						text-align: center;
+						margin: 0 auto;
+						.button{
+							color: #fff;
+							width: 100%;
+						}
+					}
+			}
+
+
+		}
+
+
+}

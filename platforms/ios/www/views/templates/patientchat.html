@@ -1,0 +1,42 @@
+<ion-view class="patient-chat-view" cache-view="false">
+  <ion-nav-title has-header>
+    <span>Messages</span>
+  </ion-nav-title>
+  <ion-content scroll="false">
+    <a class="item item-avatar item-icon-right" >
+      <img src="img/doc.jpg">
+      <h2>Dr.FirstName LastName </h2> <i class="icon ion-android-add-circle"></i>
+      <p class="degrees">General Medicine,Degrees</p>
+        <p class="practice">Practicing since 1999<span>*****</span><span>(4.9/27)</span></p>
+    </a>
+    <div class="top-content row">
+      <div class="col col-center">
+
+      </div>
+    </div>
+    <div class="bottom-content row">
+      <div class="col col-center">
+
+      </div>
+    </div>
+  </ion-content>
+  <!--<ion-footer-bar align-title="left" class="bar-assertive item-icon-left">
+  <i class="icon ion-arrow-up-c"></i>
+  <label class="item item-input" name="chat-message">
+      <input type="text"  ng-model="chat-message">
+  </label>
+</ion-footer-bar>-->
+<form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+             <ion-footer-bar class="bar-stable item-input-inset message-footer " keyboard-attach>
+
+                 <label class="item-input-wrapper item-icon-left">
+                     <i class="icon ion-arrow-up-c"></i><textarea ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+                 </label>
+                 <div class="footer-btn-wrap">
+                   <button class="button button-icon icon ion-android-send footer-btn" type="submit"
+                       ng-disabled="!input.message || input.message === ''">
+                   </button>
+                 </div>
+             </ion-footer-bar>
+</form>
+</ion-view>

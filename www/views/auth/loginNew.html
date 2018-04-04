@@ -1,0 +1,107 @@
+<ion-view class="dqLogin-view" cache-view="true">
+  <!-- <ion-header-bar class="bar-header bar-light">
+
+  </ion-header-bar> -->
+<ion-content scroll="false">
+  <div class="top-content ">
+    <div class="logoContainer">
+      <div class="logo ">
+        <img  ng-src="img/dq_login_logo.png" >
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="login-content">
+    <form  novalidate name="loginForm" ng-submit="sendForm($event)" ng-class={loginDatasubmitted:loginDatasubmitted}>
+
+      <div class="form-group" ng-class={loginDatasubmitted:loginDatasubmitted}>
+        <span class="input-group-addon"  ng-model="country.dial_code" >+91</span>
+        <input class="form-control"  type="tel" placeholder="Phone Number" name="user_phone" string-to-number ng-model="loginData.phone" mask-clean='true'  mask='9999999999' restrict="reject" clean="true" ng-intl-tel-input required></input>
+        <!-- <input type='tel' class="form-control"  mask-clean='true' placeholder="Mobile Number" ng-model='loginData.phone' mask='9999999999' restrict="reject" clean="true" international-phone-number preferred-countries="pl, de" required ng-class={submitted:submitted}><span style=" margin: -10% 0 0 2% !important; font-size: 100% !important;">+91</span></input> -->
+
+      </div>
+      <div class="form-group">
+
+        <!-- <span class="input-group-addon"  ng-model="country.dial_code" ><i class="icon ion-android-lock"></i></span> -->
+        <input class="form-control" type="password"  placeholder="Password" name="user_pin" ng-model="loginData.pin" ng-focus="getPassword(loginData.phone);" required  >
+      </div>
+
+      <button class="button button-block button-assertive" ng-click="doLogIn(loginData);" >
+        Login
+      </button>
+
+      <div class="tAndC">
+        <div class="terms">
+          <h2 > By Logging in you agree to our <a ng-click="termsAndCond();"> terms & conditions</a>  </h2>
+          <!-- <h2 > By Logging in you agree to our <a href="#" onclick="window.open('http://www.doctorquick.com/terms-conditions-of-use/', '_system', 'location=yes');" >terms & conditions</a>  </h2> -->
+
+        </div>
+      </div>
+      <div class="rememberMe">
+        <div class="remember">
+          <input type="checkbox" name="rememberMe" ng-model="user.rememberMe" ng-click="rememberme();">
+            <p >Remember me</p>
+        </div>
+        <div class="forgot">
+
+          <a ui-sref="auth.getPassword">
+          Forgot Password
+          </a>
+        </div>
+
+
+      </div>
+
+
+    </form>
+
+          <div class="regButton">
+            <button class="button button-positive button-block" ng-click="registerPatient();" >
+              Register
+            </button>
+          </div>
+
+  </div>
+
+  <div class="bottom-content">
+    <div class="leftbuttons">
+      <!-- <button class="button">Left Button</button> -->
+      <a>
+        <img class="img2" style="width: 22% !important; " ng-src="img/play_demo_off.svg" ng-click="playVideo()"><br>
+        <p class="doc_reg">Learn More</p>
+      </a>
+      <!-- <a href="#" class="btn btn-default" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/xrLtb9Pkkjg?rel=0&amp;showinfo=0">VIDEO</a>
+
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div>
+                        <iframe width="100%" height="350" src=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    </div>
+
+    <div class="rightbuttons" >
+      <!-- <button class="button">Right Button</button> -->
+      <a  ui-sref="auth.doctorRegistration">
+        <img style="width: 22% !important; " class="img2" class="modal transparent fullscreen-player"  ng-src="img/register_doctor_off.svg"><br><p class="doc_reg" >Register as a Doctor</p>
+      </a>
+    </div>
+
+  </div>
+
+</ion-content>
+<!-- <ion-footer-bar  >
+
+          <button class="bottom-content login_button button button-block button-assertive"  type="submit" ng-click="validateUser(PatientReg1.$valid)" linked="link"  ><span>Next</span></button>
+          <h2 > By Signing in, I agree to DoctorQuicks <br/><a ng-click="termsAndCond();">Terms and Conditions</a>  </h2>
+
+</ion-footer-bar> -->
+</ion-view>

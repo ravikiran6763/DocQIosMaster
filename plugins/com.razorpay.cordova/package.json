@@ -1,0 +1,59 @@
+{
+  "_from": "com.razorpay.cordova@^1.3.4",
+  "_id": "com.razorpay.cordova@1.3.5",
+  "_inBundle": false,
+  "_integrity": "sha512-sRbwdKFyOXE3EWNXtfAjcKD6kSI90wIslbO6ZZ6PalJOwVFBMxA8n1WdYwlKS3rzJS+c4q3vfUwvGMOiolhHog==",
+  "_location": "/com.razorpay.cordova",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "com.razorpay.cordova@^1.3.4",
+    "name": "com.razorpay.cordova",
+    "escapedName": "com.razorpay.cordova",
+    "rawSpec": "^1.3.4",
+    "saveSpec": null,
+    "fetchSpec": "^1.3.4"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/com.razorpay.cordova/-/com.razorpay.cordova-1.3.5.tgz",
+  "_shasum": "f288a1d6324dc8b6f98064b87e8222695bd2964c",
+  "_spec": "com.razorpay.cordova@^1.3.4",
+  "_where": "/Users/amittantia/Desktop/rkiran/DocQIosMaster",
+  "author": {
+    "name": "Razorpay Developers",
+    "email": "developers@razorpay.com",
+    "url": "https://razorpay.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/razorpay/razorpay-cordova/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Cordova/Phonegap bindings for Razorpay's Mobile SDKs",
+  "homepage": "https://github.com/razorpay/razorpay-cordova#readme",
+  "keywords": [
+    "razorpay",
+    "ecosystem:cordova",
+    "cordova",
+    "phonegap",
+    "ionic",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-browser"
+  ],
+  "license": "ISC",
+  "main": "Readme.md",
+  "name": "com.razorpay.cordova",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razorpay/razorpay-cordova.git"
+  },
+  "scripts": {
+    "postinstall": "node -e \"process.platform !== 'win32' && require('child_process').execSync('sh scripts/download_ios_framework.sh')\""
+  },
+  "version": "1.3.5"
+}

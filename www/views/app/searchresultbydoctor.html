@@ -1,0 +1,61 @@
+<ion-view class="mydoctor-profile-view" cache-view="false">
+  <ion-content>
+
+    <div class="myDoctor-list">
+
+      <ul>
+        <!-- <li  ui-sref="app.viewdoctor_profile({myDocFname:doctor.doctorFname,myDocLname:doctor.doctorLname,myDocNum:doctor.doctorPhone,myDocDegree:doctor.doctorDegrees})"> -->
+      <li  ng-repeat="doc in doclist | limitTo:pageSize" ng-click="docClicked({{doc.doctorPhone}});">
+        <div class="profile-img">
+          <!-- <img src="./img/dq_icon_speciality_540x960.png"> -->
+          <img  ng-hide="doc.docImage2 == null "ng-src="{{doc.docImage2}}"   >
+          <img  ng-show="doc.docImage2 == null " ng-src="img/doc.jpg" >
+          <!-- <img src="img/doc.jpg"> -->
+
+          <!-- <ionic-letter-avatar data={{doctor.doctorFname}}  shape="round" charcount='1'></ionic-letter-avatar> -->
+        </div>
+        <div class="name-content">
+          <h2>Dr. {{doc.doctorFname |capitalize }} {{doc.doctorLname |capitalize }} </h2>
+
+          <p>{{doc.doctorDegrees}}</p>
+
+          <p>Practicing since {{doc.practicingSince}}</p>
+
+            <div class="ratingContainer" ng-show="{{doc.ratingCount > 5}}">
+              <span ng-repeat="rating in ratings">
+                <!-- <div    star-rating rating-value="doc.ratings / doc.totalRates" max=5 >
+                </div> -->
+                 <!-- <ionic-ratings ratingsobj='ratingsObject' rating-value='rating.current' index='$index'></ionic-ratings> -->
+                <span class="stars " ng-show="{{doc.ratingCount == 0}}">
+                  <span ng-style="{ 'width': getStars(0) }"></span>
+                </span>
+                <span class="stars " ng-show="{{doc.ratingCount != 0}}">
+                  <span ng-style="{ 'width': getStars(doc.ratings/doc.ratingCount) }"></span>
+                </span>
+                <!-- <div   ng-show="{{doc.ratingCount != 0}}"  star-rating rating-value="doc.ratings/doc.ratingCount"  max=5 >
+                </div> -->
+
+              <p class="totalReview">
+                  ({{doc.ratingCount}} Reviews)
+              </p>
+                </span>
+            </div>
+
+
+        </div>
+        <div class="next-icon">
+          <i class="icon ion-android-add-circle" ng-show="{{doc.onoff == 1}}"></i>
+          <i class="icon ion-android-arrow-dropdown-circle" ng-show="{{doc.onoff == 2}}"></i>
+        </div>
+      </li>
+    </ul>
+      </div>
+        <!-- <ion-infinite-scroll on-infinite="loadNextPage()" ng-if="!moredata" distance="2">
+        </ion-infinite-scroll> -->
+        <center>
+        <p ng-click="loadNextPage()" ng-hide="showMore" style="color:teal;font-family:inherit;">  Show More </p>
+
+
+        </center>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,171 @@
+.dqLogin-view
+{
+	ion-content{
+		overflow:  hidden !important;
+	}
+	.loginPopup.popup-container.popup-showing {
+	    visibility: visible;
+	    margin-top: 125% !important;
+	    position: relative !important;
+	}
+
+	.top-content{
+		width: 100% !important;
+		height: 30% !important;
+		.logoContainer{
+			position: relative;
+			width: 70% !important;
+			margin: 0 auto;
+			.logo{
+				width: 100% !important;
+				height: 100% !important;
+				margin: 0 auto;
+				img{
+					width: 100% !important;
+					// height: 80% !important;
+					margin-top: 10% !important
+				}
+			}
+		}
+
+	}
+	.login-content{
+		width: 100% !important;
+		height: 55% !important;
+		margin-top: 4% !important;
+
+		.form-group{
+			width: 80% !important;
+			margin: 0 auto;
+
+			input[type="tel"]{
+			margin-top: 4% !important;
+			height: 16% !important;
+			padding-left: 15% !important;
+			padding-top: 2% !important;
+			width: 100% !important;
+			// height: 100%;
+			}
+			input[type="password"]{
+			margin-top: 4% !important;
+			height: 16% !important;
+			padding-left: 10px;
+			width: 100% !important;
+			// height: 100%;
+			}
+			.input-group-addon:first-child {
+			    /* border-right: 0; */
+			    position: absolute !important;
+			    margin: 6% 0 0 2% !important;
+			    border: none;
+			    background: #fff;
+			}
+		}
+		.button {
+					color: #ffffff;
+					height: 14% !important;
+					width: 80%;
+					margin: 4% 0 0 10%;
+					font-size: 115%;
+					//position: absolute;
+
+			}
+			.tAndC{
+				width: 100% !important;
+				height: 10% !important;
+				margin: 0 auto;
+				.terms{
+					width: 100% !important;
+			    margin: 0 auto;
+			    font-size: smaller;
+					h2{
+							font-size: 97%;
+							color: black;
+							text-align: center;
+							margin-top: 1%;
+							line-height: 1.5;
+						a{
+							color: inherit !important;
+							text-decoration: underline !important;
+						}
+					}
+				}
+
+			}
+		.rememberMe{
+
+			width: 80%;
+			margin: 0 auto;
+			.remember{
+				width: 50% !important;
+				position: absolute;
+				input[type="checkbox"]{
+					zoom: 150%;
+					margin-top: -2%;
+					position: absolute;
+				}
+				p{
+					position: absolute;
+    			margin: -2% 0 0 17%;
+				}
+			}
+			.forgot{
+				width: 40% !important;
+				position: absolute;
+				/* margin: 0 auto; */
+				margin: -1% 0 0 45%;
+				a{
+					color: inherit;
+					text-decoration: underline;
+					font-size: 98%;
+				}
+			}
+
+		}
+
+	}
+	.regButton{
+		margin-top: 5%;
+		width: 80%;
+		margin: 0 auto;
+
+		.button{
+			width: 100%;
+			margin: 10% 0 0 0;
+
+		}
+	}
+	.bottom-content{
+		width: 100% !important;
+		// height: 15% !important;
+		// background-color: teal;
+		.leftbuttons{
+			float: left;
+			width: 50%;
+			margin: 0 auto;
+			p {
+					color: #ffffff;
+					margin-left: 36%;
+			}
+			img {
+				border: 0;
+				/* margin: 0 auto; */
+				margin-left: 46%;
+			}
+		}
+		.rightbuttons{
+			float: left;
+			width: 50%;
+			margin: 0 auto;
+			p {
+					color: #ffffff;
+					margin-left: 0%;
+			}
+			img {
+				border: 0;
+				/* margin: 0 auto; */
+				margin-left: 23%;
+			}
+		}
+	}
+}

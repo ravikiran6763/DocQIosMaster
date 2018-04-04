@@ -1,0 +1,74 @@
+<ion-view class="patient-reg-3-view" cache-view="true" has-bouncing="false">
+  <!-- <ion-header-bar class="bar-header bar-light">
+
+  </ion-header-bar> -->
+<ion-content >
+  <div class="top-content ">
+      <div class="regTitle">
+          <div class="regHeader">
+            <div class="backButton " ng-click="backView();">
+              <i class="icon ion-ios-arrow-back" ></i>
+              <p>Back</p>
+
+            </div>
+                <div class="regFlowImg">
+                  <img  src="./img/iOS-Assets-v01_patient_registration_progress3.png">
+                </div>
+                <div class="regMsg">
+                  <p class="reg_message"> Please enter the 4 digit verification code in the text message sent to<br> </p>
+                  <p class="numClass">+91 {{phoneno}}</p>
+                </div>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="form-content">
+    <form name="PatientReg1" ng-submit="submitForm($event)" >
+      <div class="row otp" >
+          <div class="col">
+            <input type='tel' mask-clean='true' id="part1" maxlength="1"  ng-model='otpentered.OTP1' mask='9' restrict="reject" clean="true"  />
+          </div>
+          <div class="col">
+            <input type='tel' mask-clean='true' id="part2" maxlength="1" ng-model='otpentered.OTP2' mask='9' restrict="reject" clean="true" autofocus-when1 />
+          </div>
+          <div class="col">
+            <input type='tel' mask-clean='true' id="part3" maxlength="1" ng-model='otpentered.OTP3' mask='9' restrict="reject" clean="true" autofocus-When2/>
+          </div>
+          <div class="col">
+            <input type='tel' mask-clean='true' id="part4" maxlength="1"  ng-model='otpentered.OTP4' mask='9' restrict="reject" clean="true" autofocus-When3/>
+          </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="bottom-content">
+    <div class="buttonContent">
+      <div class="button-bar ">
+          <a class="button resend  button-assertive"  ng-click="resendOtp();" >Resend</a>
+          <a class="button confirm button-assertive"   ng-click="patientRegistration();">Confirm</a>
+      </div>
+    </div>
+
+    <!-- <button class="login_button button button-block button-assertive"  type="submit" ng-click="validateUser(PatientReg1.$valid)" linked="link"  ><span>Next</span></button> -->
+    <div class="tAndC">
+      <div class="otpTap">
+        <h2 > Didn't receive a text from DoctroQuick? <br/>Tap Resend </h2>
+      </div>
+      <div class="terms">
+        <h2 > By Signing in, I agree to DoctorQuick's <br/><a ng-click="termsAndCond();">Terms and Conditions</a>  </h2>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>
+<!-- <ion-footer-bar  >
+
+          <button class="bottom-content login_button button button-block button-assertive"  type="submit" ng-click="validateUser(PatientReg1.$valid)" linked="link"  ><span>Next</span></button>
+          <h2 > By Signing in, I agree to DoctorQuicks <br/><a ng-click="termsAndCond();">Terms and Conditions</a>  </h2>
+
+</ion-footer-bar> -->
+</ion-view>

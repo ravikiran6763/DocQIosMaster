@@ -1,0 +1,121 @@
+.patient-notes-view
+{
+  ion-content{
+    overflow-y: scroll !important;
+  }
+
+  background-color: #e2e2e2 !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  .buttons{
+      margin-top: 5vh;
+      width: 85%;
+      margin: 0 auto;
+
+    }
+
+  .card {
+    .col-75{
+      padding: 3%;
+    }
+    .row{
+      height: 8%;
+      margin: 0;
+      padding: 0;
+    }
+    font-size: 4vw;
+    max-width: 100%;
+
+     .checkbox {
+       position: absolute;
+       margin: -2% 0 0 -1%;
+       padding-left: 6%;
+       padding-top: 2%;
+      }
+    i{
+      font-size: 140%;
+      position: absolute;
+      margin-left: 17%;
+      margin-top: 2%;
+    }
+
+    .checkbox label:after {
+      content: 'hello';
+      width: 50%;
+      height: 20%;
+      position: relative;;
+      top: 1px;
+      left: -1px;
+      border: 3px solid green;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+    }
+
+
+  }
+  .description{
+
+    width: 80vmin;
+    height: 20%;
+    margin-top:5vh !important;
+    padding: 10px auto;
+    margin-left: 10vw;
+    text-align: center;
+    font-size: 4vw;
+  }
+  .button
+  {
+
+    border: none;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 4.5vw;
+  }
+
+  .top-content{
+    width: 100% !important;
+    height: 15% !important;
+    margin: 0 auto;
+
+    .details{
+      width: 90% !important;
+      margin: 0 auto !important;
+      .profileImage{
+        width: 25%;
+        margin-top: 4%;
+        img {
+          border-radius: 100%;
+          width: 85%;
+          border: 5% solid #dedae9;
+        }
+      }
+      .name-content {
+        width: 75%;
+        margin-left: 27%;
+
+        h2{
+          margin-top: -18%;
+          font-size: 104%;
+          color: black;
+          font-family: Ubuntu,bold,sans-serif !important;
+          }
+      }
+
+    }
+
+  }
+
+  .notesDescription{
+    width: 80%;
+    margin: 0 auto;
+    p{
+      text-align: center;
+      font-size: 100%;
+    }
+  }
+
+
+}

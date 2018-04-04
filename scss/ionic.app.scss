@@ -1,0 +1,184 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+$positive:                        teal !default;
+$dark:                           #20242c !default;
+$royal:                           #181b22 !default;
+$calm:                            #e2e2e2 !default;
+$assertive:                      #6aa13e !default;
+$energized:                       #a1a1a1 !default;
+$stable:                          red !default;
+
+/*-------------------------------------------------
+ MIXIN :: CLEARFIX
+—-----------------------------------------------*/
+
+
+@media (max-width: 300px) {
+    html {
+        font-size: 70% !important;
+    }
+}
+
+@media (min-width: 500px) {
+    html {
+        font-size: 80% !important;
+    }
+}
+
+@media (min-width: 700px) {
+    html {
+        font-size: 120% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 200% !important;
+    }
+}
+@mixin clearfix() {
+    clear: both;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+@mixin font-size($sizeValue: 12 ){
+	font-size: $sizeValue + px; //fallback for old browsers
+	font-size: (0.0625 * $sizeValue) + rem;
+
+}
+
+@mixin word-wrap() {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+//include media queries
+//@import "media-queries";
+// Include Sass mixins
+@import "scss/utils/mixins";
+// @import "scss/common/bootstrap";
+// @import "scss/common/normalize";
+
+
+// Include Theme variables
+@import "scss/common/theme.variables";
+// Include Ionic override variables
+@import "scss/utils/override_variables";
+// Include Bourbon
+@import "www/lib/bourbon/app/assets/stylesheets/_bourbon";
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+// Include Ionic override styles
+@import "scss/utils/override_styles";
+// Include project Sass variables
+@import "scss/common/common.variables";
+@import "scss/auth/auth.variables";
+@import "scss/sidemenu/side-menu.variables";
+@import "scss/profile/profile.variables";
+@import "scss/forms/forms.variables";
+// Include custom styles
+@import "scss/common/common.styles";
+@import "scss/auth/auth.styles";
+@import "scss/auth/walkthrough.styles";
+@import "scss/auth/dqlogin.styles";
+@import "scss/auth/login.styles";
+@import "scss/auth/signup.styles";
+@import "scss/auth/forgot-password.styles";
+@import "scss/auth/forgotPassword.styles";
+@import "scss/auth/terms.styles";
+
+
+@import "scss/sidemenu/side-menu.styles";
+@import "scss/profile/profile.styles";
+//newly added by rk
+//!!!!!!!!!!!!!!common for both patient & Doctors!!!!!!!!!!!!!!!!!!
+@import "scss/common/icons.styles";
+@import "scss/common/homeScreens.styles";
+@import "scss/common/profile.styles";
+@import "scss/common/myConsultations.styles";
+@import "scss/common/customercare.styles";
+
+
+
+
+@import "scss/doctorquick/dqcommon.styles";
+@import "scss/auth/patent.styles";
+//mydoctors css
+@import "scss/mydoctors/mydoctors.styles";
+@import "scss/mydoctors/favDoctor.styles";
+@import "scss/mydoctors/doctorprofile.styles";
+@import "scss/mydoctors/searchResult.styles";
+
+@import "scss/mydoctors/callAccepted.styles";
+@import "scss/patient/patientpayments.styles";
+@import "scss/patient/specialityDetails.styles";
+@import "scss/patient/refund.styles";
+@import "scss/patient/topup.styles";
+@import "scss/patient/summary.styles";
+@import "scss/patient/search.styles";
+@import "scss/patient/speciality.styles";
+@import "scss/patient/change_pwd.styles";
+@import "scss/patient/viewDoc.styles";
+
+
+//doctor screens
+@import "scss/templates/doctorscreen.styles";
+// @import "scss/templates/doctorprofile.styles";
+@import "scss/templates/doctoraccounts.styles";
+@import "scss/templates/patientrequest.styles";
+@import "scss/templates/notes.styles";
+@import "scss/templates/callAccepted.styles";
+@import "scss/templates/sidemenu.styles";
+@import "scss/templates/diagnosis.styles";
+@import "scss/templates/patientchat.styles";
+@import "scss/templates/review.styles";
+@import "scss/templates/termsofuse.styles";
+@import "scss/templates/inviteResult.styles";
+@import "scss/templates/video.styles";
+@import "scss/templates/addPatient.styles";
+
+//registration
+@import "scss/DoctorRegistration/doctorReg1.styles";
+@import "scss/DoctorRegistration/doctorReg2.styles";
+@import "scss/PatientRegistration/patienttReg1.styles";
+@import "scss/PatientRegistration/patientReg3.styles";
+@import "scss/PatientRegistration/patientReg2.styles";
+@import "scss/patient/patientSidemenu.styles";
+//test-view
+@import "scss/test/test.styles";
+@import "scss/test/test1.styles";
+@import "scss/test/testrequest.styles";
+// @import "www/lib/intl-tel-input/src/css/intlTelInput.scss";
+
+
+
+
+//font family to ubuntu
+//font-family: Ubuntu,bold,sans-serif !important;

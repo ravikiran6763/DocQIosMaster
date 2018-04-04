@@ -1,0 +1,104 @@
+.doctor-profile-view
+{
+  background-color: #e2e2e2 !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  .title .title-left .header-item{
+    left: 0px !important;
+    right: 0px !important;
+  }
+  .profile-img{
+    width: 30%;
+    height: 25% !important;
+    margin: 0 auto;
+    img{
+      width: 30vw;
+      border-radius: 60%;
+      padding: 5px;
+      background-color:#dedad7 !important;
+      margin-top: 4vh
+    }
+    i{
+      position: absolute;
+      padding-left: 88px;
+      /* padding-top: 0; */
+      // margin-top: -88px;
+      // margin-left: -9px;
+      margin-top: 6vh;//modified for boss
+      margin-left: -26vw;//modified for boss
+    }
+
+  }
+  .profile-info{
+
+    margin: 0 auto;
+    width: 90%;
+    height: 15%;
+    h1,h2,h3{
+        font-family: Ubuntu,bold,sans-serif !important;
+        text-align: center;
+    }
+    h1{
+      font-size: 5vw;
+    }
+    h2{
+      font-size: 4vw;
+      line-height: 0vh;
+      color: #666666 !important;
+    }
+    h3{
+      font-size: 3vw;
+      color: #666666 !important;
+    }
+
+  }
+  .rating-field{
+    height: 10%;
+
+    .card{
+      width: 90% !important;
+      margin: 0 auto;
+    }
+  }
+  .bottom-content{
+    height: 52%;//calc(100%-55%);
+
+    h4{
+      font-size: 4vw;
+      line-height: 0vh;
+      text-align: center;
+      margin-top: 6vh;
+      font-family: Ubuntu,bold,sans-serif !important;
+    }
+    h5{
+      font-size: 3vw;
+      line-height: 0vh;
+      text-align: center;
+      margin-top: 3vh;
+      font-family: Ubuntu,bold,sans-serif !important;
+    }
+    .button-content{
+
+      margin: 0 auto;
+      height: 50%;
+      width: 80%;
+      .button{
+        background-color: #6aa13e;
+        font-family: Ubuntu,bold,sans-serif !important;
+        color: #fff;
+      }
+      .button-stable.activated{
+				background-color: #517b2f !important;
+			}
+    }
+  }
+  .buttonPosition{
+    margin-top: 5vh;
+  }
+  .rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+    font-size: 5vw;
+}
+
+}

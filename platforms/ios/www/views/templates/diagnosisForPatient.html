@@ -1,0 +1,31 @@
+<ion-view class="prescription-view" cache-view="false">
+  <ion-content scroll="false">
+
+    <div class="top-content"  >
+      <div class="details">
+        <div class="profileImage">
+          <img ng-src="{{patientImage}}">
+        </div>
+        <div class="name-content">
+          <h2>{{patientfname}} {{patientlname}} </h2>
+          <p>{{prequestedtime}}</p>
+          <!-- <div star-rating rating-value="rating.current" max="rating.max" ></div> -->
+
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="clear-field button button-clear button-positive" ng-click="clear();">
+        Clear
+      </button>
+      <button class="done button button-clear button-positive" ng-click="done(prescription.diagnosisforpatient,1);">
+        Done
+      </button>
+    </div>
+
+    <div class="prescText">
+      <textarea placeholder=" "  ng-value="val" ng-model="prescription.diagnosisforpatient" maxlines="8" maxlines-prevent-enter="true"></textarea>
+    </div>
+
+  </ion-content>
+</ion-view>

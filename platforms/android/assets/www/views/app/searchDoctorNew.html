@@ -1,0 +1,40 @@
+<ion-view class="search-view" cache-view="false">
+
+  <ion-content class="padding " >
+    <div class="item   item-input-inset">
+      <label class="item-input-wrapper">
+        <input type="text" value="{{specialdata}} {{genderdata}} {{statusdata}} {{languagedataselected}}" readonly="true" >
+      </label>
+        <button class="button button-small"  style="background-color: #009688 !important; color: white; width: 15% !important;" ng-click="searchdoctorbydifferentscenario(specialdata,genderdata,statusdata,languagedataselected);">
+          OK
+        </button>
+    </div>
+
+  <div class="top-content">
+    <div class="list calm ">
+      <div class="search_content">
+        <ul class="">
+          <li >
+            <div class="name-content">
+              <a ng-click="showSideMenu('speciality')" class=" item item-icon-right "  >
+                <h2>Speciality</h2><i class="icon ion-ios-arrow-right next-icon "></i>
+              </a>
+              <a ng-click="showSideMenu('gender')" class="item item-icon-right ">
+                <h2>Gender</h2><i class="icon ion-ios-arrow-right"></i>
+              </a>
+              <a ng-click="showSideMenu('onlineOffline')" class="item item-icon-right ">
+                <h2>Online/Offline</h2><i class="icon ion-ios-arrow-right"></i>
+              </a>
+              <a ng-click="showSideMenu('language')" class="item item-icon-right ">
+                <h2>Language</h2><i class="icon ion-ios-arrow-right"></i>
+              </a>
+            </div>
+          </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+</ion-view>

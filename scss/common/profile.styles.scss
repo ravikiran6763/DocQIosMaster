@@ -1,0 +1,117 @@
+.profile-view
+{
+  .scroll-view{
+      display: block;
+      overflow: scroll;
+      margin-top: -1px;
+      height: 100% !important;
+  }
+  background-color:#e2e2e2 !important;// $profile-bg !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  .top-content{
+    width: 100% !important;
+    height: 17% !important;
+    margin: 0 auto;
+    overflow: hidden;
+    .details{
+      width: 90% !important;
+      margin: 0 auto !important;
+      .profileImage{
+        width: 25%;
+        margin-top: 4%;
+        img {
+          border-radius: 100%;
+          width: 100%;
+          border: 5% solid #dedae9;
+        }
+      }
+      .name-content {
+        width: 75%;
+        margin-left: 27%;
+
+        h2{
+          margin-top: -20%;
+          font-size: 100% !important;
+          color: black;
+          font-family: Ubuntu,bold,sans-serif !important;
+          }
+      }
+
+    }
+
+
+  }
+
+  .profileDetails{
+    height: 50%;
+    margin-top: 6%;
+    .card{
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 2% 2% !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      .col{
+        padding: 2%;
+        margin-left: 6%;
+      }
+    }
+    i{
+      margin-top: 3%;
+    }
+
+  }
+
+  .doc-top-content{
+    width: 100% !important;
+    height: 17% !important;
+    margin: 0 auto;
+    overflow: hidden;
+    .details{
+      width: 90% !important;
+      margin: 0 auto !important;
+      .profileImage{
+        width: 25%;
+        margin-top: 4%;
+        img {
+          border-radius: 100%;
+          width: 100%;
+          border: 5% solid #dedae9;
+        }
+      }
+      .name-content {
+        width: 75%;
+        margin-left: 27%;
+
+        h2{
+          margin-top: -25%;
+          font-size: 100% !important;
+          color: black;
+          font-family: Ubuntu,bold,sans-serif !important;
+          }
+      }
+
+    }
+
+
+  }
+  .docProfileDetails{
+    // height: 80%;
+    margin-top: 5%;
+    overflow: scroll !important;
+    .card{
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 2% 2% !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      .col{
+        padding: 2%;
+        margin-left: 6%;
+      }
+      i{
+        margin-top: 3%;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,190 @@
+.patient-reg-2-view
+{
+	width: 100% !important;
+	height: 100% !important;
+	font-family: Ubuntu,bold,sans-serif !important;
+
+	ion-content{
+		width: auto;
+		height: 100%;
+		overflow: scroll !important;
+	}
+	.scroll-content{
+	  position: relative !important;
+	}
+	.bar-header .bar-light{
+		background: transparent !important;
+	}
+	.top-content{
+
+			height: 35% !important;
+			.regTitle{
+				width: 80% !important;
+				height: 100% !important;
+				margin: 0 auto !important;
+				// background-color: red !important;
+
+				.regHeader{
+					position: absolute !important;
+					width: 80% !important;
+					margin: 0 auto !important;
+    			// margin-top: 7vh !important;
+					.backButton{
+						i{
+							position: absolute;
+							font-size: 210%;
+						}
+						p{
+							margin-top: 9%;
+							font-size: 145%;
+							margin-left: 6%;
+
+							// text-align: center;
+						}
+					}
+					.regFlowImg{
+						width: 80% !important;
+						margin: 0 auto;;
+
+						img{
+							width: 100%;
+							margin-top: 2vh;
+						}
+					}
+					.regMsg{
+						width: 85% !important;
+						margin: 0 auto !important;
+						p{
+							margin-top: 10%;
+							font-size: 130%;
+							text-align: center;
+						}
+
+					}
+				}
+			}
+	}
+	.form-content{
+		height: 45% !important;
+		margin-top: 0 !important;
+		// background-color: blue !important;
+			.button-bar{
+				color: red;
+				margin-top:4% !important;
+				margin-bottom: 2% ;
+			}
+			.form-group{
+				width: 80% !important;
+				margin: 0 auto;
+
+				.form-control{
+					height: 17% !important;
+					width: 51% !important;
+					padding: 2% 0 !important;
+				}
+				input[type="email"]{
+				margin-top: 5% !important;
+				height: 18% !important;
+				padding: 4% !important;
+				width: 100% !important;
+				// border: 1px solid #cdcdcf;
+				// height: 100%;
+				}
+
+				input[type="number"]{
+					margin-top: 4% !important;
+					height: 18% !important;
+					padding: 4% !important;
+					width: 100% !important;
+					border: 1px solid #cdcdcf;
+					// height: 100%;
+				}
+				input[type="tel"]{
+					// margin-top: 4% !important;
+					height: 18% !important;
+					padding: 0% 0 0 14% !important;
+					width: 100% !important;
+					// border: 1px solid #cdcdcf;
+					// height: 100%;
+				}
+				input[type="password"]{
+					margin-top: 4% !important;
+					height: 18% !important;
+					padding: 4% !important;
+					width: 100% !important;
+					// border: 1px solid #cdcdcf;
+					// height: 100%;
+				}
+			.item-radio .item-content{
+				padding-top: 5% !important;
+				padding-right: 0% !important;
+			}
+
+			.input-group-addon:first-child {
+			    /* border-right: 0; */
+			    position: absolute !important;
+			    margin: 5.5% 0 0 2% !important;
+			    border: none;
+			    background: #fff;
+			}
+
+
+
+			}
+			p{
+				color: #fff;
+		    text-align: center;
+		    font-size: 85%;
+			}
+
+	}
+	.bottom-content{
+		height: 17% !important;
+		// background-color: teal !important;
+		.login_button {
+					background-color: #6aa13e;
+					color: #ffffff;
+					height: 9% !important;
+					width: 80%;
+					margin: 0 0 0 10%;
+					// position: absolute;
+				span{
+					color:#dbe5d3 ;
+					font-size: 100% !important;
+				}
+			}
+		.tAndC{
+			width: 80% !important;
+			height: 20% !important;
+			margin: 0 auto;
+			.terms{
+				// width: 80% !important;
+				height: 100% ;
+				margin: 0 auto;
+				h2{
+					font-size: 80%;
+					color: #fff;
+					text-align: center;
+					margin-top: 3%;
+    			line-height: 1.5;
+					a{
+						color: inherit !important;
+						text-decoration: underline !important;
+					}
+				}
+			}
+
+		}
+
+		.button-stable{
+			background-color: #6aa13e;
+		}
+		.button-stable.activated{
+			background-color: #557a23 !important;
+		}
+		.button-calm.activated{
+			background-color:#026451!important;
+		}
+	}
+
+}

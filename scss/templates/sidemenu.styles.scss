@@ -1,0 +1,72 @@
+.doc-sidemenu{
+    background-color: #20242c !important;
+  //background-color: red !important;
+  
+  li{
+    background-color: #20242c;
+    width: 100%;
+    border-top: 1px solid #cccccc;
+    border-right: none;
+    border-bottom: none;
+    i{
+      float: left;
+    }
+
+
+  }
+  h3{
+    color: #cccccc;
+    font-weight: 300;
+    margin-left: 12vw;
+    font-size: 5vw;
+  }
+  .toggle-item{
+    background-color: transparent;
+    border: none;
+    .toggle{
+      margin-top: 5vh;
+      margin-left: 31vw;
+    }
+    .toggle .track{
+      width: 15vw;
+      height: 6vh;
+      margin-top: 1vh;
+      background-color: red;
+      border: none;
+      &:after{
+          right: 14vw;
+      }
+    }
+    .toggle .handle{
+      width: 13vw;
+      height: 7vh;
+      margin-top: 0vh;
+      left: 1vw;
+
+      &:after{
+          right: 14vw;
+      }
+    }
+    .toggle.toggle-assertive input:checked + .handle {
+        border-color: #6aa13e;
+        background-color: #6aa13e;
+        /* left: 9vw; */
+    }
+    .toggle.toggle-assertive input:checked + .track .handle{
+          left: 16vw !important;
+    }
+
+    .status-txt-cls {
+
+      position: absolute;
+      top: 3vh;
+      color: #fff;
+      left: 14vw;
+      font-size: 4vw;
+      }
+
+    .toggle.toggle-assertive input:checked + .track .status-txt-cls {
+      left: 4vw !important;
+    }
+  }
+}

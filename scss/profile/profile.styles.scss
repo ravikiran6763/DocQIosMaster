@@ -1,0 +1,94 @@
+.profile-view
+{
+  background-color:#e2e2e2;// $profile-bg !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  .profile-container
+  {
+    margin: 10px 10px;
+    margin-top: 0vh;
+  //  margin-top: 0vh;
+    margin-bottom: 0vh;
+    text-align: center;
+
+  }
+
+  .user-image-container
+  {
+    width: $image-width;
+      background-color:#e2e2e2;
+
+    .user-image
+    {
+      border-top: 0px solid $content-color;
+      padding: 2px;
+      //background-color: $profile-bg;
+
+      width: 50%;//image size
+      border-radius: 80%;
+    }
+  }
+
+  .user-name
+  {
+  //  border-top: 1px solid $content-color;
+    padding: 20px;
+  //  background-color: $profile-bg;
+      background-color:#e2e2e2;
+    width: 200%;
+    font-size: 20px;
+  }
+
+  .user-twitter
+  {
+    margin-top: 5px;
+      width: 150%;
+  }
+
+  .top-content
+  {
+  //  border-bottom: 0px solid $content-color;
+    position: relative;
+    height: 10vh;
+    margin-bottom: 1vh;
+  }
+
+  .user-background-image-outer
+  {
+    height: 120vh;
+    position:relative ;//absolute;
+    width: 10%;
+    left: 0;
+    top: 0;
+  }
+
+  .bottom-content
+  {
+    padding:20px;
+    //background-color: $profile-bg;
+    min-height: 0vh;
+    position: absolute;
+
+//profile details css
+    .user-bio
+    {
+      text-align: left;
+      margin: 10px 1px;
+      padding: 10px 10px;
+    }
+
+  .card{
+
+  }
+//for profile details
+      .profile-content{
+
+      //  position: relative;
+        text-align: left;
+        margin:33px;
+        padding:15px;
+        //border:1px solid red;
+
+      }
+
+  }
+}

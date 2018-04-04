@@ -1,0 +1,167 @@
+.patient-reg-3-view
+{
+	width: 100% !important;
+	height: 100% !important;
+	font-family: Ubuntu,bold,sans-serif !important;
+
+	ion-content{
+		width: auto;
+		height: 100%;
+		overflow: hidden !important;
+	}
+	.scroll-content{
+	  position: relative !important;
+	}
+	.bar-header .bar-light{
+		background: transparent !important;
+	}
+	.top-content{
+
+			height: 40% !important;
+			.item-icon-left {
+				padding-left: 0 !important;
+			}
+			.regTitle{
+				width: 80% !important;
+				height: 100% !important;
+				margin: 0 auto !important;
+				// background-color: red !important;
+
+				.regHeader{
+					position: absolute !important;
+					width: 80% !important;
+					margin: 0 auto !important;
+    			// margin-top: 7vh !important;
+					.backButton{
+						i{
+							position: absolute;
+							font-size: 210%;
+						}
+						p{
+							margin-top: 9%;
+							font-size: 145%;
+							margin-left: 6%;
+
+							// text-align: center;
+						}
+					}
+
+					.regFlowImg{
+						width: 80% !important;
+						margin: 0 auto;;
+
+						img{
+							width: 100%;
+							margin-top: 2vh;
+						}
+					}
+					.regMsg{
+						width: 90% !important;
+						margin: 0 auto !important;
+						p{
+							font-size: 103%;
+							color: black;
+							margin-top: 10%;
+							text-align: center;
+						}
+						.numClass{
+							font-size: 130% ;
+							color: black ;
+							text-align: center;
+    					margin: 0 auto;
+						}
+
+					}
+				}
+			}
+	}
+	.form-content{
+		height: 20% !important;
+		margin-top: 0 !important;
+		// background-color: blue !important;
+
+		.otp{
+			width: 80% !important;
+			margin: 0 auto;
+		}
+
+				input[type="tel"]{
+					margin-top: 30% !important;
+			    height: 40% !important;
+			    padding-left: 40% !important;
+			    width: 100% !important;
+					font-weight: bold !important;
+					// height: 100%;
+				}
+	}
+	.bottom-content{
+		height: 38% !important;
+		// background-color: teal !important;
+		.buttonContent{
+			width: 80% !important;
+			margin: 0 auto;
+			.button{
+				background-color: #6aa13e;
+				border: none;
+				padding: 10px auto;
+				width: 100% !important;
+			}
+			.resend{
+				float: left;
+				margin-right: 2vw;
+
+			}
+		}
+
+		.tAndC{
+			width: 85% !important;
+			height: 20% !important;
+			margin: 0 auto;
+			.otpTap{
+				width: 94% !important;
+				height: 100% ;
+				margin: 0 auto;
+				h2{
+					font-size: 100%;
+					color: #fff;
+					text-align: center;
+					margin-top: 8%;
+    			line-height: 1.5;
+					a{
+						color: inherit !important;
+						text-decoration: underline !important;
+					}
+				}
+			}
+			.terms{
+				width: 80% !important;
+				height: 100% ;
+				margin: 0 auto;
+				h2{
+					font-size: 80%;
+					color: #fff;
+					text-align: center;
+					margin-top: 30%;
+    			line-height: 1.5;
+					a{
+						color: inherit !important;
+						text-decoration: underline !important;
+					}
+				}
+			}
+
+		}
+
+		.button-stable{
+			background-color: #6aa13e;
+		}
+		.button-assertive.activated{
+			background-color: #557a23 !important;
+		}
+		.button-calm.activated{
+			background-color:#026451!important;
+		}
+
+	}
+
+}

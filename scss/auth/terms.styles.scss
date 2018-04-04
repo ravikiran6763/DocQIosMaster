@@ -1,0 +1,17 @@
+.terms-view
+{
+	ion-content{
+		overflow:  hidden !important;
+    width: 90%;
+    margin: 0 auto;
+	}
+  ol{
+    list-style: decimal-leading-zero;
+    list-style-type: decimal;
+    li{
+      display: list-item;
+    list-style-position: inside;
+    }
+  }
+
+}

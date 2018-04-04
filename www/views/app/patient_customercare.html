@@ -1,0 +1,37 @@
+<ion-view class="customercare-view" cache-view="false">
+
+  <ion-content scroll="false">
+    <form name="patientCustomerCare" ng-submit="submitForm($event)" ng-class={submitted:submitted} novalidate>
+      <div class="top-content">
+          <div class="queryContent">
+                <div class="msg">
+                  <h2>Please contact us through the form below or request a callback </h2>
+                </div>
+
+                <div class="textBox">
+                  <textarea placeholder=" " ng-model="cc.query" ng-class="{ 'has-error-lr' : patientCustomerCare.query.$invalid  && patientCustomerCare.$submitted, 'valid-lr' : patientCustomerCare.query.$valid  && patientCustomerCare.$submitted}" required ></textarea>
+
+                </div>
+                <div class="sendButton">
+                  <button class="button button-block button-assertive " ng-click="sendQuery(patientCustomerCare.$valid);">Send</button>
+                </div>
+          </div>
+      </div>
+    </form>
+
+
+      <div class="bottom-content">
+          <div class="callBack">
+            <div class="workingHrs">
+              <div class="timerLogo">
+                <img ng-src="img/dq_icon_time_540x960.png">
+              </div>
+              <h3>Working hours :9am to 9pm<br/>(Indian Standard Time)</h3>
+            </div>
+            <div class="callBackButton">
+              <button class="button button-block button-assertive" ng-click="requestCallback();">Request a callback</button>
+            </div>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

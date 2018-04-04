@@ -1,0 +1,70 @@
+<ion-view class="sepecility-details-view"  cache-view="false"  >
+
+  <ion-content>
+    <!-- ng-repeat="desc in specialityDetails" -->
+    <div class="top-content" ng-repeat="desc in specialityDetails " >
+      <div class="specDetail">
+        <div class="profile-img">
+          <img src="img/dq_icon_specialities_medium_720x1280.png">
+        </div>
+        <div class="name-content">
+          <h4>{{desc.special}}</h4>
+        </div>
+        <div class="next-icon" >
+          <i class="icon ion-android-arrow-dropdown-circle" ng-show="{{desc.noofonlinedoctors == 0}}"></i>
+          <i class="icon ion-android-add-circle" ng-show="{{desc.noofonlinedoctors >= 1}}"></i>
+        </div>
+      </div>
+      <div class="specDescription">
+        <div class="description">
+          <p> {{desc.description}} </p>
+        </div>
+      </div>
+  </div>
+          <div class="onlineDocs" ng-repeat="desc in specialityDetails">
+            <div class="card " style="border:1px solid teal; margin-top: 13%;">
+              <div class="row">
+                    <div class="col">Online Doctors</div>
+
+                      <!-- <div class="col-30" ng-repeat="desc in specialityDetails" style="font-weight:bolder;">{{desc.noofonlinedoctors}}</div> -->
+
+                    <div class="col-30" ng-if="!desc.noofonlinedoctors" style="font-weight:bolder;">{{0}}</div>
+                      <div class="col-30" ng-if="desc.noofonlinedoctors" style="font-weight:bolder;">{{desc.noofonlinedoctors}}</div>
+              </div>
+            </div>
+
+          </div>
+
+
+  <div class="card " style="margin-bottom: -4%;" ng-click="changePatient();" ng-show="showSubPatients">
+    <div class="row" style="margin-left: 0% !important;">
+      <!-- ui-sref="templates.addNewPatient" -->
+          <div  class="col col-75" class="item-icon-right"  ng-hide="defaultPatient" ng-repeat="def in patient_details">Patient : {{def.patientFname}} {{def.patientLname}}</div>
+          <div class="col col-75"  class="item-icon-right"  ng-show="defaultPatient" ng-repeat="subPat in newPAtient">Patient : {{subPat.newPatientFname}} {{subPat.newPatientLname}}</div>
+          <!-- <div class="col col-75"  class="item-icon-right" ng-click="changePatient();" ng-show="shownewPatient" ng-repeat="subPat in newPAtient">Patient : {{subPat.newPatientFname}} {{subPat.newPatientLname}}</div> -->
+          <i class="icon ion-chevron-right icon-accessory" style="margin-left: 17%; margin-top: 3%;"></i>
+
+          <div class="col">
+
+          </div>
+    </div>
+
+  </div>
+
+
+    <div class="sendRequest" ng-repeat="desc in specialityDetails">
+      <div class="reqMsg">
+          <p class="sendRequest" ng-show="{{desc.noofonlinedoctors >= 1}}">Send request for a consultation</p>
+          <p class="sendRequest" ng-show="{{desc.noofonlinedoctors == 0}}">None of the Doctors are available</p>
+
+      </div>
+      <div class="buttons" >
+        <button class="button button-block button-assertive" ng-disabled="{{desc.noofonlinedoctors == 0 || clickedOnce }}" ng-click="sendrequesttoonlinedoctors(desc.id)" ng-click="startTimer(deadline)">
+          {{buttonText}}
+        </button>
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>

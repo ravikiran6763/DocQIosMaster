@@ -1,0 +1,54 @@
+<ion-view class="profile-view" cache-view="false" >
+  <ion-content  scrollbar-y="false" has-bouncing="false" >
+    <div class="top-content">
+      <div class="details">
+        <div class="profileImage"  ng-repeat="im in patientProfileImage">
+            <img  ng-hide="im.image == null "ng-src="{{im.image}}"  ng-click="changeProfilePhoto();" >
+            <img  ng-show="im.image == null " ng-src="img/patientAvatar.png"  ng-click="changeProfilePhoto();">
+        </div>
+        <div class="name-content" ng-repeat="patient in patient_details">
+          <h2>{{patient.patientFname}} {{patient.patientMname}} {{patient.patientLname}} </h2>
+        </div>
+      </div>
+    </div>
+    <div class="profileDetails" ng-repeat="patient in patient_details">
+      <div class="card ">
+          <div class="row">
+            <div class="col">Age</div>
+            <div class="col">{{patient.patientAge}}</div>
+          </div>
+          <div class="row">
+            <div class="col">Gender</div>
+            <div class="col" >{{patient.patientSex}}</div>
+
+          </div>
+      </div>
+
+      <div class="card" ng-click="updatePatientEmail();">
+        <div class="row">
+              <div class="col">Email</div>
+
+              <div class="col col-67" style="overflow: hidden !important; text-overflow: ellipsis; word-wrap: normal;">{{patient.patientEmail}}</div>
+              <i class=" ion-checkmark-circled"  style="font-size: 112%; margin: 8px 2px 0 0px ;     margin-left: -5px;" ng-show="emailVerified"></i>
+              <i class="ion-android-alert" style="font-size: 112%; margin: 8px 2px 0 0px ;     margin-left: -5px;"  ng-hide="emailVerified"></i>
+              <i class="icon ion-chevron-right icon-accessory" ></i>
+        </div>
+      </div>
+
+      <div class="card" ng-click="changePwd();">
+          <div class="row">
+                <div class="col">Change password</div>
+                <div class="col"></div><i class="icon ion-chevron-right icon-accessory" ></i>
+
+          </div>
+       </div>
+       <div class="card" >
+           <div class="row">
+             <div class="col">Mobile Number</div>
+             <div class="col">+91{{patient.patientPhone}}</div>
+           </div>
+        </div>
+    </div>
+
+  </ion-content>
+</ion-view>

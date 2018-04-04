@@ -1,0 +1,61 @@
+<ion-view class="callAccpted-view" cache-view="false">
+
+  <ion-content scroll="false" >
+
+    <div class="top-content"  ng-repeat="mydocs in calledDetails">
+      <div class="imageContainer">
+        <i class="icon ion-android-add-circle" ng-show="{{mydocs.onoff == 1}}"></i>
+        <i class="icon ion-android-arrow-dropdown-circle" ng-show="{{mydocs.onoff == 2}}"></i>
+        <!-- <img class="item-icon-right" ng-src="img/doc.jpg" > -->
+        <img class="item-icon-right" ng-hide="mydocs.docImage2 == null "ng-src="{{mydocs.docImage2}}"   >
+        <img class="item-icon-right" ng-show="mydocs.docImage2 == null " ng-src="img/doc.jpg" >
+      </div>
+      <h1>Dr.{{mydocs.doctorFname |capitalize}} {{mydocs.doctorMname|capitalize}} {{ mydocs.doctorLname|capitalize}} </h1>
+      <h2>{{mydocs.doctorDegrees}}<br><b>Practicing since {{mydocs.practicingSince}}</b></h2>
+      <div ng-show="{{mydocs.ratingCount >5}}">
+        <span class="stars " style="margin: 0 auto" ng-show="{{mydocs.ratingCount == 0}}">
+          <span ng-style="{ 'width': getStars(0) }"></span>
+        </span>
+        <span class="stars " style="margin: 0 auto" ng-show="{{mydocs.ratingCount != 0}}">
+          <span ng-style="{ 'width': getStars(mydocs.ratings/mydocs.ratingCount) }"></span>
+        </span>
+        <center><p>({{mydocs.ratingCount}} Reviews)</p><center>
+      </div>
+      <!-- <span ng-repeat="rating in ratings" >
+        <div  star-rating rating-value="rating.current" max="rating.max" >
+        </div>
+      </span> -->
+
+    </div>
+
+      <div class="rating-field "  ng-repeat="mydocs in calledDetails">
+        <h4>
+          Your Invitation for consultation has been accepted. Please start the consultation or decline.
+        </h4>
+
+      </div>
+      <div class="bottom-content" ng-repeat="mydocs in calledDetails">
+
+          <div class="button-content">
+            <div class="buttonPosition">
+                <button type="submit" class="login_button button button-block button-assertive"  ng-click="callDoctor(3);">
+                  Voice Call
+                </button>
+              </div>
+              <div class="">
+                <button type="submit" class="login_button button button-block button-assertive" ng-click="callDoctor(2);">
+                  Video Call
+                </button>
+              </div>
+              <div class="">
+                <button type="submit" class="decline_button button button-block button-stable" ng-click="declineCall();">
+                  Decline
+                </button>
+              </div>
+              <h5 >Consultation fee: ₹{{mydocs.doctorFee}}</h5>
+          </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

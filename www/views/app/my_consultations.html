@@ -1,0 +1,32 @@
+<ion-view class="consultationList-view" cache-view="false" >
+
+  <ion-content >
+      <div class="myDoctor-list" ng-repeat="r in ConsultedDoctor" >
+        <ul>
+        <li  ng-click="consultationDetails({{r.doctorPhone}});">
+          <div class="profile-img">
+            <img  ng-hide="r.docImage2 == null "ng-src="{{r.docImage2}}"   >
+            <!-- <img  ng-show="r.docImage2 == null " ng-src="img/doc.jpg" > -->
+
+            <p class="chatCount"> {{r.unreadCount}} </p>
+          </div>
+          <div class="name-content">
+            <div class="name">
+              <h2>Dr.{{r.doctorFname | capitalize }} {{r.doctorLname | capitalize}}</h2>
+            </div>
+            <div class="dateTime"> {{r.date | date: 'dd-MM-yyyy'}} </div>
+            <div class="message"> {{r.message}} </div>
+          </div>
+
+
+          <div class="next-icon">
+            <i class="icon ion-ios-arrow-right"></i>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <li ng-show="!ConsultedDoctor.length" style="margin-top: 8vh;"><center><b style="color:teal;">No Consultations available</b></center></li>
+      </ul>
+      </div>
+  </ion-content>
+</ion-view>

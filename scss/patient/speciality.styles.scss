@@ -1,0 +1,68 @@
+.medical-speciality-view
+{
+  background-color: #e2e2e2 !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  .title .title-left .header-item{
+    left: 0px !important;
+    right: 0px !important;
+  }
+  ion-content{
+    overflow: scroll !important;
+    overflow-x: hidden;
+  }
+  a:hover, a:focus {
+      color: #444;
+       text-decoration: none !important;
+  }
+
+  .bottom-content
+  {
+      // height: 100%;
+      width: 100%;
+      overflow: scroll !important;
+
+  li,ul{
+
+    border-bottom: 1px solid #cbcbcb;
+
+    @include clearfix();
+
+    &:first-child {
+      // box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    }
+
+    &:last-child {
+      border-bottom: none !important;
+      margin-bottom: 10px auto;
+    }
+
+    .name-content {
+        margin-left: 4vw;
+        padding: 1vh 1vh;
+        width: 100%;
+        // height: 100%;
+        line-height: 1px;
+
+      h2{
+          margin-top: 1vh;
+          font-size: 4vw;
+          color: #000;
+          font-family: Ubuntu,bold,sans-serif !important;
+          line-height: 6vw;
+        }
+    }
+    .sub-content{
+      width: 90% !important;
+
+    }
+    p{
+        font-size: 3.3vw;
+        color: #878787;
+        white-space: nowrap !important;
+        width: 90%;
+        text-overflow: ellipsis;
+        overflow: visible;;
+      }
+  }
+}
+}

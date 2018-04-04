@@ -1,0 +1,47 @@
+.pateint-view
+{
+	.top-content
+	{
+		height: 40%;//to move up
+		padding-top: 10px;
+		margin-top: 10px;
+		text-align: center;
+
+		h1
+		{
+			color: $auth-color;
+		}
+	}
+
+	.bottom-content//setting up from bottom
+	{
+		height: 75%;
+		padding-top: 100px;
+		margin-top: 100px;
+
+		.button
+		{
+			border: none;
+			color:$auth-color;
+			font-weight: medium;//bold
+			font-size: 18px;//previous val 20
+		}
+
+		.login.button
+		{
+			background-color: #6aa13e//$auth-login-btn-bg;//login button color
+		}
+
+		.sign-up.button
+		{
+			background-color:#00745f// $auth-signup-btn-bg;//signup button color
+		}
+
+    .item.item-input{
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    }
+	}
+}

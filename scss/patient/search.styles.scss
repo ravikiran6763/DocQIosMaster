@@ -1,0 +1,115 @@
+.search-view
+{
+  background-color:#e2e2e2;// $profile-bg !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  .title .title-left .header-item{
+    left: 0px !important;
+    right: 0px !important;
+  }
+  .item-input-inset .item-input-wrapper input {
+    padding-left: 4px;
+    height: 29px;
+    background: transparent;
+    line-height: 18px;
+    width: 100% !important;
+}
+  .button{
+    background-color: white !important;
+  }
+  .top-content
+  {
+    position: relative;
+    height: 30vh;
+    margin-bottom: 1vh;
+    background-color:#e2e2e2;
+    font-family: Ubuntu,bold,sans-serif !important;
+
+    li {
+      height: 31.3%;
+      border-bottom: 1px solid #fff;
+
+      @include clearfix();
+
+      &:first-child {
+        //box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+      }
+
+      &:last-child {
+        border-bottom: none !important;
+        margin-bottom: 10px auto;
+      }
+      .next-icon {
+          width: 4vw;
+          float: right;
+          text-align: center;
+          margin-right: 10px;
+          height: 100%;
+          line-height: 14vh;
+
+        .ion-chevron-right:before {
+          color: #ffffff;
+          font-size: 1.8em;
+        }
+      }
+
+      .name-content {
+
+        height: 100%;
+        background-color: blue;
+
+        p{
+            font-size: 3.2vw;
+            line-height: 2.8vh;
+            margin: 0px;
+            color: #fff;
+          }
+
+        h2{
+            margin: 0px;
+            font-size: 5vw;
+            font-family: Ubuntu,bold,sans-serif !important;
+            line-height: 6vw;
+          }
+          i{
+            width: 4vw;
+            float: right;
+            text-align: center;
+            margin-right: 10px;
+            height: 100%;
+            line-height: 14vh;
+          }
+      }
+
+    }
+    .dark .item {
+      background-color: #e2e2e2;
+    }
+
+    .leftText{
+      float:left;
+      background-color: blue;
+    }
+    .rightText{
+      float:right;
+    }
+  }
+  h2{
+      font-family: Ubuntu,bold,sans-serif !important;
+  }
+  .bottom-content
+  {
+    margin-top: -10vh;
+    padding-top: 25vh;
+    margin-left: 25vw;
+    margin-right: 5vw;
+  //  margin-bottom: 5vh;
+    //padding:20px;
+    background-color: white;
+    min-height: 0vh;
+    position: float;
+    font-family: Ubuntu,bold,sans-serif !important;
+  }
+
+
+
+}

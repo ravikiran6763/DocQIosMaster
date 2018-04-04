@@ -1,0 +1,114 @@
+.callAccpted-view
+{
+  background-color: #e2e2e2 !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  .top-content{
+    width: 100%;
+    height: 40%;
+    .imageContainer{
+      width: 30%;
+      height: 25% !important;
+      margin: 0 auto;
+      img{
+        width: 100%;
+        border-radius: 60%;
+        padding: 6%;
+        background-color: #dedad7 !important;
+        margin-top: 10%;
+      }
+      i{
+        position: absolute;
+        padding-left: 23%;
+        padding-top: 0;
+        margin-top: 4%;
+      }
+    }
+    h1{
+      font-size: 130%;
+      text-align: center;
+      margin-top: 19%;
+      line-height: 20%;
+    }
+    h2{
+      font-size: 85%;
+      text-align: center;
+    }
+
+  }
+
+
+  .rating-field{
+    height: 10%;
+    margin: 0 auto;
+
+    h4{
+      text-align: center;
+      width: 90%;
+      color: #4b9a0c;
+      font-size: 112%;
+      margin-top: 4%;
+    }
+  }
+  .bottom-content{
+    height: 42%;//calc(100%-55%);
+
+    h5{
+      font-size: 120%;
+      line-height: 0%;
+      text-align: center;
+      margin-top: 8%;
+      font-family: Ubuntu,bold,sans-serif !important;
+    }
+    .button-content{
+
+      margin: 0 auto;
+      height: 50%;
+      width: 80%;
+      .button{
+        background-color: #6aa13e;
+        font-family: Ubuntu,bold,sans-serif !important;
+        color: #fff;
+      }
+    }
+  }
+  .buttonPosition{
+    margin-top: 5vh;
+  }
+  .rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+    font-size: 5vw;
+    margin-left: 35%;
+    margin-top: -2%;
+}
+
+button{
+
+  text-align: center;
+
+  border: none;
+}
+
+.button-stable{
+  background-color: #c1262c !important;
+}
+.button-assertive.activated{
+  background-color: #517b2f !important;
+}
+
+.button-stable.activated{
+  background-color:#9d2122 !important;
+}
+.login_button {
+    background-color: #6aa13e;
+    color: #ffffff;
+    height: 40px;
+}
+.decline_button{
+  background-color: #af162d;
+  color: #ffffff;
+  height: 40px;
+}
+
+}

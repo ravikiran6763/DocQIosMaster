@@ -1,0 +1,62 @@
+.patient-chat-view
+{
+	background-color:#e7e7e7 !important;
+	font-family: Ubuntu,bold,sans-serif !important;
+	.top-content{
+		height: 14%;
+		height: 14vh;
+		width: 95%;
+		margin: 0 auto;
+		border-bottom: 1px solid #fff;
+		//background-color: red;
+		.profile-img{
+			width:24%;
+			float: left;
+
+			height: inherit;
+			img{
+				border-radius: 60%;
+				width: 100%;
+				padding: 5px;
+			}
+		}
+		.details{
+			float: left;
+			width: calc(100%-28%);
+			height: inherit;
+			margin-top: 2vh !important;
+			margin-left: 4vw;
+			.firstname{
+					font-weight: bold;
+			}
+			.age .dateandtime{
+				font-weight: 400;
+			}
+
+			p{
+
+				font-family: inherit;
+				font-size: 4vw;
+				line-height: 0.9;
+			}
+
+		}
+
+
+	}
+
+	textarea{
+		width: 100% !important;
+	}
+	i{
+		font-size: 8vw;
+	}
+	.bar-assertive{
+		background-color: #e2e2e2 !important;
+		border: none;
+
+	}
+	.bar.bar-assertive.bar-footer {
+		background-image: linear-gradient(180deg, #e2e2e2, #e2e2e2 50%, transparent 50%);
+	}
+}

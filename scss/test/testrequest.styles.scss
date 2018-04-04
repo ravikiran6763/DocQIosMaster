@@ -1,0 +1,222 @@
+.MainPage-view
+{
+
+      body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: red;
+      }
+
+      .square-box{
+            position: relative;
+            height:20px;
+            width: 100%;
+            margin-top:27vh;
+            overflow: hidden;
+
+        }
+        .square-box:before{
+            content: "";
+            display: block;
+            padding-top: 100%;
+
+        }
+        .square-content{
+              position:  absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              color: white;
+          }
+          .square-content div {
+             display: table;
+             width: 100%;
+             height: 100%;
+          }
+          .square-content span {
+
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+              color: black;
+              font-size:0.8em;
+          }
+      .remember{
+        position: absolute;
+        margin-top: 14vh;
+
+      }
+      .forgot{
+        position: absolute;
+        margin-top: 14vh;
+
+      }
+
+      .roundedTwo {
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        margin-left: 4vw;
+        margin-top: 5vh;
+        background: #fcfff4;
+        background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+        background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+          border-radius: 10px;
+      }
+    .conditions{
+      width: 100%;
+      height: 100%;
+      left: 5%;
+      top: 10%;
+      position: absolute;
+      margin-top: 10vh;
+      font-size: 100%;
+      box-sizing: border-box;
+      font-size-adjust: 0.5;
+      vertical-align: middle;
+
+      .login-fonts{
+        font-size: 3.5vw;
+        text-align: center;
+      }
+
+      }
+
+    .login-space{
+      position: relative;
+      width: 100%;
+      margin-top: -2vh;
+      display: block;
+    }
+
+    .buttonlabel{
+      font-size: 1.2em;
+      color:white;
+    }
+
+    .top-content{
+        height: 20%;//to move up
+        margin-top: 8%;
+        max-width: 100%;
+        min-width: 100%;
+
+        .img1{
+            position: relative;
+            width:100%;
+            height: 100%;;//to move up
+            left: 25%;
+            right: 25%;
+            width: 50vmin;
+            height: 32vmin;
+
+        }
+
+      }
+      .bottom-content//setting up from bottom
+      {
+        position: relative;
+        display: grid;
+        width:100%;
+        width: -webkit-calc(100% - 20px);
+        top: 25vh;
+        bottom: 10vh;
+        margin-top: -20vh;
+        height: 90%;
+        vertical-align:  baseline;
+
+      }
+      .img2{
+          width:20%;
+          height: auto;//to move up
+          margin-top: 22vh;
+      }
+
+      .imgtitle
+      {
+        font-size: 12px;
+        color:white;
+
+      }
+
+        .button
+        {
+          border: none;
+          color: $auth-color;
+          font-weight: medium;//bold
+          font-size: 15px;//previous val 20
+          margin-left: auto;
+          margin-right: auto;
+          min-width: 50px;
+          width: 40vmin;
+
+
+
+        }
+
+        .login.button
+        {
+          background-color: #6aa13e;//$auth-login-btn-bg;//login button color
+          width: 100%;
+          width: 80vmin;
+          height: 40px;
+          padding: 10px auto;
+          border: none;
+          color: #fff;
+          position: absolute;
+          top: 100px;
+          margin-left: 10vw;
+
+        }
+
+        .sign-up.button
+        {
+          background-color:#00745f;// $auth-signup-btn-bg;//signup button color
+          width: 100%;
+          width: 80vmin;
+          border: none;
+          position: absolute;
+          margin-top: 40%;
+          margin-left: 10vw;
+
+        }
+
+
+        .item.item-input
+        {
+          box-sizing: border-box;
+          width: 100%;
+          width: 80vmin;
+          padding: 10px auto;
+          margin-left: 10vw;
+        }
+        ::-webkit-input-placeholder {
+             //color: teal;
+             font-size: 10px;
+          }
+        .anchor{
+          a:link {
+              text-decoration: none;
+          }
+
+          a:visited {
+              text-decoration: none;
+          }
+
+          a:hover {
+              text-decoration: underline;
+          }
+
+          a:active {
+              text-decoration: underline;
+          }
+        }
+        .bottom
+        {
+          margin-top: -5vh;
+          font-size: 1px;
+
+        }
+
+}

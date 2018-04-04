@@ -1,0 +1,111 @@
+.summary-view
+{
+  background-color:#e2e2e2 !important;// $profile-bg !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  .top-content{
+    width: 100% !important;
+    height: 15% !important;
+    margin: 0 auto;
+
+    .details{
+      width: 90% !important;
+      margin: 0 auto !important;
+      .profileImage{
+        width: 20%;
+        margin-top: 4%;
+        img {
+          border-radius: 100%;
+          width: 100%;
+          border: 5% solid #dedae9;
+        }
+      }
+      .name-content {
+        width: 75%;
+        margin-top: -15%;
+        margin-left: 22%;
+
+        h2{
+          line-height: 0 !important;
+          font-size: 104%;
+          color: black;
+          font-family: Ubuntu,bold,sans-serif !important;
+          }
+          p{
+              font-size: 85%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+          }
+          .ratingContainer{
+            margin-top: -12%;
+            margin-left: 48%;
+            width: 38%;
+          }
+      }
+      .next-icon {
+        width: 5%;
+        float: right;
+        margin-top: -13%;
+
+        .ion-chevron-right:before {
+          color: black;
+        }
+      }
+
+    }
+
+
+  }
+
+  .rateClass{
+    height: 30%;
+    margin-top: 6%;
+    .row{
+      padding: 3% !important;
+    }
+    .card{
+      width: 95% !important;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      .col{
+        padding: 2%;
+        margin-left: 4%;
+      }
+      .col-75{
+        padding: 8% !important;
+      }
+      .col-30{
+        p{
+          margin-top: 40%;
+          margin-left: 1%;
+
+        }
+      }
+    }
+
+  }
+
+  .lowRatesComment{
+    width: 90%;
+    height: 45%;
+    margin: 0 auto;
+    p{
+      text-align: center;
+      font-size: 100%;
+    }
+    textarea {
+        width: 100% !important;
+        height: 50% !important;
+        font-family: inherit;
+        padding: 0 0 0 4% !important;
+    }
+    .button{
+      width: 30%;
+      float: right;
+      background-color: #69a33d !important;
+      color: #fff;
+    }
+  }
+
+}

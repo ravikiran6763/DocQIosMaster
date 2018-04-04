@@ -1,0 +1,102 @@
+.searchDoctor-profile-view
+{
+  background-color: #e2e2e2 !important;
+  font-family: Ubuntu,bold,sans-serif !important;
+  ionic-content{
+    overflow: hidden !important;
+  }
+  .title .title-left .header-item{
+    left: 0px !important;
+    right: 0px !important;
+  }
+  .profile-img{
+    width: 30%;
+    height: 22% !important;
+    margin: 0 auto;
+    img{
+      width: 30vw;
+      border-radius: 60%;
+      padding: 5px;
+      background-color:#dedad7 !important;
+      margin-top: 2vh;
+    }
+    i{
+      position: absolute;
+      padding-left: 88px;
+      /* padding-top: 0; */
+      margin-top: -30%;
+    margin-left: -5%;
+    }
+
+  }
+  .profile-info{
+
+    margin: 0 auto;
+    width: 90%;
+    height: 18%;
+    h1,h2,h3{
+        font-family: Ubuntu,bold,sans-serif !important;
+        text-align: center;
+    }
+    h1{
+      font-size: 5vw;
+    }
+      h2{
+      font-size: 80%;
+      line-height: 1;
+      color: #666666 !important;
+      }
+    }
+    h3{
+      font-size: 3vw;
+      color: #666666 !important;
+    }
+
+
+  .rating-field{
+    height: 10%;
+
+    .card{
+      width: 90% !important;
+      margin: 0 auto;
+    }
+  }
+  .bottom-content{
+
+    h4{
+      font-size: 120% !important;
+      line-height: 0vh;
+      text-align: center;
+      margin-top: 12vh;
+      font-family: Ubuntu,bold,sans-serif !important;
+    }
+    h5{
+      font-size: 150% !important;
+      line-height: 0vh;
+      text-align: center;
+      margin-top: -3vh;
+      font-family: Ubuntu,bold,sans-serif !important;
+    }
+    .button-content{
+      margin-top: 6% !important;
+      margin: 0 auto;
+      height: 28%;
+      width: 80%;
+      .button{
+        background-color: #6aa13e;
+        font-family: Ubuntu,bold,sans-serif !important;
+        color: #fff;
+      }
+    }
+  }
+  .buttonPosition{
+    margin-top: 5vh;
+  }
+  .rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+}

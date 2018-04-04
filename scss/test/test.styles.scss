@@ -1,0 +1,42 @@
+.flip-toggle .toggle .track {
+  width: 60px;
+  background-color: red;
+   }
+.flip-toggle .toggle {
+  overflow: hidden; }
+  .flip-toggle .toggle .handle {
+    background-color: #6ecff6;
+    width: 23px;
+    height: 23px;
+    top: 9px;
+    left: 8px;
+    z-index: 20; }
+  .flip-toggle .toggle input:checked + .track {
+    background-color: teal;
+     }
+  .flip-toggle .toggle input:checked + .track .handle {
+    -webkit-transform: translate3d(30px, 0, 0);
+    transform: translate3d(30px, 0, 0);
+    background-color:white; }
+
+span.handle-label {
+  width: 45px;
+  position: absolute;
+  height: 21px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+  background: 0;
+  // border-color: transparent;
+  color: white; }
+
+.handle-label-a {
+  left: -39px;
+  margin-right: -1px;
+  overflow: hidden;
+  }
+
+.handle-label-b {
+  right: -36px;
+  margin-right: -1px; }

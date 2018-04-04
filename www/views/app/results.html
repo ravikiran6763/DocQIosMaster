@@ -1,0 +1,86 @@
+<ion-view class="searchDoctor-profile-view" cache-view="false">
+
+  <ion-content scroll="false" >
+
+      <div class="profile-img" ng-repeat="mydocs in myDocDetail">
+        <!-- <pre-img ratio="_1_1" helper-class="rounded-image"> -->
+            <!-- <img ng-src="img/doc.jpg" spinner-on-load> -->
+            <img  ng-hide="mydocs.docImage2 == null " ng-src="{{mydocs.docImage2}}"  >
+            <img  ng-show="mydocs.docImage2 == null " ng-src="img/patientAvatar.png"  >
+            <i class="icon ion-android-add-circle" ng-show="{{mydocs.onoff == 1}}"></i>
+            <i class="icon ion-android-arrow-dropdown-circle" ng-show="{{mydocs.onoff == 2}}"></i>
+        <!-- </pre-img> -->
+      </div>
+
+
+      <div class="profile-info" ng-repeat="mydocs in myDocDetail">
+        <h1>Dr. {{mydocs.doctorFname |capitalize }} {{mydocs.doctorMname |capitalize }} {{ mydocs.doctorLname |capitalize }}</h1>
+        <h2>{{mydocs.doctorDegrees}}</h2>
+        <h2><b>Practicing since {{mydocs.practicingSince}}</b></h2>
+      </div>
+      <div class="rating-field " ng-repeat="mydocs in myDocDetail">
+        <div class="card " ng-show="{{mydocs.ratingCount >5}}">
+          <div class="row" style="margin-left: 0;">
+            <div class="  col">
+              Rating
+            </div>
+            <div class=" col" >
+              {{mydocs.ratings/mydocs.ratingCount | number:1}}/{{mydocs.ratingCount}}
+            </div>
+            <div class="col ">
+              <span class="stars " ng-show="{{mydocs.ratingCount == 0}}">
+                <span ng-style="{ 'width': getStars(0) }"></span>
+              </span>
+              <span class="stars " ng-show="{{mydocs.ratingCount != 0}}">
+                <span ng-style="{ 'width': getStars(mydocs.ratings/mydocs.ratingCount) }"></span>
+              </span>
+                <!-- <span ng-repeat="rating in ratings">
+                  <div star-rating rating-value="mydocs.ratings/mydocs.ratingCount" max="rating.max" style="margin:0 !important;"></div>
+                </span> -->
+            </div>
+          </div>
+
+        </div>
+        <div class="card " style="margin-top: 2%;"  ng-click="changePatient();">
+          <div class="row" style="margin-left: 0% !important; margin-bottom: 2%;" >
+            <!-- ui-sref="templates.addNewPatient" -->
+                <div  class="col col-75" class="item-icon-right"  ng-hide="defaultPatient" ng-repeat="def in patient_details">Patient : {{def.patientFname}} {{def.patientLname}}</div>
+                <div class="col col-75"  class="item-icon-right" ng-show="defaultPatient" ng-repeat="subPat in newPAtient">Patient : {{subPat.newPatientFname}} {{subPat.newPatientLname}}</div>
+                <i class="icon ion-chevron-right icon-accessory" style="margin-left: 17%; margin-top: 3%;"></i>
+
+                <div class="col">
+
+                </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="bottom-content"  ng-repeat="mydocs in myDocDetail" >
+        <h4 ng-hide="{{mydocs.onoff == 2}}">Request a consultation via</h4>
+          <div class="button-content" ng-show="{{mydocs.onoff == 1}}">
+            <div class="">
+                <button type="submit" class="button button-stable button-block" ng-disabled="calledOnce" ng-click="callDoctor({{mydocs.doctorPhone}},6);">
+                  Voice Call
+                </button>
+              </div>
+              <div class="">
+                <button type="submit" class="button button-stable button-block" ng-disabled="calledOnce" ng-click="callDoctor({{mydocs.doctorPhone}},5);">
+                  Video Call
+                </button>
+              </div>
+          </div>
+          <div class="button-content"  ng-show="{{mydocs.onoff == 2}}" style="margin-top: 20% !important;" >
+            <!-- <h4 style="margin-top: 20%">Dr.{{mydocs.doctorFname |capitalize}} is offline.<br>You may request a consultatiion <br>by sending a notification.</h4> -->
+              <p style="text-align:center;">Dr. {{mydocs.doctorFname |capitalize }} is offline <br>You may request a consultatiion <br>by sending a notification.</p>
+
+              <div class="">
+                <button type="submit" class="button button-stable button-block" ng-disabled="calledOnce" ng-click="sendOfflineMessage({{mydocs.doctorPhone}})";>
+                  Send Notification
+                </button>
+              </div>
+          </div>
+          <h5 ng-repeat="mydocs in myDocDetail" ng-hide="{{mydocs.onoff == 2}}">Consultation Fee: ₹{{mydocs.doctorFee}}</h5>
+    </div>
+
+  </ion-content>
+</ion-view>

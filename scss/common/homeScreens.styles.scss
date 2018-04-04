@@ -1,0 +1,232 @@
+.patientscreen-view
+{
+  font-family: Ubuntu,bold,sans-serif !important;
+
+	ion-content{
+		overflow: hidden !important;
+	}
+  .slider-content{
+
+    width: 100%;
+    height: 50%;
+
+  }
+
+  .slides.slider, .slider-slides {
+    height: 100%;
+  }
+
+  .slider-slide img {
+      height: 100%;
+  }
+
+  .slider-pager-page i {
+    color: #0D0F10;
+  }
+
+  .slider-pager-page.active i {
+    color: #6aa433 !important;
+  }
+
+  .item-divider {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #dbdbdb;
+    color: #222;
+    font-weight: 600;
+    height: 8%;
+    line-height: 7vh;
+    text-align: center;
+  }
+  .item-complex .item-content{
+    background-color: #6aa433;
+    border-bottom: 11px;
+  }
+
+  .item-content{
+    border: 1px solid #86b553;
+
+  }
+    .item-avatar:last-child{
+    border-bottom: none;
+  }
+  .devider{
+    height: 5%;
+  }
+
+  .patientScreen-bottom-content
+  {
+      background-color: #6aa433;
+      width: 100%;
+      height: 42%;
+      box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+      overflow: scroll !important;
+
+
+    li {
+      height: 31.3%;
+      border-bottom: 2px solid #678929;
+      padding-top: 5% ;
+
+      @include clearfix();
+
+      &:first-child {
+        //box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+      }
+
+      &:last-child {
+        border-bottom: none !important;
+        margin-bottom: 10px auto;
+      }
+
+      .profile-img {
+        width: 13%;
+      float: left;
+      margin: 1% 0 0 2%;
+
+        img {
+          margin-top: -5%;
+          width: 100%;
+        }
+      }
+
+      .next-icon {
+        width: 5%;
+        float: right;
+        padding-top: 2%;
+        padding-right: 8%;
+        position: relative;
+
+        .ion-chevron-right:before {
+          color: #ffffff;
+          font-size: 1.8em;
+        }
+      }
+
+      .name-content {
+        float: left;
+        padding: 3% 3%;
+        height: 100%;
+
+        p{
+            font-size: 80%;
+            margin: 0px;
+            color: #fff;
+          }
+
+        h2{
+          margin-top: 0;
+          font-size: 125%;
+          color: #fff;
+          font-family: Ubuntu,bold,sans-serif !important;
+          line-height: 50%;
+                  }
+      }
+
+    }
+  }
+
+.doctorScreen-bottom-content{
+  background-color: #6aa433;
+  width: 100%;
+  height: 42%;
+  box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+  overflow: scroll !important;
+
+
+li {
+  height: 31.3%;
+  border-bottom: 2px solid #678929;
+  padding-top: 5% ;
+
+  @include clearfix();
+
+  &:first-child {
+    //box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+  }
+
+  &:last-child {
+    border-bottom: none !important;
+    margin-bottom: 10px auto;
+  }
+
+  .profile-img {
+    width: 13%;
+  float: left;
+  margin: 1% 0 0 2%;
+
+    img {
+      margin-left: 3%;
+      margin-top: -5%;
+      width: 100%;
+      border-radius: 100%;
+    }
+  }
+
+  .next-icon {
+    width: 5%;
+    float: right;
+    padding-top: 2%;
+    padding-right: 8%;
+    position: relative;
+
+    .ion-chevron-right:before {
+      color: #ffffff;
+      font-size: 1.8em;
+    }
+  }
+
+  .name-content {
+    float: left;
+    padding: 3% 3%;
+    height: 100%;
+
+    p{
+        font-size: 80%;
+        margin: 0px;
+        color: #fff;
+      }
+
+    h2{
+      margin-top: 0;
+      font-size: 125%;
+      color: #fff;
+      font-family: Ubuntu,bold,sans-serif !important;
+      line-height: 50%;
+              }
+  }
+
+}
+}
+  .toggle-item{
+    background-color: transparent;
+    border: none;
+    .toggle{
+      margin-top: 7vh;
+      margin-left: 40vw;
+    }
+    .toggle .track{
+      width: 30vw;
+      height: 6vh;
+      margin-top: 1vh;
+      &:after{
+          right: 14vw;
+      }
+    }
+    .toggle .handle{
+      width: 13vw;
+      height: 7vh;
+      margin-top: 0vh;
+      left: 1vw;
+
+      &:after{
+          right: 14vw;
+      }
+    }
+    .toggle.toggle-assertive input:checked + .handle {
+        border-color: #6aa13e;
+        background-color: #6aa13e;
+        /* left: 9vw; */
+    }
+}
+}

@@ -1,0 +1,34 @@
+{
+  "name": "resize-base64",
+  "description": "A function that resizes a base64 image",
+  "main": "index.js",
+  "authors": [
+    "Daniel Izhar <dizhar888@gmail.com> (http://daniwebmaster.com)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "resize",
+    "base64",
+    "image",
+    "picture"
+  ],
+  "homepage": "https://github.com/dizhar/resize-base64",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "10e3c1a805",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "10e3c1a8051f9f22edbdb6d7418568240d1961db"
+  },
+  "_source": "https://github.com/dizhar/resize-base64.git",
+  "_target": "*",
+  "_originalSource": "resize-base64",
+  "_direct": true
+}

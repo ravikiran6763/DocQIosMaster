@@ -1,0 +1,46 @@
+<ion-view class="myFavDoctor-profile-view" cache-view="false" >
+  <!-- <ion-nav-title>
+    <span>My Doctors</span>
+  </ion-nav-title> -->
+
+  <ion-content  >
+    <!-- <ion-refresher on-refresh="doRefresh()">
+    </ion-refresher> -->
+    <ion-list >
+
+          <ion-item  ng-repeat="doctor in myConsultedDoctors" ng-click="viewDocProfile(doctor.doctorPhone,doctor.ratings/doctor.ratingCount,doctor.ratingCount)">
+
+          <div class="profile-img">
+              <img  ng-hide="doctor.docImage2 == null "ng-src="{{doctor.docImage2}}"   >
+              <!-- <img  ng-show="doctor.docImage2 == null " ng-src="img/doc.jpg" > -->
+          </div>
+            <div class="doctorDetails">
+                Dr. {{doctor.doctorFname | capitalize }} {{doctor.doctorLname | capitalize}}
+                <p>{{doctor.doctorDegrees}} </p>
+                <p>Practicing since {{doctor.practicingSince}}</p>
+                <div ng-show="{{doctor.ratingCount > 5}}">
+                <span class="stars " ng-show="{{doctor.ratingCount == 0}}">
+                <span ng-style="{ 'width': getStars(0) }"></span>
+                </span>
+                <span class="stars " ng-show="{{doctor.ratingCount != 0}}">
+                <span ng-style="{ 'width': getStars(doctor.ratings/doctor.ratingCount) }"></span>
+                </span>
+                <p class="totalReview">
+                ({{doctor.ratingCount}} Reviews)
+                </p>
+                </div>
+            </div>
+            <div class="next-icon">
+                <i class="icon ion-android-add-circle" ng-show="{{doctor.onoff == 1}}"></i>
+                <i class="icon ion-android-arrow-dropdown-circle" ng-show="{{doctor.onoff == 2}}"></i>
+            </div>
+            <ion-option-button class="button-calm" ng-click="delItem(doctor.doctorPhone)">
+              <i class="ion-android-delete" style="margin: 0 0 0 5px; color:#af282e;"></i>
+            </ion-option-button>
+          </ion-item>
+
+          <ion-item ng-show="!myConsultedDoctors.length" style="background-color: #e2e2e2;  border: none;"><center><b style="color:teal;">No Favorite Doctors</b></center></ion-item>
+
+      </ion-list>
+  </ion-content>
+</ion-view>
