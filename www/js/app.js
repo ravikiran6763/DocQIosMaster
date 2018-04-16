@@ -1420,12 +1420,13 @@ $stateProvider
     //console.log(window.localStorage.doctororpatient);
 
     if(window.localStorage.doctororpatient === 'doctor'){
-      Storage.showConnecting = false;
       console.log('window.localStorage.sendPrescTo::',window.localStorage.sendPrescTo);
         var userType=window.localStorage.doctororpatient;
         var userNum=window.localStorage.user;
 
       if(window.localStorage.sendPrescTo){
+        Storage.showConnecting = false;
+        
         //console.log("iosDevice:");
         //console.log("iospatient:",window.localStorage.sendPrescTo);
         $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
@@ -1435,6 +1436,7 @@ $stateProvider
       else{
         console.log("normal routing");
         return '/templates/doctor_home';
+
       }
     }
     else if(window.localStorage.doctororpatient === 'patient'){
