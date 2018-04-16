@@ -325,14 +325,7 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
 
           if(window.localStorage.doctororpatient === "doctor" ){
 
-              if($rootScope.pat_phnofromwebview){
-                  $ionicLoading.show({
-                      template: '<ion-spinner></ion-spinner><br><br>Please Wait',
-                      duration:5000
-                  });
-                  $state.go('templates.sendPrescription',{"reqPat": $rootScope.pat_phnofromwebview},{location: "replace", reload: false});
-                  return '/templates/sendPrescription';
-              }
+            // alert(window.localStorage.sendPrescTo);
 
               if($rootScope.deviceIOS === true){
                 if(window.localStorage.sendPrescTo != ''){
@@ -343,6 +336,7 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
                 }
               }
 
+
           }
 
           else{
@@ -350,26 +344,18 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
           //console.log('UNDEFINED');
           }
           $timeout( function() {
-                  // $state.go('templates.loadingDoctor');
-                  if($rootScope.pat_phnofromwebview){
-                      // window.localStorage.onOff=2;
-                      $ionicLoading.show({
-                      template: '<ion-spinner></ion-spinner><br><br>Please Wait',
-                      duration:5000
-                      });
-                      //console.log($rootScope.pat_phnofromwebview);
-                      $state.go('templates.sendPrescription',{"reqPat": $rootScope.pat_phnofromwebview},{location: "replace", reload: false});
-                      return '/templates/sendPrescription';
+
+                  if(window.localStorage.sendPrescTo != ''){
+                    Storage.showConnecting = false;
+                    $ionicLoading.show({
+                    template: '<ion-spinner></ion-spinner><br><br>Please Wait',
+                    duration:5000
+                    });
+                    console.log("iospatient:",window.localStorage.sendPrescTo);
+                    $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
+                    return '/templates/sendPrescription';
                   }
 
-                  if($rootScope.deviceIOS === true){
-                        if(window.localStorage.sendPrescTo != ''){
-                            //console.log("iosDevice:");
-                            //console.log("iospatient:",window.localStorage.sendPrescTo);
-                            $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
-                            return '/templates/sendPrescription';
-                        }
-                  }
           }, 0);
 
 
@@ -389,21 +375,21 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
 
           //-------------------------------------ANALYTICS SETUP---------------------
             // window.ga.startTrackerWithId('UA-114659588-1')
-              window.ga.startTrackerWithId('UA-114659588-1', 1, function(msg) {
-                window.ga.trackView('Index.html');
-              });
-             window.ga.setAllowIDFACollection(true)
-             // window.ga.trackEvent('Request', 'Click', 'sendrequesttoonlinedoctors',1)// Label and Value are optional, Value is numeric
-             // window.ga.debugMode();
-             window.ga.enableUncaughtExceptionReporting(true, gasuccess, gaerror)
-             function gasuccess() {
-             console.info("Google Analytics working");
-             }
-             function gaerror(error){
-             console.error(error);
-             }
-             window.ga.trackView('Profile')
-             window.ga.trackView('specialityDetailsNew');
+             //  window.ga.startTrackerWithId('UA-114659588-1', 1, function(msg){
+             //    window.ga.trackView('Index.html');
+             //  });
+             // window.ga.setAllowIDFACollection(true)
+             // // window.ga.trackEvent('Request', 'Click', 'sendrequesttoonlinedoctors',1)// Label and Value are optional, Value is numeric
+             // // window.ga.debugMode();
+             // window.ga.enableUncaughtExceptionReporting(true, gasuccess, gaerror)
+             // function gasuccess() {
+             // console.info("Google Analytics working");
+             // }
+             // function gaerror(error){
+             // console.error(error);
+             // }
+             // window.ga.trackView('Profile');
+             // window.ga.trackView('specialityDetailsNew');
           //-------------------------------------ANALYTICS SETUP---------------------
 
 
@@ -1424,159 +1410,43 @@ $stateProvider
 
   // if none of the above states are matched, use this as the fallback
   // $urlRouterProvider.otherwise('/auth/loginNew');
+  $urlRouterProvider.otherwise(function($injector,$localStorage,$window,$location,$rootScope) {
 
-$urlRouterProvider.otherwise(function($injector,$localStorage,$window,$location,$rootScope) {
+    var $state = $injector.get('$state');
+    var Storage = $injector.get('$localStorage');
+    var rootScope = $injector.get('$rootScope');
 
-  var $state = $injector.get('$state');
-  var Storage = $injector.get('$localStorage');
-  var rootScope = $injector.get('$rootScope');
+    //console.log(window.localStorage.doctororpatient);
+    //console.log(window.localStorage.doctororpatient);
 
-  //console.log(window.localStorage.doctororpatient);
-  //console.log(window.localStorage.doctororpatient);
+    if(window.localStorage.doctororpatient === 'doctor'){
+      Storage.showConnecting = false;
+      console.log('window.localStorage.sendPrescTo::',window.localStorage.sendPrescTo);
+        var userType=window.localStorage.doctororpatient;
+        var userNum=window.localStorage.user;
 
-  if(window.localStorage.doctororpatient === 'doctor'){
-    Storage.showConnecting = true;
-    //console.log(window.localStorage.sendPrescTo);
-      var userType=window.localStorage.doctororpatient;
-      var userNum=window.localStorage.user;
-      //console.log(userType);
-
-      var get = getUrlVars();
-      //console.log('thisis after getting');
-      //console.log(get["phno"]);
-      rootScope.pat_phnofromwebview = get["phno"];
-
-    function getUrlVars() {
-    var vars = {};
-    /*Splits the variables into chuncks*/
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-    /*Takes those chunks and removes anything after the hashtag*/
-    vars[key] = value.replace(/#\b[^#]*$/gi, '');
-
-    });
-
-    //console.log('from webviewactivity');
-    //console.log(vars);
-    return vars;
-
-    }
-    if(rootScope.pat_phnofromwebview){
-      if(window.localStorage.doctororpatient === "doctor" ){
-
-          if(rootScope.pat_phnofromwebview){
-            //console.log('Route to prescription view :)');
-              Storage.showConnecting = false;
-              $ionicLoading.show({
-              template: '<ion-spinner></ion-spinner><br><br>Please Wait',
-              duration:5000
-              });
-              //console.log($rootScope.pat_phnofromwebview);
-              $state.go('templates.sendPrescription',{"reqPat": $rootScope.pat_phnofromwebview},{location: "replace", reload: false});
-              return '/templates/sendPrescription';
-          }
-          //
-          // if($rootScope.deviceIOS === true){
-          //   if(window.localStorage.sendPrescTo != ''){
-          //     //console.log("iosDevice:");
-          //     //console.log("iospatient:",window.localStorage.sendPrescTo);
-          //     $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
-          //     return '/templates/sendPrescription';
-          //   }
-          // }
-
-
-
+      if(window.localStorage.sendPrescTo){
+        //console.log("iosDevice:");
+        //console.log("iospatient:",window.localStorage.sendPrescTo);
+        $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
+        return '/templates/sendPrescription';
+        window.localStorage.sendPrescTo='';
+      }
+      else{
+        console.log("normal routing");
+        return '/templates/doctor_home';
       }
     }
-    else{
-      //console.log("normal routing");
-      return '/templates/doctor_home';
-
+    else if(window.localStorage.doctororpatient === 'patient'){
+      Storage.showConnecting = true;
+      return '/app/patientScreens';
     }
-  }
-  else if(window.localStorage.doctororpatient === 'patient'){
-    Storage.showConnecting = true;
-    return '/app/patientScreens';
-  }
-  else{
-    Storage.showConnecting = false;
-    return '/auth/loginNew';
-  }
+    else{
+      Storage.showConnecting = false;
+      return '/auth/loginNew';
+    }
 
-});
-
-  // $urlRouterProvider.otherwise(function($injector,$localStorage,$location,$rootScope) {
-  //   var $state = $injector.get('$state');
-  //   var Storage = $injector.get('$localStorage');
-  //   var rootScope = $injector.get('$rootScope');
-  //
-  //   //console.log(Storage.sendPrescTo);
-  //     var userType=Storage.doctororpatient;
-  //     var userNum=Storage.user;
-  //     //console.log(userType);
-  //
-  //     var get = getUrlVars();
-  //     //console.log('thisis after getting');
-  //     //console.log(get["phno"]);
-  //     rootScope.pat_phnofromwebview = get["phno"];
-  //
-  //     function getUrlVars() {
-  //     var vars = {};
-  //     /*Splits the variables into chuncks*/
-  //     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-  //     /*Takes those chunks and removes anything after the hashtag*/
-  //     vars[key] = value.replace(/#\b[^#]*$/gi, '');
-  //
-  //     });
-  //
-  //     //console.log('from webviewactivity');
-  //     //console.log(vars);
-  //     return vars;
-  //
-  //     }
-  //     if(rootScope.pat_phnofromwebview){
-  //       if(window.localStorage.doctororpatient === "doctor" ){
-  //
-  //   	      if($rootScope.pat_phnofromwebview){
-  //   					//console.log('Route to prescription view :)');
-  //   	          window.localStorage.onOff=2;
-  //   	          $ionicLoading.show({
-  //   	          template: '<ion-spinner></ion-spinner><br><br>Please Wait',
-  //   	          duration:5000
-  //   	          });
-  //   	          //console.log($rootScope.pat_phnofromwebview);
-  //   	          $state.go('templates.sendPrescription',{"reqPat": $rootScope.pat_phnofromwebview},{location: "replace", reload: false});
-  //   	          return '/templates/sendPrescription';
-  //   	      }
-  //           //
-  //   	      // if($rootScope.deviceIOS === true){
-  //   	      //   if(window.localStorage.sendPrescTo != ''){
-  //   	      //     //console.log("iosDevice:");
-  //   	      //     //console.log("iospatient:",window.localStorage.sendPrescTo);
-  //   	      //     $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
-  //   	      //     return '/templates/sendPrescription';
-  //   	      //   }
-  //   	      // }
-  //
-  //
-  //
-  //   	  }
-  //     }
-  //     else{
-  //       //console.log("normal routing");
-  //       return '/splash';
-  //     }
-  //
-  //     // if(userType === 'doctor'){
-  //     //
-  //     //   return '/templates/doctor_home';
-  //     // }
-  //     //
-  //     // else{
-  //     //   return '/splash';
-  //     // }
-  //
-  //   });
+  });
 
 
 });

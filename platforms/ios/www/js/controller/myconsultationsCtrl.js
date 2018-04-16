@@ -292,7 +292,7 @@ $scope.clicktochat = function(pateientPhone)
 		if($scope.deviceIOS === true){
 			console.log('iosPlatform');
 			window.localStorage.sendPrescTo=pateientPhone;
-			console.log('tosend prescription',window.localStorage.sendPrescTo);
+			console.log('tosend prescription', window.localStorage.sendPrescTo);
 		}
 
 		$scope.patientToChat=pateientPhone;

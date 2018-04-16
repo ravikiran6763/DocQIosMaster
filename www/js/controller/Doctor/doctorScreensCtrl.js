@@ -268,37 +268,38 @@ function checkConsultations(){
               //Unregister from onesignal notifications
               $scope.accptNotifications=false;
     					$scope.rejectNotifications=true;
-    					window.plugins.OneSignal.getIds(function(ids){
-                //document.getElementById("OneSignalUserID").innerHTML = "UserID: " + ids.userId;
-                //document.getElementById("OneSignalPushToken").innerHTML = "PushToken: " + ids.pushToken;
-                console.log(JSON.stringify(ids['userId']));
-                $scope.playerId=JSON.stringify(ids['userId']);
-    						// alert('oneSignal')
-                console.log($scope.playerId);
-    						if(window.localStorage.doctororpatient === 'patient'){
-    							var updatePlayer ={
-    								palyerId:$scope.playerId,
-    								userNum:window.localStorage.user,
-    								user:'patient'
-    							}
-    						}
-    						else{
-    							var updatePlayer ={
-    								palyerId:$scope.playerId,
-    								userNum:window.localStorage.user,
-    								user:'doctor',
-                    status:$scope.status
-    							}
 
-
-    						}
-
-                LoginService.updatePlayer(updatePlayer).then(function(response){
-                  console.log(response);
-              });
-
-
-              })
+          		// window.plugins.OneSignal.getIds(function(ids){
+              //   //document.getElementById("OneSignalUserID").innerHTML = "UserID: " + ids.userId;
+              //   //document.getElementById("OneSignalPushToken").innerHTML = "PushToken: " + ids.pushToken;
+              //   console.log(JSON.stringify(ids['userId']));
+              //   $scope.playerId=JSON.stringify(ids['userId']);
+    					// 	// alert('oneSignal')
+              //   console.log($scope.playerId);
+    					// 	if(window.localStorage.doctororpatient === 'patient'){
+    					// 		var updatePlayer ={
+    					// 			palyerId:$scope.playerId,
+    					// 			userNum:window.localStorage.user,
+    					// 			user:'patient'
+    					// 		}
+    					// 	}
+    					// 	else{
+    					// 		var updatePlayer ={
+    					// 			palyerId:$scope.playerId,
+    					// 			userNum:window.localStorage.user,
+    					// 			user:'doctor',
+              //       status:$scope.status
+    					// 		}
+              //
+              //
+    					// 	}
+              //
+              //   LoginService.updatePlayer(updatePlayer).then(function(response){
+              //     console.log(response);
+              // });
+              //
+              //
+              // })
 
 
 
