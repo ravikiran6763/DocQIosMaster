@@ -10,8 +10,8 @@ this.invitereviewpatient = function (listofcontacts){
 this.getinvitecontacts = function()
 {
     return con;
-    console.log(con);
-
+    // console.log(con);
+    // console.log(con.value);
 
 
 }
@@ -73,10 +73,10 @@ this.invitereviewforall = function (contact) {
 
 }
 
-this.getonlysinglecontact = function (contact) {
+this.getonlysinglecontactforios = function (contact) {
   var deferred = $q.defer();
   // console.log(docPhone);
-  $http.post(BASE_URL.url + API.getonlysinglecontact,contact)
+  $http.post(BASE_URL.url + API.getonlysinglecontactforios,contact)
   .success(function (data, status, headers, config){
     deferred.resolve(data);
   })

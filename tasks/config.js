@@ -24,14 +24,14 @@ var config =  function() {
 
     // Build Path
     var build = {
-        root   : '../DocQBuild/www',
-        css    : '../DocQBuild/www/css',
-        js     : '../DocQBuild/www/js',
-        images : '../DocQBuild/www/img',
-        fonts  : '../DocQBuild/build/fonts',
-        lib   : '../DocQBuild/www/lib',
-        locale : '../DocQBuild/www/locale',
-        template : '../DocQBuild/www/views'
+        root   : '../DocQIosBuild/www',
+        css    : '../DocQIosBuild/www/css',
+        js     : '../DocQIosBuild/www/js',
+        images : '../DocQIosBuild/www/img',
+        fonts  : '../DocQIosBuild/build/fonts',
+        lib   : '../DocQIosBuild/www/lib',
+        locale : '../DocQIosBuild/www/locale',
+        template : '../DocQIosBuild/www/views'
     };
 
     // Server Configuration

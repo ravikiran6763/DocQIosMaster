@@ -103,19 +103,36 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 					{
 
 						window.localStorage.doctororpatient = response;
-						window.plugins.OneSignal.getIds(function(ids) {
-							$scope.playerId=JSON.stringify(ids['userId']);
-							// console.log($scope.playerId);
-							var updatePlayer ={
-								palyerId:$scope.playerId,
-								userNum:window.localStorage.user,
-								user:'patient'
-							}
-							console.log(updatePlayer);
-							LoginService.updatePlayer(updatePlayer).then(function(response){
-								console.log(response);
-							})
+						window.FirebasePlugin.getToken(function(token) {
+						    // save this server-side and use it to push notifications to this device
+						    // alert(token);
+								$scope.playerId=token;
+									var updatePlayer ={
+										palyerId:$scope.playerId,
+										userNum:window.localStorage.user,
+										user:'patient'
+									}
+								LoginService.updatePlayer(updatePlayer).then(function(response){
+									console.log(response);
+								})
+						}, function(error) {
+						    console.error(error);
 						});
+
+
+						// window.plugins.OneSignal.getIds(function(ids) {
+						// 	$scope.playerId=JSON.stringify(ids['userId']);
+						// 	// console.log($scope.playerId);
+						// 	var updatePlayer ={
+						// 		palyerId:$scope.playerId,
+						// 		userNum:window.localStorage.user,
+						// 		user:'patient'
+						// 	}
+						// 	console.log(updatePlayer);
+						// 	LoginService.updatePlayer(updatePlayer).then(function(response){
+						// 		console.log(response);
+						// 	})
+						// });
 
 						patientProfileDetailsService.fetchPatient($scope.loginData.phone).then(function(response){
 							window.localStorage['patientDetails'] = angular.toJson(response);
@@ -130,30 +147,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 						console.log('failure data', error);
 						})
 
-						// myConsultationService.myConsultedDoctors($scope.loginData.phone).then(function(response){
-						// 	console.log(response);
-            //
-						// window.localStorage['ConsultedDoctor'] = angular.toJson(response);
-						// }).catch(function(error){
-						// // console.log('failure data', error);
-						// });
-
-            //
-
-            //
-						// ///////////get all specialities///////////
-
-
-						// doctorServices.myDoctorsFetched($scope.loginData.phone).then(function(response){
-						// 	// alert('list');
-					  //   $scope.myConsultedDoctors=response;
-						// 	window.localStorage['myDoctors'] = angular.toJson(response);
-						//
-					  // }).catch(function(error){
-					  // console.log('failure data', error);
-					  // });
-						//
-
 
 						var uname1 = "greet+"+$scope.loginData.phone;
 						var pw1 = "DQ_patient";
@@ -162,9 +155,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 						$scope.deviceAndroid = ionic.Platform.isAndroid();
 						console.log($scope.deviceAndroid);
 						if($scope.deviceAndroid === true){
-							// $ionicLoading.show({
-						  //       template: '<ion-spinner></ion-spinner><br><br>Connecting to DoctorQuick'
-						  //     });
 							var success = function(message)
 							{
 
@@ -251,6 +241,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 							}
 
 							hello.login(uname1,pw1,success, failure);
+							// $state.go('app.patient_home', {}, {location: "replace", reload: false});
 
 							$timeout( function(){
 									console.log('interval started');
@@ -278,6 +269,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 										 			hello.unreadchatfromusers(username,password,success, failure);
 										 }
 								 $rootScope.loginInterval = function () {
+									console.log("checking for login");
 									 var success = function(message)
 	 								{
 										console.log(message);
@@ -306,6 +298,22 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 					else if(response === "doctor")
 					{
 						window.localStorage.doctororpatient = response;
+
+						window.FirebasePlugin.getToken(function(token) {
+								// save this server-side and use it to push notifications to this device
+								// alert(token);
+								$scope.playerId=token;
+									var updatePlayer ={
+										palyerId:$scope.playerId,
+										userNum:window.localStorage.user,
+										user:'doctor'
+									}
+								LoginService.updatePlayer(updatePlayer).then(function(response){
+									console.log(response);
+								})
+						}, function(error) {
+								console.error(error);
+						});
 						// window.plugins.OneSignal.getIds(function(ids){
 						// 	$scope.playerId=JSON.stringify(ids['userId']);
 						//

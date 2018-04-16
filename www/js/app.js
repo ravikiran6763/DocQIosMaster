@@ -254,46 +254,65 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
 
           //-------------------------------------ONESIGNAL PUSH SETUP---------------------
 
-          window.plugins.OneSignal.getIds(function(ids) {
-          // alert('getIds: ' + JSON.stringify(ids));
-          console.log("userId = " + ids.userId + ", pushToken = " + ids.pushToken);
+          window.FirebasePlugin.onTokenRefresh(function(token) {
+      // save this server-side and use it to push notifications to this device
+
+              console.log(token);
+          }, function(error) {
+              console.error(error);
           });
-          var iosSettings = {};
-          iosSettings["kOSSettingsKeyAutoPrompt"] = true;
-          iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
 
-          var notificationOpenedCallback = function(jsonData) {
-          alert("Notification opened:\n" + JSON.stringify(jsonData));
-          //console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-          };
+          window.FirebasePlugin.onNotificationOpen(function(notification) {
+                console.log(notification);
 
-          // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 
-          window.plugins.OneSignal
-          // .startInit("6873c259-9a11-4a2a-a3b5-53aea7d59429")//old one from ravikiran6763@gmail.com
-          .startInit("e215d4e2-486f-4f19-984b-e54e8b63f891")//from services.doctorquick
-          .iOSSettings(iosSettings)
-          .endInit();
+                  console.log(notification.tap);
 
-          window.plugins.OneSignal
-          .startInit( "e215d4e2-486f-4f19-984b-e54e8b63f891")
-          .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.Notification)
-          // Notification - native notification display while user has app in focus (can be distracting).
-          // InAppAlert (DEFAULT) - native alert dialog display, which can be helpful during development.
-          // None - notification is silent.
-          .handleNotificationOpened(function(jsonData) {
-          var data = jsonData.notification.payload.additionalData;
-          // //console.log('fromPush',data.reqId);
-          //console.log("Notification opened:\n" + JSON.stringify(jsonData));
-          //console.log('didOpenRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+                  if(notification.tap)
+                  {
 
-          $ionicHistory.nextViewOptions({
-          disableAnimate: true,
-          disableBack: true
-          });
-          $state.go('templates.viewPatientRequest',{ "reqId": data.reqId,"reqPat": data.reqPat,"reqTime": data.reqTime},{location: "replace", reload: false});
-          })
-          .endInit();
+                    alert('notification tapped');
+
+                  }
+                  else {
+
+                    var confirmPopup = $ionicPopup.confirm({
+                           // title: 'Low Balance',
+                           template: '<center>Ravikiran would like a consultation with you</center> ',
+                           cssClass: 'videoPopup',
+                           buttons: [
+                             {
+                               text: 'OK',
+                               type: 'button-positive',
+                               onTap: function(e) {
+
+                                 console.log('OK TAPPED');
+
+                                 $ionicHistory.nextViewOptions({
+                                   disableAnimate: true,
+                                   disableBack: true
+                                 });
+                                 $state.go('templates.doctor_home',{}, {location: "replace", reload: false});
+
+
+                               }
+                             },
+
+                           ]
+                         });
+
+                  }
+
+
+
+                //$state.go('app.patient_profile');
+
+
+            }, function(error) {
+                console.error(error);
+            });
+
+
 
           //-------------------------------------ONESIGNAL PUSH SETUP---------------------
 
@@ -710,6 +729,7 @@ DoctorQuickApp.config(function( $ionicConfigProvider) {
        $ionicConfigProvider.navBar.alignTitle('center');
        // $ionicConfigProvider.views.transition('platform');
        $ionicConfigProvider.views.transition('none')
+       $ionicConfigProvider.backButton.previousTitleText(false).text('');
        // $ionicConfigProvider.scrolling.jsScrolling(true);
 });
 

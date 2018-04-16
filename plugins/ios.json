@@ -7,77 +7,79 @@
     "files": {}
   },
   "installed_plugins": {
+    "com.greettelehealth.DoctorQuick": {
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
+    },
     "com.razorpay.cordova": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-android-permissions": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-appversion": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
-    },
-    "cordova-plugin-calendar": {
-      "CALENDAR_USAGE_DESCRIPTION": " ",
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-contacts": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-datepicker": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-fullscreen": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-google-analytics": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-x-socialsharing": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-x-toast": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "phonegap-plugin-mobile-accessibility": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     }
   },
   "dependent_plugins": {
     "es6-promise-plugin": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     }
   }
 }

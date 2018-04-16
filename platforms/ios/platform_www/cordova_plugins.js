@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
+    "id": "com.greettelehealth.DoctorQuick.hello",
+    "file": "plugins/com.greettelehealth.DoctorQuick/www/hello.js",
+    "pluginId": "com.greettelehealth.DoctorQuick",
+    "clobbers": [
+      "hello"
+    ]
+  },
+  {
     "id": "com.razorpay.cordova.RazorpayCheckout",
     "file": "plugins/com.razorpay.cordova/www/RazorpayCheckout.js",
     "pluginId": "com.razorpay.cordova",
@@ -22,14 +30,6 @@ module.exports = [
     "pluginId": "cordova-plugin-appversion",
     "clobbers": [
       "AppVersion"
-    ]
-  },
-  {
-    "id": "cordova-plugin-calendar.Calendar",
-    "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
-    "pluginId": "cordova-plugin-calendar",
-    "clobbers": [
-      "Calendar"
     ]
   },
   {
@@ -363,6 +363,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-firebase.FirebasePlugin",
+    "file": "plugins/cordova-plugin-firebase/www/firebase.js",
+    "pluginId": "cordova-plugin-firebase",
+    "clobbers": [
+      "FirebasePlugin"
+    ]
+  },
+  {
     "id": "cordova-plugin-fullscreen.AndroidFullScreen",
     "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
     "pluginId": "cordova-plugin-fullscreen",
@@ -472,10 +480,10 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
+  "com.greettelehealth.DoctorQuick": "0.7.0",
   "com.razorpay.cordova": "0.16.1",
   "cordova-plugin-android-permissions": "1.0.0",
   "cordova-plugin-appversion": "1.0.0",
-  "cordova-plugin-calendar": "5.0.0",
   "cordova-plugin-camera": "4.0.2",
   "cordova-plugin-compat": "1.2.0",
   "cordova-plugin-contacts": "3.0.1",
@@ -483,11 +491,12 @@ module.exports.metadata =
   "cordova-plugin-device": "1.1.7",
   "cordova-plugin-file": "5.0.0",
   "cordova-plugin-file-transfer": "1.7.1",
+  "cordova-plugin-firebase": "0.1.25",
   "cordova-plugin-fullscreen": "1.1.0",
   "cordova-plugin-google-analytics": "1.8.3",
   "cordova-plugin-inappbrowser": "1.7.2",
   "cordova-plugin-network-information": "1.3.4",
-  "cordova-plugin-splashscreen": "4.1.0",
+  "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-statusbar": "2.4.1",
   "cordova-plugin-whitelist": "1.3.3",
   "es6-promise-plugin": "4.2.2",

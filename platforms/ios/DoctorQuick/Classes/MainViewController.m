@@ -68,8 +68,23 @@
     // View defaults to full size.  If you want to customize the view's size, or its subviews (e.g. webView),
     // you can do so here.
 
-    [super viewWillAppear:animated];
+    //[super viewWillAppear:animated];
+    NSLog ( @"back btn pressed:");
+    
+    [self.navigationController setNavigationBarHidden:true];
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    // View defaults to full size.  If you want to customize the view's size, or its subviews (e.g. webView),
+    // you can do so here.
+    
+    //[super viewWillAppear:animated];
+    NSLog ( @"back btn pressed:");
+    
+    [self.navigationController setNavigationBarHidden:false];
+}
+
 
 - (void)viewDidLoad
 {

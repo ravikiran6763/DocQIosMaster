@@ -28,6 +28,9 @@ $rootScope.allcontacts.checked = false;
 
     $rootScope.allContacts = invitereviews.getinvitecontacts();
 
+    console.log($rootScope.allContacts);
+
+
       for (var i = 0; i < $rootScope.allContacts.length; i++) {
 
           $rootScope.contact = $rootScope.allContacts[i];
@@ -35,9 +38,10 @@ $rootScope.allcontacts.checked = false;
       }
 
 
-    invitereviews.getonlysinglecontact($rootScope.contact).then(function(response){
+    invitereviews.getonlysinglecontactforios($rootScope.contact).then(function(response){
       //window.localStorage['allConatctsFetched'] = angular.toJson(response);
           $rootScope.contact1 = response;
+          console.log('THIS IS FROM RESSPONSE FROM PHP');
           console.log(response);
 
            $ionicLoading.hide();
@@ -50,6 +54,8 @@ $rootScope.allcontacts.checked = false;
 
 
     angular.forEach($rootScope.contact1, function(value,key) {
+
+
            $rootScope.con.checked = $rootScope.allcontacts.checked;
            console.log($rootScope.con.checked);
 
@@ -122,6 +128,10 @@ $rootScope.selectedNumber=[];
         $scope.optionToggled = function(checkedvalue,value){
             console.log(checkedvalue);
             console.log(value);
+
+            var d = value.split(' ').join('');
+            console.log(d);
+
             if(checkedvalue)
                   {
 
@@ -137,7 +147,7 @@ $rootScope.selectedNumber=[];
 
                       console.log($rootScope.selectedNumber);
                       window.localStorage['numbersToSendInvites'] = angular.toJson($rootScope.selectedNumber);
-                      
+
 
                   }
             $scope.allcontacts = $rootScope.contact1.every(function(itm){

@@ -100,14 +100,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-splashscreen": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-splashscreen@^4.1.0"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "ionic-plugin-keyboard": {
     "source": {
       "type": "registry",
@@ -139,16 +131,6 @@
     },
     "is_top_level": true,
     "variables": {}
-  },
-  "cordova-plugin-calendar": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-calendar@^5.0.0"
-    },
-    "is_top_level": true,
-    "variables": {
-      "CALENDAR_USAGE_DESCRIPTION": " "
-    }
   },
   "cordova-plugin-datepicker": {
     "source": {
@@ -186,6 +168,30 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-google-analytics@^1.8.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-firebase": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/arnesson/cordova-plugin-firebase.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@5.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.greettelehealth.DoctorQuick": {
+    "source": {
+      "type": "local",
+      "path": "/Users/amittantia/Desktop/rkiran/DocQIosMaster/node_modules/com.example.hello"
     },
     "is_top_level": true,
     "variables": {}

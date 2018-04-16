@@ -149,7 +149,7 @@ DoctorQuickApp.constant('BASE_URL', {
         'doctorDeviceUpdate':'doctor/doctorDeviceUpdate.php',
         'invitereviewforall':'doctor/invitereviewforall.php',
         'getonlysinglecontact':'doctor/getonlysinglecontact.php',
-
+        'getonlysinglecontactforios':'doctor/getonlysinglecontactforios.php',
 
 
 

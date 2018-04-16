@@ -10,27 +10,15 @@
           "NSAppTransportSecurity": [
             {
               "xml": "<key>NSAppTransportSecurity</key>",
-              "count": 6
+              "count": 4
             },
             {
               "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
-              "count": 6
+              "count": 4
             },
             {
               "xml": "<widget id=\"com.example.ul\" version=\"0.0.1\" xmlns=\"http://www.w3.org/ns/widgets\" xmlns:cdv=\"http://cordova.apache.org/ns/1.0\" />",
-              "count": 6
-            }
-          ],
-          "CFBundleLocalizations": [
-            {
-              "xml": "<array><string>en</string><string>de</string><string>nl</string><string>fr</string><string>it</string></array>",
-              "count": 1
-            }
-          ],
-          "NSCalendarsUsageDescription": [
-            {
-              "xml": "<string> </string>",
-              "count": 1
+              "count": 4
             }
           ],
           "NSPhotoLibraryAddUsageDescription": [
@@ -45,6 +33,46 @@
         "parents": {
           "/widget": [
             {
+              "xml": "<feature name=\"ExampleApplication\"><param name=\"ios-package\" value=\"ExampleApplication\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"loginintovsee\"><param name=\"ios-package\" value=\"loginintovsee\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"logoutfromvseeforios\"><param name=\"ios-package\" value=\"logoutfromvseeforios\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"ExampleApplicationforchat\"><param name=\"ios-package\" value=\"ExampleApplicationforchat\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"indivisualchatcounts\"><param name=\"ios-package\" value=\"indivisualchatcounts\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"unreadchatcountsfromusers\"><param name=\"ios-package\" value=\"unreadchatcountsfromusers\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"loginstatus\"><param name=\"ios-package\" value=\"loginstatus\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Invideocall\"><param name=\"ios-package\" value=\"Invideocall\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"sendprescription\"><param name=\"ios-package\" value=\"sendprescription\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AppDelegate_push\"><param name=\"ios-package\" value=\"AppDelegate_push\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"Checkout\"><param name=\"ios-package\" value=\"Main\" /></feature>",
               "count": 1
             }
@@ -52,10 +80,6 @@
           "/*": [
             {
               "xml": "<feature name=\"RareloopAppVersion\"><param name=\"ios-package\" value=\"RareloopAppVersion\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Calendar\"><param name=\"ios-package\" value=\"Calendar\" /></feature>",
               "count": 1
             },
             {
@@ -84,6 +108,10 @@
             },
             {
               "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"FirebasePlugin\"><param name=\"ios-package\" value=\"FirebasePlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
             {
@@ -132,83 +160,113 @@
             }
           ]
         }
+      },
+      "*/Entitlements-Debug.plist": {
+        "parents": {
+          "aps-environment": [
+            {
+              "xml": "<string>development</string>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*/Entitlements-Release.plist": {
+        "parents": {
+          "aps-environment": [
+            {
+              "xml": "<string>production</string>",
+              "count": 1
+            }
+          ]
+        }
       }
     }
   },
   "installed_plugins": {
+    "com.greettelehealth.DoctorQuick": {
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
+    },
     "com.razorpay.cordova": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-android-permissions": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-appversion": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
-    },
-    "cordova-plugin-calendar": {
-      "CALENDAR_USAGE_DESCRIPTION": " ",
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-contacts": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-datepicker": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-fullscreen": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-google-analytics": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "es6-promise-plugin": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-x-socialsharing": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "cordova-plugin-x-toast": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     },
     "phonegap-plugin-mobile-accessibility": {
-      "PACKAGE_NAME": "com.greettech.DoctorQuick"
+      "PACKAGE_NAME": "com.greettelehealth.DoctorQuick"
     }
   },
   "dependent_plugins": {},
   "modules": [
+    {
+      "id": "com.greettelehealth.DoctorQuick.hello",
+      "file": "plugins/com.greettelehealth.DoctorQuick/www/hello.js",
+      "pluginId": "com.greettelehealth.DoctorQuick",
+      "clobbers": [
+        "hello"
+      ]
+    },
     {
       "id": "com.razorpay.cordova.RazorpayCheckout",
       "file": "plugins/com.razorpay.cordova/www/RazorpayCheckout.js",
@@ -231,14 +289,6 @@
       "pluginId": "cordova-plugin-appversion",
       "clobbers": [
         "AppVersion"
-      ]
-    },
-    {
-      "id": "cordova-plugin-calendar.Calendar",
-      "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
-      "pluginId": "cordova-plugin-calendar",
-      "clobbers": [
-        "Calendar"
       ]
     },
     {
@@ -572,6 +622,14 @@
       ]
     },
     {
+      "id": "cordova-plugin-firebase.FirebasePlugin",
+      "file": "plugins/cordova-plugin-firebase/www/firebase.js",
+      "pluginId": "cordova-plugin-firebase",
+      "clobbers": [
+        "FirebasePlugin"
+      ]
+    },
+    {
       "id": "cordova-plugin-fullscreen.AndroidFullScreen",
       "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
       "pluginId": "cordova-plugin-fullscreen",
@@ -679,10 +737,10 @@
     }
   ],
   "plugin_metadata": {
+    "com.greettelehealth.DoctorQuick": "0.7.0",
     "com.razorpay.cordova": "0.16.1",
     "cordova-plugin-android-permissions": "1.0.0",
     "cordova-plugin-appversion": "1.0.0",
-    "cordova-plugin-calendar": "5.0.0",
     "cordova-plugin-camera": "4.0.2",
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-contacts": "3.0.1",
@@ -690,11 +748,12 @@
     "cordova-plugin-device": "1.1.7",
     "cordova-plugin-file": "5.0.0",
     "cordova-plugin-file-transfer": "1.7.1",
+    "cordova-plugin-firebase": "0.1.25",
     "cordova-plugin-fullscreen": "1.1.0",
     "cordova-plugin-google-analytics": "1.8.3",
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-network-information": "1.3.4",
-    "cordova-plugin-splashscreen": "4.1.0",
+    "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "2.4.1",
     "cordova-plugin-whitelist": "1.3.3",
     "es6-promise-plugin": "4.2.2",

@@ -75,21 +75,41 @@ $scope.Savedata = function()
                    var options = {};
                    options.multiple = true;
                    options.hasPhoneNumber = true;
-                   options.fields = ['name.formatted', 'phoneNumbers'];
+                   options.fields = ['givenName', 'phoneNumbers'];
                    $cordovaContacts.find(options).then(function(result) {
+
+
                        $scope.contacts = result;
 
-                       var contactsWithAtLeastOnePhoneNumber = _.filter(result, function(contact){
-                           return contact.phoneNumbers.length > 0
+
+                          // console.log($scope.contacts);
+                          // console.log('\n');
+
+
+                       var contactsWithAtLeastOnePhoneNumber = _.filter(result, function(contacts){
+
+                         // console.log(contact.phoneNumbers.length);
+                         // console.log('\n');
+
+                           return contacts.length > 0
                        });
+
+
+                       // console.log(contactsWithAtLeastOnePhoneNumber);
+                       // console.log('\n');
 
                        //
                        // Contacts with at least one phone number...
                        $scope.deviceContacts=contactsWithAtLeastOnePhoneNumber;
+
+
+                        console.log($scope.contacts.value);
+
+
                        // $scope.deviceContacts='ravikiran';
-                       console.log( $scope.deviceContacts);
-                       console.log(contactsWithAtLeastOnePhoneNumber);
-                       invitereviews.invitereviewpatient(contactsWithAtLeastOnePhoneNumber);
+                       // console.log( $scope.deviceContacts);
+                       // console.log(contactsWithAtLeastOnePhoneNumber);
+                       invitereviews.invitereviewpatient($scope.contacts);
                        $state.go("templates.invite_reviews");
                        // $ionicLoading.hide();
 
