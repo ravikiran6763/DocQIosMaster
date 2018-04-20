@@ -1,5 +1,5 @@
 // APP
-DoctorQuickApp.controller('diagnosisCtrl', function($scope,$state,$rootScope,$stateParams,$ionicConfig,$localStorage,testresultbydoctor) {
+DoctorQuickApp.controller('diagnosisCtrl', function($scope,$state,$rootScope,$stateParams,$ionicConfig,$localStorage,testresultbydoctor){
 
 		$scope.toggle = true;
 		$rootScope.headerTxt="Diagnosis";
@@ -164,7 +164,7 @@ DoctorQuickApp.controller('doc_customercareCtrl', function($scope,$rootScope, $i
 	$rootScope.showDocStatus=false;
 
 })
-DoctorQuickApp.controller('updateDoctorDetailsCtrl', function($scope,$state,$rootScope,$ionicPopup,$cordovaToast, $ionicConfig,$localStorage,$ionicLoading,doctorServices) {
+DoctorQuickApp.controller('updateDoctorDetailsCtrl', function($scope,$state,$rootScope,$ionicPopup,$cordovaToast, $ionicConfig,$localStorage,$ionicLoading,doctorServices, IonicClosePopupService) {
 				$scope.toggle = true;
 				$rootScope.headerTxt="Profile";
 				$rootScope.showBackBtn=true;
@@ -269,6 +269,8 @@ DoctorQuickApp.controller('updateDoctorDetailsCtrl', function($scope,$state,$roo
 									},
 								]
 							});
+							IonicClosePopupService.register(confirmPopup);
+
 							}
 							console.log($rootScope.emailSent);
 							}).catch(function(error){
@@ -309,6 +311,8 @@ DoctorQuickApp.controller('updateDoctorDetailsCtrl', function($scope,$state,$roo
 							},
 						]
 						});
+						IonicClosePopupService.register(confirmPopup);
+
 						}
 						$rootScope.emailSent=response;
 						console.log($rootScope.emailSent);
@@ -320,7 +324,7 @@ DoctorQuickApp.controller('updateDoctorDetailsCtrl', function($scope,$state,$roo
 
 })
 
-DoctorQuickApp.controller('updatePatientDetailsCtrl', function($scope,$state,$rootScope,$ionicLoading,$ionicPopup,$cordovaToast, $ionicConfig,$localStorage,patientProfileDetailsService) {
+DoctorQuickApp.controller('updatePatientDetailsCtrl', function($scope,$state,$rootScope,$ionicLoading,$ionicPopup,$cordovaToast, $ionicConfig,$localStorage,patientProfileDetailsService,IonicClosePopupService) {
 				$scope.toggle = true;
 				$rootScope.headerTxt="Profile";
 				$rootScope.showBackBtn=true;
@@ -360,21 +364,23 @@ DoctorQuickApp.controller('updatePatientDetailsCtrl', function($scope,$state,$ro
 				if(response){
 					$ionicLoading.hide();
 				var confirmPopup = $ionicPopup.confirm({
-				// title: 'DoctorQuick',
-				template: '<center>Click the link in the email sent to you to complete your registration process</center>',
-				// template: 'An email confirmation link to your email address has been sent. Click the link in that email to complete registering your email. Make sure to check your spam box in case it got filtered. ',
-				cssClass: 'videoPopup',
-				scope: $scope,
-				buttons: [
-				{
-					text: 'OK',
-					type: 'button-assertive',
-					onTap: function(e) {
-					// $state.go("app.patient_profile");
-					}
-				},
-				]
+						// title: 'DoctorQuick',
+						template: '<center>Click the link in the email sent to you to complete your registration process</center>',
+						// template: 'An email confirmation link to your email address has been sent. Click the link in that email to complete registering your email. Make sure to check your spam box in case it got filtered. ',
+						cssClass: 'videoPopup',
+						scope: $scope,
+						buttons: [
+						{
+							text: 'OK',
+							type: 'button-assertive',
+							onTap: function(e) {
+							// $state.go("app.patient_profile");
+							}
+						},
+						]
 				});
+				IonicClosePopupService.register(confirmPopup);
+
 				}
 				console.log($rootScope.emailSent);
 				}).catch(function(error){
@@ -442,24 +448,26 @@ DoctorQuickApp.controller('updatePatientDetailsCtrl', function($scope,$state,$ro
 							// alert('sent');
 							$ionicLoading.hide();
 							var confirmPopup = $ionicPopup.confirm({
-							// title: 'DoctorQuick',
-							template: '<center>Click the link in the email sent to you to complete your registration process</center>',
-							// template: 'An email confirmation link to your email address has been sent. Click the link in that email to complete registering your email. Make sure to check your spam box in case it got filtered. ',
-							cssClass: 'videoPopup',
-							scope: $scope,
-							buttons: [
-								{
-									text: 'OK',
-									type: 'button-assertive',
-									onTap: function(e) {
-									console.log('offline');
-									$scope.emailToUpdate={};
+									// title: 'DoctorQuick',
+									template: '<center>Click the link in the email sent to you to complete your registration process</center>',
+									// template: 'An email confirmation link to your email address has been sent. Click the link in that email to complete registering your email. Make sure to check your spam box in case it got filtered. ',
+									cssClass: 'videoPopup',
+									scope: $scope,
+									buttons: [
+										{
+											text: 'OK',
+											type: 'button-assertive',
+											onTap: function(e) {
+											console.log('offline');
+											$scope.emailToUpdate={};
 
-										// $state.go("app.patient_profile",{reload:false});
-									}
-								},
-							]
+												// $state.go("app.patient_profile",{reload:false});
+											}
+										},
+									]
 							});
+							IonicClosePopupService.register(confirmPopup);
+
 							}
 							console.log($rootScope.emailSent);
 				}).catch(function(error){

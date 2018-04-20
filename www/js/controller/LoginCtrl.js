@@ -87,12 +87,14 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 			      });
 
 
-				var userDetails={
-					userNum : $scope.loginData.phone,
-					password : $scope.loginData.pin,
-					deviceID : window.localStorage.deviceID,
-					serial:window.localStorage.serial
-				};
+						var userDetails={
+							userNum : $scope.loginData.phone,
+							password : $scope.loginData.pin,
+							deviceID : window.localStorage.deviceID,
+							serial:window.localStorage.serial,
+							manufacturer : window.localStorage.manufacturer,
+							model:window.localStorage.model
+						};
 
 				$scope.lastView = $ionicHistory.backView();
 				LoginService.loginprocess(userDetails).then(function(response){
@@ -120,19 +122,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 						});
 
 
-						// window.plugins.OneSignal.getIds(function(ids) {
-						// 	$scope.playerId=JSON.stringify(ids['userId']);
-						// 	// console.log($scope.playerId);
-						// 	var updatePlayer ={
-						// 		palyerId:$scope.playerId,
-						// 		userNum:window.localStorage.user,
-						// 		user:'patient'
-						// 	}
-						// 	console.log(updatePlayer);
-						// 	LoginService.updatePlayer(updatePlayer).then(function(response){
-						// 		console.log(response);
-						// 	})
-						// });
 
 						patientProfileDetailsService.fetchPatient($scope.loginData.phone).then(function(response){
 							window.localStorage['patientDetails'] = angular.toJson(response);
@@ -154,74 +143,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 
 						$scope.deviceAndroid = ionic.Platform.isAndroid();
 						console.log($scope.deviceAndroid);
-						if($scope.deviceAndroid === true){
-							var success = function(message)
-							{
 
-									console.log('vsee plugin called');
-
-								loggedIn=true;
-									$ionicLoading.hide().then(function(){
-										console.log("The loading indicator is now hidden");
-										            $ionicHistory.nextViewOptions({
-										                disableBack: true,
-										                disableAnimate: true,
-										                historyRoot: true
-										            });
-										            $ionicHistory.clearCache();
-										            $ionicHistory.clearHistory();
-																$state.go('app.patient_home',{}, {location: "replace", reload: true});
-
-										$ionicHistory.nextViewOptions({
-											disableAnimate: true,
-											// disableBack: true,
-											historyRoot:true
-										});
-
-									});
-									$timeout( function(){
-									console.log('interval started');
-									$interval(checkNewMessages,2000);
-									}, 5000 );
-
-
-							}
-							var failure = function()
-							{
-
-								alert("Error calling Hello Plugin");
-
-							}
-							// $state.go('app.patient_home');//for browser login
-							hello.login(uname1,pw1,success, failure);
-
-
-							var username = "greet+"+window.localStorage.user;
-	            var password = "DQ_patient";
-	            function checkNewMessages()
-	            {
-								if($ionicHistory.currentStateName() === 'auth.loginNew'){
-									return false;
-								}
-								else{
-									var success = function(message)
-	                {
-	                  $rootScope.unreadchatforpatient = message;
-	                  console.log($rootScope.unreadchatforpatient);
-	                }
-
-	                var failure = function()
-	                {
-	                  console.log("Error calling Hello Plugin");
-	                  //console.log(‘error’);
-
-	                }
-	                  hello.unreadchatfromusers(username,password,success, failure);
-								}
-
-	            }
-						}
-						else{
 							$ionicLoading.show({
 						        template: '<ion-spinner></ion-spinner><br><br>Logging to DoctorQuick'
 						      });
@@ -268,7 +190,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 										 		}
 										 			hello.unreadchatfromusers(username,password,success, failure);
 										 }
-								 $rootScope.loginInterval = function () {
+								 $rootScope.loginInterval = function() {
 									console.log("checking for login");
 									 var success = function(message)
 	 								{
@@ -290,10 +212,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 	 								}
 	 								hello.loginstatus(success,failure);
 								  }
-
-
-						}
-
 					}
 					else if(response === "doctor")
 					{
@@ -314,21 +232,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 						}, function(error) {
 								console.error(error);
 						});
-						// window.plugins.OneSignal.getIds(function(ids){
-						// 	$scope.playerId=JSON.stringify(ids['userId']);
-						//
-						// 	console.log('OneSignal for doctor');
-						// 	// console.log($scope.playerId);
-						// 	var updatePlayer ={
-						// 		palyerId:$scope.playerId,
-						// 		userNum:window.localStorage.user,
-						// 		user:'doctor'
-						// 	}
-						// 	console.log(updatePlayer);
-						// 	LoginService.updatePlayer(updatePlayer).then(function(response){
-						// 		console.log(response);
-						// 	})
-						// });
 
 						doctorServices.doctorDetails($scope.loginData.phone).then(function(response,data){
 							$rootScope.doctor_details=response;//store the response array in doctor details
@@ -344,74 +247,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 
 						$scope.deviceAndroid = ionic.Platform.isAndroid();
 						console.log($scope.deviceAndroid);
-						if($scope.deviceAndroid === true){
-												// $ionicLoading.show({
-												// 			template: '<ion-spinner></ion-spinner><br><br>Connecting to DoctorQuick'
-												// 		});
-														console.log(uname1);
-													var success = function(message)
-													{
-														$rootScope.logginMessage="Connecting to DoctorQuick";
-														console.log(message);
-
-														$ionicLoading.hide().then(function(){
-															console.log("The loading indicator is now hidden");
-
-															$ionicHistory.nextViewOptions({
-																	disableBack: true,
-																	disableAnimate: true,
-																	historyRoot: true
-															});
-															$ionicHistory.clearCache();
-															$ionicHistory.clearHistory();
-															$state.go('templates.doctor_home', {}, {location: "replace", reload: true});
-
-														});
-														$timeout( function(){
-														console.log('interval started');
-														$interval(checkNewMessages,2000);
-														}, 5000 );
-													}
-
-													var failure = function()
-													{
-
-														alert("Error Occurred While Loggin in to DoctoQuick");
-
-													}
-												$state.go('templates.doctor_home');//for logging in from browser
-												// hello.login(uname1,pw1,success, failure);
-
-
-
-
-												var username = "greet+"+window.localStorage.user;
-						            var password = "DQ_doctor";
-						            function checkNewMessages()
-						            {
-													if($ionicHistory.currentStateName() === 'auth.loginNew'){
-														return false;
-													}
-						               else{
-														 var success = function(message)
-														 {
-															 $rootScope.unreadchatforpatient = message;
-															 console.log($rootScope.unreadchatforpatient);
-														 }
-
-														 var failure = function()
-														 {
-															 console.log("Error calling Hello Plugin");
-															 //console.log(‘error’);
-
-														 }
-															 hello.unreadchatfromusers(username,password,success, failure);
-													 }
-						            }
-												// window.localStorage.onOff=1;
-
-						}
-						else{
 							$ionicLoading.show({
 						        template: '<ion-spinner></ion-spinner><br><br>Connecting to DoctorQuick'
 						      });
@@ -482,7 +317,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 	 								hello.loginstatus(success,failure);
 								  }
 
-						}
 						console.log('doctor screen should entered');
 
 					}
@@ -498,6 +332,18 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 						{
 						$scope.myPopup.close();
 						};
+					}
+					else if(response === "NewUser"){
+						window.localStorage.doctororpatient='NewUser'
+						$ionicLoading.hide();
+						var patientDetails = {};
+			      $rootScope.loginDatasubmitted=false;
+			      console.log($scope.loginDatasubmitted);
+						$ionicHistory.nextViewOptions({
+						disableAnimate: true,
+						disableBack: true
+						});
+			      $state.go('auth.patient_reg1', {}, {reload: true});
 					}
 						else{
 								$ionicLoading.hide();
@@ -538,9 +384,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 
 		}
 
-		// $scope.$on('$destroy', function(){
-		// 		$interval.cancel(checkNewMessages);
-		// });
+
 
 
 })

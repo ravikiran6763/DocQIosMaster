@@ -1,4 +1,4 @@
-DoctorQuickApp.controller('doctorCareCtrl', function($scope,$state, $rootScope,$ionicPopup, $localStorage,$timeout, $ionicConfig, $ionicLoading, $http, $cordovaToast, doctorCareService) {
+DoctorQuickApp.controller('doctorCareCtrl', function($scope,$state, $rootScope,$ionicPopup, $localStorage,$timeout, $ionicConfig, $ionicLoading, $http, $cordovaToast, doctorCareService,IonicClosePopupService) {
 	$rootScope.headerTxt="Customer Care";
 	$rootScope.showBackBtn=true;
 	$rootScope.checkedValue = false;
@@ -53,6 +53,7 @@ DoctorQuickApp.controller('doctorCareCtrl', function($scope,$state, $rootScope,$
 										},
 									]
 								});
+								IonicClosePopupService.register(confirmPopup);
 
 	      }).catch(function(error){
 	      console.log('failure data', error);
@@ -90,6 +91,7 @@ DoctorQuickApp.controller('doctorCareCtrl', function($scope,$state, $rootScope,$
 									},
 								]
 							});
+							IonicClosePopupService.register(confirmPopup);
       }).catch(function(error){
       console.log('failure data', error);
     });

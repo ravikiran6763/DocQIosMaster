@@ -1,4 +1,4 @@
-DoctorQuickApp.controller('consultSummaryCtrl', function($state, $ionicHistory,$rootScope,$stateParams,$ionicPopup,$window,$timeout,$scope,$rootScope,$ionicConfig, $http, $ionicLoading, $localStorage, LoginService, myConsultationService, rateDoctorServices,doctorServices,patientProfileDetailsService) {
+DoctorQuickApp.controller('consultSummaryCtrl', function($state, $ionicHistory,$rootScope,$stateParams,$ionicPopup,$window,$timeout,$scope,$rootScope,$ionicConfig, $http, $ionicLoading, $localStorage, LoginService, myConsultationService, rateDoctorServices,doctorServices,patientProfileDetailsService,IonicClosePopupService) {
 	$rootScope.headerTxt="Summary";
 	$rootScope.showBackBtn=true;
 	$rootScope.checkedValue = false;
@@ -28,6 +28,7 @@ var confirmPopup = $ionicPopup.confirm({
 	},
 	]
 });
+IonicClosePopupService.register(confirmPopup);
 
 
 patientProfileDetailsService.updatenotesflag($stateParams.consultId).then(function(response){
@@ -155,6 +156,8 @@ $scope.setRating = function(ratings,val){
 
 				]
 			});
+			IonicClosePopupService.register(filRatings);
+
 	}
 	else if (ratings >= 4)
 	{

@@ -5,13 +5,13 @@
     <key>CFBundleName</key>
     <string>${PRODUCT_NAME}</string>
     <key>Micro</key>
-    <string>NSCameraUsageDescription</string>
+    <string>NSPhotoLibraryAddUsageDescription</string>
     <key>CDVLaunchScreen</key>
     <string>CFBundleExecutable</string>
     <key>CFBundleIcons~ipad</key>
     <dict/>
     <key>UIInterfaceOrientationPortrait</key>
-    <string>UISupportedInterfaceOrientations~ipad</string>
+    <string>com.greettelehealth.DoctorQuick</string>
     <key>UILaunchStoryboardName</key>
     <string>CDVLaunchScreen</string>
     <key>CFBundleDevelopmentRegion</key>
@@ -21,11 +21,11 @@
     <key>CFBundleVersion</key>
     <string>1.1.0</string>
     <key>UIInterfaceOrientationPortrait,UIInterfaceOrientationPortraitUpsideDown</key>
-    <string>NSPhotoLibraryAddUsageDescription</string>
+    <string>NSMicrophoneUsageDescription</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>6.0</key>
-    <string>NSPhotoLibraryAddUsageDescription</string>
+    <string>NSMicrophoneUsageDescription</string>
     <key>CFBundleShortVersionString</key>
     <string>1.1.0</string>
     <key>NSAppTransportSecurity</key>
@@ -41,24 +41,28 @@
         </dict>
       </dict>
     </dict>
-    <key>UIInterfaceOrientation</key>
-    <array>
-      <string>UIInterfaceOrientationPortrait</string>
-    </array>
-    <key>DoctorQuick</key>
-    <string>UISupportedInterfaceOrientations</string>
-    <key>UISupportedInterfaceOrientations</key>
+    <key>UISupportedInterfaceOrientations~ipad</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
       <string>UIInterfaceOrientationPortraitUpsideDown</string>
     </array>
+    <key>UIInterfaceOrientation</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>CFBundleIdentifier</string>
     <key>com.greettelehealth.DoctorQuick</key>
-    <string>UIInterfaceOrientation</string>
+    <string>CFBundleDisplayName</string>
+    <key>DoctorQuick</key>
+    <string>UISupportedInterfaceOrientations</string>
+    <key>microphone</key>
+    <string>NSPhotoLibraryAddUsageDescription</string>
     <key>CFBundleIdentifier</key>
     <string>com.greettelehealth.DoctorQuick</string>
     <key>CFBundleDisplayName</key>
     <string>DoctorQuick</string>
-    <key>UISupportedInterfaceOrientations~ipad</key>
+    <key>UISupportedInterfaceOrientations</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
       <string>UIInterfaceOrientationPortraitUpsideDown</string>

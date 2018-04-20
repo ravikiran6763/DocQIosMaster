@@ -139,8 +139,12 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 					if(window.localStorage.doctororpatient === 'doctor'){
 						$state.go('templates.doctor_home');
 					}
-					else{
+
+					else if(window.localStorage.doctororpatient === 'patient'){
 						$state.go('app.patient_home');
+					}
+					else{
+						window.history.back();
 					}
 				}
 				else{

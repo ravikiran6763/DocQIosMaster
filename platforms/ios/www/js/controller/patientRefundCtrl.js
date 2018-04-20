@@ -1,4 +1,4 @@
-DoctorQuickApp.controller('patientRefundCtrl', function($scope,$rootScope,$localStorage,$ionicConfig,$ionicPopup, $stateParams, $cordovaToast, $http,patientWalletServices) {
+DoctorQuickApp.controller('patientRefundCtrl', function($scope,$rootScope,$localStorage,$ionicConfig,$ionicPopup, $stateParams, $cordovaToast, $http,patientWalletServices, IonicClosePopupService) {
 	$rootScope.headerTxt="Refund ";
 	$rootScope.showBackBtn=true;
 	$rootScope.checkedValue = false;
@@ -22,12 +22,10 @@ if($rootScope.debit===''){
 }
 console.log($rootScope.debit);
 	$scope.refundReq = function(isDocTopUpValid) {
-		console.log('isDocTopUpValid ', isDocTopUpValid)
+		// console.log('isDocTopUpValid ', isDocTopUpValid)
 		$scope.submitted = true;
 
 		if(!$scope.payment.refund){
-
-
 						window.plugins.toast.showWithOptions({
 						message: "Amount must be entered",
 						duration: "short", // 2000 ms
@@ -78,10 +76,10 @@ console.log($rootScope.debit);
 			//refund code should be here
 			patientWalletServices.refundRequest(refundDetails).then(function(response){
 			 $rootScope.refundRequested=response;
-			 if($rootScope.refundRequested){
+			 if($rootScope.refundRequested == 'FreesDeposit'){
 				 var confirmPopup = $ionicPopup.confirm({
 	 				// title: 'Refund',
-	 				template: 'Your request for refund is processed and it will be credited to your account within 7 business days',
+	 				template: '<center>Free Consultation Deposit cannot be Refunded</center>',
 	 				cssClass: 'videoPopup',
 	 				scope: $scope,
 	 				buttons: [
@@ -96,6 +94,48 @@ console.log($rootScope.debit);
 	 					},
 	 				]
 	 			});
+				IonicClosePopupService.register(confirmPopup);
+
+			 }
+			 else if($rootScope.refundRequested == 'refundInProcess'){
+				 var confirmPopup = $ionicPopup.confirm({
+	 				// title: 'Refund',
+	 				template: '<center>Your previous Refund Request is still in process, please try later</center>',
+	 				cssClass: 'videoPopup',
+	 				scope: $scope,
+	 				buttons: [
+	 					{
+	 						text: 'OK',
+	 						type: 'button-positive',
+	 						onTap: function(e) {
+	 						console.log('OK');
+
+	 						}
+	 					},
+	 				]
+	 			});
+				IonicClosePopupService.register(confirmPopup);
+
+			 }
+			 else{
+				 var confirmPopup = $ionicPopup.confirm({
+	 				// title: 'Refund',
+	 				template: '<center>Your request for refund is processed and it will be credited to your account within 7 business days</center>',
+	 				cssClass: 'videoPopup',
+	 				scope: $scope,
+	 				buttons: [
+	 					{
+	 						text: 'OK',
+	 						type: 'button-positive',
+	 						onTap: function(e) {
+	 						console.log('OK');
+
+	 						}
+	 					},
+	 				]
+	 			});
+				IonicClosePopupService.register(confirmPopup);
+
 			 }
 			 console.log($rootScope.refundRequested);
 			 }).catch(function(error){

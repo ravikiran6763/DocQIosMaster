@@ -1,4 +1,4 @@
-DoctorQuickApp.controller('callAcceptedCtrl', function($scope,$rootScope,$ionicConfig, $http, $location,$cordovaNetwork,$timeout,$ionicPopup,$ionicPlatform,$ionicHistory, $stateParams,$interval, $state, $localStorage, $ionicLoading, doctorServices,$ionicSideMenuDelegate,rateDoctorServices,callacceptedbydoctor,callAcceptedService,doctorServices,HardwareBackButtonManager,patientProfileDetailsService) {
+DoctorQuickApp.controller('callAcceptedCtrl', function($scope,$rootScope,$ionicConfig, $http, $location,$cordovaNetwork,$timeout,$ionicPopup,$ionicPlatform,$ionicHistory, $stateParams,$interval, $state, $localStorage, $ionicLoading, doctorServices,$ionicSideMenuDelegate,rateDoctorServices,callacceptedbydoctor,callAcceptedService,doctorServices,HardwareBackButtonManager,patientProfileDetailsService,IonicClosePopupService) {
 
 	$rootScope.headerTxt="DoctorQuick";
 	$rootScope.showBackBtn=false;
@@ -93,6 +93,8 @@ $scope.callDoctor = function(callType)
 							},
 						]
 					});
+					IonicClosePopupService.register(confirmPopup);
+
 	}
 	else if(window.localStorage.networkType == 'Ethernet' || window.localStorage.networkType == '2G' || window.localStorage.networkType == '3G')
 	{
@@ -111,6 +113,8 @@ $scope.callDoctor = function(callType)
 							},
 						]
 					});
+					IonicClosePopupService.register(confirmPopup);
+
 	}
 	else if(window.localStorage.networkType == '4G' || window.localStorage.networkType == 'WiFi' || window.localStorage.networkType == 'Unknown')
 	{
@@ -259,6 +263,8 @@ console.log(checkPatientActivity);
 					 cssClass: 'requestPopup',
 					 scope: $scope,
 		     });
+				 IonicClosePopupService.register(alertPopup);
+
 		     	 alertPopup.then(function(res) {
 					 $state.go("app.patient_home");
 					 $ionicHistory.clearHistory();
