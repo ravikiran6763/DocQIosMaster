@@ -59,28 +59,36 @@
       </div>
     </div>
 
-    <div class="bottom-content"  ng-repeat="mydocs in myDocDetails1" ng-show="{{mydocs.onoff == 1}}">
-        <center><h5>Request a consultation via</h5></center>
-        <div class="buttons" >
+    <div class="bottom-content"  ng-repeat="mydocs in myDocDetails1" >
+        <div class="buttons" ng-show="{{mydocs.onoff == 1}}">
+          <center><h5>Request a consultation via</h5></center>
+          
           <button type="submit" class=" button button-block button-assertive" ng-disabled="onceClicked" ng-click="callMyDoc({{mydocs.doctorPhone}},6);">
             Voice Call
           </button>
           <button type="submit" class="button button-block button-assertive" ng-disabled="onceClicked" ng-click="callMyDoc({{mydocs.doctorPhone}},5);">
             Video Call
           </button>
-        </div>
-        <center><h4 style="margin-top: 7%;">Consultation Fee:₹{{mydocs.doctorFee}}</h4></center>
-    </div>
-    <div class="offline-content"  ng-repeat="mydocs in myDocDetails1" ng-show="{{mydocs.onoff == 2}}">
-        <h4 style="margin-top: 20%">Dr.{{mydocs.doctorFname |capitalize}} is offline.<br>You may request a consultatiion <br>by sending a notification.</h4>
-        <div class="buttons">
 
-          <button type="submit" class="button button-block button-assertive" ng-click="sendOfflineMessage({{mydocs.doctorPhone}});">
-            Send Notification
-          </button>
+          <div ng-hide="{{firstConsultationDone == true}}"><center><h4 style="margin-top: 7%;">Consultation Fee:₹{{mydocs.doctorFee}}</h4></center></div>
+          <div ng-show="{{firstConsultationDone == true}}"><center><h4 style="margin-top: 7%;">Free Consultation</h4></center></div>
 
         </div>
+
+
+        <div class="buttons"  ng-repeat="mydocs in myDocDetails1" ng-show="{{mydocs.onoff == 2}}">
+            <h4 style="margin-top: 20%">Dr.{{mydocs.doctorFname |capitalize}} is offline.<br>You may request a consultatiion <br>by sending a notification.</h4>
+            <div class="buttons">
+
+              <button type="submit" class="button button-block button-assertive" ng-click="sendOfflineMessage({{mydocs.doctorPhone}});">
+                Send Notification
+              </button>
+
+            </div>
+        </div>
+
     </div>
+
 
   </ion-content>
 </ion-view>

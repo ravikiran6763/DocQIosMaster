@@ -1,5 +1,5 @@
 
-DoctorQuickApp.controller('patientCareCtrl', function($scope,$state, $rootScope,$cordovaNetwork, $timeout, $localStorage, $cordovaToast, $ionicLoading, $ionicPopup,$ionicConfig, $http, patientCareService) {
+DoctorQuickApp.controller('patientCareCtrl', function($scope,$state, $rootScope,$cordovaNetwork, $timeout, $localStorage, $cordovaToast, $ionicLoading, $ionicPopup,$ionicConfig, $http, patientCareService,IonicClosePopupService) {
 	$rootScope.headerTxt="Customer Care";
 	$rootScope.showBackBtn=true;
 	$rootScope.checkedValue = false;
@@ -64,6 +64,8 @@ DoctorQuickApp.controller('patientCareCtrl', function($scope,$state, $rootScope,
 										},
 									]
 								});
+								IonicClosePopupService.register(confirmPopup);
+
 				// window.plugins.toast.showWithOptions({
         // message: "Your query has been submitted.",
         // duration: "short", // 2000 ms
@@ -120,6 +122,8 @@ DoctorQuickApp.controller('patientCareCtrl', function($scope,$state, $rootScope,
 										},
 									]
 								});
+								IonicClosePopupService.register(confirmPopup);
+
 					// window.plugins.toast.showWithOptions({
 					// message: "Someone will contact you from DoctorQuick.",
 					// duration: "short", // 2000 ms

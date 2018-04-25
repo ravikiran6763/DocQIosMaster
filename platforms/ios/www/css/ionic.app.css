@@ -13553,8 +13553,7 @@ ion-side-menu .heading-item .message {
     width: 100%; }
     .ViewDoctorProfile-view .bottom-content h4 {
       font-size: 130%;
-      text-align: center;
-      line-height: 5%; }
+      text-align: center; }
     .ViewDoctorProfile-view .bottom-content h5 {
       position: relative;
       margin-top: 15%; }

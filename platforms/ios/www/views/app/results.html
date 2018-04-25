@@ -5,10 +5,11 @@
       <div class="profile-img" ng-repeat="mydocs in myDocDetail">
         <!-- <pre-img ratio="_1_1" helper-class="rounded-image"> -->
             <!-- <img ng-src="img/doc.jpg" spinner-on-load> -->
-            <img  ng-hide="mydocs.docImage2 == null " ng-src="{{mydocs.docImage2}}"  >
-            <img  ng-show="mydocs.docImage2 == null " ng-src="img/patientAvatar.png"  >
             <i class="icon ion-android-add-circle" ng-show="{{mydocs.onoff == 1}}"></i>
             <i class="icon ion-android-arrow-dropdown-circle" ng-show="{{mydocs.onoff == 2}}"></i>
+            <img  ng-hide="mydocs.docImage2 == null " ng-src="{{mydocs.docImage2}}"  >
+            <img  ng-show="mydocs.docImage2 == null " ng-src="img/patientAvatar.png"  >
+
         <!-- </pre-img> -->
       </div>
 

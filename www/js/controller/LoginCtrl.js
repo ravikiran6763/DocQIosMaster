@@ -121,8 +121,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 						    console.error(error);
 						});
 
-
-
 						patientProfileDetailsService.fetchPatient($scope.loginData.phone).then(function(response){
 							window.localStorage['patientDetails'] = angular.toJson(response);
 						}).catch(function(error){
@@ -139,7 +137,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 
 						var uname1 = "greet+"+$scope.loginData.phone;
 						var pw1 = "DQ_patient";
-
 
 						$scope.deviceAndroid = ionic.Platform.isAndroid();
 						console.log($scope.deviceAndroid);
@@ -168,7 +165,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 							$timeout( function(){
 									console.log('interval started');
 						            $interval($rootScope.loginInterval,2000,1);
-												$interval(checkNewMessages,2000);
+											 $interval(checkNewMessages,2000);
 
 						         }, 10000 );
 
@@ -176,20 +173,32 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 										 var password = "DQ_patient";
 										 function checkNewMessages()
 										 {
-										 		var success = function(message)
-										 		{
-										 			$rootScope.unreadchatforpatient = message;
-										 			console.log($scope.unreadchatforpatient);
-										 		}
 
-										 		var failure = function()
-										 		{
-										 			console.log("Error calling Hello Plugin");
-										 			//console.log(‘error’);
+											 if($ionicHistory.currentStateName() === 'auth.loginNew'){
+												 return false;
+											 }
+												else {
 
-										 		}
-										 			hello.unreadchatfromusers(username,password,success, failure);
+													 		var success = function(message)
+													 		{
+													 			$rootScope.unreadchatforpatient = message;
+													 			console.log($scope.unreadchatforpatient);
+													 		}
+
+													 		var failure = function()
+													 		{
+													 			console.log("Error calling Hello Plugin");
+													 			//console.log(‘error’);
+
+													 		}
+													 			hello.unreadchatfromusers(username,password,success, failure);
+
+												}
+
 										 }
+
+
+
 								 $rootScope.loginInterval = function() {
 									console.log("checking for login");
 									 var success = function(message)

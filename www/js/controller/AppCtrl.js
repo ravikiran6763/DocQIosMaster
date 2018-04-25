@@ -569,6 +569,9 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 
 								var success = function(message)
 								{
+
+									console.log(message);
+
 											$ionicLoading.hide();
 											console.log(message);
 											$ionicHistory.nextViewOptions({

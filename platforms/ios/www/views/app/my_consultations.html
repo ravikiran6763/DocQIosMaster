@@ -1,8 +1,8 @@
 <ion-view class="consultationList-view" cache-view="false" >
 
   <ion-content >
-      <div class="myDoctor-list" ng-repeat="r in ConsultedDoctor" >
-        <ul>
+      <div class="myDoctor-list" >
+        <ul ng-repeat="r in ConsultedDoctor" >
         <li  ng-click="consultationDetails({{r.doctorPhone}});">
           <div class="profile-img">
             <img  ng-hide="r.docImage2 == null "ng-src="{{r.docImage2}}"   >
@@ -25,7 +25,7 @@
         </li>
       </ul>
       <ul>
-        <li ng-show="!ConsultedDoctor.length" style="margin-top: 8vh;"><center><b style="color:teal;">No Consultations available</b></center></li>
+        <li ng-show="!ConsultedDoctor.length" style="margin-top: 8vh;"><center><b style="color:teal;">No Consultations Available</b></center></li>
       </ul>
       </div>
   </ion-content>
