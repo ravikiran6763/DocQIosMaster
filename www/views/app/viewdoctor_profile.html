@@ -12,7 +12,6 @@
       </div>
       <h1>Dr. {{mydocs.doctorFname |capitalize}} {{mydocs.doctorMname |capitalize}} {{ mydocs.doctorLname |capitalize}} </h1>
       <h2 class="dont-break-out">{{mydocs.doctorDegrees}}<br><b>Practicing since {{mydocs.practicingSince}}</b></h2>
-      <h2></h2>
 
     </div>
 
@@ -62,7 +61,7 @@
     <div class="bottom-content"  ng-repeat="mydocs in myDocDetails1" >
         <div class="buttons" ng-show="{{mydocs.onoff == 1}}">
           <center><h5>Request a consultation via</h5></center>
-          
+
           <button type="submit" class=" button button-block button-assertive" ng-disabled="onceClicked" ng-click="callMyDoc({{mydocs.doctorPhone}},6);">
             Voice Call
           </button>

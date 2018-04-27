@@ -74,7 +74,43 @@
   }
   .doctorDetails{
     position: absolute;
-    margin: -21% 0 0 23%;
+    margin: -18% 0 0 23%;
+    h2{
+      margin-top: 1%;
+    font-size: 90%;
+    /* color: black; */
+    font-family: Ubuntu,bold,sans-serif !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    h3{
+      margin-top: 1%;
+      font-size: 90%;
+      /* color: black; */
+      font-family: Ubuntu,bold,sans-serif !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: absolute;
+      width: 65vw;
+    }
+    h4{
+      margin-top: 10%;
+      font-size: 90%;
+      /* color: black; */
+      font-family: Ubuntu,bold,sans-serif !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 65vw;
+    }
+    .degrees{
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 55%;
+    }
   }
   .next-icon {
     width: 5%;
@@ -93,7 +129,7 @@
     // position: relative;
     // margin-top: -15px;
     position: absolute;
-    margin: -11% 0 0 64%;
+        margin: -8% 0 0 52%;
   }
 
 }

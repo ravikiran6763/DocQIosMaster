@@ -9961,7 +9961,7 @@ span.stars, span.stars span {
   background: url("../img/stars123.png") 0 -16px repeat-x;
   width: 80px;
   height: 16px;
-  margin-left: 2px; }
+  margin-left: 0px; }
 
 span.stars span {
   background-position: 0 0; }
@@ -11389,9 +11389,10 @@ tags-input .autocomplete .suggestion-item em {
     .dqLogin-view .login-content .form-group .input-group-addon:first-child {
       /* border-right: 0; */
       position: absolute !important;
-      margin: 6% 0 0 2% !important;
+      margin: 5.3% 0 0 2% !important;
       border: none;
-      background: #fff; }
+      background: #fff;
+      font-size: inherit; }
   .dqLogin-view .login-content .button {
     color: #ffffff;
     height: 14% !important;
@@ -12438,7 +12439,39 @@ ion-side-menu .heading-item .message {
     border-radius: 50%; }
   .myFavDoctor-profile-view .doctorDetails {
     position: absolute;
-    margin: -21% 0 0 23%; }
+    margin: -18% 0 0 23%; }
+    .myFavDoctor-profile-view .doctorDetails h2 {
+      margin-top: 1%;
+      font-size: 90%;
+      /* color: black; */
+      font-family: Ubuntu,bold,sans-serif !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .myFavDoctor-profile-view .doctorDetails h3 {
+      margin-top: 1%;
+      font-size: 90%;
+      /* color: black; */
+      font-family: Ubuntu,bold,sans-serif !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: absolute;
+      width: 65vw; }
+    .myFavDoctor-profile-view .doctorDetails h4 {
+      margin-top: 10%;
+      font-size: 90%;
+      /* color: black; */
+      font-family: Ubuntu,bold,sans-serif !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 65vw; }
+    .myFavDoctor-profile-view .doctorDetails .degrees {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 55%; }
   .myFavDoctor-profile-view .next-icon {
     width: 5%;
     float: right;
@@ -12448,7 +12481,7 @@ ion-side-menu .heading-item .message {
       font-size: 1.8em; }
   .myFavDoctor-profile-view .totalReview {
     position: absolute;
-    margin: -11% 0 0 64%; }
+    margin: -8% 0 0 52%; }
 
 .doctor-profile-view {
   background-color: #e2e2e2 !important;
@@ -12754,7 +12787,7 @@ ion-side-menu .heading-item .message {
     box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.8);
     overflow: scroll !important; }
     .patient-payment-view .bottom-content li {
-      height: 30%;
+      height: 35%;
       border-bottom: 2px solid #dadada;
       margin-top: 1%;
       *zoom: 1; }
@@ -12786,7 +12819,7 @@ ion-side-menu .heading-item .message {
           font-size: 1.8em; }
       .patient-payment-view .bottom-content li .name-content {
         float: left;
-        padding: 11px 0 0 6px; }
+        padding: 1px 0 0 6px; }
         .patient-payment-view .bottom-content li .name-content .name {
           width: 100%;
           margin-top: 12%; }
@@ -12899,8 +12932,7 @@ ion-side-menu .heading-item .message {
         font-size: 1.8em; }
     .sepecility-details-view .top-content .name-content {
       float: left;
-      padding: 5% 5%;
-      width: 72%; }
+      margin: 5% 0 0 1%; }
       .sepecility-details-view .top-content .name-content h4 {
         margin-top: 4%;
         font-size: 106%;

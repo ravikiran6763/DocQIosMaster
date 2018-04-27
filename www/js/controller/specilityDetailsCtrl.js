@@ -72,13 +72,11 @@ console.log(window.localStorage.SpecilityId);
        console.log(response);
        $rootScope.oldDocStatus=response[0]['noofonlinedoctors']
        console.log($rootScope.oldDocStatus);
-
        var data = response;
        for(var i=0; i<data.length; i++){
          $rootScope.doctorFname=data[i].doctorFname;
        console.log(i);
        }
-
 
        window.localStorage['specialityDetails'] = angular.toJson(response);
        $scope.specialityDetails = angular.fromJson($window.localStorage['specialityDetails']);

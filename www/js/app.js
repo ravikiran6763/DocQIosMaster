@@ -276,14 +276,14 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
                   if(notification.tap)
                   {
 
-                    alert('notification tapped');
+                    console.log('notification tapped');
 
                   }
                   else {
 
                     var confirmPopup = $ionicPopup.confirm({
                            // title: 'Low Balance',
-                           template: '<center>Ravikiran would like a consultation with you</center> ',
+                           template: '<center>You have a New Consultation Request</center> ',
                            cssClass: 'videoPopup',
                            buttons: [
                              {

@@ -37,13 +37,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 			$scope.loginData.phone = $cookies.get('Phone');
 			$scope.loginData.pin = $cookies.get('password');
 
-			// $(document).ready(function() {
-			//     $(".input-group > input").focus(function(e){
-			//         $(this).parent().addClass("input-group-focus");
-			//     }).blur(function(e){
-			//         // $(this).parent().removeClass("input-group-focus");
-			//     });
-			// });
+
 			$scope.countries = [
 					{
 					name: "India",
@@ -257,7 +251,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 						$scope.deviceAndroid = ionic.Platform.isAndroid();
 						console.log($scope.deviceAndroid);
 							$ionicLoading.show({
-						        template: '<ion-spinner></ion-spinner><br><br>Connecting to DoctorQuick'
+						        template: '<ion-spinner></ion-spinner><br><br>Logging into DoctorQuick'
 						      });
 
 							var success = function(message)
