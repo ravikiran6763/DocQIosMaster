@@ -207,7 +207,7 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
           }
           else {
           //console.log("localStorage previous value",window.localStorage.sendPrescTo);
-          window.localStorage.sendPrescTo = "";
+          $localStorage.sendPrescTo = "";
           //console.log("localStorage after value",window.localStorage.sendPrescTo);
           }
           //
@@ -234,28 +234,6 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
           function trace(value){
           //console.log(value);
           }
-          // AndroidFullScreen.immersiveMode(successFunction, errorFunction);
-          //-------------------------------------FCM PUSH SETUP---------------------
-
-          // FCMPlugin.getToken(function(token){
-          //   console.log(token);
-          //   alert(token);
-          // });
-          //
-          //
-          // FCMPlugin.onNotification(function(data){
-          //     alert(data.questionTitle);
-          //     console.log(data);
-          //     if(data.wasTapped){
-          //       //Notification was received on device tray and tapped by the user.
-          //       alert( JSON.stringify(data) );
-          //     }
-          //     else{
-          //       //Notification was received in foreground. Maybe the user needs to be notified.
-          //       alert( JSON.stringify(data) );
-          //     }
-          // });
-          //-------------------------------------FCM PUSH SETUP---------------------
 
           //-------------------------------------ONESIGNAL PUSH SETUP---------------------
 
@@ -328,36 +306,38 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
           //console.log("iosDevice:",$rootScope.deviceIOS);
           }
 
-          if(window.localStorage.doctororpatient === "doctor" ){
+          // if(window.localStorage.doctororpatient === "doctor" ){
+          //
+          //   // alert(window.localStorage.sendPrescTo);
+          //
+          //     if($rootScope.deviceIOS === true){
+          //       if($localStorage.sendPrescTo != ''){
+          //         //console.log("iosDevice:");
+          //         //console.log("iospatient:",window.localStorage.sendPrescTo);
+          //         $state.go('templates.sendPrescription',{"reqPat": $localStorage.sendPrescTo},{location: "replace", reload: false});
+          //         return '/templates/sendPrescription';
+          //       }
+          //     }
+          //
+          //
+          // }
+          //
+          // else{
+          // //do nothing
+          // //console.log('UNDEFINED');
+          // }
 
-            // alert(window.localStorage.sendPrescTo);
 
-              if($rootScope.deviceIOS === true){
-                if(window.localStorage.sendPrescTo != ''){
-                  //console.log("iosDevice:");
-                  //console.log("iospatient:",window.localStorage.sendPrescTo);
-                  $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
-                  return '/templates/sendPrescription';
-                }
-              }
-
-
-          }
-
-          else{
-          //do nothing
-          //console.log('UNDEFINED');
-          }
           $timeout( function() {
-
-                  if(window.localStorage.sendPrescTo != ''){
+              // $localStorage.sendPrescTo='';
+                  if($localStorage.sendPrescTo != ''){
                     Storage.showConnecting = false;
                     $ionicLoading.show({
                     template: '<ion-spinner></ion-spinner><br><br>Please Wait',
                     duration:5000
                     });
-                    console.log("iospatient:",window.localStorage.sendPrescTo);
-                    $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
+                    console.log("iospatient:",$localStorage.sendPrescTo);
+                    $state.go('templates.sendPrescription',{"reqPat": $localStorage.sendPrescTo},{location: "replace", reload: false});
                     return '/templates/sendPrescription';
                   }
 
@@ -1427,15 +1407,13 @@ $stateProvider
     if(window.localStorage.doctororpatient === 'doctor'){
       Storage.showConnecting = true;
       console.log('window.localStorage.sendPrescTo::',window.localStorage.sendPrescTo);
-        var userType=window.localStorage.doctororpatient;
-        var userNum=window.localStorage.user;
-      if(window.localStorage.sendPrescTo){
+
+      if(Storage.sendPrescTo){
+        // alert('route to presc')
         Storage.showConnecting = false;
-        //console.log("iosDevice:");
-        //console.log("iospatient:",window.localStorage.sendPrescTo);
-        $state.go('templates.sendPrescription',{"reqPat": window.localStorage.sendPrescTo},{location: "replace", reload: false});
+        $state.go('templates.sendPrescription',{"reqPat": Storage.sendPrescTo},{location: "replace", reload: false});
         return '/templates/sendPrescription';
-        window.localStorage.sendPrescTo='';
+        Storage.sendPrescTo='';
       }
       else{
         console.log("normal routing");

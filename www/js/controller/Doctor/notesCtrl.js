@@ -9,10 +9,10 @@ DoctorQuickApp.controller('notesCtrl', function($scope,$state,$window,$rootScope
 
   $scope.deviceAndroid = ionic.Platform.isAndroid();
   if($scope.deviceAndroid === false){
-    window.localStorage.sendPrescTo='';
+    $localStorage.sendPrescTo='';
   }
-  console.log(window.localStorage.subPatientId);
-  console.log(window.localStorage.patientNum);
+  // console.log(window.localStorage.subPatientId);
+  // console.log(window.localStorage.patientNum);
 
 console.log("inNotesCOntoller:",$state.$current.name);
 if($state.$current.name === 'templates.prescription'){

@@ -74,7 +74,6 @@ $rootScope.transcMsg='Select Dates';
          // minDate: new Date() - 10000,
          // allowOldDates: true,
          allowFutureDates: false,
-         androidTheme : 3,
          cancelButtonLabel: 'CANCEL',
          cancelButtonColor: '#ff0101',
          doneButtonLabel: 'DONE',
@@ -94,6 +93,18 @@ $rootScope.transcMsg='Select Dates';
         // ionicDatePicker.openDatePicker(ipObj1);
       };
     $scope.openDatePickerTo = function(){
+      var options = {
+         date: new Date(),
+         mode: 'date', // or 'time'
+         // minDate: new Date() - 10000,
+         // allowOldDates: true,
+         allowFutureDates: false,
+         cancelButtonLabel: 'CANCEL',
+         cancelButtonColor: '#ff0101',
+         doneButtonLabel: 'DONE',
+         doneButtonColor: '#6aa13e'
+
+       };
 
       $cordovaDatePicker.show(options).then(function(date){
         $rootScope.toDate =date;

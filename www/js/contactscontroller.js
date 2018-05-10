@@ -125,6 +125,8 @@ $rootScope.allcontacts.checked = false;
 
      }
 $rootScope.selectedNumber=[];
+window.localStorage['numbersToSendInvites']=angular.toJson($rootScope.selectedNumber);
+
         $scope.optionToggled = function(checkedvalue,value){
             console.log(checkedvalue);
             console.log(value);

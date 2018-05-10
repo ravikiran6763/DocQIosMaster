@@ -283,17 +283,14 @@ $scope.consultationDetails=function(consultedDoc)
  hello.chat(username,password,persontocall,success, failure);
 
 }
+$localStorage.sendPrescTo=''
+
 $scope.clicktochat = function(pateientPhone)
 {
 		console.log(pateientPhone);
 		$rootScope.deviceIOS = ionic.Platform.isIOS();
+		$rootScope.deviceAndroid = ionic.Platform.isAndroid();
 
-
-		if($scope.deviceIOS === true){
-			console.log('iosPlatform');
-			window.localStorage.sendPrescTo=pateientPhone;
-			console.log('tosend prescription', window.localStorage.sendPrescTo);
-		}
 
 		$scope.patientToChat=pateientPhone;
 		var username = "greet+"+window.localStorage.user;
@@ -302,8 +299,10 @@ $scope.clicktochat = function(pateientPhone)
 		var success = function(message)
 		{
 			console.log(message);
+			var str = message;
+	 		var res = str.slice(6, 16);
+			$localStorage.sendPrescTo=res;
 		}
-
 		var failure = function()
 		{
 			console.log('error');

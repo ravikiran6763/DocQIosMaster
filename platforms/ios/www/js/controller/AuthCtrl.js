@@ -198,19 +198,35 @@ $scope.patientRegistration = function()
             console.log(response);
             if(response){
 
-              window.plugins.OneSignal.getIds(function(ids) {
-                $scope.playerId=JSON.stringify(ids['userId']);
-                // console.log($scope.playerId);
-                var updatePlayer ={
-                  palyerId:$scope.playerId,
-                  userNum:window.localStorage.user,
-                  user:'patient'
-                }
-                console.log(updatePlayer);
-                LoginService.updatePlayer(updatePlayer).then(function(response){
-                  console.log(response);
-                })
+
+              window.FirebasePlugin.getToken(function(token) {
+                  // save this server-side and use it to push notifications to this device
+                  // alert(token);
+                  $scope.playerId=token;
+                    var updatePlayer ={
+                      palyerId:$scope.playerId,
+                      userNum:window.localStorage.user,
+                      user:'patient'
+                    }
+                  LoginService.updatePlayer(updatePlayer).then(function(response){
+                    console.log(response);
+                  })
+              }, function(error) {
+                  console.error(error);
               });
+              // window.plugins.OneSignal.getIds(function(ids) {
+              //   $scope.playerId=JSON.stringify(ids['userId']);
+              //   // console.log($scope.playerId);
+              //   var updatePlayer ={
+              //     palyerId:$scope.playerId,
+              //     userNum:window.localStorage.user,
+              //     user:'patient'
+              //   }
+              //   console.log(updatePlayer);
+              //   LoginService.updatePlayer(updatePlayer).then(function(response){
+              //     console.log(response);
+              //   })
+              // });
 
               patientProfileDetailsService.fetchPatient($rootScope.PatientDetail.patient_mob).then(function(response){
   							window.localStorage['patientDetails'] = angular.toJson(response);
@@ -389,7 +405,7 @@ $scope.patientRegistration = function()
       console.log($rootScope.PatientDetail.dob);
 
       var date2 = new Date();
-      var date1 = new Date($rootScope.dateOfBirth);
+      var date1 = new Date($rootScope.PatientDetail.dob);
       var timeDiff = Math.abs(date2.getTime() - date1.getTime());
       $scope.dayDifference = Math.ceil(timeDiff / (1000 * 3600 * 24));
       // return $scope.dayDifference;
@@ -406,7 +422,7 @@ $scope.patientRegistration = function()
 
 ///this is for calender
 
-        if($rootScope.dateOfBirth === '' || $scope.dayDifference < 6570){
+        if($rootScope.PatientDetail.dob === '' || $scope.dayDifference < 6570){
           $scope.submittedAge = true;
           window.plugins.toast.showWithOptions({
           message: "You should be 18+ to use DoctorQuick",
@@ -425,7 +441,7 @@ $scope.patientRegistration = function()
         }
 
         else{
-          $rootScope.PatientDetail.patient_age=$rootScope.dateOfBirth;
+          $rootScope.PatientDetail.patient_age=$rootScope.PatientDetail.dob;
           $state.go('auth.patient_reg2');
         }
         // $state.go('auth.patient_reg2');

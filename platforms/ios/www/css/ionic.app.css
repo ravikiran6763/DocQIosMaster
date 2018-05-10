@@ -14899,9 +14899,11 @@ ion-side-menu .heading-item .message {
     .patient-reg-1-view .form-content input[type="date"] {
       margin-top: 4% !important;
       height: 18% !important;
-      width: 100% !important;
-      padding: 20px 0 0 8px;
-      background-color: white; }
+      width: 80vw !important;
+      padding: 10px 0 0 8px;
+      background-color: white;
+      /* display: none; */
+      -webkit-appearance: none; }
     .patient-reg-1-view .form-content input[readonly]:not(.cloned-text-input) {
       background-color: white !important; }
   .patient-reg-1-view .bottom-content {

@@ -128,6 +128,46 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 						console.log('failure data', error);
 						})
 
+						myConsultationService.firstConsultation(window.localStorage.user).then(function(response){
+							console.log(response);
+						if(response === 'DONE'){
+								$rootScope.firstConsultationDone = false;
+								window.localStorage.firstConsultationDone=false;
+						}
+						else{
+							$rootScope.firstConsultationDone = true;
+							window.localStorage.firstConsultationDone=true;
+
+							// window.localStorage['ConsultedDoctor'] = angular.toJson(response);
+						}
+
+						}).catch(function(error){
+						// console.log('failure data', error);
+						});
+
+						searchDoctorServices.specialitySearch().then(function(response){
+							window.localStorage['specialityList1'] = angular.toJson(response);
+							// console.log(window.localStorage['specialityList1']);
+						}).catch(function(error){
+						console.log('failure data', error);
+						});
+
+						myConsultationService.myConsultedDoctors($scope.loginData.phone).then(function(response){
+							console.log(response);
+
+						window.localStorage['ConsultedDoctor'] = angular.toJson(response);
+						}).catch(function(error){
+						// console.log('failure data', error);
+						});
+
+						doctorServices.myDoctorsFetched($scope.loginData.phone).then(function(response){
+							// alert('list');
+						  $scope.myConsultedDoctors=response;
+							window.localStorage['myDoctors'] = angular.toJson(response);
+
+						}).catch(function(error){
+						console.log('failure data', error);
+						});
 
 						var uname1 = "greet+"+$scope.loginData.phone;
 						var pw1 = "DQ_patient";
@@ -229,9 +269,27 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 										userNum:window.localStorage.user,
 										user:'doctor'
 									}
-								LoginService.updatePlayer(updatePlayer).then(function(response){
-									console.log(response);
-								})
+									LoginService.updatePlayer(updatePlayer).then(function(response){
+										console.log(response);
+										if(response){
+											doctorServices.doctorStatus(window.localStorage.user).then(function(response){
+
+													console.log(response);
+													window.localStorage.onOff=response;
+													if(response == 1){
+													$scope.docAvailable=true;
+													$scope.docNotAvailable=false;
+
+													}
+													else{
+													$scope.docAvailable=false;
+													$scope.docNotAvailable=true;
+													}
+											}).catch(function(error){
+											console.log('failure data', error);
+											});
+										}
+									})
 						}, function(error) {
 								console.error(error);
 						});

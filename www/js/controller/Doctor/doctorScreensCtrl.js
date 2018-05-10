@@ -587,12 +587,10 @@ $scope.contacts='';
 $scope.inviteForReview=function(){
   $scope.contacts = angular.fromJson($window.localStorage['numbersToSendInvites']);
   $scope.allConatctsFetched = angular.fromJson($window.localStorage['allConatctsFetched']);
-  console.log($scope.allConatctsFetched);
-
-  console.log($scope.allConatctsFetched.length);
-
+  // console.log('allContacts:',$scope.allConatctsFetched);
+  // console.log($scope.allConatctsFetched.length);
   // $scope.contacts = invitereviews.getinvitecontacts();
-	console.log($scope.contacts.length);
+	// console.log($scope.contacts.length);
 
 
   if($scope.contacts.length === 0 && $scope.allConatctsFetched.length === 0)

@@ -128,9 +128,14 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 	  }, 100);
 	});
 
+	// if(window.localStorage.doctororpatient === 'doctor'){
+	// 	$localStorage.sendPrescTo='';
+	// }
 	$rootScope.goBack = function()
 	{
-
+		if(window.localStorage.doctororpatient === 'doctor'){
+			$localStorage.sendPrescTo='';
+		}
 				console.log($ionicHistory.backView());
 				$scope.prevPage=$ionicHistory.currentStateName();
 				console.log($ionicHistory.currentStateName());
@@ -1701,7 +1706,7 @@ $rootScope.newPatient={};
 													{
 															$ionicLoading.hide();
 
-															window.localStorage.sendPrescTo = "";
+															$localStorage.sendPrescTo = "";
 
 															console.log('prescription clicked');
 															console.log(message);

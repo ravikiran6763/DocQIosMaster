@@ -81,10 +81,12 @@
 
 				input[type="date"]{
 					margin-top: 4% !important;
-					height: 18% !important;
-					width: 100% !important;
-					padding: 20px 0 0 8px;
-					background-color: white;
+	height: 18% !important;
+	width: 80vw !important;
+	padding: 10px 0 0 8px;
+	background-color: white;
+	/* display: none; */
+	-webkit-appearance: none;
 					// height: 100%;
 				}
 				input[readonly]:not(.cloned-text-input){
