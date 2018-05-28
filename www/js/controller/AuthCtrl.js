@@ -1,4 +1,4 @@
-DoctorQuickApp.controller('AuthCtrl', function($scope,$ionicScrollDelegate,$cordovaDatePicker,$interval, $state,$ionicConfig,$ionicHistory,$base64,$window, $cordovaToast, $timeout, $rootScope, $ionicPlatform, $localStorage, $ionicModal, $http, $ionicPopup, $ionicLoading,$filter, patientRegistrationService, doctorRegistrationService,LoginService,patientProfileDetailsService,searchDoctorServices,medicalSpecialityService) {
+DoctorQuickApp.controller('AuthCtrl', function($scope,$ionicScrollDelegate,$cordovaDatePicker,$interval, $state,$ionicConfig,$ionicHistory,$base64,$window, $cordovaToast, $timeout, $rootScope, $ionicPlatform, $localStorage, $ionicModal, $http, $ionicPopup, $ionicLoading,$filter, $cordovaDevice, patientRegistrationService, doctorRegistrationService,LoginService,patientProfileDetailsService,searchDoctorServices,medicalSpecialityService,IonicClosePopupService) {
 
     $rootScope.showBackBtn=false;
     $rootScope.PatientDetail = {};
@@ -9,6 +9,46 @@ DoctorQuickApp.controller('AuthCtrl', function($scope,$ionicScrollDelegate,$cord
     $scope.Doctor = {};
     $rootScope.dateOfBirth='';
     $scope.submitted = false;
+
+	$scope.startdate = new Date();
+  console.log($scope.startdate);
+
+    // $timeout(function(){
+    // // Any code in here will automatically have an $scope.apply() run afterwards
+    // var device = $cordovaDevice.getDevice();
+    // window.localStorage.manufacturer = device.manufacturer;
+    // window.localStorage.model = device.model;
+    // window.localStorage.deviceID = device.uuid;
+    // window.localStorage.serial=device.serial;
+    // console.log(window.localStorage.manufacturer);
+    // console.log(window.localStorage.deviceID);
+    // console.log(window.localStorage.serial);
+    // console.log(window.localStorage.model);
+    //
+    // // And it just works!
+    // });
+
+
+
+    // $ionicPlatform.ready(function() {
+    //   _.defer(function(){
+    //       $scope.$apply(function() {
+    //       // sometimes binding does not work! :/
+    //       // getting device infor from $cordovaDevice
+    //       var device = $cordovaDevice.getDevice();
+    //       window.localStorage.manufacturer = device.manufacturer;
+    //       window.localStorage.model = device.model;
+    //       window.localStorage.deviceID = device.uuid;
+    //       window.localStorage.serial=device.serial;
+    //
+    //       console.log(window.localStorage.manufacturer);
+    //       console.log(window.localStorage.deviceID);
+    //       console.log(window.localStorage.serial);
+    //       console.log(window.localStorage.model);
+    //       });
+    //   });
+    //
+    // });
 
     $scope.deviceAndroid = ionic.Platform.isAndroid();
     // alert($scope.deviceAndroid);
@@ -69,7 +109,7 @@ console.log(window.localStorage.doctororpatient);
 
   $scope.registerPatient=function()
   {
-      console.log($scope.loginDatasubmitted);
+      // console.log($scope.loginDatasubmitted);
       var patientDetails = {};
       $rootScope.loginDatasubmitted=false;
       console.log($scope.loginDatasubmitted);
@@ -167,7 +207,8 @@ $scope.patientRegistration = function()
         }
         else if($rootScope.otpentered.OTP1 === $rootScope.otp[0] && $rootScope.otpentered.OTP2 ===  $rootScope.otp[1] && $rootScope.otpentered.OTP3 === $rootScope.otp[2] && $rootScope.otpentered.OTP4 === $rootScope.otp[3])
         {
-
+          window.localStorage.manufacturer = device.manufacturer;
+          window.localStorage.model = device.model;
               patientDetails=
                 {
                   pateientFname : $rootScope.PatientDetail.patient_fname,
@@ -180,7 +221,11 @@ $scope.patientRegistration = function()
                   pateientPwd:$rootScope.PatientDetail.pat_password,
                   patientImage:$rootScope.imageData,
                   deviceID:window.localStorage.deviceID,
-                  serial:window.localStorage.serial
+                  serial:window.localStorage.serial,
+                  manufacturer:window.localStorage.manufacturer,
+                  model:window.localStorage.model
+
+
 
                 };
                 var loginData = {
@@ -214,6 +259,7 @@ $scope.patientRegistration = function()
               }, function(error) {
                   console.error(error);
               });
+
               // window.plugins.OneSignal.getIds(function(ids) {
               //   $scope.playerId=JSON.stringify(ids['userId']);
               //   // console.log($scope.playerId);
@@ -405,7 +451,7 @@ $scope.patientRegistration = function()
       console.log($rootScope.PatientDetail.dob);
 
       var date2 = new Date();
-      var date1 = new Date($rootScope.PatientDetail.dob);
+      var date1 = new Date($rootScope.dateOfBirth);
       var timeDiff = Math.abs(date2.getTime() - date1.getTime());
       $scope.dayDifference = Math.ceil(timeDiff / (1000 * 3600 * 24));
       // return $scope.dayDifference;
@@ -422,7 +468,7 @@ $scope.patientRegistration = function()
 
 ///this is for calender
 
-        if($rootScope.PatientDetail.dob === '' || $scope.dayDifference < 6570){
+        if($rootScope.dateOfBirth === '' || $scope.dayDifference < 6570){
           $scope.submittedAge = true;
           window.plugins.toast.showWithOptions({
           message: "You should be 18+ to use DoctorQuick",
@@ -441,7 +487,7 @@ $scope.patientRegistration = function()
         }
 
         else{
-          $rootScope.PatientDetail.patient_age=$rootScope.PatientDetail.dob;
+          $rootScope.PatientDetail.patient_age=$rootScope.dateOfBirth;
           $state.go('auth.patient_reg2');
         }
         // $state.go('auth.patient_reg2');
@@ -785,13 +831,14 @@ $scope.patientRegistration = function()
   $ionicLoading.show();
   $scope.videoPlayerPopup = $ionicPopup.show({
     // title: 'DoctorQuick',
-    template: '<div ><p style="color:#fcfff4; margin: -21px 0 0 15px; "></div><div style="position: absolute; margin-top: 0px; margin-bottom: 0; top: 23px;left: 95%; border-radius: 22px; font-size: 4vw; color: teal; text-align: center; padding: 0px; background-color: white; width: 5%;font-weight: bolder;color: #777;" ng-controller="doctorScreensCtrl" ng-Click="closethis();">X</div>'+
+    template: '<div ><p style="color:#fcfff4; margin: -21px 0 0 15px; "></div><div style="position: absolute; margin-top: 0px; margin-bottom: 0; top: 23px;left: 95%; border-radius: 22px; font-size: 4vw; color: teal; text-align: center; padding: 0px; background-color: white; width: 5%;font-weight: bolder;color: #777;" ng-Click="closethis();">X</div>'+
         '<iframe style="width: 100%; height: 59%; border: 4px solid green; margin-top: 7%;" src="https://www.youtube.com/embed/xrLtb9Pkkjg?rel=0&amp;showinfo=0" frameborder="0"  autoplay></iframe>',
     // template:'test',
     cssClass: 'videoPlayerPopup',
     scope: $scope,
 
   });
+  IonicClosePopupService.register($scope.videoPlayerPopup);
 
   $ionicLoading.hide();
   $scope.closethis = function()
@@ -816,42 +863,43 @@ $rootScope.currentYear= year;
 
 
 $rootScope.dateOfBirth='';
-var ipObj2 = {
-    callback: function (val) {  //Mandatory
-      $scope.currentDate = new Date();
-      console.log($scope.currentDate);
-      console.log('Selected To Date : ' + val, new Date(val));
+// var ipObj2 = {
+//     callback: function (val) {  //Mandatory
+//       $scope.currentDate = new Date();
+//       console.log($scope.currentDate);
+//       console.log('Selected To Date : ' + val, new Date(val));
+//
+//       $rootScope.dateOfBirth = $filter('date')(new Date(val),'yyyy-MM-dd');
+//
+//     },
+//
+//     from: new Date(1950, 1, 1), //Optional
+//     to: new Date($rootScope.currentYear, $rootScope.currentMonth, $rootScope.currentDay), //Optional
+//     inputDate: new Date(),      //Optional
+//     mondayFirst: false,          //Optional
+//     // disableWeekdays: [0],       //Optional
+//     closeOnSelect: true,
+//     dateFormat: 'dd MMMM yyyy',     //Optional
+//     // templateType: 'Modal'       //Optional
+//   };
 
-      $rootScope.dateOfBirth = $filter('date')(new Date(val),'yyyy-MM-dd');
-
-    },
-
-    from: new Date(1950, 1, 1), //Optional
-    to: new Date($rootScope.currentYear, $rootScope.currentMonth, $rootScope.currentDay), //Optional
-    inputDate: new Date(),      //Optional
-    mondayFirst: false,          //Optional
-    // disableWeekdays: [0],       //Optional
-    closeOnSelect: true,
-    dateFormat: 'dd MMMM yyyy',     //Optional
-    // templateType: 'Modal'       //Optional
-  };
 
 
+
+$scope.openDatePickerDOB = function(){
   var options = {
      date: new Date(),
      mode: 'date', // or 'time'
      // minDate: new Date() - 10000,
      // allowOldDates: true,
      allowFutureDates: false,
-     androidTheme : 3,
+     androidTheme : 5,
      cancelButtonLabel: 'CANCEL',
      cancelButtonColor: '#ff0101',
      doneButtonLabel: 'DONE',
      doneButtonColor: '#6aa13e'
 
    };
-
-$scope.openDatePickerDOB = function(){
   $cordovaDatePicker.show(options).then(function(date){
     $rootScope.dateOfBirth=date;
           console.log(date);

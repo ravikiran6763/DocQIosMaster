@@ -46,7 +46,7 @@ this.fetchReqPatientDetails = function(detail){
 
 //mydoctors function
 this.myDoctorsFetched = function (userPhone){
-//console.log(userPhone);
+  //console.log(userPhone);
   var deferred = $q.defer();
   $http.post(BASE_URL.url + API.fetchMyDoctors,userPhone)
   .success(function (data, status, headers, config){
@@ -137,6 +137,19 @@ this.cancelByDoc = function(consultId){
   var deferred = $q.defer();
 
   $http.post(BASE_URL.url + API.cancelByDoc,consultId)
+  .success(function (data, status, headers, config){
+    deferred.resolve(data);
+  })
+  .error(function (){
+    deferred.reject('Error while getting data');
+  });
+  return deferred.promise;
+
+}
+
+this.noResponseFromPatient = function(consultId){
+  var deferred = $q.defer();
+  $http.post(BASE_URL.url + API.noResponseFromPatient,consultId)
   .success(function (data, status, headers, config){
     deferred.resolve(data);
   })
@@ -387,9 +400,5 @@ this.removeFavDoctor = function (removeFav){
   });
   return deferred.promise;
 }
-
-
-
-
 
 });

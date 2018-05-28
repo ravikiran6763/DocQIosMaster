@@ -123,7 +123,7 @@ DoctorQuickApp.run(function($ionicPlatform,$interval,$cordovaNetwork,$localStora
    function getTextZoomCallback(textZoom) {
      //console.log('WebView text should be scaled to the preferred value ' + textZoom + '%')
    }
-   window.MobileAccessibility.getTextZoom(getTextZoomCallback);
+   // window.MobileAccessibility.getTextZoom(getTextZoomCallback);
 
       // window.addEventListener('native.keyboardshow', function(e){
       //   setTimeout(function() {
@@ -182,7 +182,7 @@ function keyboardShowHandler(e){
 
 })
 
-DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicConfig, $ionicPlatform,$interval,$localStorage,$ionicLoading, $cordovaDevice, $timeout,$injector,$ionicHistory, $cordovaKeyboard, $cordovaNetwork, $ionicPopup) {
+DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHistory, $ionicConfig, $ionicPlatform,$interval,$localStorage,$ionicLoading, $cordovaDevice, $timeout,$injector,$ionicHistory, $cordovaKeyboard, $cordovaNetwork, $ionicPopup) {
   $ionicPlatform.on("deviceready", function(){
 
           var deviceID = device.uuid;
@@ -247,50 +247,44 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope, $ionicCon
 
           window.FirebasePlugin.onNotificationOpen(function(notification) {
                 console.log(notification);
-
-
                   console.log(notification.tap);
 
-                  if(notification.tap)
-                  {
-
-                    console.log('notification tapped');
-
+                  if($ionicHistory.currentStateName() === 'templates.patientRequest' || $ionicHistory.currentStateName() === 'templates.sendPrescription' || $ionicHistory.currentStateName() === 'templates.prescription'){
+                    console.log('Current View:',$ionicHistory.currentStateName());
                   }
-                  else {
+                  else{
+                        if(notification.tap)
+                        {
+                            console.log('notification tapped');
+                        }
+                        else {
 
-                    var confirmPopup = $ionicPopup.confirm({
-                           // title: 'Low Balance',
-                           template: '<center>You have a New Consultation Request</center> ',
-                           cssClass: 'videoPopup',
-                           buttons: [
-                             {
-                               text: 'OK',
-                               type: 'button-positive',
-                               onTap: function(e) {
+                          var confirmPopup = $ionicPopup.confirm({
+                                 // title: 'Low Balance',
+                                 template: '<center>You have a New Consultation Request</center> ',
+                                 cssClass: 'videoPopup',
+                                 buttons: [
+                                   {
+                                     text: 'OK',
+                                     type: 'button-positive',
+                                     onTap: function(e) {
+                                       console.log('OK TAPPED');
+                                       $ionicHistory.nextViewOptions({
+                                         disableAnimate: true,
+                                         disableBack: true
+                                       });
+                                       $state.go('templates.doctor_home',{}, {location: "replace", reload: false});
+                                     }
+                                   },
 
-                                 console.log('OK TAPPED');
+                                 ]
+                               });
 
-                                 $ionicHistory.nextViewOptions({
-                                   disableAnimate: true,
-                                   disableBack: true
-                                 });
-                                 $state.go('templates.doctor_home',{}, {location: "replace", reload: false});
-
-
-                               }
-                             },
-
-                           ]
-                         });
-
+                        }
                   }
-
 
 
                 //$state.go('app.patient_profile');
-
-
             }, function(error) {
                 console.error(error);
             });

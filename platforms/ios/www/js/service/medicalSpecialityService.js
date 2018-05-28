@@ -91,6 +91,20 @@ DoctorQuickApp.service('medicalSpecialityService', function($http, $q, BASE_URL,
         return deferred.promise;
     }
 
+    this.noResponseFromDoc = function (patient) {
+      // console.log(patient);
+      var deferred = $q.defer();
+      console.log(BASE_URL.url + API.noResponseFromDoc);
+      $http.post(BASE_URL.url + API.noResponseFromDoc,patient)
+      .success(function (data, status, headers, config){
+        deferred.resolve(data);
+      })
+      .error(function (){
+        deferred.reject('Error while getting data');
+      });
+      return deferred.promise;
+  }
+
     this.declinedDuringCall = function (reqId) {
       // console.log(patient);
       var deferred = $q.defer();

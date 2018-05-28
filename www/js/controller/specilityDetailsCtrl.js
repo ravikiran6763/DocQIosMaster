@@ -98,7 +98,6 @@ console.log(window.localStorage.SpecilityId);
   $scope.sendrequesttoonlinedoctors = function()
   {
 
-    window.ga.trackEvent('Request', 'Click', 'sendrequesttoonlinedoctors',1)// Label and Value are optional, Value is numeric
 
     $rootScope.clickedOnce = true;
     $ionicLoading.show({
@@ -149,14 +148,23 @@ console.log(window.localStorage.SpecilityId);
                $rootScope.buttonText='Send Request';
                $timeout.cancel(patientTimeout);
 
+               medicalSpecialityService.noResponseFromDoc(window.localStorage.user).then(function(response){
+               $scope.cancelledReq=response;
+               // $state.go("app.medical_speciality");
+               $interval.cancel(checkAcceptedReq);
+               $interval.cancel(checkAcceptedReqDocStatus);
+               }).catch(function(error){
+               console.log('failure data', error);
+               });
+
                var noResponsePopup = $ionicPopup.alert({
                template: "<div ><p>None of the doctors have accepted your request</p></div>",
                cssClass: 'requestPopup',
                scope: $scope,
                });
 
-               noResponsePopup.then(function(res) {
-                 medicalSpecialityService.cancelReq(window.localStorage.user).then(function(response){
+               noResponsePopup.then(function(res){
+                 medicalSpecialityService.noResponseFromDoc(window.localStorage.user).then(function(response){
                  $scope.cancelledReq=response;
                  // $state.go("app.medical_speciality");
                  $interval.cancel(checkAcceptedReq);

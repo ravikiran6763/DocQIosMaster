@@ -1,4 +1,4 @@
- DoctorQuickApp.controller('patientrequestCtrl', function($scope,$window,$rootScope,$state,$localStorage,$stateParams,$interval,$location,$ionicPlatform,$ionicHistory,$timeout,$ionicPopup,$ionicConfig,$ionicLoading,patientrequesttodoctor,doctorServices,patientProfileDetailsService,medicalSpecialityService) {
+ DoctorQuickApp.controller('patientrequestCtrl', function($scope,$window,$rootScope,$state,$localStorage,$stateParams,$interval,$location,$ionicPlatform,$ionicHistory,$timeout,$ionicPopup,$ionicConfig,$ionicLoading,patientrequesttodoctor,doctorServices,patientProfileDetailsService,medicalSpecialityService,IonicClosePopupService) {
 			  $scope.toggle = true;
 				$rootScope.headerTxt="Request";
 				$rootScope.showBackBtn=true;
@@ -444,6 +444,15 @@
 
 									$rootScope.closeDocPopUp=true;
 									console.log($rootScope.closeDocPopUp);
+
+                  doctorServices.noResponseFromPatient($rootScope.reqId).then(function(response){
+                  $scope.cancelledByDoc=response;
+                  console.log($scope.cancelledByDoc);
+                  //  $state.go($state.current, {}, {reload: true});
+                  }).catch(function(error){
+                  console.log('failure data', error);
+                  });
+
 									$scope.noResponsePopup = $ionicPopup.show({
 												template: "<div ng-app='refresh_div' ><p>No response has been received from patient .</p></div>",
 												cssClass: 'requestPopup',
@@ -459,6 +468,7 @@
 
 											]
 											});
+                      IonicClosePopupService.register($scope.noResponsePopup);
 
 									}
 								}

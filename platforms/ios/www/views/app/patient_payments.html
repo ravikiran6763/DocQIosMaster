@@ -7,23 +7,22 @@
             <img ng-src="img/dq_icon_payments_large_540x960.png" >
           </div>
           <h1>DoctorQuick Deposit</h1>
-        
+
         </div>
         <div class="balanceAmt ">
             <p>Balance <span> ₹ {{bal.credit-bal.debit}}</span></p>
         </div>
         <div class="buttons">
-          <div class="refund">
-            <button  type="submit" class="button button-balanced button-calm" ui-sref="app.refund_patient({credit:bal.credit,debit:bal.debit})">
-               Refund
-              </button>
-          </div>
-          <div class="topup" >
-            <button class="button button-balanced button-stable"  ui-sref="app.patient_topup">
-              Topup
-            </button>
-          </div>
-
+                <div class="refund">
+                  <button  type="submit" class="button button-balanced button-calm" ui-sref="app.refund_patient({credit:bal.credit,debit:bal.debit})">
+                     Refund
+                    </button>
+                </div>
+                <div class="topup" >
+                  <button class="button button-balanced button-stable"  ui-sref="app.patient_topup">
+                    Topup
+                  </button>
+                </div>
         </div>
 
       </div>

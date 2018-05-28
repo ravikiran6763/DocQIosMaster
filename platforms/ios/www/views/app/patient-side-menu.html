@@ -5,9 +5,9 @@
         <i class="back-btn-cls "   ng-click="goBack()" ></i>
      </ion-nav-back-button>
       <ion-nav-buttons side="left">
-        <button class="button-clear"  ng-click="showConsulation();" >
+        <button class="button-clear"   >
           <!--  my_consultations-->
-          <i class="icon ion-ios-chatbubble-outline" ng-show="showNotification" ><span class="badge badge-stable icon-badge" ng-show="showBadge">{{unreadchatforpatient}}</span></i>
+          <i class="icon ion-ios-chatbubble-outline" ng-click="showConsulation();" ng-show="showNotification" ><span class="badge badge-stable icon-badge" ng-show="showBadge">{{unreadchatforpatient}}</span></i>
         </button>
       </ion-nav-buttons>
 

@@ -324,6 +324,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 							}
 
 							hello.login(uname1,pw1,success, failure);
+							// $state.go('templates.doctor_home', {}, {location: "replace", reload: true});
 
 							$timeout( function(){
 									console.log('interval started');

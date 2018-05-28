@@ -914,6 +914,11 @@ $ionicSideMenuDelegate.toggleRight();
 window.open("market://details?id=com.greettech.DoctorQuick","_system");
 
 }
+else{
+	$ionicSideMenuDelegate.toggleRight();
+		window.open("https://itunes.apple.com/in/app/doctorquick-get-well-sooner/id1382247082?mt=8","_system");
+
+}
 
 
 }

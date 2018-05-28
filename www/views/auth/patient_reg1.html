@@ -1,9 +1,9 @@
-<ion-view class="patient-reg-1-view" cache-view="false" has-bouncing="false">
+<ion-view class="patient-reg-1-view" cache-view="false" >
   <!-- <ion-header-bar class="bar-header bar-light">
 
   </ion-header-bar> -->
 <ion-content scroll="false" padding="false" >
-  <div class="top-content hide-on-keyboard-open" >
+  <div class="top-content " >
       <div class="regTitle">
         <div class="regHeader">
           <div class="backButton " ng-click="goBack();">
@@ -44,11 +44,10 @@
 
 
         <div class="form-group" keyboard-attach>
-          <input  type="text"  placeholder="DOB" name="patient_fname"  onfocus="(this.type='date')"  ng-model="PatientDetail.dob"  required>
-
-          <!-- <input  type="date"  placeholder="DOB" name="patient_fname"    ng-model="PatientDetail.dob"  required> -->
-          <!-- <input type='text' placeholder="DOB"  ng-click="openDatePickerDOB();" ng-value="dateOfBirth| date: 'dd-MM-yyyy' " required readonly="true" style="background-color:none !important;"> -->
-        </div>
+          <!-- <input  type="date"  placeholder="DOB"   name="patient_fname"   ng-model="PatientDetail.dob"  required> -->
+          <!-- <input  type="text"  placeholder="DOB"  ng-click="openDatePickerfrom();" name="patient_fname"   ng-model="PatientDetail.dob"  required> -->
+          <input type='text' placeholder="DOB"  ng-click="openDatePickerDOB();" ng-value="dateOfBirth| date: 'dd-MM-yyyy' " required readonly="true" style="background-color:none !important;">
+          </div>
     </form>
   </div>
 

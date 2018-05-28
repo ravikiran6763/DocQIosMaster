@@ -20,15 +20,15 @@ DoctorQuickApp.controller('inviteresultCtrl', function($scope,$state,$rootScope,
   });
 console.log(window.localStorage.docTinyUrl);
 
-var permissions = cordova.plugins.permissions;
-permissions.requestPermission(permissions.READ_CONTACTS, success, error);
-function error() {
-console.warn('Turned on the permission');
-}
-
-function success( status ) {
-if( !status.hasPermission ) error();
-}
+// var permissions = cordova.plugins.permissions;
+// permissions.requestPermission(permissions.READ_CONTACTS, success, error);
+// function error() {
+// console.warn('Turned on the permission');
+// }
+//
+// function success( status ) {
+// if( !status.hasPermission ) error();
+// }
 
   $scope.query = "Hi,\nPlease visit my page at DoctorQuick and help me with a rating to promote my profile and boosting my access to many more patients. Thanks.\nClick here: ";
   $scope.tiny=window.localStorage.docTinyUrl;
