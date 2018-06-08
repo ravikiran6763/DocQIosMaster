@@ -15,14 +15,12 @@ $ionicLoading.show({
 
 $scope.patientWalletdetails = angular.fromJson($window.localStorage['patientWalletdetails']);
 
-
   patientWalletServices.myWalletBalance(window.localStorage.user).then(function(response){
     console.log(response);
    // $rootScope.patientWalletdetails=response;
    if(response){
      window.localStorage['patientWalletdetails'] = angular.toJson(response);
      $scope.patientWalletdetails = angular.fromJson($window.localStorage['patientWalletdetails']);
-     $ionicLoading.hide();
    }
 
    console.log($rootScope.patientWalletdetails);
@@ -55,7 +53,11 @@ $scope.patientWalletdetails = angular.fromJson($window.localStorage['patientWall
 
    patientWalletServices.paidToDoctors(window.localStorage.user).then(function(response){
     $rootScope.doctorsList=response;
-    console.log($rootScope.doctorsList);
+    if($rootScope.doctorsList){
+      $ionicLoading.hide();
+
+    }
+    console.log('Consulted Doctors:',$rootScope.doctorsList);
     }).catch(function(error){
       console.log('failure data', error);
     });

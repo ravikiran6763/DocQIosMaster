@@ -321,7 +321,7 @@ $scope.docClicked=function(docPhone){
 						          $rootScope.buttonText='Send Request';
 						          $timeout.cancel(patientTimeout);
 
-											searchDoctorServices.cancelOne2oneReq(window.localStorage.one2oneId).then(function(response){
+											searchDoctorServices.one2oneNoResponse(window.localStorage.one2oneId).then(function(response){
 											$scope.cancelledReq=response;
 											window.localStorage.one2oneId=0;
 											window.localStorage.callStatus=0;
@@ -339,7 +339,7 @@ $scope.docClicked=function(docPhone){
 
 						          noResponsePopup.then(function(res) {
 												console.log('delete request here');
-												searchDoctorServices.cancelOne2oneReq(window.localStorage.one2oneId).then(function(response){
+												searchDoctorServices.one2oneNoResponse(window.localStorage.one2oneId).then(function(response){
 												$scope.cancelledReq=response;
 												window.localStorage.one2oneId=0;
 												window.localStorage.callStatus=0;

@@ -291,7 +291,7 @@ $scope.clicktochat = function(pateientPhone)
 		$rootScope.deviceIOS = ionic.Platform.isIOS();
 		$rootScope.deviceAndroid = ionic.Platform.isAndroid();
 
-
+$localStorage.sendPrescTo=pateientPhone;
 		$scope.patientToChat=pateientPhone;
 		var username = "greet+"+window.localStorage.user;
 		var password = "DQ_doctor";
@@ -301,7 +301,7 @@ $scope.clicktochat = function(pateientPhone)
 			console.log(message);
 			var str = message;
 	 		var res = str.slice(6, 16);
-			$localStorage.sendPrescTo=res;
+
 		}
 		var failure = function()
 		{

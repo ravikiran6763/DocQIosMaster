@@ -12716,10 +12716,6 @@ ion-side-menu .heading-item .message {
 .patient-payment-view {
   background-color: #e2e2e2 !important;
   font-family: Ubuntu,bold,sans-serif !important; }
-  .patient-payment-view ionic-content {
-    overflow: hidden !important; }
-  .patient-payment-view .scroll-view {
-    height: 100% !important; }
   .patient-payment-view .top-content {
     width: 100%;
     height: 50%;
@@ -12786,8 +12782,12 @@ ion-side-menu .heading-item .message {
     height: 40%;
     box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.8);
     overflow: scroll !important; }
+    .patient-payment-view .bottom-content .ng-animate .scroll-bar {
+      visibility: visible !important; }
+    .patient-payment-view .bottom-content .scroll-bar-fade-out {
+      opacity: 1 !important; }
     .patient-payment-view .bottom-content li {
-      height: 35%;
+      height: 33%;
       border-bottom: 2px solid #dadada;
       margin-top: 1%;
       *zoom: 1; }
@@ -12819,10 +12819,11 @@ ion-side-menu .heading-item .message {
           font-size: 1.8em; }
       .patient-payment-view .bottom-content li .name-content {
         float: left;
-        padding: 1px 0 0 6px; }
+        padding: 5% 0%;
+        height: 100%;
+        width: 65%; }
         .patient-payment-view .bottom-content li .name-content .name {
-          width: 100%;
-          margin-top: 12%; }
+          width: 70%; }
         .patient-payment-view .bottom-content li .name-content .date {
           position: absolute;
           width: 20%;
@@ -12843,7 +12844,8 @@ ion-side-menu .heading-item .message {
           margin: 0% 2%;
           color: black; }
         .patient-payment-view .bottom-content li .name-content h2 {
-          font-size: 110%;
+          margin: 2%;
+          font-size: 100%;
           color: black;
           font-family: Ubuntu,bold,sans-serif !important;
           line-height: 50%; }
@@ -12856,14 +12858,7 @@ ion-side-menu .heading-item .message {
     .patient-payment-view .payment-bottom-content li {
       height: 31.3%;
       border-bottom: 2px solid #678929;
-      padding-top: 5%;
-      *zoom: 1; }
-      .patient-payment-view .payment-bottom-content li:before, .patient-payment-view .payment-bottom-content li:after {
-        display: table;
-        content: "";
-        line-height: 0; }
-      .patient-payment-view .payment-bottom-content li:after {
-        clear: both; }
+      padding-top: 5%; }
       .patient-payment-view .payment-bottom-content li:last-child {
         border-bottom: none !important;
         margin-bottom: 10px auto; }
@@ -13107,6 +13102,57 @@ ion-side-menu .heading-item .message {
 .topUp-refund-view {
   background-color: #e2e2e2 !important;
   font-family: Ubuntu,bold,sans-serif !important; }
+  .topUp-refund-view .payments-top-content {
+    width: 100%;
+    height: 50%;
+    overflow: hidden !important; }
+    .topUp-refund-view .payments-top-content .accDetails {
+      width: 90%;
+      height: 100%;
+      margin: 0 auto; }
+      .topUp-refund-view .payments-top-content .accDetails .walletDetails {
+        width: 100%;
+        height: 40%; }
+        .topUp-refund-view .payments-top-content .accDetails .walletDetails .walletLogo {
+          width: 15%;
+          height: 50%;
+          margin: 0 auto;
+          padding-top: 4%; }
+        .topUp-refund-view .payments-top-content .accDetails .walletDetails h1 {
+          font-family: inherit;
+          font-family: inherit;
+          font-size: 150%;
+          text-align: center; }
+      .topUp-refund-view .payments-top-content .accDetails .balanceAmt {
+        width: 100%;
+        height: 32%; }
+        .topUp-refund-view .payments-top-content .accDetails .balanceAmt p {
+          padding-top: 6%;
+          font-size: 120%; }
+        .topUp-refund-view .payments-top-content .accDetails .balanceAmt span {
+          float: right; }
+      .topUp-refund-view .payments-top-content .accDetails .buttons {
+        width: 100%;
+        height: 20%;
+        margin-left: 3%; }
+        .topUp-refund-view .payments-top-content .accDetails .buttons .refund {
+          width: 50%;
+          float: left; }
+          .topUp-refund-view .payments-top-content .accDetails .buttons .refund .button {
+            width: 90%;
+            background-color: #a1a1a1 !important;
+            border: 1px solid #9c9c9c; }
+          .topUp-refund-view .payments-top-content .accDetails .buttons .refund .button-calm.activated {
+            background-color: #808080 !important; }
+        .topUp-refund-view .payments-top-content .accDetails .buttons .topup {
+          width: 50%;
+          float: left; }
+          .topUp-refund-view .payments-top-content .accDetails .buttons .topup .button {
+            width: 90%;
+            background-color: #6aa13e !important;
+            border: 1px solid #619b3b; }
+          .topUp-refund-view .payments-top-content .accDetails .buttons .topup .button-stable.activated {
+            background-color: #517b2f !important; }
   .topUp-refund-view .top-content {
     width: 100%;
     height: 50%; }

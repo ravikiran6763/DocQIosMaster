@@ -588,18 +588,6 @@ $scope.popupShown = true;
 
  },true);
 
- // $interval(videoOrAudio,1000);
- // function videoOrAudio(){
- //  console.log($rootScope.reqId);
- //  doctorServices.callStatus($rootScope.reqId).then(function(response){
- //  		$rootScope.callStatus=response;//store the response array in doctor details
- // 		window.localStorage.callStatus=$rootScope.callStatus[0][0];
- // 		$scope.notes=window.localStorage.callStatus;
- //  		console.log($scope.callStatus);
- //  }).catch(function(error){
- //  	console.log('failure data', error);
- //  });
- // }
  $scope.$watch('notes', function (newValue, oldValue, scope){
 
  		console.log('changed');

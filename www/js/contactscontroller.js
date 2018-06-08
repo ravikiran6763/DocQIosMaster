@@ -62,8 +62,8 @@ $rootScope.allcontacts.checked = false;
 
          });
 
-
-
+$scope.allEmpty=[];
+window.localStorage['allConatctsFetched'] = angular.toJson($scope.allEmpty);
     $scope.checkAll = function()
     {
 

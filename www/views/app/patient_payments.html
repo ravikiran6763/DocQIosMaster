@@ -1,5 +1,5 @@
 <ion-view class="patient-payment-view" cache-view="false" >
-  <ion-content has-bouncing="false">
+  <ion-content scroll="false">
     <div class="top-content" ng-repeat="bal in patientWalletdetails">
       <div class="accDetails">
         <div class="walletDetails">
@@ -29,7 +29,7 @@
 
     </div>
     <ion-item class="item-divider">Transaction History</ion-item>
-
+<!-- <ion-scroll direction="y"> -->
     <div class="bottom-content" >
       <!-- <ion-scroll direction="y" > -->
         <ul>
@@ -66,6 +66,7 @@
 
 
     </div>
+  <!-- </ion-scroll > -->
   </ion-content>
 
 </ion-view>

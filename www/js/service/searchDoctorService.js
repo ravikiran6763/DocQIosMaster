@@ -132,7 +132,7 @@ var tags = [
    return deferred.promise;
 
  }
- 
+
  this.checkCallStatus  = function (id) {
    console.log('from service',id);
    var deferred = $q.defer();

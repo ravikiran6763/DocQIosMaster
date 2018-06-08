@@ -22,6 +22,7 @@ $interval(checkDocStatus, 1000);
 
 $scope.myDocDetails1 = angular.fromJson($window.localStorage['myDocDetails1']);
 
+
 doctorServices.myDoctorsDetails(window.localStorage.docPhone).then(function(response){
   console.log(response[0]['onoff']);
   $rootScope.myDocAvailable=response[0]['onoff'];
@@ -48,6 +49,7 @@ var data=$scope.myDocDetails1;//take all json data into this variable
         $rootScope.DocRates= $rootScope.rates/$rootScope.totalRates;
         console.log('rates',$rootScope.DocRates);
         console.log('total',$rootScope.totalRates);
+
         console.log('doc',$rootScope.DocRates);
 
         $scope.ratings = [{
@@ -75,13 +77,8 @@ $scope.example = {
 function checkDocStatus(){
 
   doctorServices.myDoctorsDetails(window.localStorage.docPhone).then(function(response){
-  // $scope.myDocDetails1=response;
+  $scope.myDocDetails1=response;
   // console.log($scope.myDocDetails1);
-  window.localStorage['myDocDetails1'] = angular.toJson(response);
-
-// $scope.myDocDetails1=response;
-console.log('doc',$scope.myDocDetails1);
-$scope.myDocDetails1 = angular.fromJson($window.localStorage['myDocDetails1']);
   var data=$scope.myDocDetails1;//take all json data into this variable
     for(var i=0; i<data.length; i++){
 
@@ -111,8 +108,14 @@ $scope.myDocDetails1 = angular.fromJson($window.localStorage['myDocDetails1']);
           if($rootScope.totalRates == null ){
             $rootScope.totalRates=''
           }
+          // console.log($rootScope.rates);
 
           $rootScope.DocRates= $rootScope.rates/$rootScope.totalRates;
+          // console.log('rates',$rootScope.DocRates);
+          // console.log('total',$rootScope.totalRates);
+
+
+
       }
 
 
@@ -133,11 +136,11 @@ console.log('failure data', error);
 //for voice call
 
 
-    // doctorServices.myDoctorsDetails(window.localStorage.consultedDoctor).then(function(response){
-    // $scope.myDocDetails=response;
-    // }).catch(function(error){
-    // console.log('failure data', error);
-    // });
+    doctorServices.myDoctorsDetails(window.localStorage.consultedDoctor).then(function(response){
+    $scope.myDocDetails=response;
+    }).catch(function(error){
+    console.log('failure data', error);
+    });
 
     $scope.updateDocPwd=function(){
       $rootScope.ratedBy=$scope.login.userPhone;
@@ -226,6 +229,8 @@ console.log('failure data', error);
              $scope.callAccept.close();
              $window.location.reload();
 
+
+
              });
            $state.go("app.patient_home");
            $ionicHistory.clearHistory();
@@ -247,6 +252,7 @@ console.log('failure data', error);
 
 
   	function checkMyCallStatus(){
+
       if(window.localStorage.myCallId == 0){
         return false
       }
@@ -511,7 +517,7 @@ console.log('failure data', error);
               $rootScope.buttonText='Send Request';
               $timeout.cancel(patientTimeout);
 
-              searchDoctorServices.cancelOne2oneReq(window.localStorage.myCallId).then(function(response){
+              searchDoctorServices.one2oneNoResponse(window.localStorage.myCallId).then(function(response){
                 $scope.alertPopup.close();
 
               $scope.cancelledReq=response;
@@ -522,16 +528,16 @@ console.log('failure data', error);
                 console.log('failure data', error);
               });
               $scope.callAccept.close();
-              var noResponsePopup = $ionicPopup.alert({
+              $scope.noResponsePopup = $ionicPopup.alert({
               template: "<div ><p>Doctor did not accept your request</p></div>",
               cssClass: 'requestPopup',
               scope: $scope,
               });
-              IonicClosePopupService.register(noResponsePopup);
+              IonicClosePopupService.register($scope.noResponsePopup);
 
               noResponsePopup.then(function(res){
                 console.log('delete request here');
-                searchDoctorServices.cancelOne2oneReq(window.localStorage.myCallId).then(function(response){
+                searchDoctorServices.one2oneNoResponse(window.localStorage.myCallId).then(function(response){
                   $scope.alertPopup.close();
 
                 $scope.cancelledReq=response;

@@ -94,6 +94,7 @@
 		C3D3594D6BD74EF4A96C0D9D /* CDVContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC61F3D101540A789C7A9AA /* CDVContacts.m */; };
 		C4529209A9394A7599B58531 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0057D6ABDF824198B0A88416 /* FirebaseAnalytics.framework */; };
 		C4DF1411A569459AA9815A87 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B790086ACC34CA9AC7433E1 /* QuartzCore.framework */; };
+		CA47F97F20C06B960081E4DC /* 12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA47F97E20C06B960081E4DC /* 12.mp3 */; };
 		CB267E2DB80A4487897FA810 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F33A628B7C4141AFC2B949 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CC4B267C5903409794EC3208 /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9850A0D6AF49451C928F237E /* CDVJpegHeaderWriter.m */; };
 		CC986F15AF3D480984AE49CD /* AppDelegate+FirebasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CC338CC6CC4C898F601C4D /* AppDelegate+FirebasePlugin.m */; };
@@ -241,6 +242,7 @@
 		C76C6488C311494AA2CBB1C2 /* Invideocall.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Invideocall.swift; path = com.greettelehealth.DoctorQuick/Invideocall.swift; sourceTree = "<group>"; };
 		C9CC4AA6F293450AB3FBD78A /* ImageIO.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CA01726D74424E478483F274 /* DoctorQuick.cpp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = DoctorQuick.cpp; path = com.greettelehealth.DoctorQuick/DoctorQuick.cpp; sourceTree = "<group>"; };
+		CA47F97E20C06B960081E4DC /* 12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 12.mp3; path = ../../../../../../12.mp3; sourceTree = "<group>"; };
 		D3EC1164FF5649C4A5BC909A /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; };
 		D5DF6012917A4D2EB1ACE0A1 /* FirebaseRemoteConfig.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseRemoteConfig.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseRemoteConfig.framework"; sourceTree = "<group>"; };
 		D5E13270400546C8B7CEFF35 /* CoreMedia.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -373,6 +375,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA47F97E20C06B960081E4DC /* 12.mp3 */,
 				0207DA571B56EA530066E2B4 /* Images.xcassets */,
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* DoctorQuick-Info.plist */,
@@ -573,8 +576,12 @@
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 47TGHFL28D;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -628,6 +635,7 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				CA47F97F20C06B960081E4DC /* 12.mp3 in Resources */,
 				5F40381851C34879A1E8D0FC /* DatePicker.xib in Resources */,
 				6828A16DC31C4198A039D096 /* GoogleService-Info.plist in Resources */,
 				812EF1285780452AA98213B7 /* VSeeKit.bundle in Resources */,
@@ -732,6 +740,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 47TGHFL28D;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -766,8 +776,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = DoctorQuick;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
@@ -783,6 +794,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = 47TGHFL28D;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -815,8 +828,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = DoctorQuick;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
@@ -833,6 +847,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Greet Telehealth (OPC) Private Limited (47TGHFL28D)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
@@ -859,6 +874,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Greet Telehealth (OPC) Private Limited (47TGHFL28D)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";

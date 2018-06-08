@@ -2,6 +2,87 @@
 {
   background-color: #e2e2e2 !important;
   font-family: Ubuntu,bold,sans-serif !important;
+
+.payments-top-content{
+  width: 100%;
+  height: 50%;
+  // background-color: yellow;
+  overflow: hidden !important;
+  .accDetails{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    // background-color: green;
+    .walletDetails{
+      width: 100%;
+      height: 40%;
+      // background-color: red;
+      .walletLogo{
+          width: 15%;
+          height: 50%;
+          margin: 0 auto;
+          padding-top: 4%;
+          // background-color: white;
+      }
+      h1{
+        font-family: inherit;
+        font-family: inherit;
+        font-size: 150%;
+        text-align: center;
+      }
+    }
+
+    .balanceAmt{
+      width: 100%;
+      height: 32%;
+      // background-color:pink;
+      p{
+        padding-top: 6%;
+        font-size: 120%;
+      }
+      span{
+        float: right;
+      }
+
+    }
+    .buttons{
+      width: 100%;
+      height: 20%;
+      margin-left: 3%;
+
+      .refund{
+          //background-color: green;
+          width: 50%;
+          float: left;
+          .button{
+            width: 90%;
+            background-color: #a1a1a1 !important;
+            border: 1px solid #9c9c9c;
+          }
+          .button-calm.activated{
+            background-color: #808080 !important;
+          }
+      }
+      .topup{
+          //background-color: green;
+          width: 50%;
+          float: left;
+          .button{
+            width: 90%;
+            background-color: #6aa13e !important;
+            border: 1px solid #619b3b;
+          }
+          .button-stable.activated{
+            background-color: #517b2f !important;
+          }
+      }
+
+    }
+  }
+
+}
+
+
   .top-content{
     width: 100%;
     height: 50%;
