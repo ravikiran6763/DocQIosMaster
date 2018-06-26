@@ -291,59 +291,60 @@ function checkConsultations(){
     return false;
   }
 
-  doctoronoffdetails.doctorDeviceUpdate(window.localStorage.user).then(function(response){
-    $scope.deviceDetails = response;
-    // console.log( $scope.deviceDetails);
-    // console.log('deviceUUID:',$scope.deviceDetails[0][0]);
-    // console.log('DeviceSerial:',$scope.deviceDetails[0][1]);
-
-    window.localStorage.deviceUUID = $scope.deviceDetails[0][0];
-    $scope.deviceUUID=window.localStorage.deviceUUID;
-    if(window.localStorage.deviceID === $scope.deviceUUID){
-      $rootScope.LogoutDocFromOldDevce=false;
-    }
-    else {
-      console.log('device changed');
-      var unametologout = "greet+"+window.localStorage.user;
-      var pwtologout = "DQ_doctor";
-        var success = function(message)
-        {
-
-              $rootScope.LogoutDocFromOldDevce=true;
-              $ionicLoading.hide();
-              console.log(message);
-              $ionicHistory.nextViewOptions({
-              disableBack: true,
-              disableAnimate: true,
-              historyRoot: true
-              });
-
-              $state.go('auth.loginNew');
-              $ionicHistory.clearCache();
-              $ionicHistory.clearHistory();
-              $window.localStorage.clear();
-                var alertPopup = $ionicPopup.alert({
-                  template: '<center>Your device is no longer registered <br> with DoctorQuick. Contact care@doctorquick.com</center>',
-                  cssClass: 'videoPopup',
-                });
-                alertPopup.then(function(res) {
-                  ionic.Platform.exitApp();
-                });
-        }
-        var failure = function()
-        {
-          console.log('error calling hello plugin');
-        }
-        hello.logout(unametologout,pwtologout,success, failure);
-
-
-
-    }
-
-  })
-  .catch(function(error){
-    console.log('failure data', error);
-  })
+  // doctoronoffdetails.doctorDeviceUpdate(window.localStorage.user).then(function(response){
+  //   $scope.deviceDetails = response;
+  //   console.log( $scope.deviceDetails);
+  //   console.log('deviceUUID:',$scope.deviceDetails[0][0]);
+  //   console.log('DeviceSerial:',$scope.deviceDetails[0][1]);
+  //
+  //   window.localStorage.deviceUUID = $scope.deviceDetails[0][0];
+  //   $scope.deviceUUID=window.localStorage.deviceUUID;
+  //   if(window.localStorage.deviceID === $scope.deviceUUID){
+  //     $rootScope.LogoutDocFromOldDevce=false;
+  //   }
+  //   else {
+  //     console.log('device changed');
+  //     var unametologout = "greet+"+window.localStorage.user;
+  //     var pwtologout = "DQ_doctor";
+  //       var success = function(message)
+  //       {
+  //
+  //             $rootScope.LogoutDocFromOldDevce=true;
+  //             $ionicLoading.hide();
+  //             console.log(message);
+  //             $ionicHistory.nextViewOptions({
+  //             disableBack: true,
+  //             disableAnimate: true,
+  //             historyRoot: true
+  //             });
+  //
+  //             $state.go('auth.loginNew');
+  //             $ionicHistory.clearCache();
+  //             $ionicHistory.clearHistory();
+  //             $window.localStorage.clear();
+  //               var alertPopup = $ionicPopup.alert({
+  //                 template: '<center>Your device is no longer registered <br> with DoctorQuick. Contact care@doctorquick.com</center>',
+  //                 cssClass: 'videoPopup',
+  //               });
+  //               alertPopup.then(function(res) {
+  //                 // ionic.Platform.exitApp();
+  //                 navigator.app.exitApp();
+  //               });
+  //       }
+  //       var failure = function()
+  //       {
+  //         console.log('error calling hello plugin');
+  //       }
+  //       hello.logout(unametologout,pwtologout,success, failure);
+  //
+  //
+  //
+  //   }
+  //
+  // })
+  // .catch(function(error){
+  //   console.log('failure data', error);
+  // })
 
 
 }

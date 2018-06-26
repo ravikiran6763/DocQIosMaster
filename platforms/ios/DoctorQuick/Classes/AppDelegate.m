@@ -78,8 +78,6 @@
 
 -(void)registerForVoIPPushes
 {
-    
-     NSLog ( @"THE LOOP");
     PKPushRegistry * voipRegistry = [[PKPushRegistry alloc]initWithQueue:nil];
     voipRegistry.delegate = self ;
     
@@ -92,6 +90,7 @@
     
     NSLog ( @"THE TOKEN IS:");
     NSLog(@"%@", credentials.token);
+    
     
     
     

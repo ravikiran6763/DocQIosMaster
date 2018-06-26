@@ -458,6 +458,28 @@ ion-side-menu.menu-left.menu {
 .topUp input.ng-invalid:not(:focus) {
   border:2px solid red;
 }
+
+.Docsubmitted input.ng-invalid:not(:focus) {
+  border:2px solid red;
+}
+.Docsubmitted label input.ng-invalid:not(:focus) {
+  border:2px solid red;
+}
+
+.DocEmail input.ng-invalid:not(:focus) {
+  border:2px solid red;
+}
+.DocEmail label input.ng-invalid:not(:focus) {
+  border:2px solid red;
+}
+
+.DocPhone input.ng-invalid:not(:focus) {
+  border:2px solid red;
+}
+.DocPhone label input.ng-invalid:not(:focus) {
+  border:2px solid red;
+}
+
 .submitted2ndPage input.ng-invalid:not(:focus){
   border:2px solid red;
 }

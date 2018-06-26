@@ -257,7 +257,9 @@ this.createChatHistoryIos = function (chat) {
 }
 
 this.createChatHistoryIosforDoctor = function (chat) {
+  console.log('from service chatadata:',chat);
   var deferred = $q.defer();
+  console.log(BASE_URL.url + API.createChatHistoryIosforDoctor);
   $http.post(BASE_URL.url + API.createChatHistoryIosforDoctor,chat)
   .success(function (data, status, headers, config){
     deferred.resolve(data);

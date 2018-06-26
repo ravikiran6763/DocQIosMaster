@@ -179,7 +179,7 @@ $rootScope.checkNewMessages = $interval(function(){
 
 						doctorServices.createChatHistoryIos(dataForIos).then(function(response){
 						$scope.chatHistoryios=response;//store the response array in doctor details
-						// console.log('dataSent :',$scope.chatHistoryios);
+						console.log('dataSent :',$scope.chatHistoryios);
 						}).catch(function(error){
 						console.log('failure data', error);
 						});
@@ -208,10 +208,10 @@ $rootScope.checkNewMessages = $interval(function(){
 							var res = forioschatlist.slice(1,-1);
 							var dataForIos = JSON.parse(forioschatlist);
 
-							// console.log(dataForIos);
+							console.log('DATAFROM CHAT',dataForIos);
 							doctorServices.createChatHistoryIosforDoctor(dataForIos).then(function(response){
 							$scope.chatHistoryios=response;//store the response array in doctor details
-							// console.log('dataSent :',$scope.chatHistoryios);
+							console.log('dataSent DoctorCHAT :',$scope.chatHistoryios);
 							}).catch(function(error){
 							console.log('failure data', error);
 							});

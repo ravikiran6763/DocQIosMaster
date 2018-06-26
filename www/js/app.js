@@ -249,7 +249,7 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
                 console.log(notification);
                   console.log(notification.tap);
 
-                  if($ionicHistory.currentStateName() === 'templates.patientRequest' || $ionicHistory.currentStateName() === 'templates.sendPrescription' || $ionicHistory.currentStateName() === 'templates.prescription'){
+                  if($ionicHistory.currentStateName() === 'templates.patientRequest' || $ionicHistory.currentStateName() === 'templates.sendPrescription' || $ionicHistory.currentStateName() === 'templates.prescription' || $ionicHistory.currentStateName() === 'templates.testPrescription' || $ionicHistory.currentStateName() === 'templates.medicationForPatient' || $ionicHistory.currentStateName() === 'templates.diagnosisForPatient'){
                     console.log('Current View:',$ionicHistory.currentStateName());
                   }
                   else{
@@ -274,6 +274,13 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
                                          disableBack: true
                                        });
                                        $state.go('templates.doctor_home',{}, {location: "replace", reload: false});
+                                     }
+                                   },
+                                   {
+                                     text: 'Cancel',
+                                     type: 'button-royal',
+                                     onTap: function(e) {
+                                       console.log("do nothing");
                                      }
                                    },
 

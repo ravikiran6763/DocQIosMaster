@@ -259,7 +259,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 					else if(response === "doctor")
 					{
 						window.localStorage.doctororpatient = response;
-
 						window.FirebasePlugin.getToken(function(token) {
 								// save this server-side and use it to push notifications to this device
 								// alert(token);
@@ -267,7 +266,10 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 									var updatePlayer ={
 										palyerId:$scope.playerId,
 										userNum:window.localStorage.user,
-										user:'doctor'
+										user:'doctor',
+										status:'available',
+										manufacturer:window.localStorage.manufacturer,
+										model:window.localStorage.model
 									}
 									LoginService.updatePlayer(updatePlayer).then(function(response){
 										console.log(response);

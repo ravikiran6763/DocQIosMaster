@@ -31,14 +31,7 @@
 #import <VSeeKit/VSeeKit.h>
 #import<Foundation/Foundation.h>
 
-
-//@import VSeeKit;
-
-
-@class CallManager;
-
 @interface AppDelegate : CDVAppDelegate <PKPushRegistryDelegate>
-
 
 @property (nonatomic, strong) IBOutlet UIWindow* window;
 @property (nonatomic, strong) IBOutlet CDVViewController* viewController;

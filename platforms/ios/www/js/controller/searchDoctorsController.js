@@ -481,7 +481,7 @@ $scope.docClicked=function(docPhone){
 					console.log('value changed');
 					// $scope.alertPopup.close();
 					$scope.callAccept = $ionicPopup.show({
-				 			 template: "<div >Doctor has accepted your invitation for a<br>consultation. Please start the<br>consultation or decline</div>",
+				 			 template: "<div >Doctor has accepted<br>your invitation for a consultation.<br>Please start the consultation or decline</div>",
 				 			 cssClass: 'requestPopup',
 				 			 scope: $scope,
 				 			 buttons: [

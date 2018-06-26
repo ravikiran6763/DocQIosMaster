@@ -3,7 +3,7 @@
 
   </ion-header-bar> -->
 <ion-content >
-  <div class="top-content hide-on-keyboard-open">
+  <div class="top-content">
       <div class="regTitle">
           <div class="regHeader">
             <div class="backButton " ng-click="goBack();">
@@ -12,7 +12,7 @@
 
             </div>
                 <div class="regFlowImg">
-                <img  src="./img/progress1.png" >
+                <img  src="./img/progress2.png" >
                 </div>
 
           </div>
@@ -21,11 +21,11 @@
 
 
   <div class="form-content">
-    <form name="DocReg1" ng-submit="submitForm($event)" ng-class={submitted:submitted}>
-        <div class="form-group" >
+    <form name="DocReg1" ng-submit="submitForm($event)" ng-class={Docsubmitted:Docsubmitted}>
+        <div class="form-group" ng-class={DocEmail:DocEmail} >
           <input type="email" placeholder="Email Address" name="doc_email" ng-model="Doctor.doc_email" validate-email required>
         </div>
-        <div class="form-group" >
+        <div class="form-group" ng-class={DocPhone:DocPhone} >
           <input type='tel' mask-clean='true' placeholder="Mobile Number" ng-model='Doctor.doc_phone' mask='9999999999' restrict="reject" clean="true" required><span class="intlReg">+91</span></input>
         </div>
 
