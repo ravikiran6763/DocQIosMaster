@@ -329,6 +329,10 @@ $scope.register = function() {
 
 
 			patientProfileDetailsService.emailVerification(window.localStorage.user).then(function(response){
+
+
+
+
 				$rootScope.email=response;
 				if($rootScope.email == 1){
 					$rootScope.emailVerified = false;
@@ -343,6 +347,8 @@ $scope.register = function() {
 
 				$ionicLoading.hide();
 				console.log($scope.email);
+
+
 
 			}).catch(function(error){
 			console.log('failure data', error);

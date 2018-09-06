@@ -29,10 +29,16 @@
 #import "MainViewController.h"
 #import "DoctorQuick-Swift.h"
 
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+     
+     
     [self registerForVoIPPushes];
     
     
@@ -62,19 +68,29 @@
     
     [self.window makeKeyAndVisible];
     
-    
+  
     
     CallManager.sharedInstance.navigationController = navController;
     
     
     self.window.rootViewController = navController;
     
+    self.window.tintColor = [UIColor colorWithRed:0.4274f green:0.7058f blue:0.2666f alpha:1.0f];
+
+    
     
     
     return YES;
     
 }
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+ 
+ BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options[UIApplicationOpenURLOptionsAnnotationKey] ]; // Add any custom logic here. return handled;
 
+
+
+}
 
 -(void)registerForVoIPPushes
 {

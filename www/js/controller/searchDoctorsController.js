@@ -135,7 +135,7 @@ DoctorQuickApp.controller('searchDoctorsController', function($scope,$window,$in
 
 	},true);
 
-$interval(checkDocStatus, 1000);
+// $interval(checkDocStatus, 1000);
 $scope.myDocDetail = angular.fromJson($window.localStorage['myDocDetail']);
 $ionicLoading.show({
 	template:'<ion-spinner></ion-spinner>'
@@ -332,7 +332,7 @@ $scope.docClicked=function(docPhone){
 											});
 
 						          var noResponsePopup = $ionicPopup.alert({
-						          template: "<div ><p>Doctor did not accepted your request</p></div>",
+						          template: "<div ><p>Doctor did not accept your request</p></div>",
 						          cssClass: 'requestPopup',
 						          scope: $scope,
 						          });

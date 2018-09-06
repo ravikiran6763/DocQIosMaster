@@ -13,7 +13,23 @@ DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,
 	//     // do something
 	// 		alert('statusbar shown');
 	// }
-
+	document.addEventListener("resume", onResume, false);
+	function onResume(event){
+		// alert(event);
+		console.log(event);
+		RazorpayCheckout.on('payment.success', successCallback)
+		RazorpayCheckout.on('payment.cancel', cancelCallback)
+		// Pass on the event to RazorpayCheckout
+		RazorpayCheckout.onResume(event);
+				// setTimeout(function() {
+				// //console.log('resume');
+				//       // $state.go("templates.doc_profile");//working
+				//       $state.go($state.current);
+				//     //
+				// 		// $window.location.reload(true);
+				//
+				// }, 0);
+	}
 	$scope.validateTopup=function(isDocTopUpValid){
 	  console.log('isDocTopUpValid ', isDocTopUpValid);
 	  console.log('clicked');

@@ -270,6 +270,8 @@ angular.module('DoctorQuick.factories', [])
   };
 })
 
+
+
 .factory('iAd', function ($window){
   var iAd = $window.iAd;
 
@@ -450,7 +452,7 @@ angular.module('DoctorQuick.factories', [])
               console.log(rejection.config);
               console.log(rejection.config.headers);
               console.log(rejection.config.headers[HEADER_NAME]);
-              // EROOR HANDLING 
+              // EROOR HANDLING
             }
             else{
             }

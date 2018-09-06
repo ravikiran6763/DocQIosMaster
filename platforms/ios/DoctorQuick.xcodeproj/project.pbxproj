@@ -8,104 +8,109 @@
 
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
-		02292084799E4B8E98A3D3D1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC94F0C609C24118BE28E67C /* CoreTelephony.framework */; };
-		049247F55F05421BAEFB14AD /* UIImage+CropScaleOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DC6EDC71994871A224DDC7 /* UIImage+CropScaleOrientation.m */; };
-		07E08DA6592A44F79C56AA7E /* logoutfromvseeforios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316A4388EDB8423F808D57A4 /* logoutfromvseeforios.swift */; };
-		0B1E741D14084792999DCAC2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739817AFA57D49F6B5E1CA0C /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		0D2C876E39314632A4BB8E88 /* audicallvsee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6429FD3E604C90A178A738 /* audicallvsee.swift */; };
-		0F2E9D2654F94B508E38916A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E85D6DC778D4CCE86626E84 /* AddressBookUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		113FB2B871ED4D339A921D5C /* FirebaseABTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB6F52BA03249279183D7E9 /* FirebaseABTesting.framework */; };
+		032D3E57FFE14C4B9C68ADE7 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CE5C4884C24929BD00C643 /* View.xib */; };
+		08998AED1EB94E009EE37EF2 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 2796722CBA4A40AD87E81C5E /* CDVCamera.m */; };
+		0CCA7C9114BE4996A017D1BB /* RareloopAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = AF32CA1E015D46ACAC4F4E33 /* RareloopAppVersion.m */; };
+		0EFB909530964CF388F0C7FE /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A49ED786C39497BAEC0DBD5 /* GoogleToolboxForMac.framework */; };
+		1171DB213100441CA57905FC /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7F816BCD834B6D944E38F9 /* AddressBookUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		12D870E46FAE4382B9C5BF9C /* sendprescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6872BD9349E4BD8AD8AC /* sendprescription.swift */; };
+		1442343F3C954C27B58259D7 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 708C43E0706D49F183FD7F34 /* CDVFile.m */; };
+		1736E5A27D3F4348B9C9379B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C063FFC6695F4048A00D5515 /* CoreTelephony.framework */; };
+		18B2ACF5D29143CDA7080495 /* CDVContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7061A9D4F4E0BA6C8E171 /* CDVContacts.m */; };
+		1BDD8805B9A8458EA5A854DA /* audicallvsee.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA609D09E462473AAF4EA8A6 /* audicallvsee.swift */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		20DE78FADD2744179B9716BE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D071BC630B4D998967FA95 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2754D1B103904829832D1BA4 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C36A1F6151594672A2C5DC68 /* CDVInAppBrowser.m */; };
-		27B7F7C61BAF44A9B2641140 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8537A84A5856412E9E767827 /* nanopb.framework */; };
-		2AC58335E398454BA8DE08DE /* ExampleApplicationforchat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69DC81246436987C23BDE /* ExampleApplicationforchat.swift */; };
-		2F4EF083509449CCB77667F4 /* FirebasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B251346F10A4CFABA162AEB /* FirebasePlugin.m */; };
+		223519FA3D544E08A5D923D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E98C6F44D846048611CE42 /* Accelerate.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		26F5FEB47CED45C191651986 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E56FFDFE84648B093841F /* GoogleService-Info.plist */; };
+		29FA58B9133B4092A6266C93 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D73199E0204196A11E1239 /* GTMSessionFetcher.framework */; };
+		2E1D467B2C9649F0A611C16E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14277DAAF9BE4199B0BCAE34 /* FBSDKCoreKit.framework */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
-		30C4BA44BA6847A080D67766 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C9EFE0825F49029DD08BAC /* VideoToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		35AF75D2E9CD4ECAA54926D7 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B0EB000B744D8C9CB8BEEA /* MediaAccessibility.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		3907332781DD46B7AC33CE7F /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA6F04783E14F1AB549F1F2 /* CDVViewController+SplashScreen.m */; };
-		3BCC3BFE4C1945A8A88B81E6 /* DQ_189*50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAD4D8984084E35AA884B75 /* DQ_189*50.png */; };
-		44E1EDC443204F1BABBFAE52 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35463F809E5841E19BD3FAB1 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		46BA8C32266A482D99B83A43 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C24CEAA9E34EE6991FF728 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		47360E8947B247FC9552AE79 /* CDVContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E48D4174341CB99E75965 /* CDVContacts.m */; };
-		537B720E6F2C40ABA0AD21B1 /* CDVMobileAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A83761B51C5442DA80B2E93 /* CDVMobileAccessibility.m */; };
-		54AA0740C9074008B7A1AB55 /* unreadchatcountsfromusers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727B01191BF44CCAFC17CB9 /* unreadchatcountsfromusers.swift */; };
-		54C23B3FCDAE4329B1F2AD8E /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F68F553C281B49CEB5D3F6EF /* IonicKeyboard.m */; };
-		5DF05ACDA6C2439C945E450E /* DQ_378*100.png in Resources */ = {isa = PBXBuildFile; fileRef = 6262BDD1EDB34D41B2B87663 /* DQ_378*100.png */; };
-		5E21E4906D8648BB946EC496 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F72745EC6D49E5B20C748A /* Toast+UIView.m */; };
-		65558DB57CED44A090F9B0F7 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 19757310C0694010895A89E3 /* CDVFile.m */; };
+		314409C82AFE4D06B14A1A7E /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D3BF6C85C44C7FAC58C10F /* FirebaseMessaging.framework */; };
+		318000C1DB634A51B1172427 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DE8FF1BB5E430CA5EA20B4 /* nanopb.framework */; };
+		3585BE0425C24A66B755DAEF /* FirebaseABTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F36D3EBF7D4285BDFD6FCD /* FirebaseABTesting.framework */; };
+		399C7D87FA174050911F3792 /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3744BFC1678840C18AD8E64E /* Main.m */; };
+		41A6AAB29FFC4B48B9FC1F7C /* ExampleApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD09C9382B4CEF85252484 /* ExampleApplication.swift */; };
+		422D431EB6614A25872D06E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB2FBC8DB24951975E70C4 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		45C0F613FAB24FEE9E346191 /* UIImage+CropScaleOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B57495A284CBCA9D61FF3 /* UIImage+CropScaleOrientation.m */; };
+		481CC53D9B8C4FA7BD1C5B84 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1A9334F8E469FB5848F38 /* CDVViewController+SplashScreen.m */; };
+		4895C20E402747468233171B /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = F72891903CF84D18928DA365 /* CDVAssetLibraryFilesystem.m */; };
+		4B9F8880287A48F8A88E9A33 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0861AE60D30419BA58BB4F9 /* FirebaseInstanceID.framework */; };
+		4BE69E7A2095482D914EA094 /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88E8AEB86E45B8AB383327 /* FirebaseNanoPB.framework */; };
+		4CA16405381B4A2BA83B79FC /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A6FFEB89D476796EBA10B /* CDVConnection.m */; };
+		4E46E91F669B4CDCBCCD732A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1C73B8B9404A259F2B0C95 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4FCF8E6D65E54EDD9A9DBDF7 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D33942102D4DD3B77D2AB1 /* MediaAccessibility.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		550E07F460C34B1BA9B22808 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AC8C9C7CF548EEBF3A152E /* Toast+UIView.m */; };
+		55E2A522108B44D984D3E367 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F2E7E1B8E4EAD9A6521C0 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		585CFAEBC32A4E8DA876E465 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD566CE273A4077981B5E44 /* CDVSplashScreen.m */; };
+		5957FB2D9A6744B4854F6814 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627B6D612020486BA2F0E201 /* CoreLocation.framework */; };
+		5CC75828D31D4D18ADE30588 /* FirebasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2FD0B6B4354A6BA041DF40 /* FirebasePlugin.m */; };
+		5D03FDB9FC79490486C43F00 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AFBB3C30EF4CAD81243F99 /* FBSDKShareKit.framework */; };
+		69476D90BC554F2D9212DE11 /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 662E990FAA5C430592C9CDD6 /* FacebookConnectPlugin.m */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		6B702D59FB864CC1949BE1F5 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A33779109C4877B9262399 /* CDVCamera.m */; };
-		6BD8BBE4C6F64888A4C23AFE /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8DF8BD4553407FA1AC3517 /* SocialSharing.m */; };
-		6CD05625278546B8B5B322BF /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAFC8860C0C4200A9349AB9 /* FirebaseMessaging.framework */; };
-		6EA454A051924B5FB6973DAF /* VSeeKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 946B4574989E41A088CC7D36 /* VSeeKit.bundle */; };
-		74A16FAB7E3F470DB845A8FB /* ExampleApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D6FD50F0C46668107C960 /* ExampleApplication.swift */; };
-		7AEDBCE192C846AF9B6DC9E2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1251646DBB7541F08B094809 /* CoreLocation.framework */; };
-		7F97D10FF150424F88C2DB3D /* Invideocall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416551994564ECCBEC26336 /* Invideocall.swift */; };
-		84B6F54BEF5B4CB4A87F4C1B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE226990FD7046CD98DEE563 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8A69D8F6AF644C7280D8EE48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E56884618A4D67A1ED11FB /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8BF2EE6A09704F3ABCB7E623 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BDF2024FA1412C97786048 /* FirebaseCoreDiagnostics.framework */; };
-		942ED1D45D8D44F8A6D0DAE0 /* FirebaseSwizzlingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0113E64E034CA888ACDE8C /* FirebaseSwizzlingUtilities.framework */; };
-		9D5156EDF3084BDF803E8173 /* CDVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C5953C92CA254CEFAF342A23 /* CDVContact.m */; };
-		9DF1A368FE1B4669A0D4A252 /* VSeeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C6A0BA0B742B8ACFF84D6 /* VSeeKit.framework */; };
-		9E6B0FD7466148D7BEF610F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54485C385C73457F885080FC /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		9E7410374FA5407184C3DF86 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 681E943FC0A94913A5548290 /* Toast.m */; };
-		9EB416EB8E6F41AE8997AE5A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DA3ABD26204805840F5F3D /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		9EBD9D5F84D54F049F7913A4 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1CED31DC84DA78532E89A /* CDVConnection.m */; };
-		A18793309DCD4D649A11F2FB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E5BA52B0714CFF945F1319 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A3A837D33316428BA86A6E8B /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E7A9B5129A4E408670B680 /* libresolv.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A50B626391C74F419BBDD660 /* sendprescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D651510834B6B940B60FD /* sendprescription.swift */; };
-		A6629123FF984AC296EE983C /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1366C91EEB4B95929ED4C1 /* CDVReachability.m */; };
-		A737DB9007264964A81BE344 /* globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A221C9D5EC74E479DBA822C /* globals.m */; };
-		A8CEF731147242138F3A0465 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3323BDD76C5B470BBB2C8187 /* Accelerate.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A8EFB36F03FE4BC8A7F3F56A /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B664B3D57269482FB84B1C98 /* GoogleToolboxForMac.framework */; };
-		AD26A0A0021C4FA8A66B64C3 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E4DC8BBB114433B782159A /* FirebaseCore.framework */; };
-		AEC875678E2147E5A435E384 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24303820DD0D4ABC8AFE08B6 /* Protobuf.framework */; };
-		B03EB588C2494B26B674F5FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D20AC315CE40E8AD6661AB /* QuartzCore.framework */; };
-		B0DC41B75E04498FB58FC633 /* WaitForCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFB289E9DA458E99A9A7B1 /* WaitForCallViewController.swift */; };
-		B427089316C14FF7893819F3 /* WaitForCallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7007FE9D6F44E47A4CCD500 /* WaitForCallView.xib */; };
-		B4775943A53B4D03859396E3 /* AppDelegate+FirebasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDB6907598C49DEBA19572C /* AppDelegate+FirebasePlugin.m */; };
-		B5E9B23759624EC392D1AB49 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F5D4110B4F48E993977B60 /* CDVLocalFilesystem.m */; };
-		B833730DBF0448309B83D037 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C9117C3C8345B98C6B4F67 /* CDVStatusBar.m */; };
-		B89390178E934FDC8A629C39 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D401EA2BDE45ADBD711512 /* CDVSplashScreen.m */; };
-		BABA48E41E9441248F699D1D /* FirebasePerformance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7597A286DA7A433D90D0411A /* FirebasePerformance.framework */; };
-		C1441937B2AD4DDAAD0C2DA1 /* DoctorQuick.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C57B09343984860AC7093CE /* DoctorQuick.hpp */; };
-		C50F35EBD4F24EE5B5A3730A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 534B71D2BCE845909A1EC7F7 /* GoogleService-Info.plist */; };
-		C9B941511FB3488CA80F23D8 /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A345F13D594CD3BEA21476 /* FirebaseNanoPB.framework */; };
-		CA10435520D4239800C765EC /* 12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA10435320D4239800C765EC /* 12.mp3 */; };
-		CB8034863CF0424D89C5FAAD /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8643B8D5FDE54BBDAA2D0A9A /* GTMSessionFetcher.framework */; };
-		D0C77E3CF94545A898624537 /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CF58E851364C1E803C880A /* CDVJpegHeaderWriter.m */; };
-		D17B03DD71CB4B8BA72EEAA4 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8352CDD0CCC4D03962C3A89 /* View.xib */; };
-		D24ABDE108774379899F0671 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B0C6101EF41E2A78D188F /* WebViewController.swift */; };
-		D624DAFC7D5941FFAF2C4286 /* indivisualchatcounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA121072A584E6CA06C0CB9 /* indivisualchatcounts.swift */; };
-		D72EA1EC5F324D25990307F4 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E852AD0849F641EE8193C41C /* DatePicker.m */; };
-		D760B9149FBF4D198E7BFDE0 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D0255B6F4AD4795808B7293 /* DatePicker.xib */; };
-		D80D0FB4AA764830965472D1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD0D82531F144EEB8CE5A6B /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		D8CF1B2AA2114C21AE8D8B83 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D764BE7C6BC4872A87B2746 /* FirebaseAuth.framework */; };
-		DBBB18BDBF37416A8A7774B7 /* loginintovsee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591D64F668F49C4A50202A2 /* loginintovsee.swift */; };
-		DD3FC096BDBB42508A995D7F /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E88BA96A495441DA22970A4 /* CDVDevice.m */; };
-		DDC92FE8AB5245F79869D72F /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9790D3517344F5964CD98D /* FirebaseAnalytics.framework */; };
-		DF9F5AD8A53E41DBA9CA93E7 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C194C16014A1427296CF6D34 /* PushKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E2B917A9A05F4F7085CA28A9 /* FirebaseRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8AFDB93ED05484AB11B9570 /* FirebaseRemoteConfig.framework */; };
-		E499FF1375A943368075C9F6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D9ED946A649368603C78F /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E680D39EEF974924B6D0CBBB /* RareloopAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9862F8F591E14062B12E7392 /* RareloopAppVersion.m */; };
-		E7D8F5E0AC6F40E58DEA7721 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE66BBEFE24424984B9CF64 /* CDVAssetLibraryFilesystem.m */; };
-		E8370CA7C9B64827A430E73F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF4A65253E4A81A44C348F /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		ECB9CA32C49E43C6A86F1927 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D649F011AF84506A4F8C8BF /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F3433D7B4C9C4E5E9335A2DA /* Razorpay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8C9D9538E948C8A08C6CB4 /* Razorpay.framework */; };
-		F582E51BC4214717B4F3D04A /* calls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F5A435A1FD4669AA511D4F /* calls.swift */; };
-		F888CF80407D4D969910100B /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE065AACF1945C0A4E71E5D /* FirebaseInstanceID.framework */; };
-		FA84FBED404349DE8FFEFB7E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CDD90068D449BB9DC76683 /* libicucore.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
-		FB14E138CCA944AEB85D24C3 /* NSString+SSURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5FEBC33A4545F0B2EEF127 /* NSString+SSURLEncoding.m */; };
-		FB505E16CFA5464A9CB2068F /* DoctorQuick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E286CF54454984D42FC5 /* DoctorQuick.cpp */; };
-		FD0B4A8EBB4B4C82B6EEBAFE /* loginstatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CB47B30F3421089C8772D /* loginstatus.swift */; };
-		FD66CF1DAC0B4B3DA42D75A5 /* FirebaseCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773EAF968BA642BFABE21B17 /* FirebaseCrash.framework */; };
-		FDB84678C99A4EFC9B86DE45 /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F6766957614F3B9F5CB6F4 /* Main.m */; };
-		FDFE74E7639F44DCB2A0E405 /* DQ_567*150.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A6D47FCBCF49F499CB7266 /* DQ_567*150.png */; };
+		6B8A7B12C03F4757AEB962B9 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F5D28592384F81BA90F945 /* CDVDevice.m */; };
+		7057C7783DDC4D54BC34267A /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239FF7C2376F46009CBDB343 /* Protobuf.framework */; };
+		715BB59AFF82416AA8452B64 /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = E889EBF03925419D83B7C2AE /* SocialSharing.m */; };
+		7161E97841C048C7A7ECFC4F /* CDVMobileAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4844B1D94F6645ECA75835FD /* CDVMobileAccessibility.m */; };
+		754858AE82DF40E48F0450C7 /* VSeeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3761277FDF748E686FAF1CF /* VSeeKit.framework */; };
+		75DA7641F18E43329D560D63 /* WaitForCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9CFEC6A4F493DA294DCA2 /* WaitForCallViewController.swift */; };
+		7C2181820BB44B9D82530467 /* FirebaseSwizzlingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2ED13ACD7ED49268CB510AE /* FirebaseSwizzlingUtilities.framework */; };
+		7C3675E8B9F54B34B6A4679F /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = DD961F6ECA97460A8A7A58FB /* CDVInAppBrowser.m */; };
+		7C654D529C88447E9DCD6497 /* VSeeKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F0110316B9A4468789A56CA5 /* VSeeKit.bundle */; };
+		821E84B507504D78BA1F6247 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A8961EEDF844CFAEB4D094 /* FirebaseAuth.framework */; };
+		8473B0C5951C46598FF760E3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E972E70822BC434482AF563C /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		84B9E8FABD304B40869DA0A8 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C108C833C0473EBBA05BC2 /* FirebaseCoreDiagnostics.framework */; };
+		86E63D77392046EBB66CA2EF /* logoutfromvseeforios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8DC18329794AE383768643 /* logoutfromvseeforios.swift */; };
+		87D0312C13914017BB8988ED /* FirebasePerformance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E56B514AF394674A10B4865 /* FirebasePerformance.framework */; };
+		8836B2DACD2B45FF810840DA /* ExampleApplicationforchat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A844E189A445BB85D585A3 /* ExampleApplicationforchat.swift */; };
+		897199306AB74ED28F09E882 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999B6E1BB11C43A88298B327 /* DatePicker.xib */; };
+		8DE5E3B98EA6445CB97A576C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0BF3253A9D4CA6982EADEA /* WebViewController.swift */; };
+		913619F1C9D74947A3432B37 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BA743D77D44CC182D5193F /* libresolv.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		921E8F1DA04E49669802DE4F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478D75F68E1C4F09AC1B330E /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92C1F58560D1413FB32FA979 /* loginintovsee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6D9636B5943DA824EF31E /* loginintovsee.swift */; };
+		94DFFD79A6364D71A36402E3 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CEBD198ED04930971CEC46 /* FirebaseCore.framework */; };
+		95EFB54280054DCB862DB068 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8644FA32414DBEAA203668 /* IonicKeyboard.m */; };
+		960351CB0FB54CA1A77DEA95 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969C2E01755049D0A4CAF90C /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9B99D2F1FCD745C89B6329E5 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C442EB1A6064D0086FBCA8D /* CDVStatusBar.m */; };
+		9C260A7C01ED4271B01AFF6B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C13A9BF66A48AC9CFEAB88 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9E27F85864C5454EAA91EDE4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965339FACDDE404E84177BD7 /* FBSDKLoginKit.framework */; };
+		9E9B9EDC33BB4127B7AEFBAB /* Razorpay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7D9DBCCF57465993CCA70F /* Razorpay.framework */; };
+		9F74539B1BCF4414B1E3FE86 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF2A312A063498095EC5901 /* CDVReachability.m */; };
+		A720A151ED8541EF97DE918B /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C146728CF4899BE5B9CFA /* CDVLocalFilesystem.m */; };
+		A7AB63E91FC9499D9141808C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EE180F753947E5BE1F18FE /* libicucore.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A8DA116015C1471F88D65A97 /* DoctorQuick.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 6957788E18F94E6999ACE731 /* DoctorQuick.hpp */; };
+		AC1B5583318C448DBA4CE826 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D24C953C82C41829F64FDDD /* PushKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B6326F53ED494E1F982AFAEB /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A447E6B9EA4486B3B1DB17 /* CDVJpegHeaderWriter.m */; };
+		B6355349A41145D2AF470A0C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DE6E1FD606408DBDF6C995 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B92097CD95E2400E99F3299C /* NSString+SSURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BA20A306F14CE486E65F1D /* NSString+SSURLEncoding.m */; };
+		BB4E65E247E341CAAA608731 /* FirebaseRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A87EF74B5B443AF9FB8EE1F /* FirebaseRemoteConfig.framework */; };
+		BB9EDCCFC1DA4502895CE51E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3523BBC0FBC74F6DBB9634CF /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C1B29E9CE309432883B8DCAE /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F184948055BF48E6BA3203D3 /* VideoToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C63DB4D3D86F4AC5BB2034A8 /* AppDelegate+FirebasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 439006FCF48C4C9DB54E714F /* AppDelegate+FirebasePlugin.m */; };
+		C6611190C8DE4FF9AEA62363 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A5E5DA9A784E7884331026 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CA9B3DD7212E9CCA00C8ADE1 /* 12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9B3DD5212E9CC900C8ADE1 /* 12.mp3 */; };
+		CAC4961BE3F64D1A9745AF33 /* WaitForCallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16000168A43C4846A9956580 /* WaitForCallView.xib */; };
+		CC8041FD62944975AADF53A6 /* indivisualchatcounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA588A4500494EB4411753 /* indivisualchatcounts.swift */; };
+		CD1BF7F9BADF4F8897B01D72 /* CDVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2DCE8C1FFE48199B9E5D11 /* CDVContact.m */; };
+		CDA9BDD8AA3846968A602F3F /* Invideocall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34410143921E48CAAAC73EC5 /* Invideocall.swift */; };
+		CF9B97B5CC734589A6B15FC7 /* DQ_567*150.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E44C86B404853824553F8 /* DQ_567*150.png */; };
+		CFFC9DD772CE4DF6A928C043 /* DQ_189*50.png in Resources */ = {isa = PBXBuildFile; fileRef = BA59CE0BD48B45CB903AB9CF /* DQ_189*50.png */; };
+		D277DCFE83F6473BBEC3B23C /* globals.m in Sources */ = {isa = PBXBuildFile; fileRef = C2486B5406EB4B42A1A5F901 /* globals.m */; };
+		DD8AF39058204B5394343E90 /* DQ_378*100.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A007070D6C4202BF8503FE /* DQ_378*100.png */; };
+		E07E48FCCD0949699AB2EB16 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2F32E0E805408484446320 /* DatePicker.m */; };
+		E1AF7B88FA89449CA10E7EE4 /* unreadchatcountsfromusers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6EFD1E4A44C09B06F8FB1 /* unreadchatcountsfromusers.swift */; };
+		E95C9E57A65E4A95AB771C4B /* FirebaseCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DD850D0C2D4A478FC0BD3E /* FirebaseCrash.framework */; };
+		F1823FAC360A4738854EA0B4 /* DoctorQuick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD8808A89E55470C88073A7E /* DoctorQuick.cpp */; };
+		F2065683C49445D599A1AEC9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2631EC541E46466D958B68E6 /* Bolts.framework */; };
+		F211752C75014E35BD65F205 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC7596388684AB0946A375E /* QuartzCore.framework */; };
+		F268CDEB35FD4E73A8688362 /* loginstatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD552F23BBCB41DA8DB7F6C2 /* loginstatus.swift */; };
+		F64B358328A246BE83D9D719 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C22528D0792410994E64264 /* FirebaseAnalytics.framework */; };
+		FBF0B1A637514389962878B5 /* calls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F74305F93C4F19BD118F53 /* calls.swift */; };
+		FD4F6519CFEE40038E55B411 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AE77BA8B5B4F3CBE776557 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FD58C84257744850B6361504 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A81A6FF14B648B68EE7794E /* Toast.m */; };
+		FD5F9406A7724B56962D911E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97A15F386364EFDB74639B1 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FEFB1214692144C997EADA72 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0786AAA7184C4582E1E73A /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +128,7 @@
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CordovaLib;
 		};
-		CAF640A420CA734A00E5717D /* PBXContainerItemProxy */ = {
+		CA59BD02212D8AA5005FD2ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
 			proxyType = 2;
@@ -133,36 +138,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00C6EFD1E4A44C09B06F8FB1 /* unreadchatcountsfromusers.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = unreadchatcountsfromusers.swift; path = com.greettelehealth.DoctorQuick/unreadchatcountsfromusers.swift; sourceTree = "<group>"; };
 		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DoctorQuick/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		043D651510834B6B940B60FD /* sendprescription.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = sendprescription.swift; path = com.greettelehealth.DoctorQuick/sendprescription.swift; sourceTree = "<group>"; };
-		05BDF2024FA1412C97786048 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseCoreDiagnostics.framework"; sourceTree = "<group>"; };
-		08B7479968AE4A5990980D53 /* AppDelegate+FirebasePlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+FirebasePlugin.h"; path = "cordova-plugin-firebase/AppDelegate+FirebasePlugin.h"; sourceTree = "<group>"; };
-		0A951D51150F4C96B61A5BDE /* DatePicker.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = DatePicker.h; path = "cordova-plugin-datepicker/DatePicker.h"; sourceTree = "<group>"; };
-		0C57B09343984860AC7093CE /* DoctorQuick.hpp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = DoctorQuick.hpp; path = com.greettelehealth.DoctorQuick/DoctorQuick.hpp; sourceTree = "<group>"; };
-		0E88BA96A495441DA22970A4 /* CDVDevice.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; };
-		11CDD90068D449BB9DC76683 /* libicucore.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		1251646DBB7541F08B094809 /* CoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		143C6A0BA0B742B8ACFF84D6 /* VSeeKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = VSeeKit.framework; path = DoctorQuick/Plugins/com.greettelehealth.DoctorQuick/VSeeKit.framework; sourceTree = "<group>"; };
-		160D6FD50F0C46668107C960 /* ExampleApplication.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = ExampleApplication.swift; path = com.greettelehealth.DoctorQuick/ExampleApplication.swift; sourceTree = "<group>"; };
-		17B6BF5EEAED482DAB543F8E /* CDVExif.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVExif.h; path = "cordova-plugin-camera/CDVExif.h"; sourceTree = "<group>"; };
-		17C24CEAA9E34EE6991FF728 /* MessageUI.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		19757310C0694010895A89E3 /* CDVFile.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVFile.m; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; };
-		1A221C9D5EC74E479DBA822C /* globals.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = globals.m; path = com.greettelehealth.DoctorQuick/globals.m; sourceTree = "<group>"; };
-		1A83761B51C5442DA80B2E93 /* CDVMobileAccessibility.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVMobileAccessibility.m; path = "phonegap-plugin-mobile-accessibility/CDVMobileAccessibility.m"; sourceTree = "<group>"; };
-		1BE065AACF1945C0A4E71E5D /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseInstanceID.framework"; sourceTree = "<group>"; };
-		1C3FC104DEA24AFB9D0B7080 /* NSString+SSURLEncoding.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "NSString+SSURLEncoding.h"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.h"; sourceTree = "<group>"; };
+		03D33942102D4DD3B77D2AB1 /* MediaAccessibility.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		03EE180F753947E5BE1F18FE /* libicucore.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		0A49ED786C39497BAEC0DBD5 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
+		0A87EF74B5B443AF9FB8EE1F /* FirebaseRemoteConfig.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseRemoteConfig.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseRemoteConfig.framework"; sourceTree = "<group>"; };
+		0B0786AAA7184C4582E1E73A /* ImageIO.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		0E04A9B0A2524B96A6F15DC4 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLocalFilesystem.h; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; };
+		0E2F32E0E805408484446320 /* DatePicker.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = DatePicker.m; path = "cordova-plugin-datepicker/DatePicker.m"; sourceTree = "<group>"; };
+		14277DAAF9BE4199B0BCAE34 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "DoctorQuick/Plugins/cordova-plugin-facebook4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		14AFBB3C30EF4CAD81243F99 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "DoctorQuick/Plugins/cordova-plugin-facebook4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		14E6D9636B5943DA824EF31E /* loginintovsee.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = loginintovsee.swift; path = com.greettelehealth.DoctorQuick/loginintovsee.swift; sourceTree = "<group>"; };
+		15BA743D77D44CC182D5193F /* libresolv.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		16000168A43C4846A9956580 /* WaitForCallView.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; path = WaitForCallView.xib; sourceTree = "<group>"; };
+		1BEA588A4500494EB4411753 /* indivisualchatcounts.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = indivisualchatcounts.swift; path = com.greettelehealth.DoctorQuick/indivisualchatcounts.swift; sourceTree = "<group>"; };
+		1CF2A312A063498095EC5901 /* CDVReachability.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVReachability.m; path = "cordova-plugin-network-information/CDVReachability.m"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* DoctorQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2010405D150F40BEA51D9FA6 /* Firebase.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = "cordova-plugin-firebase/Firebase.h"; sourceTree = "<group>"; };
-		21FFB289E9DA458E99A9A7B1 /* WaitForCallViewController.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = WaitForCallViewController.swift; path = com.greettelehealth.DoctorQuick/WaitForCallViewController.swift; sourceTree = "<group>"; };
-		22CF4A65253E4A81A44C348F /* ImageIO.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		24303820DD0D4ABC8AFE08B6 /* Protobuf.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/Protobuf.framework"; sourceTree = "<group>"; };
-		269D9ED946A649368603C78F /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		28248B4DC4EB494EAA33ECEF /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVAssetLibraryFilesystem.h; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; };
+		239FF7C2376F46009CBDB343 /* Protobuf.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/Protobuf.framework"; sourceTree = "<group>"; };
+		2631EC541E46466D958B68E6 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "DoctorQuick/Plugins/cordova-plugin-facebook4/Bolts.framework"; sourceTree = "<group>"; };
+		26A4A7F90C51489CBB0F2683 /* SocialSharing.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = SocialSharing.h; path = "cordova-plugin-x-socialsharing/SocialSharing.h"; sourceTree = "<group>"; };
+		2796722CBA4A40AD87E81C5E /* CDVCamera.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVCamera.m; path = "cordova-plugin-camera/CDVCamera.m"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2D649F011AF84506A4F8C8BF /* AddressBook.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		2E6429FD3E604C90A178A738 /* audicallvsee.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = audicallvsee.swift; path = com.greettelehealth.DoctorQuick/audicallvsee.swift; sourceTree = "<group>"; };
+		2C22528D0792410994E64264 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseAnalytics.framework"; sourceTree = "<group>"; };
+		2EBF5032D21341598A21752F /* CDVFile.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVFile.h; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -171,108 +172,118 @@
 		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = "cordova/build-debug.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
-		316A4388EDB8423F808D57A4 /* logoutfromvseeforios.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = logoutfromvseeforios.swift; path = com.greettelehealth.DoctorQuick/logoutfromvseeforios.swift; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* DoctorQuick-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DoctorQuick-Prefix.pch"; sourceTree = "<group>"; };
-		32E4DC8BBB114433B782159A /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseCore.framework"; sourceTree = "<group>"; };
-		3323BDD76C5B470BBB2C8187 /* Accelerate.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		33401E30F08541E88B0B09E2 /* SocialSharing.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = SocialSharing.h; path = "cordova-plugin-x-socialsharing/SocialSharing.h"; sourceTree = "<group>"; };
-		3400476F6F8D4C2B92D49F54 /* Main.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Main.h; path = com.razorpay.cordova/Razorpay/Main.h; sourceTree = "<group>"; };
-		34C9EFE0825F49029DD08BAC /* VideoToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		35463F809E5841E19BD3FAB1 /* Social.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		3AB6F52BA03249279183D7E9 /* FirebaseABTesting.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseABTesting.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseABTesting.framework"; sourceTree = "<group>"; };
-		3CE66BBEFE24424984B9CF64 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVAssetLibraryFilesystem.m; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; };
-		42F72745EC6D49E5B20C748A /* Toast+UIView.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "Toast+UIView.m"; path = "cordova-plugin-x-toast/Toast+UIView.m"; sourceTree = "<group>"; };
-		441DBCCF7BF649D68D612165 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; };
-		49B0EB000B744D8C9CB8BEEA /* MediaAccessibility.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		49D401EA2BDE45ADBD711512 /* CDVSplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVSplashScreen.m; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; };
-		50D20AC315CE40E8AD6661AB /* QuartzCore.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		534B71D2BCE845909A1EC7F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		54485C385C73457F885080FC /* UIKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5AA121072A584E6CA06C0CB9 /* indivisualchatcounts.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = indivisualchatcounts.swift; path = com.greettelehealth.DoctorQuick/indivisualchatcounts.swift; sourceTree = "<group>"; };
-		5D1366C91EEB4B95929ED4C1 /* CDVReachability.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVReachability.m; path = "cordova-plugin-network-information/CDVReachability.m"; sourceTree = "<group>"; };
-		5D521280B82F4C20AF64614F /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; };
-		5DAFC8860C0C4200A9349AB9 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseMessaging.framework"; sourceTree = "<group>"; };
-		60172CFEA49F42DDAB5D5E7A /* CDVConnection.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVConnection.h; path = "cordova-plugin-network-information/CDVConnection.h"; sourceTree = "<group>"; };
-		611F5B67250B412990C41C56 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLocalFilesystem.h; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; };
-		6262BDD1EDB34D41B2B87663 /* DQ_378*100.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = "DQ_378*100.png"; sourceTree = "<group>"; };
-		681E943FC0A94913A5548290 /* Toast.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = Toast.m; path = "cordova-plugin-x-toast/Toast.m"; sourceTree = "<group>"; };
+		33DE6E1FD606408DBDF6C995 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		34410143921E48CAAAC73EC5 /* Invideocall.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Invideocall.swift; path = com.greettelehealth.DoctorQuick/Invideocall.swift; sourceTree = "<group>"; };
+		3523BBC0FBC74F6DBB9634CF /* CFNetwork.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3744BFC1678840C18AD8E64E /* Main.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = Main.m; path = com.razorpay.cordova/Razorpay/Main.m; sourceTree = "<group>"; };
+		38A447E6B9EA4486B3B1DB17 /* CDVJpegHeaderWriter.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVJpegHeaderWriter.m; path = "cordova-plugin-camera/CDVJpegHeaderWriter.m"; sourceTree = "<group>"; };
+		3B7D9DBCCF57465993CCA70F /* Razorpay.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Razorpay.framework; path = DoctorQuick/Plugins/com.razorpay.cordova/Razorpay.framework; sourceTree = "<group>"; };
+		3BC1A9334F8E469FB5848F38 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; };
+		3CB59F4BB4A3457FB0E9DBC3 /* Toast.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Toast.h; path = "cordova-plugin-x-toast/Toast.h"; sourceTree = "<group>"; };
+		42A007070D6C4202BF8503FE /* DQ_378*100.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = "DQ_378*100.png"; sourceTree = "<group>"; };
+		4308C6B8A942450CBD927117 /* NSString+SSURLEncoding.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "NSString+SSURLEncoding.h"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.h"; sourceTree = "<group>"; };
+		439006FCF48C4C9DB54E714F /* AppDelegate+FirebasePlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+FirebasePlugin.m"; path = "cordova-plugin-firebase/AppDelegate+FirebasePlugin.m"; sourceTree = "<group>"; };
+		44DD850D0C2D4A478FC0BD3E /* FirebaseCrash.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseCrash.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseCrash.framework"; sourceTree = "<group>"; };
+		45F5D28592384F81BA90F945 /* CDVDevice.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; };
+		478D75F68E1C4F09AC1B330E /* AddressBook.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		4844B1D94F6645ECA75835FD /* CDVMobileAccessibility.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVMobileAccessibility.m; path = "phonegap-plugin-mobile-accessibility/CDVMobileAccessibility.m"; sourceTree = "<group>"; };
+		489C976B0276499BADF296CF /* IonicKeyboard.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = IonicKeyboard.h; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; };
+		4B2C146728CF4899BE5B9CFA /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLocalFilesystem.m; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; };
+		4B59018E3CFF4BEB8B907782 /* Main.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Main.h; path = com.razorpay.cordova/Razorpay/Main.h; sourceTree = "<group>"; };
+		4C442EB1A6064D0086FBCA8D /* CDVStatusBar.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVStatusBar.m; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; };
+		4D2508D6B2AA43C5B3EAA1EF /* FirebasePlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = FirebasePlugin.h; path = "cordova-plugin-firebase/FirebasePlugin.h"; sourceTree = "<group>"; };
+		503C511384EE467B8E306752 /* CDVJpegHeaderWriter.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVJpegHeaderWriter.h; path = "cordova-plugin-camera/CDVJpegHeaderWriter.h"; sourceTree = "<group>"; };
+		50BA20A306F14CE486E65F1D /* NSString+SSURLEncoding.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "NSString+SSURLEncoding.m"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.m"; sourceTree = "<group>"; };
+		51561F5406B64CF9B702FC23 /* Toast+UIView.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; };
+		51771BB75B294C2794D8F181 /* CDVDevice.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; };
+		52F74305F93C4F19BD118F53 /* calls.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = calls.swift; path = com.greettelehealth.DoctorQuick/calls.swift; sourceTree = "<group>"; };
+		5A6F6872BD9349E4BD8AD8AC /* sendprescription.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = sendprescription.swift; path = com.greettelehealth.DoctorQuick/sendprescription.swift; sourceTree = "<group>"; };
+		5A8DC18329794AE383768643 /* logoutfromvseeforios.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = logoutfromvseeforios.swift; path = com.greettelehealth.DoctorQuick/logoutfromvseeforios.swift; sourceTree = "<group>"; };
+		5A9A6FFEB89D476796EBA10B /* CDVConnection.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; };
+		627B6D612020486BA2F0E201 /* CoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		65C3E051B7EB4A3384EA9740 /* UIImage+CropScaleOrientation.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropScaleOrientation.h"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.h"; sourceTree = "<group>"; };
+		662E990FAA5C430592C9CDD6 /* FacebookConnectPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = FacebookConnectPlugin.m; path = "cordova-plugin-facebook4/FacebookConnectPlugin.m"; sourceTree = "<group>"; };
+		6957788E18F94E6999ACE731 /* DoctorQuick.hpp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = DoctorQuick.hpp; path = com.greettelehealth.DoctorQuick/DoctorQuick.hpp; sourceTree = "<group>"; };
+		69C13A9BF66A48AC9CFEAB88 /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = DoctorQuick/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		6CD0D82531F144EEB8CE5A6B /* CFNetwork.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		6D0E9AB3D393454BADA33F8E /* CDVReachability.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "cordova-plugin-network-information/CDVReachability.h"; sourceTree = "<group>"; };
-		6E85D6DC778D4CCE86626E84 /* AddressBookUI.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		739817AFA57D49F6B5E1CA0C /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		7597A286DA7A433D90D0411A /* FirebasePerformance.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebasePerformance.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebasePerformance.framework"; sourceTree = "<group>"; };
-		75E5BA52B0714CFF945F1319 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		76073EFC5EBE4F32AD0C297B /* Toast+UIView.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; };
-		773EAF968BA642BFABE21B17 /* FirebaseCrash.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseCrash.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseCrash.framework"; sourceTree = "<group>"; };
-		7D5FE0E5D3F14592B026EB31 /* CDVSplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; };
-		7DD7DBF72334470585DF1759 /* CDVStatusBar.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVStatusBar.h; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; };
-		80DC6EDC71994871A224DDC7 /* UIImage+CropScaleOrientation.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropScaleOrientation.m"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.m"; sourceTree = "<group>"; };
-		8416551994564ECCBEC26336 /* Invideocall.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Invideocall.swift; path = com.greettelehealth.DoctorQuick/Invideocall.swift; sourceTree = "<group>"; };
-		8537A84A5856412E9E767827 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/nanopb.framework"; sourceTree = "<group>"; };
-		8643B8D5FDE54BBDAA2D0A9A /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
-		87F5A435A1FD4669AA511D4F /* calls.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = calls.swift; path = com.greettelehealth.DoctorQuick/calls.swift; sourceTree = "<group>"; };
-		88E56884618A4D67A1ED11FB /* Foundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8AAD4D8984084E35AA884B75 /* DQ_189*50.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = "DQ_189*50.png"; sourceTree = "<group>"; };
-		8C5FEBC33A4545F0B2EEF127 /* NSString+SSURLEncoding.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "NSString+SSURLEncoding.m"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.m"; sourceTree = "<group>"; };
+		708C43E0706D49F183FD7F34 /* CDVFile.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVFile.m; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; };
+		757FF23900CC40869645A7FD /* CDVInAppBrowser.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; };
+		75C108C833C0473EBBA05BC2 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseCoreDiagnostics.framework"; sourceTree = "<group>"; };
+		7761561A67034003B4207951 /* CDVStatusBar.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVStatusBar.h; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; };
+		78BB2FBC8DB24951975E70C4 /* Foundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A81A6FF14B648B68EE7794E /* Toast.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = Toast.m; path = "cordova-plugin-x-toast/Toast.m"; sourceTree = "<group>"; };
+		7C5606E689F24B8EA980BA3D /* AppDelegate+FirebasePlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+FirebasePlugin.h"; path = "cordova-plugin-firebase/AppDelegate+FirebasePlugin.h"; sourceTree = "<group>"; };
+		80AE77BA8B5B4F3CBE776557 /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8534B8FFBEE440A0B296CCA7 /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = FacebookConnectPlugin.h; path = "cordova-plugin-facebook4/FacebookConnectPlugin.h"; sourceTree = "<group>"; };
+		8CB7061A9D4F4E0BA6C8E171 /* CDVContacts.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVContacts.m; path = "cordova-plugin-contacts/CDVContacts.m"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* DoctorQuick-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DoctorQuick-Info.plist"; path = "DoctorQuick/DoctorQuick-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
-		8EA1CED31DC84DA78532E89A /* CDVConnection.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; };
-		91E7A9B5129A4E408670B680 /* libresolv.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		946B4574989E41A088CC7D36 /* VSeeKit.bundle */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.plug-in"; path = VSeeKit.bundle; sourceTree = "<group>"; };
-		9591D64F668F49C4A50202A2 /* loginintovsee.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = loginintovsee.swift; path = com.greettelehealth.DoctorQuick/loginintovsee.swift; sourceTree = "<group>"; };
-		9862F8F591E14062B12E7392 /* RareloopAppVersion.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = RareloopAppVersion.m; path = "cordova-plugin-appversion/RareloopAppVersion.m"; sourceTree = "<group>"; };
-		9A7E48D4174341CB99E75965 /* CDVContacts.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVContacts.m; path = "cordova-plugin-contacts/CDVContacts.m"; sourceTree = "<group>"; };
-		9B251346F10A4CFABA162AEB /* FirebasePlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = FirebasePlugin.m; path = "cordova-plugin-firebase/FirebasePlugin.m"; sourceTree = "<group>"; };
-		9D0255B6F4AD4795808B7293 /* DatePicker.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
-		9D764BE7C6BC4872A87B2746 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseAuth.framework"; sourceTree = "<group>"; };
-		9E0113E64E034CA888ACDE8C /* FirebaseSwizzlingUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseSwizzlingUtilities.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseSwizzlingUtilities.framework"; sourceTree = "<group>"; };
-		A316F7357B52411DB27BB0DC /* CDVFile.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVFile.h; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; };
-		AAA88B19B0054E82B57C1DBF /* RareloopAppVersion.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = RareloopAppVersion.h; path = "cordova-plugin-appversion/RareloopAppVersion.h"; sourceTree = "<group>"; };
-		AD1D174D181D41CE97A68093 /* CDVContacts.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVContacts.h; path = "cordova-plugin-contacts/CDVContacts.h"; sourceTree = "<group>"; };
-		AE9790D3517344F5964CD98D /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseAnalytics.framework"; sourceTree = "<group>"; };
-		B0A345F13D594CD3BEA21476 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseNanoPB.framework"; sourceTree = "<group>"; };
-		B1C69DC81246436987C23BDE /* ExampleApplicationforchat.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = ExampleApplicationforchat.swift; path = com.greettelehealth.DoctorQuick/ExampleApplicationforchat.swift; sourceTree = "<group>"; };
-		B664B3D57269482FB84B1C98 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
-		B6F6766957614F3B9F5CB6F4 /* Main.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = Main.m; path = com.razorpay.cordova/Razorpay/Main.m; sourceTree = "<group>"; };
-		B7007FE9D6F44E47A4CCD500 /* WaitForCallView.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; path = WaitForCallView.xib; sourceTree = "<group>"; };
-		B8352CDD0CCC4D03962C3A89 /* View.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
-		BB8DF8BD4553407FA1AC3517 /* SocialSharing.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = SocialSharing.m; path = "cordova-plugin-x-socialsharing/SocialSharing.m"; sourceTree = "<group>"; };
-		BEDB6907598C49DEBA19572C /* AppDelegate+FirebasePlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+FirebasePlugin.m"; path = "cordova-plugin-firebase/AppDelegate+FirebasePlugin.m"; sourceTree = "<group>"; };
-		C194C16014A1427296CF6D34 /* PushKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
-		C32A59D867414F5684201066 /* IonicKeyboard.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = IonicKeyboard.h; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; };
-		C36A1F6151594672A2C5DC68 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVInAppBrowser.m; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; };
-		C4DA3ABD26204805840F5F3D /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		C5953C92CA254CEFAF342A23 /* CDVContact.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVContact.m; path = "cordova-plugin-contacts/CDVContact.m"; sourceTree = "<group>"; };
-		C8AFDB93ED05484AB11B9570 /* FirebaseRemoteConfig.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseRemoteConfig.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseRemoteConfig.framework"; sourceTree = "<group>"; };
-		CA10435320D4239800C765EC /* 12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 12.mp3; path = ../../../../../../12.mp3; sourceTree = "<group>"; };
-		CA90DE7BB203408EA1D98396 /* FirebasePlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = FirebasePlugin.h; path = "cordova-plugin-firebase/FirebasePlugin.h"; sourceTree = "<group>"; };
-		CE226990FD7046CD98DEE563 /* CoreMedia.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		D2A33779109C4877B9262399 /* CDVCamera.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVCamera.m; path = "cordova-plugin-camera/CDVCamera.m"; sourceTree = "<group>"; };
-		D36CB47B30F3421089C8772D /* loginstatus.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = loginstatus.swift; path = com.greettelehealth.DoctorQuick/loginstatus.swift; sourceTree = "<group>"; };
-		D71A66C5999E4F6FA950B434 /* CDVMobileAccessibility.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVMobileAccessibility.h; path = "phonegap-plugin-mobile-accessibility/CDVMobileAccessibility.h"; sourceTree = "<group>"; };
-		D8A6D47FCBCF49F499CB7266 /* DQ_567*150.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = "DQ_567*150.png"; sourceTree = "<group>"; };
-		D8DDC4D86FD44D29AAE7548C /* Toast.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Toast.h; path = "cordova-plugin-x-toast/Toast.h"; sourceTree = "<group>"; };
-		DA8C9D9538E948C8A08C6CB4 /* Razorpay.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Razorpay.framework; path = DoctorQuick/Plugins/com.razorpay.cordova/Razorpay.framework; sourceTree = "<group>"; };
-		DE6B0C6101EF41E2A78D188F /* WebViewController.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = com.greettelehealth.DoctorQuick/WebViewController.swift; sourceTree = "<group>"; };
-		DEA6F04783E14F1AB549F1F2 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; };
-		E4C9117C3C8345B98C6B4F67 /* CDVStatusBar.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVStatusBar.m; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; };
-		E6C426DE4C5942A495443491 /* CDVJpegHeaderWriter.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVJpegHeaderWriter.h; path = "cordova-plugin-camera/CDVJpegHeaderWriter.h"; sourceTree = "<group>"; };
-		E727B01191BF44CCAFC17CB9 /* unreadchatcountsfromusers.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = unreadchatcountsfromusers.swift; path = com.greettelehealth.DoctorQuick/unreadchatcountsfromusers.swift; sourceTree = "<group>"; };
-		E8141E367D1645F1AD8D6606 /* CDVCamera.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVCamera.h; path = "cordova-plugin-camera/CDVCamera.h"; sourceTree = "<group>"; };
-		E852AD0849F641EE8193C41C /* DatePicker.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = DatePicker.m; path = "cordova-plugin-datepicker/DatePicker.m"; sourceTree = "<group>"; };
-		E8CF58E851364C1E803C880A /* CDVJpegHeaderWriter.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVJpegHeaderWriter.m; path = "cordova-plugin-camera/CDVJpegHeaderWriter.m"; sourceTree = "<group>"; };
+		8D24C953C82C41829F64FDDD /* PushKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		8D36DF3F586842E28362E90E /* CDVContact.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVContact.h; path = "cordova-plugin-contacts/CDVContact.h"; sourceTree = "<group>"; };
+		8E56B514AF394674A10B4865 /* FirebasePerformance.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebasePerformance.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebasePerformance.framework"; sourceTree = "<group>"; };
+		94E9CFEC6A4F493DA294DCA2 /* WaitForCallViewController.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = WaitForCallViewController.swift; path = com.greettelehealth.DoctorQuick/WaitForCallViewController.swift; sourceTree = "<group>"; };
+		965339FACDDE404E84177BD7 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "DoctorQuick/Plugins/cordova-plugin-facebook4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		969C2E01755049D0A4CAF90C /* AVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		999B6E1BB11C43A88298B327 /* DatePicker.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
+		99D9FF4FE702418181D50582 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; };
+		99E98C6F44D846048611CE42 /* Accelerate.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		9B2E56FFDFE84648B093841F /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B7E44C86B404853824553F8 /* DQ_567*150.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = "DQ_567*150.png"; sourceTree = "<group>"; };
+		A0D12A287BF54F1E804D422C /* CDVSplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; };
+		A0F36D3EBF7D4285BDFD6FCD /* FirebaseABTesting.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseABTesting.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseABTesting.framework"; sourceTree = "<group>"; };
+		A97A15F386364EFDB74639B1 /* MessageUI.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AAC7596388684AB0946A375E /* QuartzCore.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AE174D7FAF5E48679DB3AB26 /* CDVConnection.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVConnection.h; path = "cordova-plugin-network-information/CDVConnection.h"; sourceTree = "<group>"; };
+		AF32CA1E015D46ACAC4F4E33 /* RareloopAppVersion.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = RareloopAppVersion.m; path = "cordova-plugin-appversion/RareloopAppVersion.m"; sourceTree = "<group>"; };
+		AFEB2C267AB44B5CB0AB76FA /* CDVContacts.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVContacts.h; path = "cordova-plugin-contacts/CDVContacts.h"; sourceTree = "<group>"; };
+		B2ED13ACD7ED49268CB510AE /* FirebaseSwizzlingUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseSwizzlingUtilities.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseSwizzlingUtilities.framework"; sourceTree = "<group>"; };
+		B5554B08BFC84AEE8E970F79 /* CDVReachability.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVReachability.h; path = "cordova-plugin-network-information/CDVReachability.h"; sourceTree = "<group>"; };
+		B5FB03534D1545E6A1E5B3F3 /* RareloopAppVersion.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = RareloopAppVersion.h; path = "cordova-plugin-appversion/RareloopAppVersion.h"; sourceTree = "<group>"; };
+		B7A5E5DA9A784E7884331026 /* Social.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		BA59CE0BD48B45CB903AB9CF /* DQ_189*50.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = "DQ_189*50.png"; sourceTree = "<group>"; };
+		BE7F912AA1B34E238A4CA9BD /* CDVExif.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVExif.h; path = "cordova-plugin-camera/CDVExif.h"; sourceTree = "<group>"; };
+		C063FFC6695F4048A00D5515 /* CoreTelephony.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C0861AE60D30419BA58BB4F9 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseInstanceID.framework"; sourceTree = "<group>"; };
+		C2486B5406EB4B42A1A5F901 /* globals.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = globals.m; path = com.greettelehealth.DoctorQuick/globals.m; sourceTree = "<group>"; };
+		C6A33191F4804B2A8545884A /* DatePicker.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = DatePicker.h; path = "cordova-plugin-datepicker/DatePicker.h"; sourceTree = "<group>"; };
+		C7CE5C4884C24929BD00C643 /* View.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		CA9B3DD5212E9CC900C8ADE1 /* 12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 12.mp3; path = ../../../../../../12.mp3; sourceTree = "<group>"; };
+		D2CEBD198ED04930971CEC46 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseCore.framework"; sourceTree = "<group>"; };
+		D4D73199E0204196A11E1239 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
+		DBD566CE273A4077981B5E44 /* CDVSplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVSplashScreen.m; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; };
+		DC8644FA32414DBEAA203668 /* IonicKeyboard.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = IonicKeyboard.m; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; };
+		DD1C73B8B9404A259F2B0C95 /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DD552F23BBCB41DA8DB7F6C2 /* loginstatus.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = loginstatus.swift; path = com.greettelehealth.DoctorQuick/loginstatus.swift; sourceTree = "<group>"; };
+		DD8808A89E55470C88073A7E /* DoctorQuick.cpp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = DoctorQuick.cpp; path = com.greettelehealth.DoctorQuick/DoctorQuick.cpp; sourceTree = "<group>"; };
+		DD961F6ECA97460A8A7A58FB /* CDVInAppBrowser.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVInAppBrowser.m; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; };
+		DF2DCE8C1FFE48199B9E5D11 /* CDVContact.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVContact.m; path = "cordova-plugin-contacts/CDVContact.m"; sourceTree = "<group>"; };
+		E7A844E189A445BB85D585A3 /* ExampleApplicationforchat.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = ExampleApplicationforchat.swift; path = com.greettelehealth.DoctorQuick/ExampleApplicationforchat.swift; sourceTree = "<group>"; };
+		E7A8961EEDF844CFAEB4D094 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseAuth.framework"; sourceTree = "<group>"; };
+		E7DE8FF1BB5E430CA5EA20B4 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/nanopb.framework"; sourceTree = "<group>"; };
+		E889EBF03925419D83B7C2AE /* SocialSharing.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = SocialSharing.m; path = "cordova-plugin-x-socialsharing/SocialSharing.m"; sourceTree = "<group>"; };
+		E8DD09C9382B4CEF85252484 /* ExampleApplication.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = ExampleApplication.swift; path = com.greettelehealth.DoctorQuick/ExampleApplication.swift; sourceTree = "<group>"; };
+		E972E70822BC434482AF563C /* CoreMedia.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EABE270BFAEA41E0B6C868A6 /* Firebase.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = "cordova-plugin-firebase/Firebase.h"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		EDF7E286CF54454984D42FC5 /* DoctorQuick.cpp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = DoctorQuick.cpp; path = com.greettelehealth.DoctorQuick/DoctorQuick.cpp; sourceTree = "<group>"; };
-		F0D071BC630B4D998967FA95 /* AVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		F68F553C281B49CEB5D3F6EF /* IonicKeyboard.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = IonicKeyboard.m; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; };
+		ED88E8AEB86E45B8AB383327 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseNanoPB.framework"; sourceTree = "<group>"; };
+		EF7F816BCD834B6D944E38F9 /* AddressBookUI.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		EFD0E599BC644ADDA3AEE79B /* CDVMobileAccessibility.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVMobileAccessibility.h; path = "phonegap-plugin-mobile-accessibility/CDVMobileAccessibility.h"; sourceTree = "<group>"; };
+		F0110316B9A4468789A56CA5 /* VSeeKit.bundle */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.plug-in"; path = VSeeKit.bundle; sourceTree = "<group>"; };
+		F0D3BF6C85C44C7FAC58C10F /* FirebaseMessaging.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = "DoctorQuick/Plugins/cordova-plugin-firebase/FirebaseMessaging.framework"; sourceTree = "<group>"; };
+		F16F2E7E1B8E4EAD9A6521C0 /* UIKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F184948055BF48E6BA3203D3 /* VideoToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		F3761277FDF748E686FAF1CF /* VSeeKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = VSeeKit.framework; path = DoctorQuick/Plugins/com.greettelehealth.DoctorQuick/VSeeKit.framework; sourceTree = "<group>"; };
+		F40B57495A284CBCA9D61FF3 /* UIImage+CropScaleOrientation.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropScaleOrientation.m"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.m"; sourceTree = "<group>"; };
+		F607B7FB5E534962A874FC5F /* CDVCamera.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVCamera.h; path = "cordova-plugin-camera/CDVCamera.h"; sourceTree = "<group>"; };
+		F72891903CF84D18928DA365 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVAssetLibraryFilesystem.m; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = DoctorQuick/config.xml; sourceTree = "<group>"; };
-		F8F5D4110B4F48E993977B60 /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLocalFilesystem.m; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; };
-		F94CCDB6F07244CF9A7486DB /* CDVDevice.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; };
-		FA2903EDB7594CDEB1D618C6 /* CDVContact.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVContact.h; path = "cordova-plugin-contacts/CDVContact.h"; sourceTree = "<group>"; };
-		FC94F0C609C24118BE28E67C /* CoreTelephony.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		FF88F588AFA84805989E5189 /* UIImage+CropScaleOrientation.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropScaleOrientation.h"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.h"; sourceTree = "<group>"; };
+		F9AC8C9C7CF548EEBF3A152E /* Toast+UIView.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "Toast+UIView.m"; path = "cordova-plugin-x-toast/Toast+UIView.m"; sourceTree = "<group>"; };
+		F9C2E46D20C54054A14A6115 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVAssetLibraryFilesystem.h; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; };
+		FA0BF3253A9D4CA6982EADEA /* WebViewController.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = com.greettelehealth.DoctorQuick/WebViewController.swift; sourceTree = "<group>"; };
+		FA609D09E462473AAF4EA8A6 /* audicallvsee.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = audicallvsee.swift; path = com.greettelehealth.DoctorQuick/audicallvsee.swift; sourceTree = "<group>"; };
+		FC2FD0B6B4354A6BA041DF40 /* FirebasePlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = FirebasePlugin.m; path = "cordova-plugin-firebase/FirebasePlugin.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,47 +292,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				9DF1A368FE1B4669A0D4A252 /* VSeeKit.framework in Frameworks */,
-				A8CEF731147242138F3A0465 /* Accelerate.framework in Frameworks */,
-				E499FF1375A943368075C9F6 /* AudioToolbox.framework in Frameworks */,
-				20DE78FADD2744179B9716BE /* AVFoundation.framework in Frameworks */,
-				D80D0FB4AA764830965472D1 /* CFNetwork.framework in Frameworks */,
-				84B6F54BEF5B4CB4A87F4C1B /* CoreMedia.framework in Frameworks */,
-				8A69D8F6AF644C7280D8EE48 /* Foundation.framework in Frameworks */,
-				9EB416EB8E6F41AE8997AE5A /* Security.framework in Frameworks */,
-				0B1E741D14084792999DCAC2 /* SystemConfiguration.framework in Frameworks */,
-				9E6B0FD7466148D7BEF610F4 /* UIKit.framework in Frameworks */,
-				30C4BA44BA6847A080D67766 /* VideoToolbox.framework in Frameworks */,
-				DF9F5AD8A53E41DBA9CA93E7 /* PushKit.framework in Frameworks */,
-				FA84FBED404349DE8FFEFB7E /* libicucore.tbd in Frameworks */,
-				A18793309DCD4D649A11F2FB /* libz.tbd in Frameworks */,
-				A3A837D33316428BA86A6E8B /* libresolv.tbd in Frameworks */,
-				F3433D7B4C9C4E5E9335A2DA /* Razorpay.framework in Frameworks */,
-				02292084799E4B8E98A3D3D1 /* CoreTelephony.framework in Frameworks */,
-				E8370CA7C9B64827A430E73F /* ImageIO.framework in Frameworks */,
-				7AEDBCE192C846AF9B6DC9E2 /* CoreLocation.framework in Frameworks */,
-				ECB9CA32C49E43C6A86F1927 /* AddressBook.framework in Frameworks */,
-				0F2E9D2654F94B508E38916A /* AddressBookUI.framework in Frameworks */,
-				DDC92FE8AB5245F79869D72F /* FirebaseAnalytics.framework in Frameworks */,
-				AD26A0A0021C4FA8A66B64C3 /* FirebaseCore.framework in Frameworks */,
-				8BF2EE6A09704F3ABCB7E623 /* FirebaseCoreDiagnostics.framework in Frameworks */,
-				F888CF80407D4D969910100B /* FirebaseInstanceID.framework in Frameworks */,
-				C9B941511FB3488CA80F23D8 /* FirebaseNanoPB.framework in Frameworks */,
-				A8EFB36F03FE4BC8A7F3F56A /* GoogleToolboxForMac.framework in Frameworks */,
-				27B7F7C61BAF44A9B2641140 /* nanopb.framework in Frameworks */,
-				AEC875678E2147E5A435E384 /* Protobuf.framework in Frameworks */,
-				6CD05625278546B8B5B322BF /* FirebaseMessaging.framework in Frameworks */,
-				FD66CF1DAC0B4B3DA42D75A5 /* FirebaseCrash.framework in Frameworks */,
-				E2B917A9A05F4F7085CA28A9 /* FirebaseRemoteConfig.framework in Frameworks */,
-				113FB2B871ED4D339A921D5C /* FirebaseABTesting.framework in Frameworks */,
-				D8CF1B2AA2114C21AE8D8B83 /* FirebaseAuth.framework in Frameworks */,
-				CB8034863CF0424D89C5FAAD /* GTMSessionFetcher.framework in Frameworks */,
-				BABA48E41E9441248F699D1D /* FirebasePerformance.framework in Frameworks */,
-				942ED1D45D8D44F8A6D0DAE0 /* FirebaseSwizzlingUtilities.framework in Frameworks */,
-				44E1EDC443204F1BABBFAE52 /* Social.framework in Frameworks */,
-				46BA8C32266A482D99B83A43 /* MessageUI.framework in Frameworks */,
-				B03EB588C2494B26B674F5FF /* QuartzCore.framework in Frameworks */,
-				35AF75D2E9CD4ECAA54926D7 /* MediaAccessibility.framework in Frameworks */,
+				754858AE82DF40E48F0450C7 /* VSeeKit.framework in Frameworks */,
+				223519FA3D544E08A5D923D7 /* Accelerate.framework in Frameworks */,
+				4E46E91F669B4CDCBCCD732A /* AudioToolbox.framework in Frameworks */,
+				960351CB0FB54CA1A77DEA95 /* AVFoundation.framework in Frameworks */,
+				BB9EDCCFC1DA4502895CE51E /* CFNetwork.framework in Frameworks */,
+				8473B0C5951C46598FF760E3 /* CoreMedia.framework in Frameworks */,
+				422D431EB6614A25872D06E6 /* Foundation.framework in Frameworks */,
+				FD4F6519CFEE40038E55B411 /* Security.framework in Frameworks */,
+				9C260A7C01ED4271B01AFF6B /* SystemConfiguration.framework in Frameworks */,
+				55E2A522108B44D984D3E367 /* UIKit.framework in Frameworks */,
+				C1B29E9CE309432883B8DCAE /* VideoToolbox.framework in Frameworks */,
+				AC1B5583318C448DBA4CE826 /* PushKit.framework in Frameworks */,
+				A7AB63E91FC9499D9141808C /* libicucore.tbd in Frameworks */,
+				B6355349A41145D2AF470A0C /* libz.tbd in Frameworks */,
+				913619F1C9D74947A3432B37 /* libresolv.tbd in Frameworks */,
+				9E9B9EDC33BB4127B7AEFBAB /* Razorpay.framework in Frameworks */,
+				1736E5A27D3F4348B9C9379B /* CoreTelephony.framework in Frameworks */,
+				FEFB1214692144C997EADA72 /* ImageIO.framework in Frameworks */,
+				5957FB2D9A6744B4854F6814 /* CoreLocation.framework in Frameworks */,
+				921E8F1DA04E49669802DE4F /* AddressBook.framework in Frameworks */,
+				1171DB213100441CA57905FC /* AddressBookUI.framework in Frameworks */,
+				F2065683C49445D599A1AEC9 /* Bolts.framework in Frameworks */,
+				2E1D467B2C9649F0A611C16E /* FBSDKCoreKit.framework in Frameworks */,
+				9E27F85864C5454EAA91EDE4 /* FBSDKLoginKit.framework in Frameworks */,
+				5D03FDB9FC79490486C43F00 /* FBSDKShareKit.framework in Frameworks */,
+				F64B358328A246BE83D9D719 /* FirebaseAnalytics.framework in Frameworks */,
+				94DFFD79A6364D71A36402E3 /* FirebaseCore.framework in Frameworks */,
+				84B9E8FABD304B40869DA0A8 /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				4B9F8880287A48F8A88E9A33 /* FirebaseInstanceID.framework in Frameworks */,
+				4BE69E7A2095482D914EA094 /* FirebaseNanoPB.framework in Frameworks */,
+				0EFB909530964CF388F0C7FE /* GoogleToolboxForMac.framework in Frameworks */,
+				318000C1DB634A51B1172427 /* nanopb.framework in Frameworks */,
+				7057C7783DDC4D54BC34267A /* Protobuf.framework in Frameworks */,
+				314409C82AFE4D06B14A1A7E /* FirebaseMessaging.framework in Frameworks */,
+				E95C9E57A65E4A95AB771C4B /* FirebaseCrash.framework in Frameworks */,
+				BB4E65E247E341CAAA608731 /* FirebaseRemoteConfig.framework in Frameworks */,
+				3585BE0425C24A66B755DAEF /* FirebaseABTesting.framework in Frameworks */,
+				821E84B507504D78BA1F6247 /* FirebaseAuth.framework in Frameworks */,
+				29FA58B9133B4092A6266C93 /* GTMSessionFetcher.framework in Frameworks */,
+				87D0312C13914017BB8988ED /* FirebasePerformance.framework in Frameworks */,
+				7C2181820BB44B9D82530467 /* FirebaseSwizzlingUtilities.framework in Frameworks */,
+				C6611190C8DE4FF9AEA62363 /* Social.framework in Frameworks */,
+				FD5F9406A7724B56962D911E /* MessageUI.framework in Frameworks */,
+				F211752C75014E35BD65F205 /* QuartzCore.framework in Frameworks */,
+				4FCF8E6D65E54EDD9A9DBDF7 /* MediaAccessibility.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,19 +395,19 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA10435320D4239800C765EC /* 12.mp3 */,
+				CA9B3DD5212E9CC900C8ADE1 /* 12.mp3 */,
 				0207DA571B56EA530066E2B4 /* Images.xcassets */,
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* DoctorQuick-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
-				946B4574989E41A088CC7D36 /* VSeeKit.bundle */,
-				B8352CDD0CCC4D03962C3A89 /* View.xib */,
-				8AAD4D8984084E35AA884B75 /* DQ_189*50.png */,
-				6262BDD1EDB34D41B2B87663 /* DQ_378*100.png */,
-				D8A6D47FCBCF49F499CB7266 /* DQ_567*150.png */,
-				B7007FE9D6F44E47A4CCD500 /* WaitForCallView.xib */,
-				9D0255B6F4AD4795808B7293 /* DatePicker.xib */,
-				534B71D2BCE845909A1EC7F7 /* GoogleService-Info.plist */,
+				F0110316B9A4468789A56CA5 /* VSeeKit.bundle */,
+				C7CE5C4884C24929BD00C643 /* View.xib */,
+				BA59CE0BD48B45CB903AB9CF /* DQ_189*50.png */,
+				42A007070D6C4202BF8503FE /* DQ_378*100.png */,
+				9B7E44C86B404853824553F8 /* DQ_567*150.png */,
+				16000168A43C4846A9956580 /* WaitForCallView.xib */,
+				999B6E1BB11C43A88298B327 /* DatePicker.xib */,
+				9B2E56FFDFE84648B093841F /* GoogleService-Info.plist */,
 			);
 			name = Resources;
 			path = DoctorQuick/Resources;
@@ -401,47 +416,51 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				143C6A0BA0B742B8ACFF84D6 /* VSeeKit.framework */,
-				3323BDD76C5B470BBB2C8187 /* Accelerate.framework */,
-				269D9ED946A649368603C78F /* AudioToolbox.framework */,
-				F0D071BC630B4D998967FA95 /* AVFoundation.framework */,
-				6CD0D82531F144EEB8CE5A6B /* CFNetwork.framework */,
-				CE226990FD7046CD98DEE563 /* CoreMedia.framework */,
-				88E56884618A4D67A1ED11FB /* Foundation.framework */,
-				C4DA3ABD26204805840F5F3D /* Security.framework */,
-				739817AFA57D49F6B5E1CA0C /* SystemConfiguration.framework */,
-				54485C385C73457F885080FC /* UIKit.framework */,
-				34C9EFE0825F49029DD08BAC /* VideoToolbox.framework */,
-				C194C16014A1427296CF6D34 /* PushKit.framework */,
-				11CDD90068D449BB9DC76683 /* libicucore.tbd */,
-				75E5BA52B0714CFF945F1319 /* libz.tbd */,
-				91E7A9B5129A4E408670B680 /* libresolv.tbd */,
-				DA8C9D9538E948C8A08C6CB4 /* Razorpay.framework */,
-				FC94F0C609C24118BE28E67C /* CoreTelephony.framework */,
-				22CF4A65253E4A81A44C348F /* ImageIO.framework */,
-				1251646DBB7541F08B094809 /* CoreLocation.framework */,
-				2D649F011AF84506A4F8C8BF /* AddressBook.framework */,
-				6E85D6DC778D4CCE86626E84 /* AddressBookUI.framework */,
-				AE9790D3517344F5964CD98D /* FirebaseAnalytics.framework */,
-				32E4DC8BBB114433B782159A /* FirebaseCore.framework */,
-				05BDF2024FA1412C97786048 /* FirebaseCoreDiagnostics.framework */,
-				1BE065AACF1945C0A4E71E5D /* FirebaseInstanceID.framework */,
-				B0A345F13D594CD3BEA21476 /* FirebaseNanoPB.framework */,
-				B664B3D57269482FB84B1C98 /* GoogleToolboxForMac.framework */,
-				8537A84A5856412E9E767827 /* nanopb.framework */,
-				24303820DD0D4ABC8AFE08B6 /* Protobuf.framework */,
-				5DAFC8860C0C4200A9349AB9 /* FirebaseMessaging.framework */,
-				773EAF968BA642BFABE21B17 /* FirebaseCrash.framework */,
-				C8AFDB93ED05484AB11B9570 /* FirebaseRemoteConfig.framework */,
-				3AB6F52BA03249279183D7E9 /* FirebaseABTesting.framework */,
-				9D764BE7C6BC4872A87B2746 /* FirebaseAuth.framework */,
-				8643B8D5FDE54BBDAA2D0A9A /* GTMSessionFetcher.framework */,
-				7597A286DA7A433D90D0411A /* FirebasePerformance.framework */,
-				9E0113E64E034CA888ACDE8C /* FirebaseSwizzlingUtilities.framework */,
-				35463F809E5841E19BD3FAB1 /* Social.framework */,
-				17C24CEAA9E34EE6991FF728 /* MessageUI.framework */,
-				50D20AC315CE40E8AD6661AB /* QuartzCore.framework */,
-				49B0EB000B744D8C9CB8BEEA /* MediaAccessibility.framework */,
+				F3761277FDF748E686FAF1CF /* VSeeKit.framework */,
+				99E98C6F44D846048611CE42 /* Accelerate.framework */,
+				DD1C73B8B9404A259F2B0C95 /* AudioToolbox.framework */,
+				969C2E01755049D0A4CAF90C /* AVFoundation.framework */,
+				3523BBC0FBC74F6DBB9634CF /* CFNetwork.framework */,
+				E972E70822BC434482AF563C /* CoreMedia.framework */,
+				78BB2FBC8DB24951975E70C4 /* Foundation.framework */,
+				80AE77BA8B5B4F3CBE776557 /* Security.framework */,
+				69C13A9BF66A48AC9CFEAB88 /* SystemConfiguration.framework */,
+				F16F2E7E1B8E4EAD9A6521C0 /* UIKit.framework */,
+				F184948055BF48E6BA3203D3 /* VideoToolbox.framework */,
+				8D24C953C82C41829F64FDDD /* PushKit.framework */,
+				03EE180F753947E5BE1F18FE /* libicucore.tbd */,
+				33DE6E1FD606408DBDF6C995 /* libz.tbd */,
+				15BA743D77D44CC182D5193F /* libresolv.tbd */,
+				3B7D9DBCCF57465993CCA70F /* Razorpay.framework */,
+				C063FFC6695F4048A00D5515 /* CoreTelephony.framework */,
+				0B0786AAA7184C4582E1E73A /* ImageIO.framework */,
+				627B6D612020486BA2F0E201 /* CoreLocation.framework */,
+				478D75F68E1C4F09AC1B330E /* AddressBook.framework */,
+				EF7F816BCD834B6D944E38F9 /* AddressBookUI.framework */,
+				2631EC541E46466D958B68E6 /* Bolts.framework */,
+				14277DAAF9BE4199B0BCAE34 /* FBSDKCoreKit.framework */,
+				965339FACDDE404E84177BD7 /* FBSDKLoginKit.framework */,
+				14AFBB3C30EF4CAD81243F99 /* FBSDKShareKit.framework */,
+				2C22528D0792410994E64264 /* FirebaseAnalytics.framework */,
+				D2CEBD198ED04930971CEC46 /* FirebaseCore.framework */,
+				75C108C833C0473EBBA05BC2 /* FirebaseCoreDiagnostics.framework */,
+				C0861AE60D30419BA58BB4F9 /* FirebaseInstanceID.framework */,
+				ED88E8AEB86E45B8AB383327 /* FirebaseNanoPB.framework */,
+				0A49ED786C39497BAEC0DBD5 /* GoogleToolboxForMac.framework */,
+				E7DE8FF1BB5E430CA5EA20B4 /* nanopb.framework */,
+				239FF7C2376F46009CBDB343 /* Protobuf.framework */,
+				F0D3BF6C85C44C7FAC58C10F /* FirebaseMessaging.framework */,
+				44DD850D0C2D4A478FC0BD3E /* FirebaseCrash.framework */,
+				0A87EF74B5B443AF9FB8EE1F /* FirebaseRemoteConfig.framework */,
+				A0F36D3EBF7D4285BDFD6FCD /* FirebaseABTesting.framework */,
+				E7A8961EEDF844CFAEB4D094 /* FirebaseAuth.framework */,
+				D4D73199E0204196A11E1239 /* GTMSessionFetcher.framework */,
+				8E56B514AF394674A10B4865 /* FirebasePerformance.framework */,
+				B2ED13ACD7ED49268CB510AE /* FirebaseSwizzlingUtilities.framework */,
+				B7A5E5DA9A784E7884331026 /* Social.framework */,
+				A97A15F386364EFDB74639B1 /* MessageUI.framework */,
+				AAC7596388684AB0946A375E /* QuartzCore.framework */,
+				03D33942102D4DD3B77D2AB1 /* MediaAccessibility.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -450,7 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				301BF535109A57CC0062928A /* libCordova.a */,
-				CAF640A520CA734A00E5717D /* Cordova.framework */,
+				CA59BD03212D8AA5005FD2ED /* Cordova.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -468,76 +487,78 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				160D6FD50F0C46668107C960 /* ExampleApplication.swift */,
-				87F5A435A1FD4669AA511D4F /* calls.swift */,
-				21FFB289E9DA458E99A9A7B1 /* WaitForCallViewController.swift */,
-				5AA121072A584E6CA06C0CB9 /* indivisualchatcounts.swift */,
-				DE6B0C6101EF41E2A78D188F /* WebViewController.swift */,
-				E727B01191BF44CCAFC17CB9 /* unreadchatcountsfromusers.swift */,
-				D36CB47B30F3421089C8772D /* loginstatus.swift */,
-				8416551994564ECCBEC26336 /* Invideocall.swift */,
-				2E6429FD3E604C90A178A738 /* audicallvsee.swift */,
-				1A221C9D5EC74E479DBA822C /* globals.m */,
-				0C57B09343984860AC7093CE /* DoctorQuick.hpp */,
-				EDF7E286CF54454984D42FC5 /* DoctorQuick.cpp */,
-				9591D64F668F49C4A50202A2 /* loginintovsee.swift */,
-				316A4388EDB8423F808D57A4 /* logoutfromvseeforios.swift */,
-				B1C69DC81246436987C23BDE /* ExampleApplicationforchat.swift */,
-				043D651510834B6B940B60FD /* sendprescription.swift */,
-				B6F6766957614F3B9F5CB6F4 /* Main.m */,
-				3400476F6F8D4C2B92D49F54 /* Main.h */,
-				9862F8F591E14062B12E7392 /* RareloopAppVersion.m */,
-				AAA88B19B0054E82B57C1DBF /* RareloopAppVersion.h */,
-				80DC6EDC71994871A224DDC7 /* UIImage+CropScaleOrientation.m */,
-				D2A33779109C4877B9262399 /* CDVCamera.m */,
-				E8CF58E851364C1E803C880A /* CDVJpegHeaderWriter.m */,
-				FF88F588AFA84805989E5189 /* UIImage+CropScaleOrientation.h */,
-				E8141E367D1645F1AD8D6606 /* CDVCamera.h */,
-				E6C426DE4C5942A495443491 /* CDVJpegHeaderWriter.h */,
-				17B6BF5EEAED482DAB543F8E /* CDVExif.h */,
-				9A7E48D4174341CB99E75965 /* CDVContacts.m */,
-				C5953C92CA254CEFAF342A23 /* CDVContact.m */,
-				AD1D174D181D41CE97A68093 /* CDVContacts.h */,
-				FA2903EDB7594CDEB1D618C6 /* CDVContact.h */,
-				E852AD0849F641EE8193C41C /* DatePicker.m */,
-				0A951D51150F4C96B61A5BDE /* DatePicker.h */,
-				0E88BA96A495441DA22970A4 /* CDVDevice.m */,
-				F94CCDB6F07244CF9A7486DB /* CDVDevice.h */,
-				19757310C0694010895A89E3 /* CDVFile.m */,
-				F8F5D4110B4F48E993977B60 /* CDVLocalFilesystem.m */,
-				3CE66BBEFE24424984B9CF64 /* CDVAssetLibraryFilesystem.m */,
-				A316F7357B52411DB27BB0DC /* CDVFile.h */,
-				611F5B67250B412990C41C56 /* CDVLocalFilesystem.h */,
-				28248B4DC4EB494EAA33ECEF /* CDVAssetLibraryFilesystem.h */,
-				BEDB6907598C49DEBA19572C /* AppDelegate+FirebasePlugin.m */,
-				9B251346F10A4CFABA162AEB /* FirebasePlugin.m */,
-				08B7479968AE4A5990980D53 /* AppDelegate+FirebasePlugin.h */,
-				CA90DE7BB203408EA1D98396 /* FirebasePlugin.h */,
-				2010405D150F40BEA51D9FA6 /* Firebase.h */,
-				C36A1F6151594672A2C5DC68 /* CDVInAppBrowser.m */,
-				441DBCCF7BF649D68D612165 /* CDVInAppBrowser.h */,
-				8EA1CED31DC84DA78532E89A /* CDVConnection.m */,
-				5D1366C91EEB4B95929ED4C1 /* CDVReachability.m */,
-				60172CFEA49F42DDAB5D5E7A /* CDVConnection.h */,
-				6D0E9AB3D393454BADA33F8E /* CDVReachability.h */,
-				49D401EA2BDE45ADBD711512 /* CDVSplashScreen.m */,
-				DEA6F04783E14F1AB549F1F2 /* CDVViewController+SplashScreen.m */,
-				7D5FE0E5D3F14592B026EB31 /* CDVSplashScreen.h */,
-				5D521280B82F4C20AF64614F /* CDVViewController+SplashScreen.h */,
-				E4C9117C3C8345B98C6B4F67 /* CDVStatusBar.m */,
-				7DD7DBF72334470585DF1759 /* CDVStatusBar.h */,
-				8C5FEBC33A4545F0B2EEF127 /* NSString+SSURLEncoding.m */,
-				BB8DF8BD4553407FA1AC3517 /* SocialSharing.m */,
-				1C3FC104DEA24AFB9D0B7080 /* NSString+SSURLEncoding.h */,
-				33401E30F08541E88B0B09E2 /* SocialSharing.h */,
-				42F72745EC6D49E5B20C748A /* Toast+UIView.m */,
-				681E943FC0A94913A5548290 /* Toast.m */,
-				76073EFC5EBE4F32AD0C297B /* Toast+UIView.h */,
-				D8DDC4D86FD44D29AAE7548C /* Toast.h */,
-				F68F553C281B49CEB5D3F6EF /* IonicKeyboard.m */,
-				C32A59D867414F5684201066 /* IonicKeyboard.h */,
-				1A83761B51C5442DA80B2E93 /* CDVMobileAccessibility.m */,
-				D71A66C5999E4F6FA950B434 /* CDVMobileAccessibility.h */,
+				E8DD09C9382B4CEF85252484 /* ExampleApplication.swift */,
+				52F74305F93C4F19BD118F53 /* calls.swift */,
+				94E9CFEC6A4F493DA294DCA2 /* WaitForCallViewController.swift */,
+				1BEA588A4500494EB4411753 /* indivisualchatcounts.swift */,
+				FA0BF3253A9D4CA6982EADEA /* WebViewController.swift */,
+				00C6EFD1E4A44C09B06F8FB1 /* unreadchatcountsfromusers.swift */,
+				DD552F23BBCB41DA8DB7F6C2 /* loginstatus.swift */,
+				34410143921E48CAAAC73EC5 /* Invideocall.swift */,
+				FA609D09E462473AAF4EA8A6 /* audicallvsee.swift */,
+				C2486B5406EB4B42A1A5F901 /* globals.m */,
+				6957788E18F94E6999ACE731 /* DoctorQuick.hpp */,
+				DD8808A89E55470C88073A7E /* DoctorQuick.cpp */,
+				14E6D9636B5943DA824EF31E /* loginintovsee.swift */,
+				5A8DC18329794AE383768643 /* logoutfromvseeforios.swift */,
+				E7A844E189A445BB85D585A3 /* ExampleApplicationforchat.swift */,
+				5A6F6872BD9349E4BD8AD8AC /* sendprescription.swift */,
+				3744BFC1678840C18AD8E64E /* Main.m */,
+				4B59018E3CFF4BEB8B907782 /* Main.h */,
+				AF32CA1E015D46ACAC4F4E33 /* RareloopAppVersion.m */,
+				B5FB03534D1545E6A1E5B3F3 /* RareloopAppVersion.h */,
+				F40B57495A284CBCA9D61FF3 /* UIImage+CropScaleOrientation.m */,
+				2796722CBA4A40AD87E81C5E /* CDVCamera.m */,
+				38A447E6B9EA4486B3B1DB17 /* CDVJpegHeaderWriter.m */,
+				65C3E051B7EB4A3384EA9740 /* UIImage+CropScaleOrientation.h */,
+				F607B7FB5E534962A874FC5F /* CDVCamera.h */,
+				503C511384EE467B8E306752 /* CDVJpegHeaderWriter.h */,
+				BE7F912AA1B34E238A4CA9BD /* CDVExif.h */,
+				8CB7061A9D4F4E0BA6C8E171 /* CDVContacts.m */,
+				DF2DCE8C1FFE48199B9E5D11 /* CDVContact.m */,
+				AFEB2C267AB44B5CB0AB76FA /* CDVContacts.h */,
+				8D36DF3F586842E28362E90E /* CDVContact.h */,
+				0E2F32E0E805408484446320 /* DatePicker.m */,
+				C6A33191F4804B2A8545884A /* DatePicker.h */,
+				45F5D28592384F81BA90F945 /* CDVDevice.m */,
+				51771BB75B294C2794D8F181 /* CDVDevice.h */,
+				662E990FAA5C430592C9CDD6 /* FacebookConnectPlugin.m */,
+				8534B8FFBEE440A0B296CCA7 /* FacebookConnectPlugin.h */,
+				708C43E0706D49F183FD7F34 /* CDVFile.m */,
+				4B2C146728CF4899BE5B9CFA /* CDVLocalFilesystem.m */,
+				F72891903CF84D18928DA365 /* CDVAssetLibraryFilesystem.m */,
+				2EBF5032D21341598A21752F /* CDVFile.h */,
+				0E04A9B0A2524B96A6F15DC4 /* CDVLocalFilesystem.h */,
+				F9C2E46D20C54054A14A6115 /* CDVAssetLibraryFilesystem.h */,
+				439006FCF48C4C9DB54E714F /* AppDelegate+FirebasePlugin.m */,
+				FC2FD0B6B4354A6BA041DF40 /* FirebasePlugin.m */,
+				7C5606E689F24B8EA980BA3D /* AppDelegate+FirebasePlugin.h */,
+				4D2508D6B2AA43C5B3EAA1EF /* FirebasePlugin.h */,
+				EABE270BFAEA41E0B6C868A6 /* Firebase.h */,
+				DD961F6ECA97460A8A7A58FB /* CDVInAppBrowser.m */,
+				757FF23900CC40869645A7FD /* CDVInAppBrowser.h */,
+				5A9A6FFEB89D476796EBA10B /* CDVConnection.m */,
+				1CF2A312A063498095EC5901 /* CDVReachability.m */,
+				AE174D7FAF5E48679DB3AB26 /* CDVConnection.h */,
+				B5554B08BFC84AEE8E970F79 /* CDVReachability.h */,
+				DBD566CE273A4077981B5E44 /* CDVSplashScreen.m */,
+				3BC1A9334F8E469FB5848F38 /* CDVViewController+SplashScreen.m */,
+				A0D12A287BF54F1E804D422C /* CDVSplashScreen.h */,
+				99D9FF4FE702418181D50582 /* CDVViewController+SplashScreen.h */,
+				4C442EB1A6064D0086FBCA8D /* CDVStatusBar.m */,
+				7761561A67034003B4207951 /* CDVStatusBar.h */,
+				50BA20A306F14CE486E65F1D /* NSString+SSURLEncoding.m */,
+				E889EBF03925419D83B7C2AE /* SocialSharing.m */,
+				4308C6B8A942450CBD927117 /* NSString+SSURLEncoding.h */,
+				26A4A7F90C51489CBB0F2683 /* SocialSharing.h */,
+				F9AC8C9C7CF548EEBF3A152E /* Toast+UIView.m */,
+				7A81A6FF14B648B68EE7794E /* Toast.m */,
+				51561F5406B64CF9B702FC23 /* Toast+UIView.h */,
+				3CB59F4BB4A3457FB0E9DBC3 /* Toast.h */,
+				DC8644FA32414DBEAA203668 /* IonicKeyboard.m */,
+				489C976B0276499BADF296CF /* IonicKeyboard.h */,
+				4844B1D94F6645ECA75835FD /* CDVMobileAccessibility.m */,
+				EFD0E599BC644ADDA3AEE79B /* CDVMobileAccessibility.h */,
 			);
 			name = Plugins;
 			path = DoctorQuick/Plugins;
@@ -580,7 +601,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 47TGHFL28D;
@@ -623,11 +644,11 @@
 			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		CAF640A520CA734A00E5717D /* Cordova.framework */ = {
+		CA59BD03212D8AA5005FD2ED /* Cordova.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Cordova.framework;
-			remoteRef = CAF640A420CA734A00E5717D /* PBXContainerItemProxy */;
+			remoteRef = CA59BD02212D8AA5005FD2ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -640,15 +661,15 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
-				CA10435520D4239800C765EC /* 12.mp3 in Resources */,
-				6EA454A051924B5FB6973DAF /* VSeeKit.bundle in Resources */,
-				D17B03DD71CB4B8BA72EEAA4 /* View.xib in Resources */,
-				3BCC3BFE4C1945A8A88B81E6 /* DQ_189*50.png in Resources */,
-				5DF05ACDA6C2439C945E450E /* DQ_378*100.png in Resources */,
-				FDFE74E7639F44DCB2A0E405 /* DQ_567*150.png in Resources */,
-				B427089316C14FF7893819F3 /* WaitForCallView.xib in Resources */,
-				D760B9149FBF4D198E7BFDE0 /* DatePicker.xib in Resources */,
-				C50F35EBD4F24EE5B5A3730A /* GoogleService-Info.plist in Resources */,
+				CA9B3DD7212E9CCA00C8ADE1 /* 12.mp3 in Resources */,
+				7C654D529C88447E9DCD6497 /* VSeeKit.bundle in Resources */,
+				032D3E57FFE14C4B9C68ADE7 /* View.xib in Resources */,
+				CFFC9DD772CE4DF6A928C043 /* DQ_189*50.png in Resources */,
+				DD8AF39058204B5394343E90 /* DQ_378*100.png in Resources */,
+				CF9B97B5CC734589A6B15FC7 /* DQ_567*150.png in Resources */,
+				CAC4961BE3F64D1A9745AF33 /* WaitForCallView.xib in Resources */,
+				897199306AB74ED28F09E882 /* DatePicker.xib in Resources */,
+				26F5FEB47CED45C191651986 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,48 +701,49 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				74A16FAB7E3F470DB845A8FB /* ExampleApplication.swift in Sources */,
-				F582E51BC4214717B4F3D04A /* calls.swift in Sources */,
-				B0DC41B75E04498FB58FC633 /* WaitForCallViewController.swift in Sources */,
-				D624DAFC7D5941FFAF2C4286 /* indivisualchatcounts.swift in Sources */,
-				D24ABDE108774379899F0671 /* WebViewController.swift in Sources */,
-				54AA0740C9074008B7A1AB55 /* unreadchatcountsfromusers.swift in Sources */,
-				FD0B4A8EBB4B4C82B6EEBAFE /* loginstatus.swift in Sources */,
-				7F97D10FF150424F88C2DB3D /* Invideocall.swift in Sources */,
-				0D2C876E39314632A4BB8E88 /* audicallvsee.swift in Sources */,
-				A737DB9007264964A81BE344 /* globals.m in Sources */,
-				C1441937B2AD4DDAAD0C2DA1 /* DoctorQuick.hpp in Sources */,
-				FB505E16CFA5464A9CB2068F /* DoctorQuick.cpp in Sources */,
-				DBBB18BDBF37416A8A7774B7 /* loginintovsee.swift in Sources */,
-				07E08DA6592A44F79C56AA7E /* logoutfromvseeforios.swift in Sources */,
-				2AC58335E398454BA8DE08DE /* ExampleApplicationforchat.swift in Sources */,
-				A50B626391C74F419BBDD660 /* sendprescription.swift in Sources */,
-				FDB84678C99A4EFC9B86DE45 /* Main.m in Sources */,
-				E680D39EEF974924B6D0CBBB /* RareloopAppVersion.m in Sources */,
-				049247F55F05421BAEFB14AD /* UIImage+CropScaleOrientation.m in Sources */,
-				6B702D59FB864CC1949BE1F5 /* CDVCamera.m in Sources */,
-				D0C77E3CF94545A898624537 /* CDVJpegHeaderWriter.m in Sources */,
-				47360E8947B247FC9552AE79 /* CDVContacts.m in Sources */,
-				9D5156EDF3084BDF803E8173 /* CDVContact.m in Sources */,
-				D72EA1EC5F324D25990307F4 /* DatePicker.m in Sources */,
-				DD3FC096BDBB42508A995D7F /* CDVDevice.m in Sources */,
-				65558DB57CED44A090F9B0F7 /* CDVFile.m in Sources */,
-				B5E9B23759624EC392D1AB49 /* CDVLocalFilesystem.m in Sources */,
-				E7D8F5E0AC6F40E58DEA7721 /* CDVAssetLibraryFilesystem.m in Sources */,
-				B4775943A53B4D03859396E3 /* AppDelegate+FirebasePlugin.m in Sources */,
-				2F4EF083509449CCB77667F4 /* FirebasePlugin.m in Sources */,
-				2754D1B103904829832D1BA4 /* CDVInAppBrowser.m in Sources */,
-				9EBD9D5F84D54F049F7913A4 /* CDVConnection.m in Sources */,
-				A6629123FF984AC296EE983C /* CDVReachability.m in Sources */,
-				B89390178E934FDC8A629C39 /* CDVSplashScreen.m in Sources */,
-				3907332781DD46B7AC33CE7F /* CDVViewController+SplashScreen.m in Sources */,
-				B833730DBF0448309B83D037 /* CDVStatusBar.m in Sources */,
-				FB14E138CCA944AEB85D24C3 /* NSString+SSURLEncoding.m in Sources */,
-				6BD8BBE4C6F64888A4C23AFE /* SocialSharing.m in Sources */,
-				5E21E4906D8648BB946EC496 /* Toast+UIView.m in Sources */,
-				9E7410374FA5407184C3DF86 /* Toast.m in Sources */,
-				54C23B3FCDAE4329B1F2AD8E /* IonicKeyboard.m in Sources */,
-				537B720E6F2C40ABA0AD21B1 /* CDVMobileAccessibility.m in Sources */,
+				41A6AAB29FFC4B48B9FC1F7C /* ExampleApplication.swift in Sources */,
+				FBF0B1A637514389962878B5 /* calls.swift in Sources */,
+				75DA7641F18E43329D560D63 /* WaitForCallViewController.swift in Sources */,
+				CC8041FD62944975AADF53A6 /* indivisualchatcounts.swift in Sources */,
+				8DE5E3B98EA6445CB97A576C /* WebViewController.swift in Sources */,
+				E1AF7B88FA89449CA10E7EE4 /* unreadchatcountsfromusers.swift in Sources */,
+				F268CDEB35FD4E73A8688362 /* loginstatus.swift in Sources */,
+				CDA9BDD8AA3846968A602F3F /* Invideocall.swift in Sources */,
+				1BDD8805B9A8458EA5A854DA /* audicallvsee.swift in Sources */,
+				D277DCFE83F6473BBEC3B23C /* globals.m in Sources */,
+				A8DA116015C1471F88D65A97 /* DoctorQuick.hpp in Sources */,
+				F1823FAC360A4738854EA0B4 /* DoctorQuick.cpp in Sources */,
+				92C1F58560D1413FB32FA979 /* loginintovsee.swift in Sources */,
+				86E63D77392046EBB66CA2EF /* logoutfromvseeforios.swift in Sources */,
+				8836B2DACD2B45FF810840DA /* ExampleApplicationforchat.swift in Sources */,
+				12D870E46FAE4382B9C5BF9C /* sendprescription.swift in Sources */,
+				399C7D87FA174050911F3792 /* Main.m in Sources */,
+				0CCA7C9114BE4996A017D1BB /* RareloopAppVersion.m in Sources */,
+				45C0F613FAB24FEE9E346191 /* UIImage+CropScaleOrientation.m in Sources */,
+				08998AED1EB94E009EE37EF2 /* CDVCamera.m in Sources */,
+				B6326F53ED494E1F982AFAEB /* CDVJpegHeaderWriter.m in Sources */,
+				18B2ACF5D29143CDA7080495 /* CDVContacts.m in Sources */,
+				CD1BF7F9BADF4F8897B01D72 /* CDVContact.m in Sources */,
+				E07E48FCCD0949699AB2EB16 /* DatePicker.m in Sources */,
+				6B8A7B12C03F4757AEB962B9 /* CDVDevice.m in Sources */,
+				69476D90BC554F2D9212DE11 /* FacebookConnectPlugin.m in Sources */,
+				1442343F3C954C27B58259D7 /* CDVFile.m in Sources */,
+				A720A151ED8541EF97DE918B /* CDVLocalFilesystem.m in Sources */,
+				4895C20E402747468233171B /* CDVAssetLibraryFilesystem.m in Sources */,
+				C63DB4D3D86F4AC5BB2034A8 /* AppDelegate+FirebasePlugin.m in Sources */,
+				5CC75828D31D4D18ADE30588 /* FirebasePlugin.m in Sources */,
+				7C3675E8B9F54B34B6A4679F /* CDVInAppBrowser.m in Sources */,
+				4CA16405381B4A2BA83B79FC /* CDVConnection.m in Sources */,
+				9F74539B1BCF4414B1E3FE86 /* CDVReachability.m in Sources */,
+				585CFAEBC32A4E8DA876E465 /* CDVSplashScreen.m in Sources */,
+				481CC53D9B8C4FA7BD1C5B84 /* CDVViewController+SplashScreen.m in Sources */,
+				9B99D2F1FCD745C89B6329E5 /* CDVStatusBar.m in Sources */,
+				B92097CD95E2400E99F3299C /* NSString+SSURLEncoding.m in Sources */,
+				715BB59AFF82416AA8452B64 /* SocialSharing.m in Sources */,
+				550E07F460C34B1BA9B22808 /* Toast+UIView.m in Sources */,
+				FD58C84257744850B6361504 /* Toast.m in Sources */,
+				95EFB54280054DCB862DB068 /* IonicKeyboard.m in Sources */,
+				7161E97841C048C7A7ECFC4F /* CDVMobileAccessibility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,6 +777,10 @@
 					"$(inherited)",
 					"\"DoctorQuick/Plugins/com.greettelehealth.DoctorQuick\"",
 					"\"DoctorQuick/Plugins/com.razorpay.cordova\"",
+					"\"DoctorQuick/Plugins/cordova-plugin-facebook4\"",
+					"\"DoctorQuick/Plugins/cordova-plugin-facebook4\"",
+					"\"DoctorQuick/Plugins/cordova-plugin-facebook4\"",
+					"\"DoctorQuick/Plugins/cordova-plugin-facebook4\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
@@ -771,6 +797,7 @@
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
+					"/Users/amittantia/Desktop/rkiran/DocQIosMaster/platforms/ios/DoctorQuick/Plugins/cordova-plugin-facebook4",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -781,11 +808,12 @@
 				INFOPLIST_FILE = "DoctorQuick/DoctorQuick-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.greettelehealth.DoctorQuick;
 				PRODUCT_NAME = DoctorQuick;
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -808,6 +836,10 @@
 					"$(inherited)",
 					"\"DoctorQuick/Plugins/com.greettelehealth.DoctorQuick\"",
 					"\"DoctorQuick/Plugins/com.razorpay.cordova\"",
+					"\"DoctorQuick/Plugins/cordova-plugin-facebook4\"",
+					"\"DoctorQuick/Plugins/cordova-plugin-facebook4\"",
+					"\"DoctorQuick/Plugins/cordova-plugin-facebook4\"",
+					"\"DoctorQuick/Plugins/cordova-plugin-facebook4\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
@@ -824,6 +856,7 @@
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
 					"\"DoctorQuick/Plugins/cordova-plugin-firebase\"",
+					"/Users/amittantia/Desktop/rkiran/DocQIosMaster/platforms/ios/DoctorQuick/Plugins/cordova-plugin-facebook4",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DoctorQuick/DoctorQuick-Prefix.pch";
@@ -832,11 +865,11 @@
 				INFOPLIST_FILE = "DoctorQuick/DoctorQuick-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.greettelehealth.DoctorQuick;
 				PRODUCT_NAME = DoctorQuick;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};
@@ -846,30 +879,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -887,29 +905,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -917,7 +921,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};

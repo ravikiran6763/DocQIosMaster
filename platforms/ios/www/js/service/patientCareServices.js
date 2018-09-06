@@ -1,15 +1,28 @@
 'use strict';
-DoctorQuickApp.service('patientCareService', function ($http,$q, BASE_URL, API) {
+DoctorQuickApp.service('patientCareService', function ($http,$q,$ionicLoading, BASE_URL, API) {
+
 
   this.submitQuery = function (patientQuery){
+
+
+
+
+
     console.log('from service',patientQuery);
     var deferred = $q.defer();
     $http.post(BASE_URL.url + API.patientQuery,patientQuery)
     .success(function (data, status, headers, config){
-      console.log('enter success part');
-      console.log(data);
-      console.log(status);
+
+
+
+
       deferred.resolve(data);
+
+
+      //return status;
+
+
+
     })
     .error(function (){
       deferred.reject('Error while getting data');

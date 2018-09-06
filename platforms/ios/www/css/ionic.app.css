@@ -11434,6 +11434,15 @@ tags-input .autocomplete .suggestion-item em {
         .dqLogin-view .login-content .tAndC .terms h2 a {
           color: inherit !important;
           text-decoration: underline !important; }
+  .dqLogin-view .login-content .forgot {
+    width: 100% !important;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center; }
+    .dqLogin-view .login-content .forgot a {
+      color: inherit;
+      text-decoration: underline;
+      font-size: 98%; }
   .dqLogin-view .login-content .rememberMe {
     width: 80%;
     margin: 0 auto; }
@@ -11447,15 +11456,6 @@ tags-input .autocomplete .suggestion-item em {
       .dqLogin-view .login-content .rememberMe .remember p {
         position: absolute;
         margin: -2% 0 0 17%; }
-    .dqLogin-view .login-content .rememberMe .forgot {
-      width: 40% !important;
-      position: absolute;
-      /* margin: 0 auto; */
-      margin: -1% 0 0 45%; }
-      .dqLogin-view .login-content .rememberMe .forgot a {
-        color: inherit;
-        text-decoration: underline;
-        font-size: 98%; }
 
 .dqLogin-view .regButton {
   margin-top: 5%;

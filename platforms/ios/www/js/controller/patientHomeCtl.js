@@ -44,9 +44,9 @@ DoctorQuickApp.controller('patientHomeCtrl', function($scope,$state,$rootScope,$
 
 	        if($localStorage.showConnecting === true){
 
-						$timeout( function(){
-						$rootScope.connectingMessage = 'Internet connection appears very slow'
-					}, 60000 );
+					// 	$timeout( function(){
+					// 	$rootScope.connectingMessage = 'Internet connection appears very slow'
+					// }, 60000 );
 						$rootScope.connectingMessage = 'Connecting to DoctorQuick'
 	          $ionicLoading.show({
 	            template: '<ion-spinner></ion-spinner><br><br>{{connectingMessage}}',
@@ -155,7 +155,7 @@ DoctorQuickApp.controller('patientHomeCtrl', function($scope,$state,$rootScope,$
 									hello.login(uname1,pw1,success, failure);
 									$timeout( function(){
 			                        console.log('interval started');
-			                        $interval($rootScope.loginInterval,2000,1);
+			                        $interval($rootScope.loginInterval,5000);
 			                        $interval(checkNewMessages,2000);
 			                   }, 10000 );
 
@@ -177,21 +177,53 @@ DoctorQuickApp.controller('patientHomeCtrl', function($scope,$state,$rootScope,$
 				 									 }
 				 										 hello.unreadchatfromusers(username,password,success, failure);
 				 								}
+
+
 												$rootScope.loginInterval = function () {
 				                 console.log("checking for login");
+
 				                  var success = function(message)
 				                 {
-				                   console.log(message);
-				                   $ionicLoading.hide().then(function(){
-				                   $localStorage.showConnecting = false;
-				                   console.log("The loading indicator is now hidden");
-				                   $ionicHistory.nextViewOptions({
-				                   disableAnimate: true,
-				                   disableBack: true
-				                   });
-				                     //$interval.cancel(loginStatus);
-				                   });
-				                 }
+
+													 if($rootScope.logindone  != "YES")
+													 {
+
+
+														 if(message === "YES")
+														 {
+
+															 $rootScope.logindone = message;
+
+																$ionicLoading.hide().then(function(){
+																$localStorage.showConnecting = false;
+																$ionicHistory.nextViewOptions({
+																disableAnimate: true,
+																disableBack: true
+																});
+																	//$interval.cancel(loginStatus);
+																});
+
+
+
+
+
+															}
+															else {
+
+																	$localStorage.showConnecting = true;
+
+
+
+															}
+
+													 }
+
+
+
+
+
+
+												 }
 
 				                 var failure = function()
 				                 {

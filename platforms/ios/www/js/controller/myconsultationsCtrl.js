@@ -81,8 +81,12 @@ else{
 	});
 }
 
+// $interval(checkNewMessages,2000);
+// function checkNewMessages(){
+//
+// }
 $rootScope.checkNewMessages = $interval(function(){
-	// console.log('refreshing consultation list for new messages');
+	console.log('refreshing consultation list for new messages');
 
 		var success = function(message)
 		{
@@ -177,6 +181,9 @@ $rootScope.checkNewMessages = $interval(function(){
 						var res = forioschatlist.slice(1,-1);
 						var dataForIos = JSON.parse(forioschatlist);
 
+
+						console.log('the data from chat counts:',dataForIos);
+
 						doctorServices.createChatHistoryIos(dataForIos).then(function(response){
 						$scope.chatHistoryios=response;//store the response array in doctor details
 						console.log('dataSent :',$scope.chatHistoryios);
@@ -211,14 +218,14 @@ $rootScope.checkNewMessages = $interval(function(){
 							console.log('DATAFROM CHAT',dataForIos);
 							doctorServices.createChatHistoryIosforDoctor(dataForIos).then(function(response){
 							$scope.chatHistoryios=response;//store the response array in doctor details
-							console.log('dataSent DoctorCHAT :',$scope.chatHistoryios);
+							console.log('dataSent:',$scope.chatHistoryios);
 							}).catch(function(error){
 							console.log('failure data', error);
 							});
 
 							myConsultationService.myConsultedPatients(window.localStorage.user).then(function(response){
 							$scope.myPatients=response;//store the response array in doctor details
-							// console.log($scope.myPatients);
+							console.log($scope.myPatients);
 							var data = $scope.myPatients;
 							for(var i=0; i<data.length; i++){
 							$scope.patientFname=data[i].patientFname;
@@ -247,7 +254,7 @@ $rootScope.checkNewMessages = $interval(function(){
 		}
 
 		hello.chatcounts(username,password,success, failure);
-}, 1000);
+}, 2000);
 
 $scope.pagedecision=$ionicHistory.currentStateName();
 var username = "greet+"+window.localStorage.user;

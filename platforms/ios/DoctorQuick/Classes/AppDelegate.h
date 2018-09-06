@@ -30,6 +30,9 @@
 #import <PushKit/PushKit.h>
 #import <VSeeKit/VSeeKit.h>
 #import<Foundation/Foundation.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
+
 
 @interface AppDelegate : CDVAppDelegate <PKPushRegistryDelegate>
 

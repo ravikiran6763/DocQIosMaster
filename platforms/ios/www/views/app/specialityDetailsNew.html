@@ -40,7 +40,7 @@
     <div class="row" style="margin-left: 0% !important;">
       <!-- ui-sref="templates.addNewPatient" -->
           <div  class="col col-75" class="item-icon-right"  ng-hide="defaultPatient" ng-repeat="def in patient_details">Patient : {{def.patientFname}} {{def.patientLname}}</div>
-          <div class="col col-75"  class="item-icon-right"  ng-show="defaultPatient" ng-repeat="subPat in newPAtient">Patient : {{subPat.newPatientFname}} {{subPat.newPatientLname}}</div>
+          <div class="col col-75"  class="item-icon-right"  ng-show="{{defaultPatient || selectedSubPatient != 0}}" ng-repeat="subPat in newPAtient">Patient : {{subPat.newPatientFname}} {{subPat.newPatientLname}}</div>
           <!-- <div class="col col-75"  class="item-icon-right" ng-click="changePatient();" ng-show="shownewPatient" ng-repeat="subPat in newPAtient">Patient : {{subPat.newPatientFname}} {{subPat.newPatientLname}}</div> -->
           <i class="icon ion-chevron-right icon-accessory" style="margin-left: 17%; margin-top: 3%;"></i>
 

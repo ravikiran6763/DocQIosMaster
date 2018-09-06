@@ -1,4 +1,4 @@
-DoctorQuickApp.service('searchbyspecialities', function ($http,$q,BASE_URL, API) {
+DoctorQuickApp.service('searchbyspecialities', function ($http,$q,$timeout,BASE_URL, API) {
 
   var selectedspecial = "";
   var selectedcategory = "";
@@ -47,16 +47,33 @@ DoctorQuickApp.service('searchbyspecialities', function ($http,$q,BASE_URL, API)
 
   this.getlistofspecialist = function(searchdoctor)
   {
+
       var deferred = $q.defer();
-      console.log(BASE_URL.url + API.doctorbydifferentscenario);
+
       $http.post(BASE_URL.url + API.doctorbydifferentscenario,searchdoctor)
       .success(function (data, status, headers, config){
-        deferred.resolve(data);
+
+
+
+
+              deferred.resolve(data);
+
+
+
       })
-      .error(function (){
-        deferred.reject('Error while getting data');
+      .error(function (data, status, headers, config){
+
+        console.log('THE DATA IS:',data);
+            deferred.resolve(data);
+
+
+
       });
+
       return deferred.promise;
+
+       // return result.promise;
+
   }
 
 

@@ -259,7 +259,7 @@ $rootScope.unreadchatforpatient = 0;
     // window.localStorage.onOff=2;
   }
     console.log($ionicHistory.viewHistory());
-    $interval(checkConsultations,2000,false);
+    $interval(checkConsultations,2000);
     console.log(window.localStorage.onOff);
     // $scope.docStatus=window.localStorage.onOff;
     $scope.$watch('docStatus', function (newValue, oldValue, scope){

@@ -20,6 +20,10 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 		$ionicSideMenuDelegate.toggleRight();
 	};
 
+
+
+
+
 	$scope.showConsulation=function()
 	{
 		$ionicHistory.nextViewOptions({
@@ -439,13 +443,22 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 
 									  }
 
+
+
 								searchbyspecialities.getlistofspecialist(searchdoctor).then(function (response) {
 										$ionicLoading.show();
 
 
-										console.log(response.length);
-								if(response.length)
+								if(response)
 								{
+
+
+
+										console.log('the length of the response is:');
+										console.log(response);
+
+
+
 												if(response.length <= 15){
 														console.log('hide show more');
 														$rootScope.showMore=true;
@@ -453,13 +466,19 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 												else{
 													$rootScope.showMore=false;
 												}
+
 												$rootScope.searchResultLength = response.length;
 												console.log(response);
 												console.log($rootScope.pageSize);
 
-												$ionicLoading.hide();
-												window.localStorage['doclist'] = angular.toJson(response);
-												$rootScope.doclist = angular.fromJson($window.localStorage['doclist']);
+
+												// window.localStorage['doclist'] = angular.toJson(response);
+												// $rootScope.doclist = angular.fromJson($window.localStorage['doclist']);
+
+
+												$rootScope.doclist = response;
+
+
 												$state.go('app.doctorsearch');
 												// $rootScope.doclist = response;
 
@@ -498,6 +517,8 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 												}
 
 
+												$ionicLoading.hide();
+
 								}
 								else if(Object.keys(response).length == 0)
 								{
@@ -531,6 +552,11 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 										$rootScope.doclist = "no doctors found";
 										}
 								}).catch(function (response, data, status, header) {
+
+										console.log('THE STATUS IS:');
+										console.log(status);
+
+
 								});
 					}
 	}
@@ -596,7 +622,7 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 								{
 									console.log('error calling hello plugin');
 								}
-								hello.logout(unametologout,pwtologout,success, failure);
+								hello.logout(success, failure);
 							}
 							}).catch(function(error){
 							console.log('failure data', error);
@@ -1709,6 +1735,10 @@ $rootScope.newPatient={};
 
 													var success = function(message)
 													{
+
+
+															console.log('THE RESPONSE IS:',message);
+
 															$ionicLoading.hide();
 
 															$localStorage.sendPrescTo = "";

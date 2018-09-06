@@ -198,8 +198,8 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 
 							$timeout( function(){
 									console.log('interval started');
-						            $interval($rootScope.loginInterval,2000,1);
-											 $interval(checkNewMessages,2000);
+						            $interval($rootScope.loginInterval,5000,3);
+											 // $interval(checkNewMessages,2000);
 
 						         }, 10000 );
 
@@ -235,19 +235,26 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 
 								 $rootScope.loginInterval = function() {
 									console.log("checking for login");
+
+									var i =0;
+
+
 									 var success = function(message)
 	 								{
-										console.log(message);
-										$ionicLoading.hide().then(function(){
-										console.log("The loading indicator is now hidden");
-										$ionicHistory.nextViewOptions({
-										disableAnimate: true,
-										disableBack: true
-										});
-										$state.go('app.patient_home', {}, {location: "replace", reload: false});
-											//$interval.cancel(loginStatus);
-										});
-	 								}
+
+
+											$ionicLoading.hide().then(function(){
+											console.log("The loading indicator is now hidden");
+											$ionicHistory.nextViewOptions({
+											disableAnimate: true,
+											disableBack: true
+											});
+											$state.go('app.patient_home', {}, {location: "replace", reload: false});
+												//$interval.cancel(loginStatus);
+											});
+
+
+									}
 
 	 								var failure = function()
 	 								{
@@ -331,7 +338,7 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 							$timeout( function(){
 									console.log('interval started');
 						            $interval($rootScope.loginInterval,2000,1);
-												$interval(checkNewMessages,2000);
+												// $interval(checkNewMessages,2000);
 
 						         }, 10000 );
 										 var username = "greet+"+window.localStorage.user;

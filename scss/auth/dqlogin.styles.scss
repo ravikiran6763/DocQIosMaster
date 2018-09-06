@@ -93,6 +93,18 @@
 				}
 
 			}
+
+			.forgot{
+				width: 100% !important;
+		    position: absolute;
+		    margin: 0 auto;
+		    text-align: center;
+				a{
+					color: inherit;
+					text-decoration: underline;
+					font-size: 98%;
+				}
+			}
 		.rememberMe{
 
 			width: 80%;
@@ -110,17 +122,7 @@
     			margin: -2% 0 0 17%;
 				}
 			}
-			.forgot{
-				width: 40% !important;
-				position: absolute;
-				/* margin: 0 auto; */
-				margin: -1% 0 0 45%;
-				a{
-					color: inherit;
-					text-decoration: underline;
-					font-size: 98%;
-				}
-			}
+
 
 		}
 

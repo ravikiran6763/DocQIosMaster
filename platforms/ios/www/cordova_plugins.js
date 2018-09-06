@@ -166,6 +166,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+    "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+    "pluginId": "cordova-plugin-facebook4",
+    "clobbers": [
+      "facebookConnectPlugin"
+    ]
+  },
+  {
     "id": "cordova-plugin-file.DirectoryEntry",
     "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
     "pluginId": "cordova-plugin-file",
@@ -455,11 +463,12 @@ module.exports.metadata =
   "cordova-plugin-contacts": "3.0.1",
   "cordova-plugin-datepicker": "0.9.2",
   "cordova-plugin-device": "1.1.7",
+  "cordova-plugin-facebook4": "2.3.0",
   "cordova-plugin-file": "5.0.0",
   "cordova-plugin-firebase": "0.1.25",
   "cordova-plugin-fullscreen": "1.1.0",
   "cordova-plugin-inappbrowser": "3.0.0",
-  "cordova-plugin-network-information": "1.3.4",
+  "cordova-plugin-network-information": "2.0.2-dev",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-statusbar": "2.4.1",
   "cordova-plugin-whitelist": "1.3.3",

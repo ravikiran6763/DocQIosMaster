@@ -14,14 +14,21 @@ DoctorQuickApp.controller('patientCareCtrl', function($scope,$state, $rootScope,
 		$scope.submitted = true;
 		// console.log($scope.submitted);
 		$ionicLoading.show();
+
+
 		if(!$rootScope.cc.query){
+
+
+
+
+
 			console.log($rootScope.cc.query);
 			// $scope.queryPopup =$ionicPopup.show({
 	    //  template: 'Please Enter your query',
 			//  cssClass: 'dqAlerts',
 			//  scope: $scope,
 			//  	});
-			$ionicLoading.hide();
+
 			window.plugins.toast.showWithOptions({
 			message: "Please Enter your query",
 			duration: "short", // 2000 ms
@@ -45,10 +52,35 @@ DoctorQuickApp.controller('patientCareCtrl', function($scope,$state, $rootScope,
 	      patientPhone:window.localStorage.user,
 	      query:$rootScope.cc.query
 	    }
-	    patientCareService.submitQuery(patientQuery).then(function(response,status){
-				console.log(response);
-				$ionicLoading.hide();
+	    patientCareService.submitQuery(patientQuery).then(function(response){
+
+
+console.log('THE RESPONSE IS:');
+console.log(response);
+
+				if(response)
+				{
+
+					if($scope.countDown == 60)
+					{
+
+							alert('timeout finsihed');
+
+
+
+					}
+
+
+					$ionicLoading.hide();
+
+
+				}
+
+
+				// $ionicLoading.hide();
 	        $rootScope.cc.query="";
+
+
 					var confirmPopup = $ionicPopup.confirm({
 									template: '<center>Someone will contact you from DoctorQuick</center>',
 									cssClass: 'videoPopup',
@@ -99,8 +131,10 @@ DoctorQuickApp.controller('patientCareCtrl', function($scope,$state, $rootScope,
     console.log('callback');
 
 		patientCareService.submitCallBack(window.localStorage.user).then(function(response){
-			console.log('check network connection here');
-			console.log(response );
+
+			console.log(response.status);
+			console.log(response.data);
+
 			if(response === 'Query Submitted'){
 				$ionicLoading.show();
 

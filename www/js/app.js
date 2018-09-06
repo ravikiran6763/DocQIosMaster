@@ -437,7 +437,7 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
     $state.go('templates.sendPrescription',{}, {location: "replace", reload: false});
   }
 
-  if(toState.name === "templates.prescription" && fromState.name ==="templates.consulted_patient") {
+  if(toState.name === "templates.prescription" && fromState.name ==="templates.consulted_patient"){
     $ionicHistory.clearCache();
     $ionicHistory.clearHistory();
     $ionicHistory.nextViewOptions({
@@ -446,7 +446,7 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
     });
     $state.go("templates.doctor_home");
   }
-  if (toState.name != "templates.invite_reviews") {
+  if (toState.name != "templates.invite_reviews"){
     $rootScope.inviteButton = false;
     $rootScope.hideSideMenu = true;
   }
@@ -635,8 +635,28 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
   })
 
 
+
+
+
   DoctorQuickApp.config(['$provide', '$httpProvider', function($provide, $httpProvider) {
       $httpProvider.interceptors.push('RequestsErrorHandler');
+
+      // $httpProvider.interceptors.push(["$q", "$timeout", function ($q, $timeout) {
+      //   function slower(response) {
+      //     var deferred = $q.defer();
+      //     $timeout(function() {
+      //         deferred.resolve(response);
+      //     }, 2000);
+      //     return deferred.promise;
+      //   }
+      //   return {
+      //     'response': slower
+      //
+      //        $injector.get("$ionicLoading").show();
+      //
+      //
+      //   };
+      // }]);
 
       // --- Decorate $http to add a special header by default ---
 
@@ -708,20 +728,28 @@ DoctorQuickApp.config(function( $ionicConfigProvider) {
 DoctorQuickApp.config(function($stateProvider, $httpProvider,$urlRouterProvider, $ionicConfigProvider,USER_ROLES) {
 // $ionicConfigProvider.navBar.alignTitle('left')
   //INTRO
+
+
+// $httpProvider.interceptors.push('patientCareService');
+
   $httpProvider.defaults.timeout = 60000;
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+
+
   // $httpProvider.interceptors.push('Interceptor');
   $httpProvider.interceptors.push(function($q,$injector,$localStorage,$rootScope) {
     return {
           request: function (config) {
-              //config.cache = true;
-              // config.timeout = 30000;
+              // config.cache = true;
+              // config.timeout = 60000;
+
+
+
               return config;
           },
           responseError: function (rejection,response) {
-            //console.log(rejection);
-            //console.log(response);
 
             $rootScope.$watchCollection('[networkType, online]', function(newValues, oldValues){
                 // do stuff here
@@ -764,6 +792,8 @@ DoctorQuickApp.config(function($stateProvider, $httpProvider,$urlRouterProvider,
                });
                //console.log(rejection.status);
 
+
+
               switch (rejection.status) {
                   // case 0 :  var $http = $injector.get('$http');//for retry condition
                   //           return $http(response.config);
@@ -803,8 +833,9 @@ DoctorQuickApp.config(function($stateProvider, $httpProvider,$urlRouterProvider,
                       //console.log('Error 404 - not found!');
 
                       break;
+
                   case 408 :
-                      //console.log('Timeout');
+                      console.log('Timeout Reached');
                       $injector.get("$ionicPopup").confirm({
                             // title: 'Unable to reach DoctorQuick servers',
                             template: '<center>Unable to reach DoctorQuick servers. Please check your connection and try again</center>',
@@ -835,6 +866,10 @@ DoctorQuickApp.config(function($stateProvider, $httpProvider,$urlRouterProvider,
           }
       }
     });
+
+
+
+
 
 
 

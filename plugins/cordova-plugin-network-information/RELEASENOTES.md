@@ -20,6 +20,12 @@
 -->
 # Release Notes
 
+### 2.0.1 (Dec 27, 2017)
+* [CB-13708](https://issues.apache.org/jira/browse/CB-13708) Fix to allow 2.0.0 version install (#60)
+
+### 2.0.0 (Dec 15, 2017)
+* [CB-13663](https://issues.apache.org/jira/browse/CB-13663) : Removed deprecated platforms
+
 ### 1.3.4 (Nov 06, 2017)
 * [CB-12751](https://issues.apache.org/jira/browse/CB-12751) (ios) Fix connection type when airplane mode is on
 * [CB-13299](https://issues.apache.org/jira/browse/CB-13299) (CI) Fix **Android** builds
