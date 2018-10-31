@@ -98,7 +98,7 @@ DoctorQuickApp.run(function($ionicPlatform,$interval,$cordovaNetwork,$localStora
   $ionicPlatform.ready(function() {
     // window.AndroidFullScreen.immersiveMode(successFunction, errorFunction);
     // window.plugin.backgroundMode.enable();
-    ionic.Platform.isFullScreen = true
+    ionic.Platform.isFullScreen = false;
     function successFunction() {
       // //console.log("It worked!");
     }
@@ -112,8 +112,14 @@ DoctorQuickApp.run(function($ionicPlatform,$interval,$cordovaNetwork,$localStora
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
     }
-    ionic.Platform.fullScreen();
-
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      window.cordova.plugins.Keyboard.disableScroll(true);
+    }
+    if(window.StatusBar){
+    // StatusBar.styleDefault();
+      // StatusBar.overlaysWebView(true);
+      StatusBar.hide();
+    }
     setTimeout(function() {
       //console.log('hide splash ');
         // navigator.splashscreen.hide();
@@ -130,35 +136,21 @@ DoctorQuickApp.run(function($ionicPlatform,$interval,$cordovaNetwork,$localStora
       //     document.activeElement.scrollIntoViewIfNeeded();
       //   }, 100);
       // });
-      window.addEventListener('native.keyboardshow', keyboardShowHandler);
-document.addEventListener('focusout', function(e) {
-  //console.log('focused');
-  window.scrollTo(0, 0);
-});
-function keyboardShowHandler(e){
-    //console.log('Keyboard height is: ' + e.keyboardHeight);
-    // container.style.height = scrollViewOffsetHeight + "px";
-
+    window.addEventListener('native.keyboardshow', keyboardShowHandler);
+    document.addEventListener('focusout', function(e) {
+      //console.log('focused');
+      window.scrollTo(0, 0);
+    });
+    function keyboardShowHandler(e){
+    setTimeout(function() {
+        $('html, body').animate({ scrollTop: 0 }, 1000);
+    }, 0);
 }
-   //    window.addEventListener('native.keyboardshow', function (e) {
-   //     //console.log('keyboard opened');
-   // });
 
    window.addEventListener('native.keyboardhide', function () {
 
        //console.log('keyboard closed');
    });
-
-   var mailme = function() {
-       //console.log('Caught!');
-   }
-
-   window.addEventListener('error', function(e) {
-       var ie = window.event || {};
-       var errMsg = e.message || ie.errorMessage || "404 error on " + window.location;
-       var errSrc = (e.filename || ie.errorUrl) + ': ' + (e.lineno || ie.errorLine);
-       mailme([errMsg, errSrc]);
-   }, true);
 
 
   });
@@ -211,11 +203,7 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
           //console.log("localStorage after value",window.localStorage.sendPrescTo);
           }
           //
-          if(window.StatusBar){
-          // StatusBar.styleDefault();
-            // StatusBar.overlaysWebView(true);
-            StatusBar.hide();
-          }
+
 
           if (window.Connection){
             if (navigator.connection.type == Connection.NONE)
@@ -249,6 +237,7 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
                 console.log(notification);
                   console.log(notification.tap);
 
+                if(window.localStorage.doctororpatient === 'doctor'){
                   if($ionicHistory.currentStateName() === 'templates.patientRequest' || $ionicHistory.currentStateName() === 'templates.sendPrescription' || $ionicHistory.currentStateName() === 'templates.prescription' || $ionicHistory.currentStateName() === 'templates.testPrescription' || $ionicHistory.currentStateName() === 'templates.medicationForPatient' || $ionicHistory.currentStateName() === 'templates.diagnosisForPatient'){
                     console.log('Current View:',$ionicHistory.currentStateName());
                   }
@@ -290,6 +279,10 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
                         }
                   }
 
+                }
+                else{
+                  console.log('patient clicked');
+                }
 
                 //$state.go('app.patient_profile');
             }, function(error) {
@@ -348,16 +341,16 @@ DoctorQuickApp.run(function($state,$ionicPlatform,$window, $rootScope,$ionicHist
           var permissions = cordova.plugins.permissions;
           // permissions.requestPermission(permissions.READ_CONTACTS, success, error);
 
-          permissions.requestPermission(permissions.CAMERA, success, error);
-          permissions.requestPermission(permissions.RECORD_AUDIO, success, error);
-
-          function error() {
-          console.warn('Turned on the permission');
-          }
-
-          function success( status ) {
-          if( !status.hasPermission ) error();
-          }
+          // permissions.requestPermission(permissions.CAMERA, success, error);
+          // permissions.requestPermission(permissions.RECORD_AUDIO, success, error);
+          //
+          // function error() {
+          // console.warn('Turned on the permission');
+          // }
+          //
+          // function success( status ) {
+          // if( !status.hasPermission ) error();
+          // }
 
           //-------------------------------------ANALYTICS SETUP---------------------
             // window.ga.startTrackerWithId('UA-114659588-1')

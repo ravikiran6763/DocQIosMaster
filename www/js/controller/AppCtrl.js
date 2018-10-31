@@ -309,9 +309,17 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 		$scope.specfic = val;
 		$scope.choice= val;
 		console.log($scope.specfic);
+		console.log('particular speciality called');
+		
+
 		$ionicSideMenuDelegate.toggleRight();
+
+
+
 		searchbyspecialities.specialitywisesearch($scope.specfic);
 		$rootScope.specialdata =  searchbyspecialities.getSpecialData();
+
+
 	}
 
 	$scope.selectSex = function(val)	{
@@ -563,7 +571,13 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 
 
 	//signout
-
+	var logOutPatient ={
+	userNum:window.localStorage.user,
+	serial:window.localStorage.serial,
+	deviceID:window.localStorage.deviceID,
+	manufacturer:window.localStorage.manufacturer,
+	deviceModel:window.localStorage.manufacturer
+	}
 		$scope.confirmSignout = function() {
 			console.log('closing side menu');
 			$ionicSideMenuDelegate.toggleRight();
@@ -586,7 +600,7 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 								$ionicLoading.show({
 									template:'<ion-spinner></ion-spinner><br><br>Logging out from DoctorQuick'
 								})
-							LoginService.logoutFromDq(window.localStorage.user).then(function(response){
+							LoginService.logoutFromDq(logOutPatient).then(function(response){
 							$scope.loggedOut=response;
 							console.log($scope.loggedOut);
 							if($scope.loggedOut){

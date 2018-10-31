@@ -17,14 +17,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-appversion.RareloopAppVersion",
-    "file": "plugins/cordova-plugin-appversion/www/app-version.js",
-    "pluginId": "cordova-plugin-appversion",
-    "clobbers": [
-      "AppVersion"
-    ]
-  },
-  {
     "id": "cordova-plugin-camera.Camera",
     "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
     "pluginId": "cordova-plugin-camera",
@@ -372,6 +364,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-ionic-keyboard.keyboard",
+    "file": "plugins/cordova-plugin-ionic-keyboard/www/ios/keyboard.js",
+    "pluginId": "cordova-plugin-ionic-keyboard",
+    "clobbers": [
+      "window.Keyboard"
+    ]
+  },
+  {
     "id": "cordova-plugin-network-information.network",
     "file": "plugins/cordova-plugin-network-information/www/network.js",
     "pluginId": "cordova-plugin-network-information",
@@ -427,15 +427,6 @@ module.exports = [
     ]
   },
   {
-    "id": "ionic-plugin-keyboard.keyboard",
-    "file": "plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
-    "pluginId": "ionic-plugin-keyboard",
-    "clobbers": [
-      "cordova.plugins.Keyboard"
-    ],
-    "runs": true
-  },
-  {
     "id": "phonegap-plugin-mobile-accessibility.mobile-accessibility",
     "file": "plugins/phonegap-plugin-mobile-accessibility/www/mobile-accessibility.js",
     "pluginId": "phonegap-plugin-mobile-accessibility",
@@ -457,7 +448,6 @@ module.exports.metadata =
 {
   "com.greettelehealth.DoctorQuick": "0.7.0",
   "com.razorpay.cordova": "0.16.1",
-  "cordova-plugin-appversion": "1.0.0",
   "cordova-plugin-camera": "4.0.2",
   "cordova-plugin-compat": "1.2.0",
   "cordova-plugin-contacts": "3.0.1",
@@ -468,14 +458,14 @@ module.exports.metadata =
   "cordova-plugin-firebase": "0.1.25",
   "cordova-plugin-fullscreen": "1.1.0",
   "cordova-plugin-inappbrowser": "3.0.0",
+  "cordova-plugin-ionic-keyboard": "2.1.3",
   "cordova-plugin-network-information": "2.0.2-dev",
   "cordova-plugin-splashscreen": "5.0.2",
-  "cordova-plugin-statusbar": "2.4.1",
+  "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-whitelist": "1.3.3",
   "es6-promise-plugin": "4.2.2",
   "cordova-plugin-x-socialsharing": "5.3.2",
   "cordova-plugin-x-toast": "2.6.2",
-  "ionic-plugin-keyboard": "2.2.1",
   "phonegap-plugin-mobile-accessibility": "1.0.5-dev"
 };
 // BOTTOM OF METADATA

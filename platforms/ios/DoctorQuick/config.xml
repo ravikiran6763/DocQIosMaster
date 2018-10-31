@@ -52,9 +52,6 @@
     <feature name="Checkout">
         <param name="ios-package" value="Main" />
     </feature>
-    <feature name="RareloopAppVersion">
-        <param name="ios-package" value="RareloopAppVersion" />
-    </feature>
     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
@@ -88,6 +85,9 @@
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
     </feature>
+    <feature name="Keyboard">
+        <param name="ios-package" onload="true" value="CDVIonicKeyboard" />
+    </feature>
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
@@ -105,9 +105,6 @@
     </feature>
     <feature name="Toast">
         <param name="ios-package" value="Toast" />
-    </feature>
-    <feature name="Keyboard">
-        <param name="ios-package" onload="true" value="IonicKeyboard" />
     </feature>
     <feature name="MobileAccessibility">
         <param name="ios-package" onload="true" value="CDVMobileAccessibility" />
@@ -189,12 +186,12 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CameraUsesGeolocation" value="false" />
-    <preference name="StatusBarStyle" value="styleBlackTranslucent" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="default" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="Fullscreen" value="true" />
+    <preference name="Fullscreen" value="false" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="FadeSplashScreenDuration" value="750" />
     <preference name="FadeSplashScreen" value="false" />
@@ -208,4 +205,7 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="KeyboardResize" value="true" />
+    <preference name="KeyboardResizeMode" value="ionic" />
+    <preference name="KeyboardShrinksView" value="true" />
 </widget>

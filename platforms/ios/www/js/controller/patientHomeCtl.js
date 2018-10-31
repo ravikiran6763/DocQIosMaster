@@ -185,11 +185,11 @@ DoctorQuickApp.controller('patientHomeCtrl', function($scope,$state,$rootScope,$
 				                  var success = function(message)
 				                 {
 
-													 if($rootScope.logindone  != "YES")
+													 if($rootScope.logindone  != "LOGGEDIN")
 													 {
 
 
-														 if(message === "YES")
+														 if(message === "LOGGEDIN")
 														 {
 
 															 $rootScope.logindone = message;

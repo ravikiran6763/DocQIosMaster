@@ -91,7 +91,11 @@
           <ion-radio  ng-model="specialityList.sex" ng-value=type.sex ng-click="selectSex(type.sex);" ng-show="showSex" ng-click="closeSideMenu()"><h2 >{{type.sex}} </h2></ion-radio>
       </div>
       <div class="radio_bg" ng-repeat="st in statusList">
+          <!-- <ion-radio  ng-model="specialityList.stat" ng-value=st.stat ng-click="selectStatus(st.stat);" ng-show="showStatus" ng-click="closeSideMenu()"><h2 >{{st.stat}} </h2></ion-radio> -->
+
           <ion-radio  ng-model="specialityList.stat" ng-value=st.stat ng-click="selectStatus(st.stat);" ng-show="showStatus" ng-click="closeSideMenu()"><h2 >{{st.stat}} </h2></ion-radio>
+
+
       </div>
       <div class="radio_bg" ng-repeat="ln in LanguageList">
           <ion-radio  ng-model="specialityList.language" ng-value=ln.language ng-click="selectLanguage(ln.language);" ng-show="showLanguage"  ng-click="closeSideMenu()"><h2 >{{ln.language}} </h2></ion-radio>

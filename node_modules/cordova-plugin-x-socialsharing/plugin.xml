@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-x-socialsharing"
-        version="5.3.2">
+        version="5.4.1">
 
   <name>SocialSharing</name>
 
@@ -45,6 +45,10 @@
       <string>This app requires photo library access to function properly.</string>
     </config-file>
 
+    <config-file target ="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+      <string>This app requires photo library access to function properly.</string>
+    </config-file>
+
     <header-file src="src/ios/NSString+SSURLEncoding.h"/>
     <source-file src="src/ios/NSString+SSURLEncoding.m"/>
     <header-file src="src/ios/SocialSharing.h"/>
@@ -63,6 +67,16 @@
       </feature>
     </config-file>
 
+
+
+    <config-file target="AndroidManifest.xml" parent="/*/application">
+      <receiver android:name="nl.xservices.plugins.ShareChooserPendingIntent" android:enabled="true">
+        <intent-filter>
+          <action android:name="android.intent.action.SEND"/>
+        </intent-filter>
+      </receiver>
+    </config-file>
+
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     </config-file>
@@ -74,6 +88,7 @@
     </config-file>
 
     <source-file src="src/android/nl/xservices/plugins/SocialSharing.java" target-dir="src/nl/xservices/plugins"/>
+    <source-file src="src/android/nl/xservices/plugins/ShareChooserPendingIntent.java" target-dir="src/nl/xservices/plugins"/>
     <source-file src="src/android/nl/xservices/plugins/FileProvider.java" target-dir="src/nl/xservices/plugins"/>
     <source-file src="src/android/res/xml/sharing_paths.xml" target-dir="res/xml"/>
 

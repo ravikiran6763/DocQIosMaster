@@ -93,19 +93,18 @@ console.log(window.localStorage.SpecilityId);
    $scope.buttonText='Send Request';
 
    $rootScope.popUpClosed == false;
+
+   patientWalletServices.getMinBalance().then(function(response){
+   $rootScope.minBAlance=response;
+   console.log($rootScope.minBAlance);
+   }).catch(function(error){
+     console.log('failure data', error);
+   });
+
   $scope.sendrequesttoonlinedoctors = function()
   {
 
-    $rootScope.clickedOnce = true;
-        if($rootScope.clickedOnce)
-        {
 
-         setTimeout(function(){
-           $ionicLoading.show();
-         },2000);
-
-
-        }
 
       // $interval(checkAcceptedReqDocStatus,2000);
 
@@ -130,7 +129,20 @@ console.log(window.localStorage.SpecilityId);
 
      $rootScope.newPAtient=medicalSpecialityService.getNewPatient();
      console.log($rootScope.newPAtient);
-     if($rootScope.myWalletBal >= 270 || $rootScope.myWalletBal === 'agent'){
+     if($rootScope.myWalletBal >= $rootScope.minBAlance || $rootScope.myWalletBal === 'agent'){
+
+       $rootScope.clickedOnce = true;
+           if($rootScope.clickedOnce)
+           {
+
+            setTimeout(function(){
+              $ionicLoading.show();
+            },2000);
+
+
+           }
+
+
        console.log(window.localStorage.networkType);
        if(window.localStorage.networkType === '4G' || window.localStorage.networkType === 'WiFi' || window.localStorage.networkType === 'Unknown'){
          console.log(window.localStorage.SpecilityId);
@@ -149,7 +161,7 @@ console.log(window.localStorage.SpecilityId);
             console.log('Database Errorq');
             var restrictUser = $ionicPopup.confirm({
               // title: 'Slow Data',
-              template: '<center>Previous request was cancelled by you after requesting for a consultation with a Doctor. Request you to only send requests if you want to talk to a Doctor.<br><br>Please wait for one minute to send another request </center>',
+              template: '<center>Previous request was cancelled by you after requesting for a consultation with a Doctor. Request you to only send requests if you want to talk to a Doctor.<br>Please wait for five minutes to send another request </center>',
               cssClass: 'videoPopup',
               scope: $scope,
               buttons: [
@@ -169,9 +181,9 @@ console.log(window.localStorage.SpecilityId);
            else if($rootScope.sentReqStat === 'Inserted'){
              $interval(checkAcceptedReqDocStatus,2000);
 
-               $ionicLoading.hide();
               $rootScope.counter = 120;
                $rootScope.onTimeout = function(){
+                 $ionicLoading.hide();
                // console.log($scope.counter);
               $rootScope.counter--;
                patientTimeout = $timeout($rootScope.onTimeout,1000);
@@ -189,38 +201,42 @@ console.log(window.localStorage.SpecilityId);
                console.log('failure data', error);
                });
 
-               var noResponsePopup = $ionicPopup.alert({
-               template: "<div ><p>None of the doctors have accepted your request</p></div>",
-               cssClass: 'requestPopup',
-               scope: $scope,
-               });
+               if(window.localStorage.SpecilityId == 16 || window.localStorage.SpecilityId == 14){
+                 var noResponsePopup = $ionicPopup.alert({
+                   template: "<center ><p>None of the doctors have accepted your request</p></center>",
+                   cssClass: 'requestPopup',
+                   scope: $scope,
 
-               // $scope.callReqPopUp = $ionicPopup.show({
-               //   template: "<div ><p>None of the doctors have accepted your request, Would you like to consult a General Physician.</p></div>",
-               //       cssClass: 'requestPopup',
-               //       scope: $scope,
-               //       buttons: [
-               //       {
-               //       text: 'Cancel',
-               //       type: 'button-royal',
-               //       onTap:function(){
-               //
-               //         console.log('cancel');
-               //
-               //       }
-               //       },
-               //       {
-               //       text: 'OK',
-               //       type: 'button-positive',
-               //       onTap:function(){
-               //
-               //         console.log('cancel');
-               //
-               //       }
-               //       }
-               //     ]
-               //
-               //     });
+                 });
+               }
+               else{
+                 var noResponsePopup = $ionicPopup.alert({
+                   template: "<center><p>None of the doctors have accepted your request.<br>Would you like to Consult a <br>General Physician?</p></center>",
+                   cssClass: 'requestPopup',
+                   scope: $scope,
+                   buttons: [
+                   {
+                   text: 'OK',
+                   type: 'button-assertive',
+                       onTap:function(){
+                         console.log(window.localStorage.SpecilityId);
+                           window.localStorage.SpecilityId=14;
+                           $scope.sendrequesttoonlinedoctors();
+                         // $state.go($state.current, {}, {reload: true});
+
+                       }
+                   },
+                   {
+                   text: 'Cancel',
+                   type: 'button-royal',
+                   onTap:function(){
+                     $state.go($state.current, {}, {reload: true});
+                   }
+
+                   }
+                   ]
+                 });
+               }
 
 
                noResponsePopup.then(function(res){
@@ -375,38 +391,42 @@ console.log(window.localStorage.SpecilityId);
        }
      }
      else{
-              $ionicLoading.hide();
+             $ionicLoading.hide().then(function(){
+
                var confirmPopup = $ionicPopup.confirm({
-           						// title: 'Low Balance',
-           						template: '<center>Your request could not be processed as your DoctorQuick deposit is less than ₹270.</center> ',
-           						cssClass: 'videoPopup',
-           						scope: $scope,
-           						buttons: [
+                       // title: 'Low Balance',
+                       template: '<center>Your request could not be processed as your DoctorQuick deposit is less than ₹{{minBAlance}}.</center> ',
+                       cssClass: 'videoPopup',
+                       scope: $scope,
+                       buttons: [
                         {
-           								text: 'Cancel',
-           								type: 'button-royal',
-           								onTap: function(e) {
+                           text: 'Cancel',
+                           type: 'button-royal',
+                           onTap: function(e) {
                             $ionicHistory.nextViewOptions({
                               disableAnimate: true,
                               disableBack: true
                             });
                             $state.go($state.$current,{}, {location: "replace", reload: false})
-           								}
-           							},
-           							{
-           								text: 'Topup',
-           								type: 'button-positive',
-           								onTap: function(e) {
+                           }
+                         },
+                         {
+                           text: 'Topup',
+                           type: 'button-positive',
+                           onTap: function(e) {
                             $ionicHistory.nextViewOptions({
                               disableAnimate: true,
                               disableBack: true
                             });
                             $state.go('app.patient_topup',{}, {location: "replace", reload: false});
-           								}
-           							},
+                           }
+                         },
 
-           						]
-           					});
+                       ]
+                     });
+                     $ionicLoading.hide();
+             });
+
          }
      }).catch(function(error){
        console.log('failure data', error);

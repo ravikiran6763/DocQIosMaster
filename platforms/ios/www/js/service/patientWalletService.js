@@ -65,6 +65,36 @@ DoctorQuickApp.service('patientWalletServices', function ($cookies,$http,$q, BAS
 
   }
 
+  this.getMinBalance = function () {
+    var deferred = $q.defer();
+
+    $http.post(BASE_URL.url + API.getMinBalance)
+    .success(function (data, status, headers, config){
+      deferred.resolve(data);
+    })
+    .error(function (){
+      deferred.reject('Error while getting data');
+    });
+
+    return deferred.promise;
+
+  }
+
+
+  this.getdiffbalnce = function (patientPhone) {
+      var deferred = $q.defer();
+
+      $http.post(BASE_URL.url + API.getdiffbalnce,patientPhone)
+      .success(function (data, status, headers, config){
+        deferred.resolve(data);
+      })
+      .error(function (){
+        deferred.reject('Error while getting data');
+      });
+
+      return deferred.promise;
+
+    }
   // //transaction history
   // this.mytransactionHistory = function (patientPhone) {
   //     console.log('transaction history of:',patientPhone);

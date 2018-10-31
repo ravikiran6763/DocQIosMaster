@@ -13,7 +13,13 @@ ion-title {
   text-align: center;
   color: red;
 }
+body.keyboard-open .hideElementOnKeyboardShown{
+    display: none;
+}
 
+.platform-ios12 .platform-ios12_0 .platform-ready .keyboard-open{
+  margin:-50% !important;
+}
 .hide{
   display:block !important;
   visibility: visible !important;
@@ -174,7 +180,7 @@ span.stars span {
 }
 .intlReg {
     position: absolute !important;
-    margin: -10% 0 0 2% !important;
+    margin: -9% 0 0 2% !important;
     font-size: 100% !important;
 }
 h5.menu-text{

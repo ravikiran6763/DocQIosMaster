@@ -1,4 +1,5 @@
-DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,$localStorage, $location, $ionicConfig,$cordovaInAppBrowser, $http, $cordovaToast, patientWalletServices, RazorPayService ,patientProfileDetailsService,BASE_URL, API) {
+
+DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,$localStorage,$ionicPlatform,$window,$location,$ionicPopup, $ionicConfig,$cordovaInAppBrowser, $http, $cordovaToast, patientWalletServices, RazorPayService ,patientProfileDetailsService,IonicClosePopupService,BASE_URL, API) {
 
 	$rootScope.headerTxt="Topup";
 	$rootScope.showBackBtn=true;
@@ -13,23 +14,21 @@ DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,
 	//     // do something
 	// 		alert('statusbar shown');
 	// }
-	document.addEventListener("resume", onResume, false);
-	function onResume(event){
-		// alert(event);
-		console.log(event);
-		RazorpayCheckout.on('payment.success', successCallback)
-		RazorpayCheckout.on('payment.cancel', cancelCallback)
-		// Pass on the event to RazorpayCheckout
-		RazorpayCheckout.onResume(event);
-				// setTimeout(function() {
-				// //console.log('resume');
-				//       // $state.go("templates.doc_profile");//working
-				//       $state.go($state.current);
-				//     //
-				// 		// $window.location.reload(true);
-				//
-				// }, 0);
-	}
+		patientWalletServices.getdiffbalnce(window.localStorage.user).then(function(response){
+		$rootScope.diffBalance=response;
+		console.log('THE BALANCE AMOUNT IS:',$rootScope.diffBalance);
+		}).catch(function(error){
+		console.log('failure data', error);
+		});
+
+
+	patientWalletServices.getMinBalance().then(function(response){
+	$rootScope.minBAlance=response;
+	console.log($rootScope.minBAlance);
+	}).catch(function(error){
+		console.log('failure data', error);
+	});
+
 	$scope.validateTopup=function(isDocTopUpValid){
 	  console.log('isDocTopUpValid ', isDocTopUpValid);
 	  console.log('clicked');
@@ -40,9 +39,136 @@ DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,
 
 								$scope.payment.topUpAmt=($scope.payment.topUp*100);
 								console.log($scope.payment.topUp);
-							 if($scope.payment.topUp < 270){//250
+								if(window.localStorage.user == '9738158587' ){
+									$rootScope.minBAlance=1;
+
+								}
+								if($rootScope.diffBalance > 0 && $scope.payment.topUp >= $rootScope.diffBalance)
+										{
+
+											$scope.payment.topUpAmt=($scope.payment.topUp*100);
+
+
+
+											var options = {
+														description: 'GET WELL SOONER',
+														currency: 'INR',
+														// key: 'rzp_test_JTodx06v7mHqbr',//change this key to live account key rzp_live_gTFcR9lOEpUn71 // rzp_test_JTodx06v7mHqbr
+														key: 'rzp_live_gTFcR9lOEpUn71',//change this key to live account key rzp_live_gTFcR9lOEpUn71 // rzp_test_JTodx06v7mHqbr
+														amount:$scope.payment.topUpAmt ,
+														name: 'DoctorQuick',
+														method:{
+														wallet:true,
+														upi:true
+														},
+														prefill:{
+														email: $scope.patientEmail,
+														contact: window.localStorage.user,
+														name: $scope.patientFname
+														}
+														// ,
+														// callback_url: 'http://ec2-13-126-101-210.ap-south-1.compute.amazonaws.com/patient/razorPaySuccess.php'
+														// callback_url: 'http://doctorquickelb-549049736.ap-south-1.elb.amazonaws.com/razorPaySuccess.php'
+
+											}
+
+
+											var called=false;
+											var successCallback = function(payment_id) {
+
+																		RazorPayService.topUpOptions(options);
+																		//
+																		// console.log('payment_id: ' + payment_id)
+																		// console.log('options:',options);
+
+																		$scope.paymentid = payment_id;
+
+																		RazorPayService.topUp($scope.paymentid).then(function(response){
+
+																			$rootScope.patientWalletUpdate=response;
+																			if($rootScope.patientWalletUpdate='TransactionSuccessful'){
+																				window.plugins.toast.showWithOptions({
+																					message: "Transaction Successfull",
+																					duration: "short", // 2000 ms
+																					position: "bottom",
+																					styling: {
+																							opacity: 1.0, // 0.0 (transparent) to 1.0 (opaque). Default 0.8
+																							backgroundColor: '#026451', // make sure you use #RRGGBB. Default #333333
+																							textColor: '#ffffff', // Ditto. Default #FFFFFF
+																							textSize: 13, // Default is approx. 13.
+																							cornerRadius: 16, // minimum is 0 (square). iOS default 20, Android default 100
+																							horizontalPadding: 16, // iOS default 16, Android default 50
+																							verticalPadding: 12 // iOS default 12, Android default 30
+																					}
+																				});
+																			}
+																			else{
+																				var errorInPayment = $ionicPopup.confirm({
+																				// title: 'Refund',
+																				template: '<center>Error Occurred while adding amout to DoctorQuick Deposit.<br>Contact Customer Care </center>',
+																				cssClass: 'videoPopup',
+																				scope: $scope,
+																				buttons: [
+
+																					{
+																						text: 'OK',
+																						type: 'button-positive',
+																						onTap: function(e) {
+																						console.log('OK');
+
+																						}
+																					},
+																				]
+																			});
+																			IonicClosePopupService.register(errorInPayment);
+																			}
+
+
+																		}).catch(function(error){
+																		console.log('failure data', error);
+																		});
+																		$state.go('app.patient_payments');
+																		// $window.location.reload(true);
+																		 called = false;
+											}
+
+											var cancelCallback = function(error) {
+												console.log(error.description + ' (Error '+error.code+')');
+												window.plugins.toast.showWithOptions({
+													message: "Transaction Failed",
+													duration: "short", // 2000 ms
+													position: "bottom",
+													styling: {
+															opacity: 1.0, // 0.0 (transparent) to 1.0 (opaque). Default 0.8
+															backgroundColor: '#9d2122', // make sure you use #RRGGBB. Default #333333
+															textColor: '#ffffff', // Ditto. Default #FFFFFF
+															textSize: 13, // Default is approx. 13.
+															cornerRadius: 16, // minimum is 0 (square). iOS default 20, Android default 100
+															horizontalPadding: 16, // iOS default 16, Android default 50
+															verticalPadding: 12 // iOS default 12, Android default 30
+													}
+												});
+												 called = false;
+											}
+											// RazorpayCheckout.open(options, successCallback, cancelCallback);
+
+												$ionicPlatform.ready(function(){
+													// alert('platform ready in topup')
+														if (!called) {
+														RazorpayCheckout.open(options, successCallback, cancelCallback);
+														called = true;
+														}
+												});
+
+
+
+
+
+										}
+
+							 else if($scope.payment.topUp < $rootScope.minBAlance){//250
 								 window.plugins.toast.showWithOptions({
-								 message: "Amount must be ₹270 or higher",
+								 message: "Amount must be ₹ " + $rootScope.minBAlance + "  or higher",
 								 duration: "short", // 2000 ms
 								 position: "bottom",
 								 styling: {
@@ -57,6 +183,7 @@ DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,
 								 });
 
 								}
+
 
 								else{
 									var options = {
@@ -79,48 +206,53 @@ DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,
 									}
 									RazorPayService.topUpOptions(options);
 
-
+									var called=false;
 									var successCallback = function(payment_id) {
-									console.log('payment_id: ' + payment_id)
+									// console.log('payment_id: ' + payment_id)
 
 									$scope.paymentid = payment_id;
 										RazorPayService.topUp($scope.paymentid).then(function(response){
 									   $rootScope.patientWalletUpdate=response;
-										 console.log($rootScope.patientWalletUpdate);
+										 // console.log($rootScope.patientWalletUpdate);
 										 if($rootScope.patientWalletUpdate === 'TransactionSuccessful'){
-
-											 // console.log('TransactionSuccessful');
-											 var confirmPopup = $ionicPopup.confirm({
-							 					// title: 'DoctorQuick',
-							 					template: '<center>Successfully added the amount to you DoctorQuick Deposit</center>',
-							 					// template: 'An email confirmation link to your email address has been sent. Click the link in that email to complete registering your email. Make sure to check your spam box in case it got filtered. ',
-							 					cssClass: 'videoPopup',
-							 					scope: $scope,
-							 					buttons: [
-							 						{
-							 							text: 'OK',
-							 							type: 'button-assertive',
-							 							onTap: function(e) {
-							 							console.log('offline');
-							 							// $state.go("templates.doctor_home");
-														// $window.location.reload(true);
-														$state.reload();
-
-							 							}
-							 						},
-							 					]
-							 				});
-
-											  // $state.go('app.patient_topup');
-
-												// $state.go("app.patient_payments", $stateParams, {reload: true, inherit: false});
-												// 	this.navCtrl.push("patient_payments",{
-												// 		status: this.status
-												// 	});
+											 window.plugins.toast.showWithOptions({
+												 message: "Transaction Successfull",
+												 duration: "short", // 2000 ms
+												 position: "bottom",
+												 styling: {
+														 opacity: 1.0, // 0.0 (transparent) to 1.0 (opaque). Default 0.8
+														 backgroundColor: '#026451', // make sure you use #RRGGBB. Default #333333
+														 textColor: '#ffffff', // Ditto. Default #FFFFFF
+														 textSize: 13, // Default is approx. 13.
+														 cornerRadius: 16, // minimum is 0 (square). iOS default 20, Android default 100
+														 horizontalPadding: 16, // iOS default 16, Android default 50
+														 verticalPadding: 12 // iOS default 12, Android default 30
+												 }
+											 });
 										 }
-										 if($rootScope.patientWalletUpdate ==='ERROR'){
-											  alert('Error While Initiating Payment');
+										 else{
+											 var errorInPayment = $ionicPopup.confirm({
+											 // title: 'Refund',
+											 template: '<center>Error Occurred while adding amout to DoctorQuick Deposit.<br>Contact Customer Care </center>',
+											 cssClass: 'videoPopup',
+											 scope: $scope,
+											 buttons: [
+
+												 {
+													 text: 'OK',
+													 type: 'button-positive',
+													 onTap: function(e) {
+													 console.log('OK');
+
+													 }
+												 },
+											 ]
+										 });
+										 IonicClosePopupService.register(errorInPayment);
 										 }
+										 // if($rootScope.patientWalletUpdate ==='ERROR'){
+											//   alert('Error While Initiating Payment');
+										 // }
 										 $scope.payment.topUpAmt="";
 										 // $state.reload()
 										// $state.transitionTo($state.current, $stateParams, { reload: true, inherit: false, notify: true });
@@ -128,9 +260,12 @@ DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,
 									   }).catch(function(error){
 									     console.log('failure data', error);
 									   });
+										 $state.go('app.patient_payments');
+										 // $window.location.reload(true);
+											called = false;
 									}
 
-									var cancelCallback = function(error) {
+									var cancelCallback = function(error){
 									console.log(error.description + ' (Error '+error.code+')')
 										window.plugins.toast.showWithOptions({
 										message: "Transaction cancelled",
@@ -147,17 +282,25 @@ DoctorQuickApp.controller('patientTopupCtrl', function($scope,$rootScope,$state,
 										}
 										});
 										// $window.location.reload(true);
+										called = false;
+
 									}
 
-									RazorpayCheckout.open(options, successCallback, cancelCallback);
-
+									// RazorpayCheckout.open(options, successCallback, cancelCallback);
+									$ionicPlatform.ready(function(){
+										// alert('platform ready in topup')
+											if (!called) {
+											RazorpayCheckout.open(options, successCallback, cancelCallback);
+											called = true;
+											}
+									});
 
 
 								}
 	  }
 		else{
 			window.plugins.toast.showWithOptions({
-			message: "Amount must be ₹270 or higher",
+			message: "Amount must be ₹"+$rootScope.minBAlance+ " or higher",
 			duration: "short", // 2000 ms
 			position: "bottom",
 			styling: {

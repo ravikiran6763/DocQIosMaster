@@ -611,6 +611,11 @@ $scope.popupShown = true;
 			 if($scope.deviceAndroid === true){
          console.log(window.localStorage.activePatient);
 				 $interval.cancel($rootScope.videoOrAudio);
+         var docTimeout = $timeout($scope.onTimeout,1000);//timer interval
+         $scope.$on('$destroy', function(){
+         $timeout.cancel(docTimeout);
+         console.log('destroyed');
+         });
 				 $state.go("templates.prescription",{"reqPat":window.localStorage.activePatient},{location: "replace", reload: false})
 
 			 }

@@ -1,37 +1,17 @@
 //
-//  Razorpay.h
-//  Razorpay
+//  CheckoutOtpelf.h
+//  CheckoutOtpelf
 //
-//  Created by Akshay Bhalotia on 02/03/16.
-//  Copyright © 2016 Razorpay. All rights reserved.
+//  Created by Abhinav Arora on 14/08/17.
+//  Copyright © 2017 Abhinav. All rights reserved.
 //
 
-#import "ExternalWalletSelectionProtocol.h"
-#import "RazorpayPaymentCompletionProtocol.h"
-#import "RazorpayPaymentCompletionProtocolWithData.h"
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface Razorpay : NSObject
+//! Project version number for CheckoutOtpelf.
+FOUNDATION_EXPORT double CheckoutOtpelfVersionNumber;
 
-/*!
- @deprecated This method is deprecated. Use initWithKey:andDelegate: instead.
- See https://docs.razorpay.com/docs/ios for more information.
- */
-+ (nonnull instancetype)
-      initWithKey:(nonnull NSString *)key
-      andDelegate:(nonnull id<RazorpayPaymentCompletionProtocol>)delegate
-forViewController:(nullable UIViewController *)vc __attribute__((deprecated));
-+ (nonnull instancetype)
-initWithKey:(nonnull NSString *)key
-andDelegate:(nonnull id<RazorpayPaymentCompletionProtocol>)delegate;
-+ (nonnull instancetype)initWithKey:(nonnull NSString *)key
-                andDelegateWithData:
-                    (nonnull id<RazorpayPaymentCompletionProtocolWithData>)
-                        delegate;
-- (void)setExternalWalletSelectionDelegate:
-    (nonnull id<ExternalWalletSelectionProtocol>)walletDelegate;
-- (void)open:(nonnull NSDictionary *)options;
-- (void)close;
+//! Project version string for CheckoutOtpelf.
+FOUNDATION_EXPORT const unsigned char CheckoutOtpelfVersionString[];
 
-@end
+// In this header, you should import all the public headers of your framework using statements like #import <CheckoutOtpelf/PublicHeader.h>

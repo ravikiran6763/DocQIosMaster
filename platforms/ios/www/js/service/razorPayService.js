@@ -23,7 +23,7 @@ DoctorQuickApp.service('RazorPayService', function ($http,$q,$rootScope, BASE_UR
     $http.post(BASE_URL.url + API.topMeup,storePaymentDetails)
     .success(function (data, status, headers, config){
       deferred.resolve(data);
-      alert(data);
+             
 
 
     })
