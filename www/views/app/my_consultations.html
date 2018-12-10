@@ -3,7 +3,7 @@
   <ion-content >
       <div class="myDoctor-list" >
         <ul ng-repeat="r in ConsultedDoctor" >
-        <li  ng-click="consultationDetails({{r.doctorPhone}});">
+        <li  ng-click="consultationDetails(r.doctorPhone,r.consultDate);">
           <div class="profile-img">
             <img  ng-hide="r.docImage2 == null "ng-src="{{r.docImage2}}"   >
             <!-- <img  ng-show="r.docImage2 == null " ng-src="img/doc.jpg" > -->

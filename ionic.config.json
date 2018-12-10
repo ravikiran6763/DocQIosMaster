@@ -1,6 +1,8 @@
 {
   "name": "DoctorQuick",
-  "app_id": "45d07bf3",
+  "integrations": {
+    "cordova": {}
+  },
   "gulpStartupTasks": [
     "sass",
     "watch"
@@ -15,8 +17,6 @@
       "proxyUrl": "http://localhost:8100/"
     }
   ],
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic1"
+  "type": "ionic1",
+  "pro_id": "45d07bf3"
 }

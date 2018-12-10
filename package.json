@@ -98,6 +98,7 @@
     "underscore.string": "^3.3.5"
   },
   "devDependencies": {
+    "@ionic/v1-toolkit": "1.0.14",
     "bower": "^1.8.4",
     "gulp-image": "^4.3.0",
     "gulp-minify": "^2.1.0",

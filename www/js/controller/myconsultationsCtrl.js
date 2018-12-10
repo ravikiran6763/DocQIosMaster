@@ -270,24 +270,73 @@ if($scope.pagedecision === 'templates.consulted_patient')
 
 $scope.deviceAndroid = ionic.Platform.isAndroid();
 
-$scope.consultationDetails=function(consultedDoc)
+$scope.consultationDetails=function(consultedDoc,consultDate)
 {
 
-			var username = "greet+"+window.localStorage.user;
-			var password = "DQ_patient";
-		 	var persontocall = "greet+" + consultedDoc;
-			console.log(persontocall);
 
-		var success = function(message)
-		{
-			console.log(message);
-		}
-		var failure = function()
-		{
-			console.log("Error calling Hello Plugin");
-		}
+		var array = consultDate.split(' ');
+		console.log('the splitted date is:');
+		console.log(array[0]);
 
- hello.chat(username,password,persontocall,success, failure);
+
+
+
+
+			var date =array[0];
+			console.log(date);
+			var d = new Date();
+			console.log(d);
+
+
+
+
+			var curr_date = d.getDate();
+			var curr_month = d.getMonth();
+			curr_month++;
+			var curr_year = d.getFullYear();
+
+
+			var todaydate = curr_year + "-" + curr_month + "-" + curr_date;
+
+			console.log('TODAY DATE IS:');
+			console.log(todaydate);
+				var today = todaydate;
+
+
+			var date2 = new Date(today);
+			var date1 = new Date(date);
+			var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+			$scope.dayDifference = Math.ceil(timeDiff / (1000 * 3600 * 24));
+			console.log('the diff is:');
+			console.log($scope.dayDifference);
+
+
+				// var daydiff = $scope.dayDifference;
+				var username = "greet+"+window.localStorage.user;
+				var password = "DQ_patient";
+				var persontocall = "greet+" + consultedDoc;
+				console.log(persontocall);
+				console.log($scope.daydiff);
+
+
+
+					var daydiff = array[0];
+
+					console.log('TODAY DATE FORMAT IS',daydiff);
+
+
+					var success = function(message)
+					{
+						console.log(message);
+					}
+
+					var failure = function()
+					{
+						console.log("Error calling Hello Plugin");
+					}
+
+			 		hello.chat(username,password,persontocall,daydiff,success, failure);
+
 
 }
 $localStorage.sendPrescTo=''
@@ -298,7 +347,8 @@ $scope.clicktochat = function(pateientPhone)
 		$rootScope.deviceIOS = ionic.Platform.isIOS();
 		$rootScope.deviceAndroid = ionic.Platform.isAndroid();
 
-$localStorage.sendPrescTo=pateientPhone;
+		var daydiff = "2018-12-01";
+		$localStorage.sendPrescTo=pateientPhone;
 		$scope.patientToChat=pateientPhone;
 		var username = "greet+"+window.localStorage.user;
 		var password = "DQ_doctor";
@@ -315,7 +365,7 @@ $localStorage.sendPrescTo=pateientPhone;
 			console.log('error');
 
 		}
-		hello.chat(username,password,persontocall,success, failure);
+		hello.chat(username,password,persontocall,daydiff,success, failure);
 
 
 }

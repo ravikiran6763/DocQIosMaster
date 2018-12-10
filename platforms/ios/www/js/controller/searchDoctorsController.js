@@ -509,7 +509,7 @@ if($ionicHistory.currentStateName() === 'app.results'){
 					console.log('value changed');
 					// $scope.alertPopup.close();
 					$scope.callAccept = $ionicPopup.show({
-				 			 template: "<div >Doctor has accepted your <br>invitation for a consultation. Please start the<br>consultation or decline</div>",
+				 			 template: "<div >Doctor has accepted your invitation <br>for a consultation. Please start the<br>consultation or decline</div>",
 				 			 cssClass: 'requestPopup',
 				 			 scope: $scope,
 				 			 buttons: [

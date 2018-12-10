@@ -106,11 +106,8 @@ console.log(window.localStorage.SpecilityId);
 
 
 
-      // $interval(checkAcceptedReqDocStatus,2000);
-
-
       $rootScope.defaultPatient = false;
-
+      console.log($rootScope.newPatientFname);
     patientWalletServices.myWalletBalance(window.localStorage.user).then(function(response){
      $rootScope.patientWalletdetails=response;
      if($rootScope.patientWalletdetails === 'agent'){
@@ -126,6 +123,7 @@ console.log(window.localStorage.SpecilityId);
 
        console.log($rootScope.myWalletBal);
      }
+     console.log(window.localStorage.selectedSubPatient);
 
      $rootScope.newPAtient=medicalSpecialityService.getNewPatient();
      console.log($rootScope.newPAtient);
@@ -144,7 +142,7 @@ console.log(window.localStorage.SpecilityId);
 
 
        console.log(window.localStorage.networkType);
-       if(window.localStorage.networkType === '4G' || window.localStorage.networkType === 'WiFi' || window.localStorage.networkType === 'Unknown'){
+       if(window.localStorage.networkType === '4G' || window.localStorage.networkType === 'WiFi' || window.localStorage.networkType === 'Unknown' || !window.localStorage.networkType){
          console.log(window.localStorage.SpecilityId);
 
          medicalSpecialityService.sendrequesttodoctor(window.localStorage.SpecilityId).then(function(response){
@@ -154,6 +152,7 @@ console.log(window.localStorage.SpecilityId);
            $rootScope.sentReqStat=$rootScope.sentReqResponse[1];
            console.log('ReqStat',$rootScope.sentReqStat);
            console.log($rootScope.sentReqId);
+
 
 
            if($rootScope.sentReqStat != 'Inserted'){
@@ -180,7 +179,7 @@ console.log(window.localStorage.SpecilityId);
 
            else if($rootScope.sentReqStat === 'Inserted'){
              $interval(checkAcceptedReqDocStatus,2000);
-
+             console.log($rootScope.newPatientFname);
               $rootScope.counter = 120;
                $rootScope.onTimeout = function(){
                  $ionicLoading.hide();
@@ -537,8 +536,8 @@ console.log(window.localStorage.SpecilityId);
 
   $rootScope.newpatientAdded=medicalSpecialityService.getNewPatient();
   console.log($rootScope.newpatientAdded);
-  $scope.newPatientFname=$scope.newpatientAdded.fname;
-  $scope.newPatientLname=$scope.newpatientAdded.lname;
+  $rootScope.newPatientFname=$rootScope.newpatientAdded.fname;
+  $scope.newPatientLname=$rootScope.newpatientAdded.lname;
   if($rootScope.newpatientAdded){
     $rootScope.shownewPatient=false;
   }
