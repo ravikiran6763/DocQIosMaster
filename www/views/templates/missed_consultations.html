@@ -1,0 +1,35 @@
+<ion-view class="consultationList-view" cache-view="false">
+
+  <ion-content >
+    <div class="myDoctor-list" >
+
+      <ul>
+        <center><h5 ng-show="missedCalls.length" style="width: 85%;">The following patient's are pending to receive consultation in your speciality. Click on their names to confirm your availability.</h5></center>
+
+      <li ng-repeat="patient in missedCalls" ng-click="sendSmsToPatient(patient.patientNum)">
+
+        <div class="profile-img">
+          <img src="{{patient.image}}">
+        </div>
+
+        <div class="name-content">
+          <div class="name" >
+            <h2 style="margin: 7% !important;">{{patient.patientName}}</h2>
+          </div>
+
+        </div>
+
+        <div class="next-icon">
+          <i class="icon ion-ios-arrow-right"></i>
+        </div>
+
+      </li>
+    </ul>
+
+      <ul>
+        <li ng-show="!missedCalls.length" style="margin-top: 8vh;"><center><b style="color:teal;">No Missed Consultations</b></center></li>
+      </ul>
+    </div>
+
+  </ion-content>
+</ion-view>

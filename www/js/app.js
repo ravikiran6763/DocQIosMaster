@@ -1273,6 +1273,16 @@ $stateProvider
     }
   })
 
+  .state('templates.missed_consultations', {
+    url: "/missed_consultations",
+    views: {
+      'menuContent': {
+        templateUrl: "views/templates/missed_consultations.html",
+        controller:'missedConsultationsCtrl'
+      }
+    }
+  })
+
   .state('templates.viewPatientRequest', {
     url: "/viewPatientRequest/:reqId/:reqPat/:reqTime",
     views: {
