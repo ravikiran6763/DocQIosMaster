@@ -276,77 +276,36 @@ var doctorDeviceDetails ={
   deviceId:window.localStorage.deviceID,
   deviceSerial:window.localStorage.serial
 }
+
+
 function checkConsultations(){
     doctoronoffdetails.getdoctorrequest(doctorDeviceDetails).then(function(response){
     $scope.pendingRequests = response;
+
+    if(response.length != 0){
+
+      var data = response;
+      for(var i=0; i<data.length; i++){
+        $rootScope.id=data[i].id;
+        $rootScope.patientNum=data[i].patientNum;
+        $rootScope.awstime=data[i].awstime;
+
+      }
+
+      $rootScope.currentPatient = $scope.pendingRequests;
+      window.localStorage['currentPatient'] = angular.toJson($rootScope.currentPatient);
+      console.log($rootScope.currentPatient);
+      $state.go('templates.patientRequest',{'reqId':$rootScope.id,'reqPat':$rootScope.patientNum,'reqTime':$rootScope.awstime})
+
+      // $state.go('templates.doc-customercare');
+    }
+
+
     // console.log('pending:',$scope.pendingRequests);
     $scope.requests=$scope.pendingRequests.length;
-  });
-  // .catch(function(error){
-  //   console.log('failure data', error);
-  // })
-
-  // console.log($ionicHistory.currentStateName());
-  if ($ionicHistory.currentStateName() === 'auth.loginNew') {
-    return false;
-  }
-
-  // doctoronoffdetails.doctorDeviceUpdate(window.localStorage.user).then(function(response){
-  //   $scope.deviceDetails = response;
-  //   console.log( $scope.deviceDetails);
-  //   console.log('deviceUUID:',$scope.deviceDetails[0][0]);
-  //   console.log('DeviceSerial:',$scope.deviceDetails[0][1]);
-  //
-  //   window.localStorage.deviceUUID = $scope.deviceDetails[0][0];
-  //   $scope.deviceUUID=window.localStorage.deviceUUID;
-  //   if(window.localStorage.deviceID === $scope.deviceUUID){
-  //     $rootScope.LogoutDocFromOldDevce=false;
-  //   }
-  //   else {
-  //     console.log('device changed');
-  //     var unametologout = "greet+"+window.localStorage.user;
-  //     var pwtologout = "DQ_doctor";
-  //       var success = function(message)
-  //       {
-  //
-  //             $rootScope.LogoutDocFromOldDevce=true;
-  //             $ionicLoading.hide();
-  //             console.log(message);
-  //             $ionicHistory.nextViewOptions({
-  //             disableBack: true,
-  //             disableAnimate: true,
-  //             historyRoot: true
-  //             });
-  //
-  //             $state.go('auth.loginNew');
-  //             $ionicHistory.clearCache();
-  //             $ionicHistory.clearHistory();
-  //             $window.localStorage.clear();
-  //               var alertPopup = $ionicPopup.alert({
-  //                 template: '<center>Your device is no longer registered <br> with DoctorQuick. Contact care@doctorquick.com</center>',
-  //                 cssClass: 'videoPopup',
-  //               });
-  //               alertPopup.then(function(res) {
-  //                 // ionic.Platform.exitApp();
-  //                 navigator.app.exitApp();
-  //               });
-  //       }
-  //       var failure = function()
-  //       {
-  //         console.log('error calling hello plugin');
-  //       }
-  //       hello.logout(unametologout,pwtologout,success, failure);
-  //
-  //
-  //
-  //   }
-  //
-  // })
-  // .catch(function(error){
-  //   console.log('failure data', error);
-  // })
-
-
+  }).catch(function(error){
+    console.log('failure data', error);
+  })
 }
 
     // console.log($ionicHistory.currentStateName());

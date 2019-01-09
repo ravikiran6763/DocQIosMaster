@@ -646,30 +646,33 @@ if($ionicHistory.currentStateName() === 'app.results'){
 		 if(newValue == 4 || newValue == 5) {
 						//  alert('declined');
 						 $scope.callReqPopUp.close();
-						 var confirmPopup = $ionicPopup.confirm({
-										 // title: 'Declined!',
-										 template: '<center>Doctor has declined for consultation</center>',
-										 cssClass: 'videoPopup',
-										 scope: $scope,
-										 buttons: [
-											 {
-												 text: 'OK',
-												 type: 'button-positive',
-												 onTap: function(e) {
-													 var test = $timeout($scope.onTimeout,1000);//timer interval
-										 			$scope.$on('$destroy', function(){
-										 			$timeout.cancel(test);
-													console.log('declined here');
-										 			console.log('destroyed');
-													// $scope.callAccept.close();
-										 			});
-													 $state.go($state.current, {}, {reload: true});
-												 console.log('ok');
-												 }
-											 },
-										 ]
-						 });
-						 IonicClosePopupService.register(confirmPopup);
+						 if($ionicHistory.currentStateName() === 'app.results'){
+							 var confirmPopup = $ionicPopup.confirm({
+							 				// title: 'Declined!',
+							 				template: '<center>Doctor has declined for consultation</center>',
+							 				cssClass: 'videoPopup',
+							 				scope: $scope,
+							 				buttons: [
+							 					{
+							 						text: 'OK',
+							 						type: 'button-positive',
+							 						onTap: function(e) {
+							 							var test = $timeout($scope.onTimeout,1000);//timer interval
+							 						 $scope.$on('$destroy', function(){
+							 						 $timeout.cancel(test);
+							 						 console.log('declined here');
+							 						 console.log('destroyed');
+							 						 // $scope.callAccept.close();
+							 						 });
+							 							$state.go($state.current, {}, {reload: true});
+							 						console.log('ok');
+							 						}
+							 					},
+							 				]
+							 });
+							 IonicClosePopupService.register(confirmPopup);
+						 }
+
 
 						 $scope.callAccept.close();
 

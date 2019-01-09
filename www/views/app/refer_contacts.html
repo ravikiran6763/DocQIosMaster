@@ -1,0 +1,33 @@
+<ion-view class="review-view" cache-view="false">
+
+  <ion-nav-title>
+   <span>Refer A Friend</span>
+ </ion-nav-title>
+
+ <ion-content  scroll="true">
+
+   <div class="top-content">
+     <h4>Select your contacts that you would like to invite to review. Reviews will help you to attract new patients changed.</h4>
+   </div>
+
+
+    <ion-checkbox class="item-checkbox-right" ng-model="allcontactsforref.selected" ng-click="checkAllref(allcontactsforref.selected);">
+      SELECT ALL
+    </ion-checkbox>
+
+  <ion-list ng-repeat="con1 in contact4 ">
+
+    <ion-checkbox
+        ng-model="con1.selected"
+         class="item-checkbox-right" ng-click="optionToggled(con1.selected,con1.value);">
+        <h2>{{con1.name}}</h2>
+    </ion-checkbox>
+
+
+  </ion-list>
+
+
+     </ion-content>
+
+
+</ion-view>

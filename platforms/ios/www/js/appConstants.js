@@ -88,6 +88,10 @@ DoctorQuickApp.constant('BASE_URL', {
         'sendVerificationMail':'patient/sendVerificationMail.php',
         'updateEmail':'patient/updateEmail.php',
         'firstConsultation':'patient/firstConsultation.php',
+        'referalCode':'patient/referalCode.php',
+        'inviterefpatient':'patient/inviteforref.php',
+        'SendReferal':'patient/SendReferal.php',
+
 
 
         'verifyemail':'verifyemail/verifyemail.php',
@@ -154,7 +158,8 @@ DoctorQuickApp.constant('BASE_URL', {
         'getonlysinglecontact':'doctor/getonlysinglecontact.php',
         'getonlysinglecontactforios':'doctor/getonlysinglecontactforios.php',
         'noResponseFromPatient':'doctor/noResponseFromPatient.php',
-
+        'missedConsultations':'doctor/missedConsultations.php',
+        'sendSmsToPatient':'doctor/sendSmsToPatient.php',
 
 
 

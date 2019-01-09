@@ -1198,6 +1198,32 @@ $stateProvider
     }
   })
 
+
+
+  .state('app.refer_contacts', {
+    url: "/refer_contacts/:countofselected",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/refer_contacts.html",
+        controller:'inviterefcontacts'
+      }
+    }
+  })
+
+  .state('app.refer_contacts_result', {
+    url: "/refer_contacts_result",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/refer_contacts_result.html",
+        controller : 'inviteToDqCtrl'
+      }
+    }
+  })
+
+
+
+
+
   .state('templates', {
     url: "/templates",
     abstract: true,
@@ -1269,6 +1295,16 @@ $stateProvider
       'menuContent': {
         templateUrl: "views/templates/consulted_patient.html",
         controller:'myconsultationsCtrl'
+      }
+    }
+  })
+
+  .state('templates.missed_consultations', {
+    url: "/missed_consultations",
+    views: {
+      'menuContent': {
+        templateUrl: "views/templates/missed_consultations.html",
+        controller:'missedConsultationsCtrl'
       }
     }
   })

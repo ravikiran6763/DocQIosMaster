@@ -6,7 +6,6 @@ DoctorQuickApp.controller('LoginCtrl', function($scope, $state,$stateParams, $co
 		$scope.user = {};
 		$scope.user.rememberMe = false;
 		$scope.loginData = {};
-
 		$scope.loginData.phone=$stateParams.userPhone;
 		$scope.loginData.pin=$stateParams.userPassword;
 

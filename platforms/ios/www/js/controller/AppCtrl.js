@@ -1,4 +1,4 @@
-DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window, $timeout,$location, $stateParams,$ionicPlatform,$cordovaDevice, $window, $ionicHistory, $interval, $ionicModal, $ionicPopover, $ionicLoading, $ionicConfig, $ionicPopup,$http, $ionicSideMenuDelegate, $localStorage, $sessionStorage, $cordovaInAppBrowser,$cordovaCamera, $cordovaNetwork,$cordovaToast,$ionicNavBarDelegate, LoginService, patientProfileDetailsService,searchDoctorServices, doctorServices, medicalSpecialityService,myConsultationService,rateDoctorServices,patientWalletServices,searchbyspecialities,rateDoctorServices,medicalSpecialityService, callAcceptedService,testresultbydoctor,searchDoctorServices,Factory) {
+DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window, $timeout,$location, $stateParams,$ionicPlatform,$cordovaDevice, $window, $ionicHistory, $interval, $ionicModal, $ionicPopover, $ionicLoading, $ionicConfig, $ionicPopup,$http, $ionicSideMenuDelegate, $localStorage, $sessionStorage, $cordovaInAppBrowser,$cordovaCamera, $cordovaNetwork,$cordovaToast,$ionicNavBarDelegate, LoginService, patientProfileDetailsService,searchDoctorServices, doctorServices, medicalSpecialityService,myConsultationService,rateDoctorServices,invitereviews,patientWalletServices,searchbyspecialities,rateDoctorServices,medicalSpecialityService, callAcceptedService,testresultbydoctor,searchDoctorServices,Factory) {
 
 	$rootScope.headerTxt='';
 	$rootScope.showBackBtn=true;
@@ -227,6 +227,124 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 
 	}
 
+	$scope.patientProfile = angular.fromJson($window.localStorage['patientDetails']);
+	console.log($scope.patientProfile);
+	var data = $scope.patientProfile;
+	for(var i=0; i<data.length; i++){
+
+		$rootScope.patientFname=data[i].patientFname;
+		$rootScope.patientLname=data[i].patientLname;
+	}
+	console.log($rootScope.patientFname, $rootScope.patientLname);
+
+
+
+
+
+
+
+
+
+
+	$scope.contacts='';
+
+		$scope.inviteForReviewforref=function(){
+
+			$scope.contacts = angular.fromJson($window.localStorage['numbersToSendReferal']);
+			$scope.allConatctsFetched = angular.fromJson($window.localStorage['allConatctsFetchedrefered']);
+
+
+			if($scope.contacts.length === 0 && $scope.allConatctsFetched.length === 0)
+			{
+
+				$ionicLoading.hide();
+				window.plugins.toast.showWithOptions({
+					message: "Please select your contacts",
+					duration: "short", // 2000 ms
+					position: "bottom",
+					styling: {
+					opacity: 1.0, // 0.0 (transparent) to 1.0 (opaque). Default 0.8
+					backgroundColor: '#9d2122', // make sure you use #RRGGBB. Default #333333
+					textColor: '#ffffff', // Ditto. Default #FFFFFF
+					textSize: 13, // Default is approx. 13.
+					cornerRadius: 16, // minimum is 0 (square). iOS default 20, Android default 100
+					horizontalPadding: 16, // iOS default 16, Android default 50
+					verticalPadding: 12 // iOS default 12, Android default 30
+					}
+				});
+
+
+			}
+
+			else if($scope.allConatctsFetched.length === 0 &&  $scope.contacts.length > 0)
+			{
+				$ionicLoading.show({
+					template:'<ion-spinner></ion-spinner><br><center>Sending invite</center>'
+				})
+				$scope.all=2;
+
+				$scope.query = " wants you to use DoctorQuick for consulting a Doctor online from your smart phone. Use referal code "+window.localStorage.refCode+" to get a first consultation free.\n";
+				$scope.tiny='https://appurl.io/jpwavzgm';
+
+			$scope.query =$rootScope.patientFname+" "+$rootScope.patientLname+$scope.query+$scope.tiny;
+			console.log($scope.query);
+
+
+
+				invitereviews.sendsmstoReferal($scope.contacts,$scope.query,window.localStorage.user,window.localStorage.refCode,$scope.all).then(function(response){
+					if(response){
+						console.log(response);
+						$ionicLoading.hide();
+						$scope.contacts=[];
+						window.localStorage['numbersToSendReferal'] = angular.toJson($scope.contacts);
+						$state.go("app.patient_home")
+					}
+				}).catch(function(error){
+				console.log('failure data', error);
+				})
+
+
+
+			}
+			else if($scope.allConatctsFetched.length > 0 &&  $scope.contacts.length === 0)
+			{
+				$ionicLoading.show({
+					template:'<ion-spinner></ion-spinner><br><center>Sending invite</center>'
+				})
+				$scope.all=1;
+
+				$scope.query = " wants you to use DoctorQuick for consulting a Doctor online from your smart phone. Use referal code "+window.localStorage.refCode+" to get a first consultation free.\n";
+				$scope.tiny='https://appurl.io/jpwavzgm';
+
+			$scope.query =$rootScope.patientFname+" "+$rootScope.patientLname+$scope.query+$scope.tiny;
+			console.log($scope.query);
+
+
+				invitereviews.sendsmstoReferal($scope.allConatctsFetched,$scope.query,window.localStorage.user,window.localStorage.refCode,$scope.all).then(function(response){
+					if(response){
+						console.log(response);
+						$ionicLoading.hide();
+						$scope.contacts=[];
+						window.localStorage['allConatctsFetchedrefered'] = angular.toJson($scope.contacts);
+						$state.go("app.patient_home")
+					}
+				}).catch(function(error){
+				console.log('failure data', error);
+				})
+
+			}
+			else {
+
+
+			}
+
+
+
+
+
+		}
+
+
 
 
 	$rootScope.specialityList = {};
@@ -310,7 +428,7 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 		$scope.choice= val;
 		console.log($scope.specfic);
 		console.log('particular speciality called');
-		
+
 
 		$ionicSideMenuDelegate.toggleRight();
 
