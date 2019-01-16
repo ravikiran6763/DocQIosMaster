@@ -95,6 +95,22 @@ DoctorQuickApp.service('patientWalletServices', function ($cookies,$http,$q, BAS
       return deferred.promise;
 
     }
+
+
+    this.askForDeposit = function (patientPhone) {
+      var deferred = $q.defer();
+
+      $http.post(BASE_URL.url + API.askForDeposit,patientPhone)
+      .success(function (data, status, headers, config){
+        deferred.resolve(data);
+      })
+      .error(function (){
+        deferred.reject('Error while getting data');
+      });
+
+      return deferred.promise;
+
+    }
   // //transaction history
   // this.mytransactionHistory = function (patientPhone) {
   //     console.log('transaction history of:',patientPhone);

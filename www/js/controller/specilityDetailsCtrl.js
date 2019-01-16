@@ -127,306 +127,351 @@ console.log(window.localStorage.SpecilityId);
 
      $rootScope.newPAtient=medicalSpecialityService.getNewPatient();
      console.log($rootScope.newPAtient);
-     if($rootScope.myWalletBal >= $rootScope.minBAlance || $rootScope.myWalletBal === 'agent'){
 
-       $rootScope.clickedOnce = true;
-           if($rootScope.clickedOnce)
-           {
-
-            setTimeout(function(){
-              $ionicLoading.show();
-            },2000);
-
-
-           }
-
-
-       console.log(window.localStorage.networkType);
-       if(window.localStorage.networkType === '4G' || window.localStorage.networkType === 'WiFi' || window.localStorage.networkType === 'Unknown' || !window.localStorage.networkType){
-         console.log(window.localStorage.SpecilityId);
-
-         medicalSpecialityService.sendrequesttodoctor(window.localStorage.SpecilityId).then(function(response){
-           console.log('successfull data', response[0][1]);
-           $rootScope.sentReqResponse=response;
-           $rootScope.sentReqId=$rootScope.sentReqResponse[0];
-           $rootScope.sentReqStat=$rootScope.sentReqResponse[1];
-           console.log('ReqStat',$rootScope.sentReqStat);
-           console.log($rootScope.sentReqId);
-
-
-
-           if($rootScope.sentReqStat != 'Inserted'){
-             $ionicLoading.hide();
-            console.log('Database Errorq');
-            var restrictUser = $ionicPopup.confirm({
+     patientWalletServices.askForDeposit(window.localStorage.user)
+      .then(function(response){
+        $rootScope.freeConsult=response;
+        console.log($rootScope.freeConsult);
+        if($rootScope.freeConsult=='registration_bonus'){
+          var askForDeposit = $ionicPopup.confirm({
               // title: 'Slow Data',
-              template: '<center>Previous request was cancelled by you after requesting for a consultation with a Doctor. Request you to only send requests if you want to talk to a Doctor.<br>Please wait for five minutes to send another request </center>',
+              template: '<center>You need to Deposit ₹{{minBAlance}} to proceed with your free consultation which can be refunded back on request.</center>',
               cssClass: 'videoPopup',
               scope: $scope,
               buttons: [
-              {
-                text: 'OK',
-                type: 'button-positive',
-                onTap: function(e) {
-                console.log('ok');
-                $state.go($state.current, {}, {reload: true});
-                }
-              },
+                {
+                  text: 'Cancel',
+                  type: 'button-royal',
+                  onTap: function(e) {
+                    $ionicHistory.nextViewOptions({
+                      disableAnimate: true,
+                      disableBack: true
+                    });
+                    $state.go($state.$current,{}, {location: "replace", reload: false})
+                  }
+                },
+                {
+                  text: 'Topup',
+                  type: 'button-positive',
+                  onTap: function(e) {
+                    $ionicHistory.nextViewOptions({
+                      disableAnimate: true,
+                      disableBack: true
+                    });
+                    $state.go('app.patient_topup',{}, {location: "replace", reload: false});
+                  }
+                },
+
               ]
-            });
+          });
+        }
+        else{
+          if($rootScope.myWalletBal >= $rootScope.minBAlance || $rootScope.myWalletBal === 'agent'){
 
-          }
+            $rootScope.clickedOnce = true;
+                if($rootScope.clickedOnce)
+                {
 
-           else if($rootScope.sentReqStat === 'Inserted'){
-             $interval(checkAcceptedReqDocStatus,2000);
-             console.log($rootScope.newPatientFname);
-              $rootScope.counter = 120;
-               $rootScope.onTimeout = function(){
-                 $ionicLoading.hide();
-               // console.log($scope.counter);
-              $rootScope.counter--;
-               patientTimeout = $timeout($rootScope.onTimeout,1000);
-               if($scope.counter == 0){
-               console.log('one minute over');
-               $rootScope.buttonText='Send Request';
-               $timeout.cancel(patientTimeout);
+                 setTimeout(function(){
+                   $ionicLoading.show();
+                 },2000);
 
-               medicalSpecialityService.noResponseFromDoc(window.localStorage.user).then(function(response){
-               $scope.cancelledReq=response;
-               // $state.go("app.medical_speciality");
-               $interval.cancel(checkAcceptedReq);
-               $interval.cancel(checkAcceptedReqDocStatus);
-               }).catch(function(error){
-               console.log('failure data', error);
-               });
 
-               if(window.localStorage.SpecilityId == 16 || window.localStorage.SpecilityId == 14){
-                 var noResponsePopup = $ionicPopup.alert({
-                   template: "<center ><p>None of the doctors have accepted your request</p></center>",
-                   cssClass: 'requestPopup',
-                   scope: $scope,
+                }
 
-                 });
-               }
-               else{
-                 var noResponsePopup = $ionicPopup.alert({
-                   template: "<center><p>None of the doctors have accepted your request.<br>Would you like to Consult a <br>General Physician?</p></center>",
-                   cssClass: 'requestPopup',
+
+            console.log(window.localStorage.networkType);
+            if(window.localStorage.networkType === '4G' || window.localStorage.networkType === 'WiFi' || window.localStorage.networkType === 'Unknown' || !window.localStorage.networkType){
+              console.log(window.localStorage.SpecilityId);
+
+              medicalSpecialityService.sendrequesttodoctor(window.localStorage.SpecilityId).then(function(response){
+                console.log('successfull data', response[0][1]);
+                $rootScope.sentReqResponse=response;
+                $rootScope.sentReqId=$rootScope.sentReqResponse[0];
+                $rootScope.sentReqStat=$rootScope.sentReqResponse[1];
+                console.log('ReqStat',$rootScope.sentReqStat);
+                console.log($rootScope.sentReqId);
+
+
+
+                if($rootScope.sentReqStat != 'Inserted'){
+                  $ionicLoading.hide();
+                 console.log('Database Errorq');
+                 var restrictUser = $ionicPopup.confirm({
+                   // title: 'Slow Data',
+                   template: '<center>Previous request was cancelled by you after requesting for a consultation with a Doctor. Request you to only send requests if you want to talk to a Doctor.<br>Please wait for five minutes to send another request </center>',
+                   cssClass: 'videoPopup',
                    scope: $scope,
                    buttons: [
                    {
-                   text: 'OK',
-                   type: 'button-assertive',
-                       onTap:function(){
-                         console.log(window.localStorage.SpecilityId);
-                           window.localStorage.SpecilityId=14;
-                           $scope.sendrequesttoonlinedoctors();
-                         // $state.go($state.current, {}, {reload: true});
-
-                       }
-                   },
-                   {
-                   text: 'Cancel',
-                   type: 'button-royal',
-                   onTap:function(){
+                     text: 'OK',
+                     type: 'button-positive',
+                     onTap: function(e) {
+                     console.log('ok');
                      $state.go($state.current, {}, {reload: true});
-                   }
-
-                   }
+                     }
+                   },
                    ]
                  });
-               }
-
-
-               noResponsePopup.then(function(res){
-                 medicalSpecialityService.noResponseFromDoc(window.localStorage.user).then(function(response){
-                 $scope.cancelledReq=response;
-                 // $state.go("app.medical_speciality");
-                 $interval.cancel(checkAcceptedReq);
-                 $interval.cancel(checkAcceptedReqDocStatus);
-                 }).catch(function(error){
-                 console.log('failure data', error);
-                 });
-               });
-
-               $scope.callReqPopUp.close();
 
                }
-             }
-                var patientTimeout = $timeout($rootScope.onTimeout,1000);//timer interval
-                $scope.$on('$destroy', function(){
-                $timeout.cancel(patientTimeout);
-                console.log('destroyed');
-                });
 
+                else if($rootScope.sentReqStat === 'Inserted'){
+                  $interval(checkAcceptedReqDocStatus,2000);
+                  console.log($rootScope.newPatientFname);
+                   $rootScope.counter = 120;
+                    $rootScope.onTimeout = function(){
+                      $ionicLoading.hide();
+                    // console.log($scope.counter);
+                   $rootScope.counter--;
+                    patientTimeout = $timeout($rootScope.onTimeout,1000);
+                    if($scope.counter == 0){
+                    console.log('one minute over');
+                    $rootScope.buttonText='Send Request';
+                    $timeout.cancel(patientTimeout);
 
-
-                $rootScope.buttonText='Request sent' ;
-                $scope.callReqPopUp = $ionicPopup.show({
-                      template: "<div >Your request for a<br>consultation has been sent<br><b>{{counter | secondsToDateTime | date:'mm:ss'}}</b></div>",
-                      cssClass: 'requestPopup',
-                      scope: $scope,
-                      buttons: [
-                      {
-                      text: 'Cancel',
-                      type: 'button-royal',
-                      onTap:function(){
-
-                        $interval.cancel(checkAcceptedReq);
-                        $interval.cancel(checkAcceptedReqDocStatus);
-
-                        console.log('cancel');
-                        console.log($scope.counter);
-                        console.log(window.localStorage.user);
-                        medicalSpecialityService.cancelReq(window.localStorage.user).then(function(response){
-                        $scope.cancelledReq=response;
-                          $state.go($state.current, {}, {reload: true});
-                        }).catch(function(error){
-                        console.log('failure data', error);
-                        });
-                      }
-                      },
-                    ]
-
+                    medicalSpecialityService.noResponseFromDoc(window.localStorage.user).then(function(response){
+                    $scope.cancelledReq=response;
+                    // $state.go("app.medical_speciality");
+                    $interval.cancel(checkAcceptedReq);
+                    $interval.cancel(checkAcceptedReqDocStatus);
+                    }).catch(function(error){
+                    console.log('failure data', error);
                     });
-                    $scope.nonePopUp=false;
-                    var closePopup=function(){
-                      console.log('cancelCall here');
-                      medicalSpecialityService.cancelReq(window.localStorage.user).then(function(response){
+
+                    if(window.localStorage.SpecilityId == 16 || window.localStorage.SpecilityId == 14){
+                      var noResponsePopup = $ionicPopup.alert({
+                        template: "<center ><p>None of the doctors have accepted your request</p></center>",
+                        cssClass: 'requestPopup',
+                        scope: $scope,
+
+                      });
+                    }
+                    else{
+                      var noResponsePopup = $ionicPopup.alert({
+                        template: "<center><p>None of the doctors have accepted your request.<br>Would you like to Consult a <br>General Physician?</p></center>",
+                        cssClass: 'requestPopup',
+                        scope: $scope,
+                        buttons: [
+                        {
+                        text: 'OK',
+                        type: 'button-assertive',
+                            onTap:function(){
+                              console.log(window.localStorage.SpecilityId);
+                                window.localStorage.SpecilityId=14;
+                                $scope.sendrequesttoonlinedoctors();
+                              // $state.go($state.current, {}, {reload: true});
+
+                            }
+                        },
+                        {
+                        text: 'Cancel',
+                        type: 'button-royal',
+                        onTap:function(){
+                          $state.go($state.current, {}, {reload: true});
+                        }
+
+                        }
+                        ]
+                      });
+                    }
+
+
+                    noResponsePopup.then(function(res){
+                      medicalSpecialityService.noResponseFromDoc(window.localStorage.user).then(function(response){
                       $scope.cancelledReq=response;
-                      $scope.callReqPopUp.close(); //close the popup after 3 seconds for some reason
-                       $scope.nonePopUp=true;
-                         $interval.cance(checkAcceptedReq);
-                        console.log($scope.cancelledReq);
+                      // $state.go("app.medical_speciality");
+                      $interval.cancel(checkAcceptedReq);
+                      $interval.cancel(checkAcceptedReqDocStatus);
                       }).catch(function(error){
                       console.log('failure data', error);
                       });
+                    });
+
+                    $scope.callReqPopUp.close();
 
                     }
+                  }
+                     var patientTimeout = $timeout($rootScope.onTimeout,1000);//timer interval
+                     $scope.$on('$destroy', function(){
+                     $timeout.cancel(patientTimeout);
+                     console.log('destroyed');
+                     });
 
-                    console.log($scope.counter);
-                    console.log('buttonclicked');
-                    $interval(checkAcceptedReq,2000);
 
-                    var checkAcceptedReq = $interval(function () {
-                      var newCallStatus = {
-                        patient:window.localStorage.user,
-                        reqId:$rootScope.sentReqId
-                      }
-                       console.log('intervalStarted');
-                       console.log(newCallStatus);
-                          medicalSpecialityService.checkForAccptedReq(newCallStatus).then(function(response){
-                          $scope.accptdReq=response;
-                          console.log($scope.accptdReq);
-                            if($scope.accptdReq != ''){
-                              console.log($scope.accptdReq);
-                              var accptDoc=$scope.accptdReq;
-                              for(var i=0; i<accptDoc.length; i++){
-                                $rootScope.doctorPhone=accptDoc[i].doctorPhone,
-                                $rootScope.callId=accptDoc[i].callId,
-                                $rootScope.cal_flag=accptDoc[i].flag,
-                                $rootScope.rates=accptDoc[i].ratings,
-                                $rootScope.totalRates=accptDoc[i].totalRates
-                              }
-                              $scope.callReqPopUp.close();
 
-                              setTimeout(function (){
-                                console.log('delay 3 sec');
-                                $ionicHistory.nextViewOptions({
-                                  disableAnimate: true,
-                                  disableBack: true
-                                });
-                                var patientTimeout = $timeout($rootScope.onTimeout,1000);//timer interval
-                                $scope.$on('$destroy', function(){
-                                $timeout.cancel(patientTimeout);
-                                console.log('destroyed');
-                                });
-                                $state.go('app.callAccepted',{accptdDoc:$rootScope.doctorPhone,callId:$rootScope.callId,callFlag:$rootScope.cal_flag,rates:$rootScope.rates,totalRates:$rootScope.totalRates},{location: "replace", reload: false});
-                                console.log('show accpted doc profile');
-                                  $interval.cancel(checkAcceptedReq);
-                              }, 1000);
-
-                            }
-
-                          }).catch(function(error){
-                          console.log('failure data', error);
-                          });
-
-                     }, 2000);
-
-           }
-          else{
-              console.log('Database Error1');
-          }
-          }).catch(function(error){
-              console.log('failure data', error);
-          });
-          /*Start timers*/
-       }
-       else{
-
-             $ionicLoading.show({
-               template: 'Sending request',
-               duration: 5000
-             });
-             $timeout( function(){
-               var confirmPopup = $ionicPopup.confirm({
-                 // title: 'Slow Data',
-                 template: 'Unable to send request at the moment as we detected slow network on your device. Please try after sometime ',
-                 cssClass: 'videoPopup',
-                 scope: $scope,
-                 buttons: [
-                 {
-                   text: 'OK',
-                   type: 'button-positive',
-                   onTap: function(e) {
-                   console.log('ok');
-                   }
-                 },
-                 ]
-               });
-             }, 5000 );
-
-       }
-     }
-     else{
-             $ionicLoading.hide().then(function(){
-
-               var confirmPopup = $ionicPopup.confirm({
-                       // title: 'Low Balance',
-                       template: '<center>Your request could not be processed as your DoctorQuick deposit is less than ₹{{minBAlance}}.</center> ',
-                       cssClass: 'videoPopup',
-                       scope: $scope,
-                       buttons: [
-                        {
+                     $rootScope.buttonText='Request sent' ;
+                     $scope.callReqPopUp = $ionicPopup.show({
+                           template: "<div >Your request for a<br>consultation has been sent<br><b>{{counter | secondsToDateTime | date:'mm:ss'}}</b></div>",
+                           cssClass: 'requestPopup',
+                           scope: $scope,
+                           buttons: [
+                           {
                            text: 'Cancel',
                            type: 'button-royal',
-                           onTap: function(e) {
-                            $ionicHistory.nextViewOptions({
-                              disableAnimate: true,
-                              disableBack: true
-                            });
-                            $state.go($state.$current,{}, {location: "replace", reload: false})
-                           }
-                         },
-                         {
-                           text: 'Topup',
-                           type: 'button-positive',
-                           onTap: function(e) {
-                            $ionicHistory.nextViewOptions({
-                              disableAnimate: true,
-                              disableBack: true
-                            });
-                            $state.go('app.patient_topup',{}, {location: "replace", reload: false});
-                           }
-                         },
+                           onTap:function(){
 
-                       ]
-                     });
-                     $ionicLoading.hide();
-             });
+                             $interval.cancel(checkAcceptedReq);
+                             $interval.cancel(checkAcceptedReqDocStatus);
 
-         }
+                             console.log('cancel');
+                             console.log($scope.counter);
+                             console.log(window.localStorage.user);
+                             medicalSpecialityService.cancelReq(window.localStorage.user).then(function(response){
+                             $scope.cancelledReq=response;
+                               $state.go($state.current, {}, {reload: true});
+                             }).catch(function(error){
+                             console.log('failure data', error);
+                             });
+                           }
+                           },
+                         ]
+
+                         });
+                         $scope.nonePopUp=false;
+                         var closePopup=function(){
+                           console.log('cancelCall here');
+                           medicalSpecialityService.cancelReq(window.localStorage.user).then(function(response){
+                           $scope.cancelledReq=response;
+                           $scope.callReqPopUp.close(); //close the popup after 3 seconds for some reason
+                            $scope.nonePopUp=true;
+                              $interval.cance(checkAcceptedReq);
+                             console.log($scope.cancelledReq);
+                           }).catch(function(error){
+                           console.log('failure data', error);
+                           });
+
+                         }
+
+                         console.log($scope.counter);
+                         console.log('buttonclicked');
+                         $interval(checkAcceptedReq,2000);
+
+                         var checkAcceptedReq = $interval(function () {
+                           var newCallStatus = {
+                             patient:window.localStorage.user,
+                             reqId:$rootScope.sentReqId
+                           }
+                            console.log('intervalStarted');
+                            console.log(newCallStatus);
+                               medicalSpecialityService.checkForAccptedReq(newCallStatus).then(function(response){
+                               $scope.accptdReq=response;
+                               console.log($scope.accptdReq);
+                                 if($scope.accptdReq != ''){
+                                   console.log($scope.accptdReq);
+                                   var accptDoc=$scope.accptdReq;
+                                   for(var i=0; i<accptDoc.length; i++){
+                                     $rootScope.doctorPhone=accptDoc[i].doctorPhone,
+                                     $rootScope.callId=accptDoc[i].callId,
+                                     $rootScope.cal_flag=accptDoc[i].flag,
+                                     $rootScope.rates=accptDoc[i].ratings,
+                                     $rootScope.totalRates=accptDoc[i].totalRates
+                                   }
+                                   $scope.callReqPopUp.close();
+
+                                   setTimeout(function (){
+                                     console.log('delay 3 sec');
+                                     $ionicHistory.nextViewOptions({
+                                       disableAnimate: true,
+                                       disableBack: true
+                                     });
+                                     var patientTimeout = $timeout($rootScope.onTimeout,1000);//timer interval
+                                     $scope.$on('$destroy', function(){
+                                     $timeout.cancel(patientTimeout);
+                                     console.log('destroyed');
+                                     });
+                                     $state.go('app.callAccepted',{accptdDoc:$rootScope.doctorPhone,callId:$rootScope.callId,callFlag:$rootScope.cal_flag,rates:$rootScope.rates,totalRates:$rootScope.totalRates},{location: "replace", reload: false});
+                                     console.log('show accpted doc profile');
+                                       $interval.cancel(checkAcceptedReq);
+                                   }, 1000);
+
+                                 }
+
+                               }).catch(function(error){
+                               console.log('failure data', error);
+                               });
+
+                          }, 2000);
+
+                }
+               else{
+                   console.log('Database Error1');
+               }
+               }).catch(function(error){
+                   console.log('failure data', error);
+               });
+               /*Start timers*/
+            }
+            else{
+
+                  $ionicLoading.show({
+                    template: 'Sending request',
+                    duration: 5000
+                  });
+                  $timeout( function(){
+                    var confirmPopup = $ionicPopup.confirm({
+                      // title: 'Slow Data',
+                      template: 'Unable to send request at the moment as we detected slow network on your device. Please try after sometime ',
+                      cssClass: 'videoPopup',
+                      scope: $scope,
+                      buttons: [
+                      {
+                        text: 'OK',
+                        type: 'button-positive',
+                        onTap: function(e) {
+                        console.log('ok');
+                        }
+                      },
+                      ]
+                    });
+                  }, 5000 );
+
+            }
+          }
+          else{
+                  $ionicLoading.hide().then(function(){
+
+                    var confirmPopup = $ionicPopup.confirm({
+                            // title: 'Low Balance',
+                            template: '<center>Your request could not be processed as your DoctorQuick deposit is less than ₹{{minBAlance}}.</center> ',
+                            cssClass: 'videoPopup',
+                            scope: $scope,
+                            buttons: [
+                             {
+                                text: 'Cancel',
+                                type: 'button-royal',
+                                onTap: function(e) {
+                                 $ionicHistory.nextViewOptions({
+                                   disableAnimate: true,
+                                   disableBack: true
+                                 });
+                                 $state.go($state.$current,{}, {location: "replace", reload: false})
+                                }
+                              },
+                              {
+                                text: 'Topup',
+                                type: 'button-positive',
+                                onTap: function(e) {
+                                 $ionicHistory.nextViewOptions({
+                                   disableAnimate: true,
+                                   disableBack: true
+                                 });
+                                 $state.go('app.patient_topup',{}, {location: "replace", reload: false});
+                                }
+                              },
+
+                            ]
+                          });
+                          $ionicLoading.hide();
+                  });
+
+              }
+        }
+      }).catch(function(error){
+         console.log('failure data', error);
+      });
+
+
      }).catch(function(error){
        console.log('failure data', error);
      });

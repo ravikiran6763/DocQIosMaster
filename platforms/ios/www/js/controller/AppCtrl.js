@@ -227,6 +227,9 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 
 	}
 
+if($window.localStorage['patientDetails'])
+{
+
 	$scope.patientProfile = angular.fromJson($window.localStorage['patientDetails']);
 	console.log($scope.patientProfile);
 	var data = $scope.patientProfile;
@@ -237,12 +240,7 @@ DoctorQuickApp.controller('AppCtrl', function($state, $scope, $rootScope,$window
 	}
 	console.log($rootScope.patientFname, $rootScope.patientLname);
 
-
-
-
-
-
-
+}
 
 
 

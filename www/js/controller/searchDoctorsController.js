@@ -306,174 +306,219 @@ $scope.docClicked=function(docPhone){
 				console.log($rootScope.myWalletBal);
 			}
 						$rootScope.counter = 0;
-			if($rootScope.myWalletBal >= $rootScope.minBAlance || $rootScope.myWalletBal ==='agent')
-			{
-
-					if(window.localStorage.networkType == '4G' || window.localStorage.networkType == 'WiFi'){
 
 
-											searchDoctorServices.requestForCall(callRequest).then(function(response){
-												$ionicLoading.hide();
-												console.log('print response',response);
-											window.localStorage['one2oneReq'] = angular.toJson(response);
-											$rootScope.one2oneReq = angular.fromJson($window.localStorage['one2oneReq']);
-											window.localStorage.one2oneId = $rootScope.one2oneReq.reqId;
-											console.log(window.localStorage.one2oneId);
-											console.log($rootScope.one2oneReq.callStatus);
+						patientWalletServices.askForDeposit(window.localStorage.user)
+						 .then(function(response){
+						   $rootScope.freeConsult=response;
+						   console.log($rootScope.freeConsult);
+							 if($rootScope.freeConsult=='registration_bonus'){
+			           var askForDeposit = $ionicPopup.confirm({
+			               // title: 'Slow Data',
+			               template: '<center>You need to Deposit ₹{{minBAlance}} to proceed with your free consultation which can be refunded back on request.</center>',
+			               cssClass: 'videoPopup',
+			               scope: $scope,
+			               buttons: [
+			                 {
+			                   text: 'Cancel',
+			                   type: 'button-royal',
+			                   onTap: function(e) {
+			                     $ionicHistory.nextViewOptions({
+			                       disableAnimate: true,
+			                       disableBack: true
+			                     });
+			                     $state.go($state.$current,{}, {location: "replace", reload: false})
+			                   }
+			                 },
+			                 {
+			                   text: 'Topup',
+			                   type: 'button-positive',
+			                   onTap: function(e) {
+			                     $ionicHistory.nextViewOptions({
+			                       disableAnimate: true,
+			                       disableBack: true
+			                     });
+			                     $state.go('app.patient_topup',{}, {location: "replace", reload: false});
+			                   }
+			                 },
 
-										}).catch(function(error){
-										console.log('failure data', error);
-										});
+			               ]
+			           });
+			         }
+						   else{
+								 if($rootScope.myWalletBal >= $rootScope.minBAlance || $rootScope.myWalletBal ==='agent')
+								 {
 
-										// hello.greet(uname,pw,persontocall,success, failure);
-										$rootScope.counter = 120;
-						        $rootScope.onTimeout = function(){
-						          console.log($rootScope.counter);
-						          $rootScope.counter--;
-						          patientTimeout = $timeout($rootScope.onTimeout,1000);
-						          if($rootScope.counter == 0){
-						          console.log('one minute over');
-						          $rootScope.buttonText='Send Request';
-						          $timeout.cancel(patientTimeout);
-
-											searchDoctorServices.one2oneNoResponse(window.localStorage.one2oneId).then(function(response){
-											$scope.cancelledReq=response;
-											window.localStorage.one2oneId=0;
-											window.localStorage.callStatus=0;
-											$scope.callAccept.close();
-											console.log($scope.cancelledReq);
-											}).catch(function(error){
-												console.log('failure data', error);
-											});
-
-											if($ionicHistory.currentStateName() === 'app.results'){
-
-												noResponsePopup = $ionicPopup.alert({
-													template: "<div ><p>Doctor did not accept your request</p></div>",
-													cssClass: 'requestPopup',
-													scope: $scope,
-												});
-												IonicClosePopupService.register(noResponsePopup);
-
-											}
-											else{
-												return false;
-											}
+										 if(window.localStorage.networkType == '4G' || window.localStorage.networkType == 'WiFi'){
 
 
-						          noResponsePopup.then(function(res) {
-												console.log('delete request here');
-												searchDoctorServices.one2oneNoResponse(window.localStorage.one2oneId).then(function(response){
-												$scope.cancelledReq=response;
-												window.localStorage.one2oneId=0;
-												window.localStorage.callStatus=0;
-												$scope.callAccept.close();
-												console.log($scope.cancelledReq);
-												}).catch(function(error){
-													console.log('failure data', error);
-												});
-						          });
+																 searchDoctorServices.requestForCall(callRequest).then(function(response){
+																	 $ionicLoading.hide();
+																	 console.log('print response',response);
+																 window.localStorage['one2oneReq'] = angular.toJson(response);
+																 $rootScope.one2oneReq = angular.fromJson($window.localStorage['one2oneReq']);
+																 window.localStorage.one2oneId = $rootScope.one2oneReq.reqId;
+																 console.log(window.localStorage.one2oneId);
+																 console.log($rootScope.one2oneReq.callStatus);
 
-						          $scope.callReqPopUp.close();
+															 }).catch(function(error){
+															 console.log('failure data', error);
+															 });
 
-						          }
-						        }
-										var patientTimeout = $timeout($scope.onTimeout,1000);//timer interval
-							      $scope.$on('$destroy', function(){
-							      $timeout.cancel(patientTimeout);
-							      console.log('destroyed');
-							      });
-										$scope.callReqPopUp = $ionicPopup.show({
-									 			 template: "<div >Your request for a<br>consultation has been sent<br><b>{{counter | secondsToDateTime | date:'mm:ss'}}</b></div>",
-									 			 cssClass: 'requestPopup',
-									 			 scope: $scope,
-									 			 buttons: [
-									 			 {
-									 			 text: 'Cancel',
-									 			 type: 'button-royal',
-									 			 onTap:function(){
-									 				 console.log('cancel');
-									 				 console.log($rootScope.counter);
-									 				 console.log(window.localStorage.user);
-													 $scope.callReqPopUp.close();
-													  $state.go($state.current, {}, {reload: true});
-													  searchDoctorServices.cancelOne2oneReq(window.localStorage.one2oneId).then(function(response){
-													  $scope.cancelledReq=response;
-														window.localStorage.one2oneId=0;
-														window.localStorage.callStatus=0;
-														console.log($scope.cancelledReq);
-													  }).catch(function(error){
-													  	console.log('failure data', error);
-													  });
+															 // hello.greet(uname,pw,persontocall,success, failure);
+															 $rootScope.counter = 120;
+															 $rootScope.onTimeout = function(){
+																 console.log($rootScope.counter);
+																 $rootScope.counter--;
+																 patientTimeout = $timeout($rootScope.onTimeout,1000);
+																 if($rootScope.counter == 0){
+																 console.log('one minute over');
+																 $rootScope.buttonText='Send Request';
+																 $timeout.cancel(patientTimeout);
 
-									 			 }
-									 			 },
+																 searchDoctorServices.one2oneNoResponse(window.localStorage.one2oneId).then(function(response){
+																 $scope.cancelledReq=response;
+																 window.localStorage.one2oneId=0;
+																 window.localStorage.callStatus=0;
+																 $scope.callAccept.close();
+																 console.log($scope.cancelledReq);
+																 }).catch(function(error){
+																	 console.log('failure data', error);
+																 });
 
-									 		 ]
+																 if($ionicHistory.currentStateName() === 'app.results'){
 
-									 		 });
+																	 noResponsePopup = $ionicPopup.alert({
+																		 template: "<div ><p>Doctor did not accept your request</p></div>",
+																		 cssClass: 'requestPopup',
+																		 scope: $scope,
+																	 });
+																	 IonicClosePopupService.register(noResponsePopup);
 
-					}
-					else{
-						var slowData = $ionicPopup.confirm({
-							// title: 'Slow Data',
-							template: 'Unable to send request at the moment as we detected slow network on your device. Please try after sometime ',
-							cssClass: 'videoPopup',
-							scope: $scope,
-							buttons: [
-							{
-								text: 'OK',
-								type: 'button-positive',
-								onTap: function(e) {
-								console.log('ok');
-								}
-							},
-							]
-						});
-						IonicClosePopupService.register(slowData);
-
-					}
-
-			}
-			else
-			{
-
-				var confirmPopup = $ionicPopup.confirm({
-					// title: 'DoctorQuick',
-					template: '<center>Your request could not be processed as your DoctorQuick deposit is less than ₹{{ minBAlance }}</center> ',
-					cssClass: 'videoPopup',
-					scope: $scope,
-					buttons: [
-						{
-							text: 'Cancel',
-							type: 'button-royal',
-							onTap: function(e) {
-								$ionicHistory.nextViewOptions({
-									disableAnimate: true,
-									disableBack: true
-								});
-								$state.go('app.patient_home',{}, {location: "replace", reload: false})
-							}
-						},
-						{
-							text: 'Topup',
-							type: 'button-positive',
-							onTap: function(e) {
-								$ionicHistory.nextViewOptions({
-									disableAnimate: true,
-									disableBack: true
-								});
-								$state.go('app.patient_topup',{}, {location: "replace", reload: false});
-							}
-						},
-
-					]
-					//templateUrl: "views/app/viewdoctor_profile.html",
-				});
-				IonicClosePopupService.register(confirmPopup);
+																 }
+																 else{
+																	 return false;
+																 }
 
 
-			}
+																 noResponsePopup.then(function(res) {
+																	 console.log('delete request here');
+																	 searchDoctorServices.one2oneNoResponse(window.localStorage.one2oneId).then(function(response){
+																	 $scope.cancelledReq=response;
+																	 window.localStorage.one2oneId=0;
+																	 window.localStorage.callStatus=0;
+																	 $scope.callAccept.close();
+																	 console.log($scope.cancelledReq);
+																	 }).catch(function(error){
+																		 console.log('failure data', error);
+																	 });
+																 });
+
+																 $scope.callReqPopUp.close();
+
+																 }
+															 }
+															 var patientTimeout = $timeout($scope.onTimeout,1000);//timer interval
+															 $scope.$on('$destroy', function(){
+															 $timeout.cancel(patientTimeout);
+															 console.log('destroyed');
+															 });
+															 $scope.callReqPopUp = $ionicPopup.show({
+																		template: "<div >Your request for a<br>consultation has been sent<br><b>{{counter | secondsToDateTime | date:'mm:ss'}}</b></div>",
+																		cssClass: 'requestPopup',
+																		scope: $scope,
+																		buttons: [
+																		{
+																		text: 'Cancel',
+																		type: 'button-royal',
+																		onTap:function(){
+																			console.log('cancel');
+																			console.log($rootScope.counter);
+																			console.log(window.localStorage.user);
+																			$scope.callReqPopUp.close();
+																			 $state.go($state.current, {}, {reload: true});
+																			 searchDoctorServices.cancelOne2oneReq(window.localStorage.one2oneId).then(function(response){
+																			 $scope.cancelledReq=response;
+																			 window.localStorage.one2oneId=0;
+																			 window.localStorage.callStatus=0;
+																			 console.log($scope.cancelledReq);
+																			 }).catch(function(error){
+																				 console.log('failure data', error);
+																			 });
+
+																		}
+																		},
+
+																	]
+
+																	});
+
+										 }
+										 else{
+											 var slowData = $ionicPopup.confirm({
+												 // title: 'Slow Data',
+												 template: 'Unable to send request at the moment as we detected slow network on your device. Please try after sometime ',
+												 cssClass: 'videoPopup',
+												 scope: $scope,
+												 buttons: [
+												 {
+													 text: 'OK',
+													 type: 'button-positive',
+													 onTap: function(e) {
+													 console.log('ok');
+													 }
+												 },
+												 ]
+											 });
+											 IonicClosePopupService.register(slowData);
+
+										 }
+
+								 }
+								 else
+								 {
+
+									 var confirmPopup = $ionicPopup.confirm({
+										 // title: 'DoctorQuick',
+										 template: '<center>Your request could not be processed as your DoctorQuick deposit is less than ₹{{ minBAlance }}</center> ',
+										 cssClass: 'videoPopup',
+										 scope: $scope,
+										 buttons: [
+											 {
+												 text: 'Cancel',
+												 type: 'button-royal',
+												 onTap: function(e) {
+													 $ionicHistory.nextViewOptions({
+														 disableAnimate: true,
+														 disableBack: true
+													 });
+													 $state.go('app.patient_home',{}, {location: "replace", reload: false})
+												 }
+											 },
+											 {
+												 text: 'Topup',
+												 type: 'button-positive',
+												 onTap: function(e) {
+													 $ionicHistory.nextViewOptions({
+														 disableAnimate: true,
+														 disableBack: true
+													 });
+													 $state.go('app.patient_topup',{}, {location: "replace", reload: false});
+												 }
+											 },
+
+										 ]
+										 //templateUrl: "views/app/viewdoctor_profile.html",
+									 });
+									 IonicClosePopupService.register(confirmPopup);
+
+
+								 }
+						   }
+						 }).catch(function(error){
+						    console.log('failure data', error);
+						 });
+
 				$ionicLoading.hide();
 			}).catch(function(error){
 		console.log('failure data', error);

@@ -195,7 +195,8 @@ $scope.patientRegistration = function()
                   serial:window.localStorage.serial,
                   manufacturer:window.localStorage.manufacturer,
                   model:window.localStorage.model,
-                  ipAddress:$rootScope.ip
+                  ipAddress:$rootScope.ip,
+                  patientRefCode:$rootScope.PatientDetail.patient_refCode
 
 
 

@@ -158,8 +158,7 @@ DoctorQuickApp.constant('BASE_URL', {
         'getonlysinglecontact':'doctor/getonlysinglecontact.php',
         'getonlysinglecontactforios':'doctor/getonlysinglecontactforios.php',
         'noResponseFromPatient':'doctor/noResponseFromPatient.php',
-        'missedConsultations':'doctor/missedConsultations.php',
-        'sendSmsToPatient':'doctor/sendSmsToPatient.php',
+
 
 
 
